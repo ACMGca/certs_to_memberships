@@ -1,4 +1,5 @@
 import { readdir } from "node:fs/promises";
+import { rules } from "./rules.js";
 
 const CERTKEYLIST = ['MG','AG','SG','RG','AAG','ASG','ARG','AHG','DHG','HG','HGWT','CGI1','CGI2','CGI3','TRCI','VFG','AHGPerm','AAGPerm','ASGPerm','ARGPerm']
 
