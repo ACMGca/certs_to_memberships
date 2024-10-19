@@ -1,3 +1,64 @@
+/*
+Lowercase 'd' indicates a 'Designation'
+Lowercase 'c' indicated a 'Constraint'
+*/
+
+// Mountain Guide
+const IFMGA = 'IFMGA Member'
+const MG = 'Mountain Guide Member'
+
+// Alpine Guide
+const AG = 'Alpine Guide Member'
+const dAG = 'TAP Alpine Guide Designation'
+const AAG = 'Apprentice Alpine Guide Member'
+const dAAG = 'TAP Apprentice Alpine Guide Designation'
+
+// Ski Guide
+const SG = 'Ski Guide Member'
+const dSG = 'TAP Ski Guide Designation'
+const ASG = 'Apprentice Ski Guide Member'
+const dASG = 'TAP Apprentice Ski Guide Designation'
+
+// Rock Guide
+const RG = 'Rock Guide Member'
+const dRG = 'TAP Rock Guide Designation'
+const ARG = 'Apprentice Rock Guide Member'
+const dARG = 'TAP Apprentice Rock Guide Designation'
+
+// Hiking Guide
+const HG = 'Hiking Guide Member'
+const dHG = 'TAP Hiking Guide Designation'
+const AHG = 'Apprentice Hiking Guide Member'
+const dAHG = 'TAP Apprentice Hiking Guide Designation'
+const HGW = 'Winter Hiking Guide Member'
+const AHGW = 'Apprentice Winter Hiking Guide Member'
+const dWT = 'TAP Winter Travel Designation'
+const DHG = 'Day Hiking Guide Member'
+const dDHG = '-- DHG Deprecated TAP Designation --'
+
+// Climbing Instructor
+const CGI1 = 'Climbing Gym Instructor Level 1 Member'
+const dCGI1 = 'TAP Climbing Gym Instructor Level 1 Designation'
+const CGI2 = 'Climbing Gym Instructor Level 2 Member'
+const dCGI2 = 'TAP Climbing Gym Instructor Level 2 Designation'
+const CGI3 = 'Climbing Gym Instructor Level 3 Member'
+const dCGI3 = 'TAP Climbing Gym Instructor Level 3 Designation'
+const TRCI = 'Top Rope Climbing Instructor Member'
+const dTRCI = 'TAP Top Rope Climbing Instructor Designation'
+const VFG = 'Via Ferrata Guide Member'
+const dVFG = 'TAP Via Ferrata Guide Designation'
+
+// Additional qualifications
+const cFA = 'First Aid is Current'
+const cPP = 'Professional Practice is Current'
+const cCPD = 'Continuing Professional Development is Current'
+const cAH = 'Current Account Holder'
+const cATL = 'Apprentice Time Limit is not exceeded'
+const cSM = 'Ski Guide Assessment Completed on Skis'
+
+const descriptions = {IFMGA, MG, AG, dAG, AAG, dAAG, SG, dSG, ASG, dASG, RG, dRG, ARG, dARG, HG, HGW, dHG, AHG, AHGW, dWT, dAHG, DHG, dDHG, CGI1, dCGI1, CGI2, dCGI2, CGI3, dCGI3, TRCI, dTRCI, VFG, dVFG, cFA, cPP, cCPD, cAH, cSM}
+
+
 export const rules = {
     IFMGA: {
         supervises: [ARG, ASG, AAG, AHG, TRCI],
@@ -42,27 +103,27 @@ export const rules = {
     ARG: {
         supervises: [],
         supersedes: [],
-        eligible: [{to: cAH, with: dARG, when: [cFA]}, {to: ARG, when: [cFA, cPP, cCPD, ATL]}]
+        eligible: [{to: cAH, with: dARG, when: [cFA]}, {to: ARG, when: [cFA, cPP, cCPD, cATL]}]
     },
     AAG: {
         supervises: [],
         supersedes: [],
-        eligible: [{to: cAH, with: dAAG, when: [cFA]}, {to: AAG, when: [cFA, cPP, cCPD, ATL]}]
+        eligible: [{to: cAH, with: dAAG, when: [cFA]}, {to: AAG, when: [cFA, cPP, cCPD, cATL]}]
     },
     ASG: {
         supervises: [],
         supersedes: [],
-        eligible: [{to: cAH, with: dASG, when: [cFA]}, {to: ASG, when: [cFA, cPP, cCPD, ATL]}]
+        eligible: [{to: cAH, with: dASG, when: [cFA]}, {to: ASG, when: [cFA, cPP, cCPD, cATL]}]
     },
     AHG: {
         supervises: [],
         supersedes: [],
-        eligible: [{to: cAH, with: dAHG, when: [cFA]}, {to: AHG, when: [cFA, cPP, cCPD, ATL]}]
+        eligible: [{to: cAH, with: dAHG, when: [cFA]}, {to: AHG, when: [cFA, cPP, cCPD, cATL]}]
     },
     AHGW: { // Apprentice Hiking Guide with Winter Travel
         supervises: [],
         supersedes: [],
-        eligible: [{to: AHG, with: dWT, when: [cFA, cPP, cCPD, ATL]}, {to: AHGW, when: [cFA, cPP, cCPD, ATL]}]
+        eligible: [{to: AHG, with: dWT, when: [cFA, cPP, cCPD, cATL]}, {to: AHGW, when: [cFA, cPP, cCPD, cATL]}]
     },
     CGI1: {
         supervises: [],
