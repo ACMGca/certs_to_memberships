@@ -56,10 +56,10 @@ const cAH = 'Current Account Holder'
 const cATL = 'Apprentice Time Limit is not exceeded'
 const cSM = 'Ski Guide Assessment Completed on Skis'
 
-const descriptions = {IFMGA, MG, AG, dAG, AAG, dAAG, SG, dSG, ASG, dASG, RG, dRG, ARG, dARG, HG, HGW, dHG, AHG, AHGW, dWT, dAHG, DHG, dDHG, CGI1, dCGI1, CGI2, dCGI2, CGI3, dCGI3, TRCI, dTRCI, VFG, dVFG, cFA, cPP, cCPD, cAH, cSM}
+export const labels = {IFMGA, MG, AG, dAG, AAG, dAAG, SG, dSG, ASG, dASG, RG, dRG, ARG, dARG, HG, HGW, dHG, AHG, AHGW, dWT, dAHG, DHG, dDHG, CGI1, dCGI1, CGI2, dCGI2, CGI3, dCGI3, TRCI, dTRCI, VFG, dVFG, cFA, cPP, cCPD, cAH, cSM}
 
 
-export const rules = {
+const rulesObject = {
     IFMGA: {
         supervises: [ARG, ASG, AAG, AHG, TRCI],
         supersedes: [],
@@ -151,3 +151,21 @@ export const rules = {
         eligible: [{to: cAH, with: dVFG, when: [cFA]}, {to: VFG, when: [cFA, cPP, cCPD]}]
     }
 }
+
+export const rules = (function (){
+
+    const augmented = Object.keys(rulesObject).reduce((acc, cur) => {
+
+        // improve it by scanning the rulesObject object for every other membership that includes the current one in it's 'supersedes' property.
+        acc[cur] = rulesObject[cur]
+        acc[cur].superseded_by = Object.keys(rulesObject).map((scanKey) => {
+    
+            if(rulesObject[scanKey].supersedes.includes(labels[cur])){
+                return scanKey
+            }
+        }).filter(v => v) // remove undefined elements
+    
+        return acc
+    }, {})
+    return augmented
+})()

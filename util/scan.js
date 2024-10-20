@@ -61,6 +61,46 @@ const certValidation = (certs) => {
     return result
 }
 
+const certSupersedenceCheck = (certs) => {
+
+    // Given the certificate info for the member, for each certificate with a non-null status, there
+    // should not be another certificate that supersedes it on the profile. If there is, flag it with 
+    // a description of the problem. Otherwise, return nothing. 
+    let result = null
+
+    const correctedCertKeys = Object.keys(certs).map((k) => {
+
+        if(k === 'HGWT') return
+        if(k.endsWith('Perm')) return k.substring(0,3)
+        return k
+    }).filter(v => v)
+
+    result = correctedCertKeys.map((certKey) => {
+
+        const certRule = rules[certKey] // reference to the rule set for this membership type
+
+        if(certs[certKey] && certs[certKey].status && certRule){ // if there is a status value set (ACTIVE|INACTIVE|RESIGNED)
+
+            /*
+                If, in the rule for the current certificate, we have a
+                'superseded_by' value for a certificate which is
+                a) also present on the profile
+                b) and which has a non-null status
+                then that is a problem. Otherwise, an empty list indicates no problems
+            */
+
+            const intersection = certRule.superseded_by.filter(x => correctedCertKeys.includes(x) && certs[x].status);
+            return intersection.length > 0 ? `${intersection[0]} > ${certKey}` : undefined
+        }
+    })
+
+    return result
+}
+
+// Load the old dues table data for possible reference
+const duesDataFile = Bun.file('./dues_data/dues_map.json')
+const duesMap = await duesDataFile.json()
+
 const profileFiles = await readdir('./profile_data');
 const sortedProfileFileNames = profileFiles.sort(sortProfileFileNames)
 
@@ -73,12 +113,15 @@ let resignedProblemCount = 0
 let validationProblemCount = 0
 let memberProblemCount = 0
 let resignedAndDateless = 0
+let duesDatesAvailable = 0
+let supersedeErrorCount = 0
 for (const file of sortedProfileFileNames) {
 
     profileCount++
     const profileFile = Bun.file(`./profile_data/${file}`);
     const profile = await profileFile.json();
     const profileStatus = profile.ProfileStatus
+    const username = profile.LegacyUsername
     if(profileStatus.endsWith('CTIVE')) {memberCount++; professionalCount++}
     if(profileStatus === 'RESIGNED') {resignedCount++; professionalCount++}
     const certs = getCertificationHistory(profile)
@@ -87,11 +130,34 @@ for (const file of sortedProfileFileNames) {
     // If there are no certificate dates on the profile, we want to know if there are other dates we can use:
     if(validation && !validation.valid && validation.noCertificateDates && !profile.DateJoined) validation.noJoinDate = true
     if(profileStatus === 'RESIGNED' && validation.noCertificateDates && validation.noJoinDate) resignedAndDateless++
+
+    // Do we have a dates for this person in the old dues table data? 
+    if(validation && validation.noCertificateDates && validation.noJoinDate && duesMap[username]) {
+
+        duesDatesAvailable++
+        // console.log('\u0007')
+        // console.log(file, username, profileStatus ,duesMap[username].duesYears)
+    }
+
     if(validation && !validation.valid) validationProblemCount++
     if(validation && !validation.valid && profileStatus.endsWith('CTIVE')) memberProblemCount++
     if(validation && !validation.valid && profileStatus === 'RESIGNED') resignedProblemCount++
-    // console.log('\u0007');
-    console.log(profileStatus, `${(certs && Object.keys(certs).length > 0) ? 'GUIDE': '_NOT_'}`, file, JSON.stringify(validation))
+
+    // If the certificate profile seems basically valid, run the supersedence checks on the profile.
+    // This is about ensuring that a member does not have multiple certificates in either ACTIVE or INACTIVE
+    // states at the same time when they should be excluded due to supersedence rules.
+    if(validation?.valid && profileStatus.endsWith('CTIVE')){
+
+        const supersedenceResult = certSupersedenceCheck(certs).filter(v => v)
+        
+        if(supersedenceResult.length > 0){
+
+            supersedeErrorCount++
+            console.log(`${supersedeErrorCount})`, 'Supersedence check: ', file, profileStatus, `${supersedenceResult[0]} should have null status`, supersedenceResult)
+        }
+    }
+
+    // console.log(profileStatus, `${(certs && Object.keys(certs).length > 0) ? 'GUIDE': '_NOT_'}`, file, JSON.stringify(validation))
 }
 
 console.log(`\n\n---\nProfile Total Count: ${profileCount}`)
@@ -109,3 +175,5 @@ console.log(`Validation Problem Rate: ${Math.round(memberProblemCount/memberCoun
 console.log(`\n\n---\nResigned Total Count: ${resignedCount}`)
 console.log(`Resigned Problem Count: ${resignedProblemCount}`)
 console.log(`Validation Problem Rate: ${Math.round(resignedProblemCount/resignedCount*100, 0)}%`)
+
+console.log(`Dues table has possible dates for: ${duesDatesAvailable}`)
