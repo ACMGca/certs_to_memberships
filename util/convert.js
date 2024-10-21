@@ -12,6 +12,8 @@ const certSort = (a, b) => {
 /*
 GOAL: Given a Cognito Certificates object, convert it to a Wicket Memberships object.
 */
+// TODO: This can be better if we also pass the ProfileStatus and the yyyy-MM-dd of the 
+//       known membership year end date for this member (based on LastAnnualValidation)
 export const convertCognitoToWicket = (cognito) => {
 
     const wicket = { professional: [] }
