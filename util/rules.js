@@ -154,6 +154,10 @@ const rulesObject = {
     }
 }
 
+/**
+ * Export the rulesObject as 'rules' but not before adding `superseded_by` and
+ * `membership_tier_slug` properties to each of the membership rule objects.
+ */
 export const rules = (function (){
 
     const augmented = Object.keys(rulesObject).reduce((acc, cur) => {
