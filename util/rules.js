@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 Lowercase 'd' indicates a 'Designation'
 Lowercase 'c' indicated a 'Constraint'
@@ -164,8 +166,12 @@ export const rules = (function (){
                 return scanKey
             }
         }).filter(v => v) // remove undefined elements
-    
+
+        // add a membership slug based on the English label value
+        acc[cur].membership_tier_slug = labels[cur].toLowerCase().replace(/ member/, '').replace(/\s/g, '_').trim()
+
         return acc
     }, {})
+
     return augmented
 })()

@@ -1,3 +1,5 @@
+'use strict';
+
 import { readdir } from "node:fs/promises";
 import { rules } from "./rules.js";
 
@@ -153,7 +155,7 @@ for (const file of sortedProfileFileNames) {
         if(supersedenceResult.length > 0){
 
             supersedeErrorCount++
-            console.log(`${supersedeErrorCount})`, 'Supersedence check: ', file, profileStatus, `${supersedenceResult[0]} should have null status`, supersedenceResult)
+            console.log(`${supersedeErrorCount})`, `Supersedence check [${profile.ACMGID}]: `, file, profileStatus, `${supersedenceResult[0]} should have null status`)
         }
     }
 
@@ -177,3 +179,5 @@ console.log(`Resigned Problem Count: ${resignedProblemCount}`)
 console.log(`Validation Problem Rate: ${Math.round(resignedProblemCount/resignedCount*100, 0)}%`)
 
 console.log(`Dues table has possible dates for: ${duesDatesAvailable}`)
+
+// console.log(JSON.stringify(rules, null, 2))
