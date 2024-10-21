@@ -38,6 +38,26 @@ Method: Each My Profile data record was downloaded via the Cognito Forms API. Th
 - Validation Problem Rate: 34% ( 1/3 of RESIGNED Profiles are broken due to missing dates )
 
 
+### SUPERSEDENCE CHECK
+
+The data was scanned for the presence of 'supersedence' issues (where an existing certificate should have been
+eclipsed by a superior certificate but was not.)
+
+This data issues are simple manual fixed to apply in the My Profile form.
+
+1) Supersedence check:  5.json    ACTIVE   RG > TRCI should have null status
+2) Supersedence check:  161.json  ACTIVE   SG > ASG should have null status
+3) Supersedence check:  367.json  INACTIVE SG > ASG should have null status
+4) Supersedence check:  488.json  ACTIVE   MG > AAG should have null status
+5) Supersedence check:  785.json  ACTIVE   RG > TRCI should have null status
+6) Supersedence check:  836.json  INACTIVE SG > ASG should have null status
+7) Supersedence check:  960.json  ACTIVE   SG > ASG should have null status
+8) Supersedence check:  1669.json ACTIVE   CGI2 > CGI1 should have null status
+9) Supersedence check:  3004.json ACTIVE   CGI2 > CGI1 should have null status
+10) Supersedence check: 3041.json ACTIVE   SG > ASG should have null status
+11) Supersedence check: 3117.json ACTIVE   CGI2 > CGI1 should have null status
+
+
 ## PROPOSAL
 
 Consider the current 1706 members the critical path priority. Attempt to remediate the deficient profiles before the Wicket data migration to support accurate membership creation.
