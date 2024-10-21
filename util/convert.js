@@ -84,14 +84,23 @@ export const convertCognitoToWicket = (cognito) => {
         return { ...cognito[certKey], certKey }
     }).sort(certSort)
 
-    // Now we have the cert objects in the right order (asc by date)
-    // WOULD ITERATE HERE ... 
-
+    // Now we have the cert objects in the right order (asc by date).
+    // For each of the certs on the cognito object, convert it to a date bracketed membership:
     wicket.professional = certsArray.map((cert) => {
 
         return convertCert(cert)
     })
 
-    console.log(wicket)
+    // TODO: Based on the Cognito `ProfileStatus` we can infer what the 'tail' of the membership
+    // object should look like:
+    // - Active: One of the Professional Certified memberships should be 'Active' and hit the *future* membership end date
+    // - Inactive: A "Professional Inactive" membership should be 'Active' and hit the *future* membership end date AND 
+    //             all other Professional Certified memberships should have end dates in the past
+    // - Resigned: Every membership should have end dates in the past
+
+    // TODO: Detectable 'mid career' Inactive periods can be filled with "Professional Inactive" membership
+    // TODO: Detectable 'mid career' Resigned periods can be void of any membership
+
+    // console.log(wicket)
     return wicket
 }
