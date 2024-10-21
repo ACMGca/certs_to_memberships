@@ -1,6 +1,6 @@
 # PROFILE DATA analysis
 
-##  [ Fri, October 15, 2024 ]
+##  [ Fri, October 18, 2024 ]
 
 Note: This is the result of an initial data analysis which focused on an assessment of the presence of enough certificate and profile 'date' data to be able to support the Wicket membership date bracket data creation needed for Wicket Membership import. 
 
