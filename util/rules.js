@@ -109,7 +109,7 @@ const rulesObject = {
     },
     AAG: {
         supervises: [],
-        supersedes: [],
+        supersedes: [ARG],
         eligible: [{to: cAH, with: dAAG, when: [cFA]}, {to: AAG, when: [cFA, cPP, cCPD, cATL]}]
     },
     ASG: {
@@ -164,6 +164,11 @@ export const rules = (function (){
 
         // improve it by scanning the rulesObject object for every other membership that includes the current one in it's 'supersedes' property.
         acc[cur] = rulesObject[cur]
+        
+        // TODO: This array needs to be sorted based on a 'supersedence_rank' with MG being the highest.
+        //       It is important to hit the lesser certifications ascending through the list in order
+        //       to be able to identify the correct 'next' certificate in the supersedense check.
+        //       If we jump straight to MG and miss RG, it is likely that the chronology breaks.
         acc[cur].superseded_by = Object.keys(rulesObject).map((scanKey) => {
     
             if(rulesObject[scanKey].supersedes.includes(labels[cur])){
