@@ -49,6 +49,7 @@ const TRCI = 'Top Rope Climbing Instructor Member'
 const dTRCI = 'TAP Top Rope Climbing Instructor Designation'
 const VFG = 'Via Ferrata Guide Member'
 const dVFG = 'TAP Via Ferrata Guide Designation'
+const dHGB = 'TAP Hiking Guide Bridge Designation'
 
 // Additional qualifications
 const cFA = 'First Aid is Current'
@@ -58,7 +59,7 @@ const cAH = 'Current Account Holder'
 const cATL = 'Apprentice Time Limit is not exceeded'
 const cSM = 'Ski Guide Assessment Completed on Skis'
 
-export const labels = {IFMGA, MG, AG, dAG, AAG, dAAG, SG, dSG, ASG, dASG, RG, dRG, ARG, dARG, HG, HGW, dHG, AHG, AHGW, dWT, dAHG, DHG, dDHG, CGI1, dCGI1, CGI2, dCGI2, CGI3, dCGI3, TRCI, dTRCI, VFG, dVFG, cFA, cPP, cCPD, cAH, cSM}
+export const labels = {IFMGA, MG, AG, dAG, AAG, dAAG, SG, dSG, ASG, dASG, RG, dRG, ARG, dARG, HG, HGW, dHG, AHG, AHGW, dWT, dAHG, DHG, dDHG, CGI1, dCGI1, CGI2, dCGI2, CGI3, dCGI3, TRCI, dTRCI, VFG, dVFG, dHGB, cFA, cPP, cCPD, cAH, cSM}
 
 
 const rulesObject = {
@@ -100,7 +101,11 @@ const rulesObject = {
     HGW: { // Hiking Guide with Winter Travel
         supervises: [AHGW, AAG],
         supersedes: [AHG, AHGW],
-        eligible: [{to: HG, with: dWT, when: [cFA, cPP, cCPD]}, {to: HGW, when: [cFA, cPP, cCPD]}]
+        eligible: [
+            {to: HG, with: dWT, when: [cFA, cPP, cCPD]},
+            {to: HGW, when: [cFA, cPP, cCPD]},
+            {to: SG, when: [cFA, cPP, cCPD, dHGB]}
+        ]
     },
     ARG: {
         supervises: [],
@@ -125,7 +130,12 @@ const rulesObject = {
     AHGW: { // Apprentice Hiking Guide with Winter Travel
         supervises: [],
         supersedes: [],
-        eligible: [{to: AHG, with: dWT, when: [cFA, cPP, cCPD, cATL]}, {to: AHGW, when: [cFA, cPP, cCPD, cATL]}]
+        eligible: [
+            {to: AHG, with: dWT, when: [cFA, cPP, cCPD, cATL]},
+            {to: AHGW, when: [cFA, cPP, cCPD, cATL]},
+            {to: cAH, with: dAHG, when: [cFA, dHGB]},
+            {to: ASG, when: [cFA, cPP, cCPD, cATL, dHGB]}
+        ]
     },
     CGI1: {
         supervises: [],
