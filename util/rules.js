@@ -133,7 +133,6 @@ const rulesObject = {
         eligible: [
             {to: AHG, with: dWT, when: [cFA, cPP, cCPD, cATL]},
             {to: AHGW, when: [cFA, cPP, cCPD, cATL]},
-            {to: cAH, with: dAHG, when: [cFA, dHGB]},
             {to: ASG, when: [cFA, cPP, cCPD, cATL, dHGB]}
         ]
     },

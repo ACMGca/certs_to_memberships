@@ -1,6 +1,9 @@
 profile_data
 dues_data
 .DS_Store
+*.duckdb
+duckDb.json
+
 # Logs
 logs
 *.log

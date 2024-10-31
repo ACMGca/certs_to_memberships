@@ -3,36 +3,7 @@
 import { readdir } from "node:fs/promises";
 import { rules } from "./rules.js";
 
-const CERTKEYLIST = ['MG','AG','SG','RG','AAG','ASG','ARG','AHG','DHG','HG','HGWT','CGI1','CGI2','CGI3','TRCI','VFG','AHGPerm','AAGPerm','ASGPerm','ARGPerm']
-
-const sortProfileFileNames = (a,b) => {
-
-    if(Number(a.split('.')[0]) < Number(b.split('.')[0])){
-        return -1
-    }else if(Number(a.split('.')[0]) > Number(b.split('.')[0])){
-        return 1
-    }else{
-        return 0
-    }
-}
-
-// Determine if the profile contains evidence of prior certification
-const getCertificationHistory = (profile) => {
-
-    const certs = CERTKEYLIST.reduce((acc, cur) => {
-
-        if((profile[cur] || profile[`${cur}Date`] || profile[`${cur}LastModified`])){
-            acc[cur] = {}
-            acc[cur].status = profile[cur]
-            acc[cur].date = profile[`${cur}Date`]
-            acc[cur].lastModified = profile[`${cur}LastModified`]
-        }
-
-        return acc
-    }, {})
-
-    return Object.keys(certs).length > 0 ? certs : null
-}
+import { getCertificationHistory, sortProfileFileNames, CERTKEYLIST } from './helpers.js';
 
 // Given indication of certification, assess the available data for completeness and correctness
 const certValidation = (certs) => {
@@ -122,6 +93,7 @@ for (const file of sortedProfileFileNames) {
     profileCount++
     const profileFile = Bun.file(`./profile_data/${file}`);
     const profile = await profileFile.json();
+    const fullName = profile.LegalName.FirstAndLast
     const profileStatus = profile.ProfileStatus
     const username = profile.LegacyUsername
     if(profileStatus.endsWith('CTIVE')) {memberCount++; professionalCount++}
@@ -155,7 +127,7 @@ for (const file of sortedProfileFileNames) {
         if(supersedenceResult.length > 0){
 
             supersedeErrorCount++
-            console.log(`${supersedeErrorCount})`, `Supersedence check [${profile.ACMGID}]: `, file, profileStatus, `${supersedenceResult[0]} should have null status`)
+            console.log(`${supersedeErrorCount})`, `Supersedence check [${profile.ACMGID}, ${fullName}]: `, file, profileStatus, `${supersedenceResult[0]} should have null status`)
         }
     }
 
