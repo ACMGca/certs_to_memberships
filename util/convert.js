@@ -1,5 +1,5 @@
 'use strict';
-import { format, compareDesc } from "date-fns";
+import { format, compareDesc, intervalToDuration, formatISODuration } from "date-fns";
 import { rules } from "./rules.js";
 
 const certSort = (a, b) => {
@@ -48,7 +48,6 @@ export const convertCognitoToWicket = (cognito) => {
         // And, based on that, we can use the start date of the second one to identify the end date of the first bracket.
         if (intersection.length > 0) {
 
-            // TODO - need to write a test that checks for supersedence order rules
             const supersedingCertKey = intersection[0]
             const supersedingCertDate = new Date(cognito[supersedingCertKey].date)
             // Subtract one day so it ends the day before the next one starts
@@ -92,6 +91,21 @@ export const convertCognitoToWicket = (cognito) => {
     wicket.professional = certsArray.map((cert) => {
 
         return convertCert(cert)
+    })
+
+    // Due to supersedence rules, it is possible for the converter to introduce a zero-day membership. 
+    // For example, an Alpine Guide passing a Ski Guide Exam technically becomes a Ski Guide for zero days
+    // because the Ski Guide Membership is immediately superseded by Mountain Guide.
+    // For this reason, zero-day memberships are not really useful data and we will remove them 
+    // from the conversion result: 
+    wicket.professional = wicket.professional.filter((membership) => {
+
+        // return only memberships with a non-zero duration
+        const duration = formatISODuration(intervalToDuration({
+            start: new Date(membership[2]),
+            end: new Date(membership[3])
+        }))
+        return duration !== 'P0Y0M0DT0H0M0S' // An ISO duration of zero
     })
 
     // TODO: Based on the Cognito `ProfileStatus` we can infer what the 'tail' of the membership

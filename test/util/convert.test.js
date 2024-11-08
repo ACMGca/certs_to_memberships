@@ -107,12 +107,6 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
         "2009-04-01"
       ],
       [
-        "ski_guide",
-        "Inactive",
-        "2009-04-01", // this is legitimate as a 0 day
-        "2009-04-01"  // membership as a transit to MG
-      ],
-      [
         "mountain_guide",
         "Active",
         "2009-04-01",
