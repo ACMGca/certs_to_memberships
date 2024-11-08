@@ -2,7 +2,11 @@
     "dependencies": {
         "@date-fns/tz": "^1.1.2",
         "date-fns": "^4.1.0",
+        "hono": "^4.6.9",
         "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
         "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "wrangler": "^3.86.0"
     }
 }

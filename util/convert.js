@@ -1,5 +1,5 @@
 'use strict';
-import { format, compareDesc, intervalToDuration, formatISODuration } from "date-fns";
+import { sub, format, compareDesc, intervalToDuration, formatISODuration } from "date-fns";
 import { rules } from "./rules.js";
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
 
@@ -59,10 +59,12 @@ export const convertCognitoToWicket = (cognito) => {
 
             const supersedingCertKey = intersection[0]
             const supersedingCertDate = new Date(cognito[supersedingCertKey].date)
-            result[3] = format(supersedingCertDate, 'yyyy-MM-dd')
+            // Subtract one day so it ends the day before the next one starts
+            const certDateLessOneDay = sub(supersedingCertDate, { days: 1 })
+            result[3] = format(certDateLessOneDay, 'yyyy-MM-dd')
 
             // We know that this first certificate was superseded so it must be a past and Inactive membership.
-            const endDateInPast = compareDesc(supersedingCertDate, new Date())
+            const endDateInPast = compareDesc(certDateLessOneDay, new Date())
             if (endDateInPast === 1) {
                 result[1] = 'Inactive'
             }
