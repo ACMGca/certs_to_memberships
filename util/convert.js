@@ -1,5 +1,5 @@
 'use strict';
-import { sub, format, compareDesc } from "date-fns";
+import { format, compareDesc } from "date-fns";
 import { rules } from "./rules.js";
 
 const certSort = (a, b) => {
@@ -42,20 +42,21 @@ export const convertCognitoToWicket = (cognito) => {
         // Now we need to determine if there is a certificate present which supersedes the first certificate.
         // If there is, we can use the start date of the second one to help to define the end date of the first bracket.
         // To do this, see if the `superseded_by` rule of the current cert intersects with other certs on the profile:
-        const intersection = certRule.superseded_by.filter(x => certKeys.includes(x) && cognito[x].status && cognito[x].status !== 'RESIGNED');
+        const intersection = certRule.superseded_by.filter(x => certKeys.includes(x) && cognito[x].status !== 'RESIGNED');
 
         // If the `intersection` has a value, it means that other certificate 'superseded' the first one. 
         // And, based on that, we can use the start date of the second one to identify the end date of the first bracket.
         if (intersection.length > 0) {
 
+            // TODO - need to write a test that checks for supersedence order rules
             const supersedingCertKey = intersection[0]
             const supersedingCertDate = new Date(cognito[supersedingCertKey].date)
             // Subtract one day so it ends the day before the next one starts
-            const certDateLessOneDay = sub(supersedingCertDate, { days: 1 })
-            result[3] = format(certDateLessOneDay, 'yyyy-MM-dd')
+            // const certDateLessOneDay = sub(supersedingCertDate, { days: 1 })
+            result[3] = format(supersedingCertDate, 'yyyy-MM-dd')
 
             // We know that this first certificate was superseded so it must be a past and Inactive membership.
-            const endDateInPast = compareDesc(certDateLessOneDay, new Date())
+            const endDateInPast = compareDesc(supersedingCertDate, new Date())
             if (endDateInPast === 1) {
                 result[1] = 'Inactive'
             }
@@ -105,4 +106,14 @@ export const convertCognitoToWicket = (cognito) => {
 
     // console.log(wicket)
     return wicket
+}
+
+/** 
+ * Given a Cognito Forms representation of a member certificate history,
+ * create a simple object that represents the TAP Designation history
+ * for that member.
+ */
+export const convertCognitoToTapDesignations = (cognito) => {
+
+    // TODO - implement
 }

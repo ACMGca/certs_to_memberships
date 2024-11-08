@@ -63,15 +63,34 @@ export const labels = {IFMGA, MG, AG, dAG, AAG, dAAG, SG, dSG, ASG, dASG, RG, dR
 
 
 const rulesObject = {
-    IFMGA: {
-        supervises: [ARG, ASG, AAG, AHG, TRCI],
+    ARG: {
+        supervises: [],
         supersedes: [],
-        eligible: [{to: MG, when: [cSM]}]
+        eligible: [{to: cAH, with: dARG, when: [cFA]}, {to: ARG, when: [cFA, cPP, cCPD, cATL]}]
     },
-    MG: {
-        supervises: [ARG, ASG, AAG, AHG, TRCI],
-        supersedes: [RG, AG, SG, HG, AAG, ARG, ASG, AHG, TRCI],
-        eligible: [{to: AG, with:dSG, when: [cFA, cPP, cCPD]},{to: SG, with:dAG, when: [cFA, cPP, cCPD]}, {to: MG, when: [cFA, cPP, cCPD]}]
+    AAG: {
+        supervises: [],
+        supersedes: [ARG],
+        eligible: [{to: cAH, with: dAAG, when: [cFA]}, {to: AAG, when: [cFA, cPP, cCPD, cATL]}]
+    },
+    ASG: {
+        supervises: [],
+        supersedes: [],
+        eligible: [{to: cAH, with: dASG, when: [cFA]}, {to: ASG, when: [cFA, cPP, cCPD, cATL]}]
+    },
+    AHG: {
+        supervises: [],
+        supersedes: [],
+        eligible: [{to: cAH, with: dAHG, when: [cFA]}, {to: AHG, when: [cFA, cPP, cCPD, cATL]}]
+    },
+    AHGW: { // Apprentice Hiking Guide with Winter Travel
+        supervises: [],
+        supersedes: [],
+        eligible: [
+            {to: AHG, with: dWT, when: [cFA, cPP, cCPD, cATL]},
+            {to: AHGW, when: [cFA, cPP, cCPD, cATL]},
+            {to: ASG, when: [cFA, cPP, cCPD, cATL, dHGB]}
+        ]
     },
     RG: {
         supervises: [ARG, AAG, TRCI],
@@ -107,35 +126,6 @@ const rulesObject = {
             {to: SG, when: [cFA, cPP, cCPD, dHGB]}
         ]
     },
-    ARG: {
-        supervises: [],
-        supersedes: [],
-        eligible: [{to: cAH, with: dARG, when: [cFA]}, {to: ARG, when: [cFA, cPP, cCPD, cATL]}]
-    },
-    AAG: {
-        supervises: [],
-        supersedes: [ARG],
-        eligible: [{to: cAH, with: dAAG, when: [cFA]}, {to: AAG, when: [cFA, cPP, cCPD, cATL]}]
-    },
-    ASG: {
-        supervises: [],
-        supersedes: [],
-        eligible: [{to: cAH, with: dASG, when: [cFA]}, {to: ASG, when: [cFA, cPP, cCPD, cATL]}]
-    },
-    AHG: {
-        supervises: [],
-        supersedes: [],
-        eligible: [{to: cAH, with: dAHG, when: [cFA]}, {to: AHG, when: [cFA, cPP, cCPD, cATL]}]
-    },
-    AHGW: { // Apprentice Hiking Guide with Winter Travel
-        supervises: [],
-        supersedes: [],
-        eligible: [
-            {to: AHG, with: dWT, when: [cFA, cPP, cCPD, cATL]},
-            {to: AHGW, when: [cFA, cPP, cCPD, cATL]},
-            {to: ASG, when: [cFA, cPP, cCPD, cATL, dHGB]}
-        ]
-    },
     CGI1: {
         supervises: [],
         supersedes: [],
@@ -160,6 +150,16 @@ const rulesObject = {
         supervises: [],
         supersedes: [],
         eligible: [{to: cAH, with: dVFG, when: [cFA]}, {to: VFG, when: [cFA, cPP, cCPD]}]
+    },
+    MG: {
+        supervises: [ARG, ASG, AAG, AHG, TRCI],
+        supersedes: [RG, AG, SG, HG, AAG, ARG, ASG, AHG, TRCI],
+        eligible: [{to: AG, with:dSG, when: [cFA, cPP, cCPD]},{to: SG, with:dAG, when: [cFA, cPP, cCPD]}, {to: MG, when: [cFA, cPP, cCPD]}]
+    },
+    IFMGA: {
+        supervises: [ARG, ASG, AAG, AHG, TRCI],
+        supersedes: [],
+        eligible: [{to: MG, when: [cSM]}]
     }
 }
 
