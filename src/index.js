@@ -10,4 +10,6 @@ app.use('*', cors())
 
 app.get('/', (c) => c.redirect('https://acmg.ca'))
 
+app.get('/hello', (c) => c.text('hello world'))
+
 export default app
