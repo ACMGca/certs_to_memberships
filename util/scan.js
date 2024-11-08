@@ -21,15 +21,10 @@ const certValidation = (certs) => {
             result.missingDates.push(certKey)
         }
     })
+
     // 2. If the number of missing dates is the same as the number of certs, it means we have NO DATES AT ALL to work with: 
     if(result.missingDates && result.missingDates.length === Object.keys(certs).length) result.noCertificateDates = true
     
-    // 3. [ TODO ] It's possible that some profiles have certificates which are active but should not be because of
-    //    supersedence rules. 
-
-    // 4. [ TODO ] The profile should be deterministically convertible to Wicket Membership format
-    //    This need the most work to create the function and test cases to prove that we can do this for the existing data.
-
     if(Object.keys(result).length === 1) result.valid = true
     return result
 }
