@@ -1,6 +1,9 @@
 'use strict';
 import { format, compareDesc, intervalToDuration, formatISODuration } from "date-fns";
 import { rules } from "./rules.js";
+import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
+
+const cognitoCertificateSchema = getCognitoCertificateSchema()
 
 const certSort = (a, b) => {
 
@@ -15,6 +18,12 @@ GOAL: Given a Cognito Certificates object, convert it to a Wicket Memberships ob
 // TODO: This can be better if we also pass the ProfileStatus and the yyyy-MM-dd of the 
 //       known membership year end date for this member (based on LastAnnualValidation)
 export const convertCognitoToWicket = (cognito) => {
+
+    // Apply schema validation to the Cognito Certificate Object. 
+    // We will use the validation errors to inform the inference strategies to be used
+    // to identify other possibly usable dates.
+    const parsedCognitoObject = cognitoCertificateSchema.safeParse(cognito)
+    if(parsedCognitoObject.error) console.log(parsedCognitoObject.error)
 
     const wicket = { professional: [] }
 
@@ -50,8 +59,6 @@ export const convertCognitoToWicket = (cognito) => {
 
             const supersedingCertKey = intersection[0]
             const supersedingCertDate = new Date(cognito[supersedingCertKey].date)
-            // Subtract one day so it ends the day before the next one starts
-            // const certDateLessOneDay = sub(supersedingCertDate, { days: 1 })
             result[3] = format(supersedingCertDate, 'yyyy-MM-dd')
 
             // We know that this first certificate was superseded so it must be a past and Inactive membership.
@@ -93,7 +100,7 @@ export const convertCognitoToWicket = (cognito) => {
         return convertCert(cert)
     })
 
-    // Due to supersedence rules, it is possible for the converter to introduce a zero-day membership. 
+    // Due to supersedence rules, it is possible for the converter to introduce a 'zero-day membership'. 
     // For example, an Alpine Guide passing a Ski Guide Exam technically becomes a Ski Guide for zero days
     // because the Ski Guide Membership is immediately superseded by Mountain Guide.
     // For this reason, zero-day memberships are not really useful data and we will remove them 
@@ -107,6 +114,23 @@ export const convertCognitoToWicket = (cognito) => {
         }))
         return duration !== 'P0Y0M0DT0H0M0S' // An ISO duration of zero
     })
+
+    // Winter Travel
+    // The Winter Travel Certificate (WT) in the source data is an indicator that a member has an
+    // enhanced Scope of Practice at the AHG or HG scope to include winter hiking. In the past, this
+    // was expressed with the anomalous addition of the WT certificate. However, we wish to move to
+    // a standard 1:1 expression of Membership to Scope of Practice. Therefore, a AHG or HG with WT
+    // becomes AHGW or HGW to denote the winter scope of practice by the unique membership type.
+    // Additionally, there are two different paths to acquiring the winter SoP:
+    // An AHG or HG who receives the WT TAP designation becomes AHGW or HGW on the WT date.
+    // Alternatively an AHG or HG who becomes ASG, automatically becomes either AHGW or HGW due to
+    // the SoP acquired via the ASG training.
+    //
+    // To implement: Once we have the Wicket Membership date brackets, we can look for the two conditions
+    // that would indicate the need to end AHG or HG and start either AHGW or HGW. 
+    // 
+
+
 
     // TODO: Based on the Cognito `ProfileStatus` we can infer what the 'tail' of the membership
     // object should look like:
