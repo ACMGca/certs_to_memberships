@@ -66,7 +66,7 @@ test('A Certificate missing a date should cause an error', () => {
 test('An Inactive or Resigned Certificate missing a lastModified date should cause an error', () => {
 
     const sample = getPlainSample()
-    sample.CGI2.status = 'Inactive' // that removes the date and should cause the error
+    sample.CGI2.status = 'Inactive' 
     expect(sample.CGI2.lastModified).toEqual(null)
     const result = cognitoCertificateSchema.safeParse(sample)
     expect(result.error.errors).toHaveLength(1)
