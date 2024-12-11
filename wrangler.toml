@@ -3,6 +3,7 @@ name = "wicket-prep"
 main = "src/index.js"
 compatibility_date = "2024-11-06"
 compatibility_flags = ["nodejs_compat"]
+assets = { directory = "public" }
 
 # Workers Logs
 # Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
@@ -103,9 +104,9 @@ enabled = true
 
 # Bind another Worker service. Use this binding to call another Worker without network overhead.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
-# [[services]]
-# binding = "MY_SERVICE"
-# service = "my-service"
+[[services]]
+binding = "ACMG_API"
+service = "api-acmg-ca"
 
 # Bind a Vectorize index. Use to store and query vector embeddings for semantic search, classification and other vector search use-cases.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#vectorize-indexes

@@ -3,6 +3,7 @@ dues_data
 .DS_Store
 *.duckdb
 duckDb.json
+.wrangler/
 
 # Logs
 logs
