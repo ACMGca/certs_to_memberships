@@ -118,7 +118,7 @@ const rulesObject = {
         eligible: [{to: DHG, when: [cFA, cPP, cCPD]}] // only DHG can renew as DHG
     },
     HGW: { // Hiking Guide with Winter Travel
-        supervises: [AHGW, AAG],
+        supervises: [AHG, AHGW, AAG],
         supersedes: [AHG, AHGW],
         eligible: [
             {to: HG, with: dWT, when: [cFA, cPP, cCPD]},
