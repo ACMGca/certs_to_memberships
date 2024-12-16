@@ -26,7 +26,24 @@ export const getCertificationHistory = (profile) => {
         }
 
         return acc
+
+        
     }, {})
 
-    return Object.keys(certs).length > 0 ? certs : null
+    const { DateJoined, 
+            DateEnd, 
+            DateReinstate, 
+            IFMGALicenseNumber, 
+            LastAnnualValidation, 
+            Mode } = profile
+
+    const result = { DateJoined, 
+                     DateEnd, 
+                     DateReinstate, 
+                     LastAnnualValidation, 
+                     IFMGALicenseNumber, 
+                     SkiExamMode: Mode,
+                     ...certs }
+
+    return Object.keys(certs).length > 0 ? result : null
 }

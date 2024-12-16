@@ -9,6 +9,9 @@ const getPlainSample = () => {
         DateJoined: '2023-11-03',
         DateEnd: null,
         DateReinstate: null,
+        LastAnnualValidation: '2024-01-05',
+        IFMGALicenseNumber: '0',
+        SkiExamMode: 'Ski',
         CGI1: {
           status: null,
           date: '2023-10-01',
