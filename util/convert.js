@@ -1,5 +1,5 @@
 'use strict';
-import { sub, format, compareDesc, intervalToDuration, formatISODuration } from "date-fns";
+import { sub, format, compareDesc, intervalToDuration, formatISODuration, isWithinInterval, parseISO, subDays } from "date-fns";
 import { rules } from "./rules.js";
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
 
@@ -7,8 +7,15 @@ const cognitoCertificateSchema = getCognitoCertificateSchema()
 
 const certSort = (a, b) => {
 
-    if (new Date(a.date) < new Date(b.date)) return -1
-    if (new Date(a.date) > new Date(b.date)) return 1
+    if (parseISO(a.date) < parseISO(b.date)) return -1
+    if (parseISO(a.date) > parseISO(b.date)) return 1
+    return 0
+}
+
+const membershipSort = (a, b) => {
+
+    if (parseISO(a[2]) < parseISO(b[2])) return -1
+    if (parseISO(a[2]) > parseISO(b[2])) return 1
     return 0
 }
 
@@ -40,10 +47,10 @@ export const convertCognitoToWicket = (cognito) => {
 
         // If there is a JoinDate and it is later than the Cert Date then we should use it as the start of the bracket
         // because it indicates that the member joined the ACMG after the TAP designation was awarded.
-        let bracketStartDate = new Date(certObject.date)
-        if (cognito.DateJoined && (new Date(cognito.DateJoined) > bracketStartDate)) {
+        let bracketStartDate = parseISO(certObject.date)
+        if (cognito.DateJoined && (parseISO(cognito.DateJoined) > bracketStartDate)) {
 
-            bracketStartDate = new Date(cognito.DateJoined)
+            bracketStartDate = parseISO(cognito.DateJoined)
         }
         // That gives us enough information to set the start date of the first membership:
         result[2] = format(bracketStartDate, 'yyyy-MM-dd')
@@ -55,6 +62,7 @@ export const convertCognitoToWicket = (cognito) => {
 
         // If the `intersection` has a value, it means that other certificate 'superseded' the first one. 
         // And, based on that, we can use the start date of the second one to identify the end date of the first bracket.
+        
         if (intersection.length > 0) {
 
             const supersedingCertKey = intersection[0]
@@ -87,12 +95,12 @@ export const convertCognitoToWicket = (cognito) => {
     }
 
     // Determine the keys of the certs on the object
-    const certKeys = Object.keys(rules).filter(x => Object.keys(cognito).includes(x))
+    const certKeys = Object.keys(rules).filter(x => Object.keys(parsedCognitoObject.data).includes(x))
 
     // Now we know the cert keys we are working with. Build a array we can sort based on cert dates:
     const certsArray = certKeys.map((certKey) => {
 
-        return { ...cognito[certKey], certKey }
+        return { ...parsedCognitoObject.data[certKey], certKey }
     }).sort(certSort)
 
     // Now we have the cert objects in the right order (asc by date).
@@ -102,19 +110,19 @@ export const convertCognitoToWicket = (cognito) => {
         return convertCert(cert)
     })
 
-    // Due to supersedence rules, it is possible for the converter to introduce a 'zero-day membership'. 
-    // For example, an Alpine Guide passing a Ski Guide Exam technically becomes a Ski Guide for zero days
+    // Due to supersedence rules, it is possible for the converter to introduce a 'one-day membership'. 
+    // For example, an Alpine Guide passing a Ski Guide Exam technically becomes a Ski Guide for one day
     // because the Ski Guide Membership is immediately superseded by Mountain Guide.
-    // For this reason, zero-day memberships are not really useful data and we will remove them 
+    // For this reason, one-day memberships are not really useful data and we will remove them 
     // from the conversion result: 
     wicket.professional = wicket.professional.filter((membership) => {
 
-        // return only memberships with a non-zero duration
+        // remove memberships with a one-day duration
         const duration = formatISODuration(intervalToDuration({
             start: new Date(membership[2]),
             end: new Date(membership[3])
         }))
-        return duration !== 'P0Y0M0DT0H0M0S' // An ISO duration of zero
+        return duration !== 'P0Y0M0DT0H0M0S' && duration !== 'P0Y0M-1DT0H0M0S' // zero or one days in ISO duration format
     })
 
     // Winter Travel
@@ -130,8 +138,55 @@ export const convertCognitoToWicket = (cognito) => {
     //
     // To implement: Once we have the Wicket Membership date brackets, we can look for the two conditions
     // that would indicate the need to end AHG or HG and start either AHGW or HGW. 
-    // 
+    const winterDesignationDateBySkiCertificate = ( 
+        parsedCognitoObject.data.HGWT &&
+        !parsedCognitoObject.data.HGWT.date &&
+        parsedCognitoObject.data.HGWT.status === 'Acquired' &&
+        (parsedCognitoObject.data.ASG.date || parsedCognitoObject.data.SG.date)
+     )
 
+    if(winterDesignationDateBySkiCertificate){
+
+        // determine if the memberships include AHG or HG which may be affected
+        const ahgMembershipIndex = wicket.professional.findIndex((membership) => membership[0] === 'apprentice_hiking_guide')
+        const hgMembershipIndex = wicket.professional.findIndex((membership) => membership[0] === 'hiking_guide')
+
+        if(ahgMembershipIndex > -1 && isWithinInterval(parseISO(winterDesignationDateBySkiCertificate), { 
+            start:parseISO(wicket.professional[ahgMembershipIndex][2]), 
+            end: parseISO(wicket.professional[ahgMembershipIndex][3]) 
+        })){
+
+            console.log('it is AHG to be rebuilt')
+        }
+
+        if(hgMembershipIndex > -1 && isWithinInterval(parseISO(winterDesignationDateBySkiCertificate), { 
+            start:parseISO(wicket.professional[hgMembershipIndex][2]), 
+            end: parseISO(wicket.professional[hgMembershipIndex][3]) 
+        })){
+
+            console.log('it is HG to be rebuilt')
+            // The original HG Membership needs the following changes:
+            // 1) If it was ACTIVE, it should be set in INACTIVE
+            // 2) It should get a new END date set to `winterDesignationDateBySkiCertificate` minus one day
+            
+            // Clone the HG Membership as the basis for the HGW Membership
+            const hgMembershipClone = [...wicket.professional[hgMembershipIndex]]
+            wicket.professional[hgMembershipIndex][1] = 'Inactive'
+            wicket.professional[hgMembershipIndex][3] = format(subDays(parseISO(winterDesignationDateBySkiCertificate), 1), 'yyyy-MM-dd')
+
+            // A new HGW Membership needs to be created. It is a copy of the original HG Membership with:
+            // 1) Gets the slug updated to include 'winter'
+            // 2) Gets a START date set to `winterDesignationDateBySkiCertificate`
+            // 3) Keeps the same END date as the original HG
+            hgMembershipClone[0] = 'hiking_guide_winter'
+            hgMembershipClone[2] = format(parseISO(winterDesignationDateBySkiCertificate), 'yyyy-MM-dd')
+
+            // Push the new membership into the collection
+            wicket.professional.push(hgMembershipClone)
+            // And re-sort it
+            wicket.professional.sort(membershipSort)
+        }
+    }
 
 
     // TODO: Based on the Cognito `ProfileStatus` we can infer what the 'tail' of the membership
@@ -146,14 +201,4 @@ export const convertCognitoToWicket = (cognito) => {
 
     // console.log(wicket)
     return wicket
-}
-
-/** 
- * Given a Cognito Forms representation of a member certificate history,
- * create a simple object that represents the TAP Designation history
- * for that member.
- */
-export const convertCognitoToTapDesignations = (cognito) => {
-
-    // TODO - implement
 }
