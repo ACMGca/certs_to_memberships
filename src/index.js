@@ -27,7 +27,10 @@ app.get('/hello', (c) => c.text('hello world'))
 
 app.get('/admin/preview/:cognitoEntryId', async (c) => {
 
-    const cognitoEntryId = Number(c.req.param('cognitoEntryId').replace(',', ''))
+    if(c.req.param('cognitoEntryId').indexOf(',') > -1){
+        return c.redirect(`/admin/preview/${c.req.param('cognitoEntryId').replace(/,/g, '')}`)
+    }
+    const cognitoEntryId = Number(c.req.param('cognitoEntryId').replace(/,/g, ''))
 
     let cognitoProfile, initials, stagingToken, wicketPersonGuid, wicketPersonMemberships, wicketPersonStub
     if (cognitoEntryId) {
