@@ -1,5 +1,60 @@
 import { sign } from "hono/jwt"
 
+export const createWicketPerson = async (person, tokenString) => {
+
+    let response
+    try {
+        response = await fetch(`https://acmg-admin.staging.wicketcloud.com/api/people`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${tokenString}`,
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                data: {
+                    type: 'people',
+                    attributes: {
+                        given_name: person.given_name,
+                        family_name: person.family_name,
+                        identifying_number: Number(person.identifying_number),
+                        communications_double_opt_in: false,
+                        user: {
+                            password: 'ex@mplePassword',
+                            password_confirmation: 'ex@mplePassword',
+                            confirmed_at: `${new Date()}`,
+                            skip_confirmation_notification: true
+                        }
+                    },
+                    relationships: {
+                        emails: {
+                            data: [
+                                {
+                                    type: 'emails',
+                                    attributes: {
+                                        address: person.address
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            })
+        })
+        if (response.status !== 200) {
+
+            return `${response.status} error creating Wicket Person`
+        }
+        const wicketResponseJson = await response.json()
+
+        // this will either be the Wicket GUID of the found person, or undefined. 
+        return wicketResponseJson?.data?.id
+    } catch (error) {
+
+        console.error(error.message)
+    }
+}
+
 export const findWicketGuidByMemberNumber = async (memberNumber, tokenString) => {
 
     let response
@@ -75,7 +130,7 @@ export const getCognitoProfile = async (c, cognitoId) => {
 
 export const nameToInitials = (first, last) => {
 
-    return `${first.substring(0,1).toUpperCase()}.${last.substring(0,1).toUpperCase()}.`
+    return `${first.substring(0, 1).toUpperCase()}.${last.substring(0, 1).toUpperCase()}.`
 }
 
 export const getStagingToken = async (c) => {
@@ -88,7 +143,7 @@ export const getStagingToken = async (c) => {
         aud: "https://acmg-api.staging.wicketcloud.com",
         iss: 'https://acmg.ca'
     }
-    
+
     const token = await sign(tokenBody, c.env.WICKET_STAGING_SECRET)
     return token
 }

@@ -5,6 +5,7 @@ dues_data
 duckDb.json
 .wrangler/
 .dev.vars
+bun.lockb
 
 # Logs
 logs

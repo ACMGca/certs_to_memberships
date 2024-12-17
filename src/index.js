@@ -5,7 +5,7 @@ import { prettyJSON } from 'hono/pretty-json'
 import { basicAuth } from 'hono/basic-auth'
 import { HTTPException } from 'hono/http-exception'
 
-import { getCognitoProfile, nameToInitials, getStagingToken, findWicketGuidByMemberNumber, getWicketPersonMemberships } from './utils.js'
+import { getCognitoProfile, nameToInitials, getStagingToken, findWicketGuidByMemberNumber, getWicketPersonMemberships, createWicketPerson } from './utils.js'
 
 const app = new Hono()
 app.use('*', prettyJSON())
@@ -27,8 +27,8 @@ app.get('/hello', (c) => c.text('hello world'))
 
 app.get('/admin/preview/:cognitoEntryId', async (c) => {
 
-    const cognitoEntryId = c.req.param('cognitoEntryId')
-    
+    const cognitoEntryId = Number(c.req.param('cognitoEntryId').replace(',', ''))
+
     let cognitoProfile, initials, stagingToken, wicketPersonGuid, wicketPersonMemberships, wicketPersonStub
     if (cognitoEntryId) {
         cognitoProfile = await getCognitoProfile(c, cognitoEntryId)
@@ -80,7 +80,7 @@ app.get('/admin/preview/:cognitoEntryId', async (c) => {
                     hx-post="/admin/wicket/people" 
                     hx-trigger="click" 
                     hx-target="#wicketPersonGuid" 
-                    hx-swap="innerHTML">Provision Member to Wicket
+                    hx-swap="innerHTML">Create Wicket Profile for this Person
             </button>`) }
             </span></p>
 
@@ -93,9 +93,16 @@ app.get('/admin/preview/:cognitoEntryId', async (c) => {
 
 app.post('/admin/wicket/people', async (c) => {
 
-    const body = await c.req.parseBody()
-    console.log('hit POST people...')
-    console.log(body)
-    return c.text(body.myVal)
+    try {
+        const body = await c.req.parseBody()
+        const stagingToken = await getStagingToken(c)
+        const personGuid = await createWicketPerson(body, stagingToken)
+        return c.text(`<a href="https://acmg-admin.staging.wicketcloud.com/people/${personGuid}">${personGuid}</a>`)        
+    } catch (error) {
+        
+        console.log(error.message)
+    }
+
 })
+
 export default app
