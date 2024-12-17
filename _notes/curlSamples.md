@@ -50,8 +50,8 @@ platform, we don't want to delete them because they cannot be reassigned back to
             "identifying_number": 12345,
             "communications_double_opt_in": false,
             "user": {
-                "password": "ex@mplePassword",
-                "password_confirmation": "ex@mplePassword",
+                "password": "test1234!",
+                "password_confirmation": "test1234!",
                 "confirmed_at": "2024-11-01T00:00:00.000Z",
                 "skip_confirmation_notification": true
             }
