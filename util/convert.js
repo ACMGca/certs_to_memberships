@@ -188,6 +188,21 @@ export const convertCognitoToWicket = (cognito) => {
         }
     }
 
+    // IFMGA: For any active Mountain Guide with an IFMGA License Number > 0 and a SkiExamMode of 'Ski', 
+    // an IFMGA Membership is implied. The approach is to clone the MG membership and change the
+    // name of the Tier to IFMGA.
+    // Any Active MG without an IFMGALicenseNumber > 0 would not receive an IFMGA Membership Tier in Wicket. 
+    if(cognito.MG && cognito.MG.status === 'Active' && cognito.SkiExamMode === 'Ski' && Number(cognito.IFMGALicenseNumber) > 0){
+
+        // Find the MG membership on the Wicket object
+        const mgMembership = wicket.professional.find((m) => m[0] === 'mountain_guide' && m[1] === 'Active')
+        if(mgMembership){
+            const ifmgaMembership = [...mgMembership]
+            ifmgaMembership[0] = 'ifmga' // just change the label
+            wicket.professional.push(ifmgaMembership)
+        }
+    }
+
 
     // TODO: Based on the Cognito `ProfileStatus` we can infer what the 'tail' of the membership
     // object should look like:

@@ -55,17 +55,17 @@ test('Simple CGI1 to CGI2 Scenario', () => {
 // Continuously active member with complete data and smooth progression through the training.
 // Multiple cases of supersedence and progression from Alpine Guide to Mountain Guide with 
 // a one-day-duration Ski Guide (exam success).
-test.todo('Continuous Active Membership with Progression to Mountain Guide', () => {
+test('Continuous Active Membership with Progression to Mountain Guide', () => {
 
   const source = {
     DateJoined: '2001-09-01',
     DateEnd: null,
     DateReinstate: null,
     LastAnnualValidation: '2024-01-05',
-    IFMGALicenseNumber: '499', // TODO: Because this is not zero
-    SkiExamMode: 'Ski',        // and this is 'Ski', this member should get an IFMGA Membership too
-    "MG": {
-      "status": "Active",
+    IFMGALicenseNumber: '499', // Because of this,
+    SkiExamMode: 'Ski',        // and this, 
+    "MG": {                    //
+      "status": "Active",      // and MG.status === 'Active' an IFMGA Wicket Membership Tier is also created.
       "date": "2009-04-01",
       "lastModified": null
     },
