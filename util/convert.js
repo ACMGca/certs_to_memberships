@@ -66,7 +66,7 @@ export const convertCognitoToWicket = (cognito) => {
         if (intersection.length > 0) {
 
             const supersedingCertKey = intersection[0]
-            const supersedingCertDate = new Date(cognito[supersedingCertKey].date)
+            const supersedingCertDate = parseISO(cognito[supersedingCertKey].date)
             // Subtract one day so it ends the day before the next one starts
             const certDateLessOneDay = sub(supersedingCertDate, { days: 1 })
             result[3] = format(certDateLessOneDay, 'yyyy-MM-dd')
@@ -119,8 +119,8 @@ export const convertCognitoToWicket = (cognito) => {
 
         // remove memberships with a one-day duration
         const duration = formatISODuration(intervalToDuration({
-            start: new Date(membership[2]),
-            end: new Date(membership[3])
+            start: parseISO(membership[2]),
+            end: parseISO(membership[3])
         }))
         return duration !== 'P0Y0M0DT0H0M0S' && duration !== 'P0Y0M-1DT0H0M0S' // zero or one days in ISO duration format
     })
