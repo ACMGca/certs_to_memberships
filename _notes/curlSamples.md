@@ -1,7 +1,7 @@
 # cURL Samples
 
-The work that follows is an working exploration for the purpose of improving understanding of 
-the Wicket APIs. This may be used to support more detailed exploration of the ACMG member data 
+The work that follows is a working exploration for the purpose of improving understanding of 
+the Wicket APIs. This will support more detailed exploration of the ACMG member data certificate to 
 membership conversion process.
 
 ## Wicket Staging Token Service
