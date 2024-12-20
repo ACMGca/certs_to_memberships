@@ -59,6 +59,10 @@ app.get('/admin/preview/:cognitoEntryId', async (c) => {
             <title>ACMG Wicket Membership Preview</title>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/figtree@5.1.1/index.min.css">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/dm-mono@5.1.0/index.min.css">
+            <script type="module">
+                import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+                mermaid.initialize({ startOnLoad: true });
+            </script>
             <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
             <style>
                 body {
@@ -86,8 +90,24 @@ app.get('/admin/preview/:cognitoEntryId', async (c) => {
                     hx-swap="innerHTML">Create Wicket Profile for this Person
             </button>`) }
             </span></p>
-
-            <pre>${JSON.stringify(wicketPersonMemberships, null, 2)}</pre>
+            
+            <div id="person_memberships">
+            <pre class="mermaid">${raw(wicketPersonMemberships.gantt)}</pre>
+            </div>
+            ${wicketPersonMemberships ? raw(`
+                    <button hx-vals='${JSON.stringify(wicketPersonStub)}' 
+                        hx-confirm="This will delete all Wicket memberships for this member.\n\nProceed?" 
+                        hx-delete="/admin/wicket/person_memberships" 
+                        hx-trigger="click" 
+                        hx-target="#person_memberships" 
+                        hx-swap="innerHTML">Delete Wicket Memberships</button>`) : raw(`
+                    
+                    <button hx-vals='${JSON.stringify(wicketPersonStub)}' 
+                        hx-confirm="This will delete all Wicket memberships for this member.\n\nProceed?" 
+                        hx-delete="/admin/wicket/person_memberships" 
+                        hx-trigger="click" 
+                        hx-target="#person_memberships" 
+                        hx-swap="innerHTML">Create Wicket Memberships</button>`)}
             <p></p>
         </body>
         
@@ -105,7 +125,6 @@ app.post('/admin/wicket/people', async (c) => {
         
         console.log(error.message)
     }
-
 })
 
 export default app

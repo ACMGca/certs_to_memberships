@@ -97,7 +97,52 @@ export const getWicketPersonMemberships = async (wicketPersonGuid, tokenString) 
         }
         const wicketPersonMemberships = await response.json()
 
-        return wicketPersonMemberships
+        // The following 4 step process converts the raw Wicket API response for person_memberships to a neater summary:
+        // STEP 1
+        const processed = wicketPersonMemberships?.data.reduce((acc, cur) => {
+
+            if (!acc[cur.type]) {
+                acc[cur.type] = []
+            }
+            acc[cur.type].push(cur)
+            return acc
+        }, {})
+        // STEP 2 - collect the object names
+        const included = wicketPersonMemberships?.included.reduce((acc, cur) => {
+
+            if (!acc[cur.type]) {
+                acc[cur.type] = {}
+            }
+            acc[cur.type][cur.id] = cur
+            return acc
+        }, {})
+        // STEP 3 - summarize
+        const summary = processed.person_memberships.map(m => {
+
+            const category = included.memberships[m.relationships.membership.data.id].attributes.category
+            const membership_name = included.memberships[m.relationships.membership.data.id].attributes.name
+            return [category, membership_name, m.attributes.status, m.attributes.starts_at, m.attributes.ends_at]
+        });
+        // STEP 4 - Reduce the summary object by category to support sections on the MermaidJS Gantt chart
+        const result = summary.reduce((acc, cur) => {
+
+            if (!acc[cur[0]]) {
+                acc[cur[0]] = []
+            }
+            acc[cur[0]].push(cur)
+            return acc
+        }, {})
+
+        const final = {}
+        Object.values(result).forEach(v => v.reverse())
+        const wicketGanttSourceText = `gantt
+dateFormat  YYYY-MM-DD
+title Wicket Membership Gantt View
+${Object.keys(result).map((category) => { return `\tsection ${category}\n${result[category].map((line, index) => `\t${line[1]}\t\t${line[2] === 'Active' ? ':active,' : ':done,'} ${category.toLowerCase().replace(' ', '_')}${index}, ${line[3].substring(0, 10)}, ${line[4] === null ? `${new Date().toISOString().substring(0, 10)}` : line[4].substring(0, 10)}`).join('\n')}` }).join('\n')}`
+
+        final.json = result
+        final.gantt = wicketGanttSourceText
+        return final
     } catch (error) {
 
         console.error(error.message)
