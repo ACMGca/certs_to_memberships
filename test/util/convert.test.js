@@ -40,7 +40,7 @@ test('Simple CGI1 to CGI2 Scenario', () => {
         'climbing_gym_instructor_level_2',
         'Active',
         '2024-09-13',
-        '2025-01-31'
+        '2024-12-31'
       ]
     ]
   }
@@ -61,7 +61,7 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
     DateJoined: '2001-09-01',
     DateEnd: null,
     DateReinstate: null,
-    LastAnnualValidation: '2024-01-05',
+    LastAnnualValidation: '2024-12-05',
     IFMGALicenseNumber: '499', // Because of this,
     SkiExamMode: 'Ski',        // and this, 
     "MG": {                    //
@@ -126,13 +126,13 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
         "mountain_guide",
         "Active",
         "2009-04-01",
-        "2025-01-31"
+        "2025-12-31"
       ],
       [
         "ifmga",
         "Active",
         "2009-04-01",
-        "2025-01-31"
+        "2025-12-31"
       ]
     ]
   }
@@ -254,13 +254,13 @@ test('An Active HG+SG with DHG history and Winter Travel', () => {
         "hiking_guide_winter",
         "Active",
         "2009-04-01", // started by the ASG
-        "2025-01-31"
+        "2024-12-31"
       ],
       [
         "ski_guide",
         "Active",
         "2021-01-01",
-        "2025-01-31"
+        "2024-12-31"
       ]
     ]
   }
@@ -300,14 +300,14 @@ test('New Member in 2024 with earlier designation dates', () => {
       [
         "climbing_gym_instructor_level_1",
         "Active",
-        "2024-09-09", // note that it uses the JoinDate because it was later than the certificate date TOD - but why one day less - BUG? 
-        "2025-01-31"  // WHY DO I SEE ONE THING IN THE TEST YET I THINK THE SAME CODE PRODUCED THE OTHER DATA ????
+        "2024-09-09",
+        "2024-12-31" 
       ],
       [
         "apprentice_hiking_guide",
         "Active",
         "2024-09-09",
-        "2025-01-31"
+        "2024-12-31"
       ]]
   }
   const parsedSource = cognitoCertificateSchema.safeParse(source)

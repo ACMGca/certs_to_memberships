@@ -19,6 +19,30 @@ const membershipSort = (a, b) => {
     return 0
 }
 
+/**
+ * Determine the correct end date for any Active Wicket Membership Tiers based on the 
+ * last known value for the LastAnnualValidation date for the member.
+ * Anything after Dec 01, 2024 gets a Dec 31, 2025 end date. Otherwise it gets Dec 31, 2024.
+ * We should not need to be concerned about any dates prior to the 2024 renewal year because
+ * they will not be being issued any active membership tiers in Wicket (Resigned profiles).
+ * @param {String} lastAnnualValidation - ISO Format date yyyy-MM-dd of the last known annual validation date
+ * @returns {Date} To be used as the end date of an Active Membership Tier
+ * @throws {TypeError} When the date cannot be determined
+ */
+const getActiveMembershipEndDate = (lastAnnualValidation) => {
+
+    const decemberFirst2024 = new Date('2024-12-01T00:00:00.000Z')
+    const decemberThirtyFirst2024 = new Date('2024-12-31T00:00:00.000Z')
+    const decemberThirtyFirst2025 = new Date('2025-12-31T00:00:00.000Z')
+    const lastAnnualValidationDate = parseISO(lastAnnualValidation)
+    if(isNaN(lastAnnualValidationDate)){
+        throw new TypeError('ActiveMembershipEndDate could not be determined based on input: ' + lastAnnualValidation)
+    }
+    const compare = compareDesc(decemberFirst2024, lastAnnualValidationDate)
+
+    return compare >= 0 ? decemberThirtyFirst2025 : decemberThirtyFirst2024
+}
+
 /*
 GOAL: Given a Cognito Certificates object, convert it to a Wicket Memberships object.
 */
@@ -34,7 +58,7 @@ export const convertCognitoToWicket = (cognito) => {
 
     const wicket = { professional: [] }
 
-    const convertCert = (certObject) => {
+    const convertCert = (certObject, lastAnnualValidation) => {
 
         // Prepare the stub of the result array
         const result = [undefined, undefined, undefined, undefined]
@@ -85,9 +109,7 @@ export const convertCognitoToWicket = (cognito) => {
                 result[1] = 'Active'
                 // We have determined that the certificate is active so we should let it last until 
                 // the end of the current membership year.
-                // The right way to do this is to use the LastAnnualRenewal date and calculate it. 
-                // TODO: For now, I am going to hard code this.
-                result[3] = '2025-01-31'
+                result[3] = format(getActiveMembershipEndDate(lastAnnualValidation), 'yyyy-MM-dd')
             }
         }
 
@@ -107,7 +129,7 @@ export const convertCognitoToWicket = (cognito) => {
     // For each of the certs on the cognito object, convert it to a date bracketed membership:
     wicket.professional = certsArray.map((cert) => {
 
-        return convertCert(cert)
+        return convertCert(cert, cognito.LastAnnualValidation)
     })
 
     // Due to supersedence rules, it is possible for the converter to introduce a 'one-day membership'. 
