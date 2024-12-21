@@ -11,7 +11,8 @@ export const getCognitoCertificateSchema = () => {
         DateReinstate: z.string().nullable(),
         LastAnnualValidation: z.string().nullable(),
         IFMGALicenseNumber: z.string().nullable(),
-        SkiExamMode: z.string().nullable()
+        SkiExamMode: z.string().nullable(),
+        transforms: z.string().array().min(0).default([])
     }
 
     // Define the schema for the individual certificate objects
@@ -38,6 +39,7 @@ export const getCognitoCertificateSchema = () => {
                 if(data.MG && !data.MG.date){
 
                     data.MG.date = data.DateJoined
+                    data.transforms.push(`MG.date backfilled with DateJoined`)
                 }
                 return data
             })
@@ -51,11 +53,27 @@ export const getCognitoCertificateSchema = () => {
 
                     if(data[permCert] && !data[permCert].date && data[permCert.substring(0,3)]){
 
-                        process.stdout.write(`fix ${data[permCert.substring(0,3)].date}\n`)
                         data[permCert].date = data[permCert.substring(0,3)].date
-                        process.stdout.write(`Set ${permCert}.date to ${data[permCert].date}\n`)
+                        data.transforms.push(`Set ${permCert}.date to ${permCert.substring(0,3)}.date`)
                     }
                 })
+                return data
+            })
+            .transform((data, ctx) => {
+
+                // DATA_FIX_3
+                // Correct for Resigned Certificates where LastModified is missing by backfilling with DateEnd when it is available.
+                // This supports our ability to know when to end a Membership Tier bracket for a Resigned Members' history.
+                if(data.DateEnd){
+                    CERTKEYLIST.forEach((certKey) => {
+
+                        if(data[certKey] && data[certKey].status === 'Resigned' && data[certKey].lastModified === null){
+
+                            data[certKey].lastModified = data.DateEnd
+                            data.transforms.push(`${certKey}.lastModified backfilled with DateEnd`)
+                        }
+                    })
+                }
                 return data
             })
             .superRefine((data, ctx) => {
@@ -78,7 +96,7 @@ export const getCognitoCertificateSchema = () => {
 
                             ctx.addIssue({
                                 code: z.ZodIssueCode.custom,
-                                message: 'Certificates with Active or Inactive status require a date',
+                                message: 'Certificates with a defined status require a date',
                                 path: [certKey, 'date']
                             })
                         }
