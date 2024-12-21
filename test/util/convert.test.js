@@ -271,6 +271,62 @@ test('An Active HG+SG with DHG history and Winter Travel', () => {
   expect(result).toMatchObject(expected)
 })
 
+// Similar to A.C. but detuned example to use AHG, ASG to trigger WT 
+test('An Active AHG+ASG to demonstrate Winter Travel implementation', () => {
+
+  const source = {
+    DateJoined: '2006-09-15',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2024-01-05',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    "ASG": {
+      "status": 'Active',
+      "date": "2009-04-01",
+      "lastModified": null
+    },
+    "AHG": {
+      "status": 'Active',
+      "date": "2006-09-01",
+      "lastModified": null
+    },
+    "HGWT": {
+      "status": "Acquired",
+      "date": null,
+      "lastModified": null
+    }
+  }
+
+  const expected = {
+    "professional": [
+      [
+        "apprentice_hiking_guide",
+        "Inactive",
+        "2006-09-15", // starts with the Join date because it's later than the certificate date
+        "2009-03-31"  // but ends the day before the ASG certificate
+      ],
+      [
+        "apprentice_ski_guide",
+        "Active",
+        "2009-04-01", // starts with the ASG date
+        "2024-12-31" // ends as normal annual membership
+      ],
+      [
+        "apprentice_hiking_guide_winter",
+        "Active",
+        "2009-04-01", // starts the same day as the ASG due to the enhance winter scope of practice
+        "2024-12-31"  // ends as normal for the year end
+      ]
+    ]
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result).toMatchObject(expected)
+})
+
 // B.B. [https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/3184]
 // This is a brand new 2024 Member who had a CGI1 from 2022 but never used it to become a member until 2024.
 // The test shows the use of the DateJoined when the certificate dates predate membership.
@@ -320,3 +376,10 @@ test('New Member in 2024 with earlier designation dates', () => {
 // 227 >> ok RESIGNED [231.json]
 // {"DateJoined":"2016-05-01","DateEnd":null,"DateReinstate":null,"CGI1":{"status":"Resigned","date":"2015-12-01","lastModified":"2024-03-01"}}
 // {"professional":[]} << wrong
+
+
+// TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
+// This is an example of the data transformation business rule in the schema layer
+// If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
+// then backfill the LastModified on each cert with that value.
+// R.L. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/1788

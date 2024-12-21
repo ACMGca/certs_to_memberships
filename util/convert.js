@@ -178,7 +178,26 @@ export const convertCognitoToWicket = (cognito) => {
             end: parseISO(wicket.professional[ahgMembershipIndex][3]) 
         })){
 
-            console.log('it is AHG to be rebuilt')
+            // The original AHG Membership needs the following changes:
+            // 1) If it was ACTIVE, it should be set in INACTIVE
+            // 2) It should get a new END date set to `winterDesignationDateBySkiCertificate` minus one day
+            
+            // Clone the AHG Membership as the basis for the AHGW Membership
+            const ahgMembershipClone = [...wicket.professional[ahgMembershipIndex]]
+            wicket.professional[ahgMembershipIndex][1] = 'Inactive'
+            wicket.professional[ahgMembershipIndex][3] = format(subDays(parseISO(winterDesignationDateBySkiCertificate), 1), 'yyyy-MM-dd')
+
+            // A new AHGW Membership needs to be created. It is a copy of the original AHG Membership with:
+            // 1) Gets the slug updated to include 'winter'
+            // 2) Gets a START date set to `winterDesignationDateBySkiCertificate`
+            // 3) Keeps the same END date as the original AHG
+            ahgMembershipClone[0] = 'apprentice_hiking_guide_winter'
+            ahgMembershipClone[2] = format(parseISO(winterDesignationDateBySkiCertificate), 'yyyy-MM-dd')
+
+            // Push the new membership into the collection
+            wicket.professional.push(ahgMembershipClone)
+            // And re-sort it
+            wicket.professional.sort(membershipSort)
         }
 
         if(hgMembershipIndex > -1 && isWithinInterval(parseISO(winterDesignationDateBySkiCertificate), { 
@@ -186,7 +205,7 @@ export const convertCognitoToWicket = (cognito) => {
             end: parseISO(wicket.professional[hgMembershipIndex][3]) 
         })){
 
-            console.log('it is HG to be rebuilt')
+            // (this is near duplicate logic from AHG above - not optimized but kept this way for simplicity)
             // The original HG Membership needs the following changes:
             // 1) If it was ACTIVE, it should be set in INACTIVE
             // 2) It should get a new END date set to `winterDesignationDateBySkiCertificate` minus one day
