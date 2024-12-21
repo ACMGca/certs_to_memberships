@@ -61,7 +61,7 @@ test('A Certificate missing a date should cause an error', () => {
     const result = cognitoCertificateSchema.safeParse(sample)
     expect(result.error).toBeDefined()
     expect(result.error.errors).toHaveLength(1)
-    expect(result.error.errors[0].message).toEqual('Certificates with Active or Inactive status require a date')
+    expect(result.error.errors[0].message).toEqual('Certificates with a defined status require a date')
     expect(result.error.errors[0].path).toEqual(['CGI2', 'date'])
 })
 

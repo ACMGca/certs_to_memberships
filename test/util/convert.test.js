@@ -327,6 +327,51 @@ test('An Active AHG+ASG to demonstrate Winter Travel implementation', () => {
   expect(result).toMatchObject(expected)
 })
 
+// Simplest test case to support an explicit date set for Winter Travel
+test('Winter Travel with an explicit date splits a AHG certificate into two memberships', () => {
+
+  const source = {
+    DateJoined: '2006-09-15',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2024-01-05',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    "AHG": {
+      "status": 'Active',
+      "date": "2006-09-01",
+      "lastModified": null
+    },
+    "HGWT": {
+      "status": "Acquired",
+      "date": '2012-03-15',
+      "lastModified": null
+    }
+  }
+
+  const expected = {
+    "professional": [
+      [
+        "apprentice_hiking_guide",
+        "Inactive",
+        "2006-09-15", // starts with the Join date because it's later than the certificate date
+        "2012-03-14"  // but ends the day before the WT Certificate was Acquired
+      ],
+      [
+        "apprentice_hiking_guide_winter",
+        "Active",
+        "2012-03-15", // starts with the WT date
+        "2024-12-31" // ends as normal annual membership
+      ]
+    ]
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result).toMatchObject(expected)
+})
+
 // B.B. [https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/3184]
 // This is a brand new 2024 Member who had a CGI1 from 2022 but never used it to become a member until 2024.
 // The test shows the use of the DateJoined when the certificate dates predate membership.

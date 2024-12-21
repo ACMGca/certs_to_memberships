@@ -35,7 +35,7 @@ const getActiveMembershipEndDate = (lastAnnualValidation) => {
     const decemberThirtyFirst2024 = new Date('2024-12-31T00:00:00.000Z')
     const decemberThirtyFirst2025 = new Date('2025-12-31T00:00:00.000Z')
     const lastAnnualValidationDate = parseISO(lastAnnualValidation)
-    if(isNaN(lastAnnualValidationDate)){
+    if (isNaN(lastAnnualValidationDate)) {
         throw new TypeError('ActiveMembershipEndDate could not be determined based on input: ' + lastAnnualValidation)
     }
     const compare = compareDesc(decemberFirst2024, lastAnnualValidationDate)
@@ -54,7 +54,7 @@ export const convertCognitoToWicket = (cognito) => {
     // We will use the validation errors to inform the inference strategies to be used
     // to identify other possibly usable dates.
     const parsedCognitoObject = cognitoCertificateSchema.safeParse(cognito)
-    if(parsedCognitoObject.error) console.log(parsedCognitoObject.error)
+    if (parsedCognitoObject.error) console.log(parsedCognitoObject.error)
 
     const wicket = { professional: [] }
 
@@ -86,7 +86,7 @@ export const convertCognitoToWicket = (cognito) => {
 
         // If the `intersection` has a value, it means that other certificate 'superseded' the first one. 
         // And, based on that, we can use the start date of the second one to identify the end date of the first bracket.
-        
+
         if (intersection.length > 0) {
 
             const supersedingCertKey = intersection[0]
@@ -104,8 +104,8 @@ export const convertCognitoToWicket = (cognito) => {
                 throw new Error('ERROR>> The superseded certificate end date was not in the past. This is a data issue.')
             }
         }
-        else{
-            if(certObject.status && certObject.status.toLowerCase() === 'active'){
+        else {
+            if (certObject.status && certObject.status.toLowerCase() === 'active') {
                 result[1] = 'Active'
                 // We have determined that the certificate is active so we should let it last until 
                 // the end of the current membership year.
@@ -147,7 +147,7 @@ export const convertCognitoToWicket = (cognito) => {
         return duration !== 'P0Y0M0DT0H0M0S' && duration !== 'P0Y0M-1DT0H0M0S' // zero or one days in ISO duration format
     })
 
-    // Winter Travel
+    // Winter Travel - `Implicit` Due to Skiing Scope of Practice OR `Explicit` due to designation date set on HGWT
     // The Winter Travel Certificate (WT) in the source data is an indicator that a member has an
     // enhanced Scope of Practice at the AHG or HG scope to include winter hiking. In the past, this
     // was expressed with the anomalous addition of the WT certificate. However, we wish to move to
@@ -155,89 +155,85 @@ export const convertCognitoToWicket = (cognito) => {
     // becomes AHGW or HGW to denote the winter scope of practice by the unique membership type.
     // Additionally, there are two different paths to acquiring the winter SoP:
     // An AHG or HG who receives the WT TAP designation becomes AHGW or HGW on the WT date.
+    // (This is denoted by an explicit date on the HGWT certificate)
     // Alternatively an AHG or HG who becomes ASG, automatically becomes either AHGW or HGW due to
     // the SoP acquired via the ASG training.
     //
     // To implement: Once we have the Wicket Membership date brackets, we can look for the two conditions
     // that would indicate the need to end AHG or HG and start either AHGW or HGW. 
-    const winterDesignationDateBySkiCertificate = ( 
+
+    /**
+    * This applies side effects to the Wicket object  by reference to affects the Tier Splitting for HGWT.
+    * @param {Object} wicket - The wicket memberships object being build - this will have side effects by reference
+    * @param {*} splitDate - The ISO Date string (yyyy-MM-dd) on which to split the membership
+    */
+    const winterTravelSplitter = (wicket, splitDate) => {
+
+        const slugs = ['apprentice_hiking_guide', 'hiking_guide']
+        const affectedMemberships = slugs.map((slug) => {
+
+            return wicket.professional.findIndex((membership) => membership[0] === slug)
+        })
+
+        affectedMemberships.forEach((membershipIndex, slugIndex) => {
+
+            if (membershipIndex > -1 && isWithinInterval(parseISO(splitDate), {
+                start: parseISO(wicket.professional[membershipIndex][2]),
+                end: parseISO(wicket.professional[membershipIndex][3])
+            })) {
+
+                // The original AHG Membership needs the following changes:
+                // 1) If it was ACTIVE, it should be set in INACTIVE
+                // 2) It should get a new END date set to `winterDesignationDateBySkiCertificate` minus one day
+
+                // Clone the AHG Membership as the basis for the AHGW Membership
+                const ahgMembershipClone = [...wicket.professional[membershipIndex]]
+                wicket.professional[membershipIndex][1] = 'Inactive'
+                wicket.professional[membershipIndex][3] = format(subDays(parseISO(splitDate), 1), 'yyyy-MM-dd')
+
+                // A new AHGW Membership needs to be created. It is a copy of the original AHG Membership with:
+                // 1) Gets the slug updated to include 'winter'
+                // 2) Gets a START date set to `winterDesignationDateBySkiCertificate`
+                // 3) Keeps the same END date as the original AHG
+                ahgMembershipClone[0] = `${slugs[slugIndex]}_winter`
+                ahgMembershipClone[2] = format(parseISO(splitDate), 'yyyy-MM-dd')
+
+                // Push the new membership into the collection
+                wicket.professional.push(ahgMembershipClone)
+                // And re-sort it
+                wicket.professional.sort(membershipSort)
+            }
+        })
+    }
+
+    const winterDesignationDateBySkiCertificate = (
         parsedCognitoObject.data.HGWT &&
         !parsedCognitoObject.data.HGWT.date &&
         parsedCognitoObject.data.HGWT.status === 'Acquired' &&
         (parsedCognitoObject.data.ASG.date || parsedCognitoObject.data.SG.date)
-     )
+    )
 
-    if(winterDesignationDateBySkiCertificate){
+    // IMPLICIT WT
+    if (winterDesignationDateBySkiCertificate) {
 
-        // determine if the memberships include AHG or HG which may be affected
-        const ahgMembershipIndex = wicket.professional.findIndex((membership) => membership[0] === 'apprentice_hiking_guide')
-        const hgMembershipIndex = wicket.professional.findIndex((membership) => membership[0] === 'hiking_guide')
+        winterTravelSplitter(wicket, winterDesignationDateBySkiCertificate)
+    }
 
-        if(ahgMembershipIndex > -1 && isWithinInterval(parseISO(winterDesignationDateBySkiCertificate), { 
-            start:parseISO(wicket.professional[ahgMembershipIndex][2]), 
-            end: parseISO(wicket.professional[ahgMembershipIndex][3]) 
-        })){
+    // EXPLICIT WT
+    if (parsedCognitoObject.data?.HGWT?.date) {
 
-            // The original AHG Membership needs the following changes:
-            // 1) If it was ACTIVE, it should be set in INACTIVE
-            // 2) It should get a new END date set to `winterDesignationDateBySkiCertificate` minus one day
-            
-            // Clone the AHG Membership as the basis for the AHGW Membership
-            const ahgMembershipClone = [...wicket.professional[ahgMembershipIndex]]
-            wicket.professional[ahgMembershipIndex][1] = 'Inactive'
-            wicket.professional[ahgMembershipIndex][3] = format(subDays(parseISO(winterDesignationDateBySkiCertificate), 1), 'yyyy-MM-dd')
-
-            // A new AHGW Membership needs to be created. It is a copy of the original AHG Membership with:
-            // 1) Gets the slug updated to include 'winter'
-            // 2) Gets a START date set to `winterDesignationDateBySkiCertificate`
-            // 3) Keeps the same END date as the original AHG
-            ahgMembershipClone[0] = 'apprentice_hiking_guide_winter'
-            ahgMembershipClone[2] = format(parseISO(winterDesignationDateBySkiCertificate), 'yyyy-MM-dd')
-
-            // Push the new membership into the collection
-            wicket.professional.push(ahgMembershipClone)
-            // And re-sort it
-            wicket.professional.sort(membershipSort)
-        }
-
-        if(hgMembershipIndex > -1 && isWithinInterval(parseISO(winterDesignationDateBySkiCertificate), { 
-            start:parseISO(wicket.professional[hgMembershipIndex][2]), 
-            end: parseISO(wicket.professional[hgMembershipIndex][3]) 
-        })){
-
-            // (this is near duplicate logic from AHG above - not optimized but kept this way for simplicity)
-            // The original HG Membership needs the following changes:
-            // 1) If it was ACTIVE, it should be set in INACTIVE
-            // 2) It should get a new END date set to `winterDesignationDateBySkiCertificate` minus one day
-            
-            // Clone the HG Membership as the basis for the HGW Membership
-            const hgMembershipClone = [...wicket.professional[hgMembershipIndex]]
-            wicket.professional[hgMembershipIndex][1] = 'Inactive'
-            wicket.professional[hgMembershipIndex][3] = format(subDays(parseISO(winterDesignationDateBySkiCertificate), 1), 'yyyy-MM-dd')
-
-            // A new HGW Membership needs to be created. It is a copy of the original HG Membership with:
-            // 1) Gets the slug updated to include 'winter'
-            // 2) Gets a START date set to `winterDesignationDateBySkiCertificate`
-            // 3) Keeps the same END date as the original HG
-            hgMembershipClone[0] = 'hiking_guide_winter'
-            hgMembershipClone[2] = format(parseISO(winterDesignationDateBySkiCertificate), 'yyyy-MM-dd')
-
-            // Push the new membership into the collection
-            wicket.professional.push(hgMembershipClone)
-            // And re-sort it
-            wicket.professional.sort(membershipSort)
-        }
+        winterTravelSplitter(wicket, parsedCognitoObject.data.HGWT.date)
     }
 
     // IFMGA: For any active Mountain Guide with an IFMGA License Number > 0 and a SkiExamMode of 'Ski', 
     // an IFMGA Membership is implied. The approach is to clone the MG membership and change the
     // name of the Tier to IFMGA.
     // Any Active MG without an IFMGALicenseNumber > 0 would not receive an IFMGA Membership Tier in Wicket. 
-    if(cognito.MG && cognito.MG.status === 'Active' && cognito.SkiExamMode === 'Ski' && Number(cognito.IFMGALicenseNumber) > 0){
+    if (cognito.MG && cognito.MG.status === 'Active' && cognito.SkiExamMode === 'Ski' && Number(cognito.IFMGALicenseNumber) > 0) {
 
         // Find the MG membership on the Wicket object
         const mgMembership = wicket.professional.find((m) => m[0] === 'mountain_guide' && m[1] === 'Active')
-        if(mgMembership){
+        if (mgMembership) {
             const ifmgaMembership = [...mgMembership]
             ifmgaMembership[0] = 'ifmga' // just change the label
             wicket.professional.push(ifmgaMembership)
