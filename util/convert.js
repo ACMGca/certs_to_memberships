@@ -165,14 +165,14 @@ export const convertCognitoToWicket = (cognito) => {
     // An AHG or HG who receives the WT TAP designation becomes AHGW or HGW on the WT date.
     // (This is denoted by an explicit date on the HGWT certificate)
     // Alternatively an AHG or HG who becomes ASG, automatically becomes either AHGW or HGW due to
-    // the SoP acquired via the ASG training.
+    // the SoP acquired via the ASG training on that designation date.
     //
     // To implement: Once we have the Wicket Membership date brackets, we can look for the two conditions
     // that would indicate the need to end AHG or HG and start either AHGW or HGW. 
 
     /**
-    * This applies side effects to the Wicket object  by reference to affects the Tier Splitting for HGWT.
-    * @param {Object} wicket - The wicket memberships object being build - this will have side effects by reference
+    * This applies side effects to the Wicket object  by reference to affect the Tier Splitting for HGWT.
+    * @param {Object} wicket - The wicket memberships object - this will have side effects by reference
     * @param {*} splitDate - The ISO Date string (yyyy-MM-dd) on which to split the membership
     */
     const winterTravelSplitter = (wicket, splitDate) => {
@@ -248,17 +248,7 @@ export const convertCognitoToWicket = (cognito) => {
         }
     }
 
-
-    // TODO: Based on the Cognito `ProfileStatus` we can infer what the 'tail' of the membership
-    // object should look like:
-    // - Active: One of the Professional Certified memberships should be 'Active' and hit the *future* membership end date
-    // - Inactive: A "Professional Inactive" membership should be 'Active' and hit the *future* membership end date AND 
-    //             all other Professional Certified memberships should have end dates in the past
-    // - Resigned: Every membership should have end dates in the past
-
     // TODO: Detectable 'mid career' Inactive periods can be filled with "Professional Inactive" membership
     // TODO: Detectable 'mid career' Resigned periods can be void of any membership
-
-    // console.log(wicket)
     return wicket
 }
