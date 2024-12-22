@@ -111,7 +111,15 @@ export const convertCognitoToWicket = (cognito) => {
                 // the end of the current membership year.
                 result[3] = format(getActiveMembershipEndDate(lastAnnualValidation), 'yyyy-MM-dd')
             }
+            else if(certObject.status && certObject.status.toLowerCase() !== 'active' && certObject.lastModified && new Date() > parseISO(certObject.lastModified)){
+                result[1] = 'Inactive'
+                // The bracket should end on the indicated last modified date
+                result[3] = format(parseISO(certObject.lastModified), 'yyyy-MM-dd')
+            }
         }
+
+        // Prevent the return of invalid Tier results by throwing an error if anything is undefined:
+        if(result.includes(undefined)) throw new Error(`Invalid Membership Tier Result: ${JSON.stringify(result)}`)
 
         return result
     }

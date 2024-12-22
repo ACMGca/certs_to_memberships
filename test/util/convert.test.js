@@ -402,7 +402,7 @@ test('New Member in 2024 with earlier designation dates', () => {
         "climbing_gym_instructor_level_1",
         "Active",
         "2024-09-09",
-        "2024-12-31" 
+        "2024-12-31"
       ],
       [
         "apprentice_hiking_guide",
@@ -417,10 +417,39 @@ test('New Member in 2024 with earlier designation dates', () => {
   expect(result).toMatchObject(expected)
 })
 
-// New Test Case - Recently resigned with good dates.
-// 227 >> ok RESIGNED [231.json]
-// {"DateJoined":"2016-05-01","DateEnd":null,"DateReinstate":null,"CGI1":{"status":"Resigned","date":"2015-12-01","lastModified":"2024-03-01"}}
-// {"professional":[]} << wrong
+// Recently resigned with good dates on the profile.
+// (This should be a simple case for a person with a Resigned profile)
+// L.C. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/231 RESIGNED [231.json]
+test.only('A resigned member shows an Inactive Tier bracket ending in the past', () => {
+
+  const source = { 
+    DateJoined: '2016-05-01', 
+    DateEnd: null, 
+    DateReinstate: null, 
+    LastAnnualValidation: '2023-01-01',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    CGI1: { 
+      status: 'Resigned', 
+      date: '2015-12-01', 
+      lastModified: '2024-03-01' 
+    } 
+  }
+  const expected = {
+    "professional": [
+      [
+        "climbing_gym_instructor_level_1",
+        "Inactive",   // The tier status is Inactive because the bracket end date is in the past
+        "2016-05-01", // Starts on the DateJoined because it is after the certificate date
+        "2024-03-01"  // Ends on the LastModified date
+      ]
+    ]
+  }
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result).toMatchObject(expected)
+})
 
 
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
