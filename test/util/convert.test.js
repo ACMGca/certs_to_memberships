@@ -420,7 +420,7 @@ test('New Member in 2024 with earlier designation dates', () => {
 // Recently resigned with good dates on the profile.
 // (This should be a simple case for a person with a Resigned profile)
 // L.C. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/231 RESIGNED [231.json]
-test.only('A resigned member shows an Inactive Tier bracket ending in the past', () => {
+test('A resigned member shows an Inactive Tier bracket ending in the past', () => {
 
   const source = { 
     DateJoined: '2016-05-01', 
