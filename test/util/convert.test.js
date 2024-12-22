@@ -457,3 +457,7 @@ test('A resigned member shows an Inactive Tier bracket ending in the past', () =
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
 // then backfill the LastModified on each cert with that value.
 // R.L. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/1788
+
+
+// TEST CASE: History Interrupted by Resign / Reinstate
+// B.C. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/296
