@@ -456,8 +456,8 @@ test('A resigned member shows an Inactive Tier bracket ending in the past', () =
 // This is an example of the data transformation business rule in the schema layer
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
 // then backfill the LastModified on each cert with that value.
-// R.L. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/1788
+// R.L. Cognito Row 1788
 
 
 // TEST CASE: History Interrupted by Resign / Reinstate
-// B.C. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/296
+// B.C. Cognito Row 296
