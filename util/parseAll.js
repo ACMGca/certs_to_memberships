@@ -4,6 +4,12 @@ import { readdir } from "node:fs/promises";
 import { getCertificationHistory, sortProfileFileNames, CERTKEYLIST } from './helpers.js';
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
 import { convertCognitoToWicket } from "./convert.js";
+import { parseISO, differenceInDays } from "date-fns";
+
+const convertTestFile = Bun.file('test/util/convert.test.js')
+const convertTestFileContent = await convertTestFile.text()
+const cognitoProfileUrlPattern = /https:\/\/www.cognitoforms.com\/acmg\/acmgmyprofile\/entries\/1-all-entries\/\d+/g
+const cognitoTestProfileUrlMatches = convertTestFileContent.match(cognitoProfileUrlPattern)
 
 const cognitoCertificateSchema = getCognitoCertificateSchema()
 
@@ -24,11 +30,24 @@ let ACTIVE_MEMBER_COUNT=0
 let INACTIVE_MEMBER_COUNT=0
 
 const inspect = ''
+let mostRecentlyUpdatedDate = new Date('1979-12-24T00:00:00.000Z')
+const profiles = {}
 for (const file of sortedProfileFileNames) {
 
     if(inspect === '' || file === inspect){
         const profileFile = Bun.file(`./profile_data/${file}`);
         const profile = await profileFile.json();
+        const entryName = file.replace('.', '_')
+        profiles[entryName] = { 
+            isFormalTestProfile: cognitoTestProfileUrlMatches.includes(`https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/${file.split('.')[0]}`) ? true : undefined,
+            profileStatus: profile.ProfileStatus, 
+            memberNumber: profile.MemberNumber,
+            cognitoLastModified: profile.Entry.DateUpdated
+        }
+        const profileLastUpdatedDate = parseISO(profile.Entry.DateUpdated)
+        if(profileLastUpdatedDate > mostRecentlyUpdatedDate){
+            mostRecentlyUpdatedDate = profileLastUpdatedDate
+        }
 
         // Skip any non-relevant Cognito Profiles
         if(!['ACTIVE', 'INACTIVE', 'RESIGNED'].includes(profile.ProfileStatus)) continue 
@@ -38,11 +57,13 @@ for (const file of sortedProfileFileNames) {
         if(profile.ProfileStatus === 'INACTIVE') INACTIVE_MEMBER_COUNT++
         
         const cognito_certs = getCertificationHistory(profile)
-
         const parsedCognitoObject = cognitoCertificateSchema.safeParse(cognito_certs)
 
         // PARSING
         if(parsedCognitoObject.error){
+
+            profiles[entryName].parseError = parsedCognitoObject.error
+            profiles[entryName].originalCerts = cognito_certs
 
             if(inspect === '' ){
 
@@ -56,15 +77,18 @@ for (const file of sortedProfileFileNames) {
 
         // CONVERSION
         else{
+            profiles[entryName].certsParsed = parsedCognitoObject.data
             if(inspect === '') process.stdout.write(`>> ok ${profile.ProfileStatus} [${file}]\n`)
             try {
                 const wicket = convertCognitoToWicket(parsedCognitoObject.data)
+                profiles[entryName].wicketMemberships = wicket
                 process.stdout.write(JSON.stringify(parsedCognitoObject.data)+'\n')
                 process.stdout.write(JSON.stringify(wicket)+'\n')
             } catch (error) {
                 if(!['ACTIVE', 'INACTIVE'].includes(profile.ProfileStatus)) MEMBER_CONVERSION_ERRORS++
                 if(profile.ProfileStatus === 'RESIGNED') NONMEMBER_CONVERSION_ERRORS++
-                process.stdout.write('conversion error! INSPECT! >> ' + error.message + ' >> ' + JSON.stringify(parsedCognitoObject.data) + '\n')
+                profiles[entryName].conversionError = error.message
+                process.stdout.write('Conversion Error >> ' + error.message + ' >> ' + JSON.stringify(parsedCognitoObject.data) + '\n')
             }            
         }
     }
@@ -85,3 +109,32 @@ process.stdout.write(`NONMEMBER_COUNT\t\t\t${NONMEMBER_COUNT}\n`)
 process.stdout.write(`ACTIVE_MEMBER_COUNT\t\t${ACTIVE_MEMBER_COUNT}\n`)
 process.stdout.write(`INACTIVE_MEMBER_COUNT\t\t${INACTIVE_MEMBER_COUNT}\n`)
 
+
+// Produce the JSON Conversion Output
+const jsonResultFile = Bun.file('public/data/conversion.json')
+
+const result = {}
+const info = {}
+const stats = {
+    MEMBER_PARSE_ERRORS: MEMBER_PARSE_ERRORS,
+    MEMBER_PARSE_ERROR_RATE: `${parseFloat(`${memberParseErrorRate * 100}`).toFixed(2)}%`,
+    MEMBER_CONVERSION_ERRORS: MEMBER_CONVERSION_ERRORS,
+    MEMBER_CONVERSION_ERROR_RATE: `${parseFloat(`${memberConversionErrorRate * 100}`).toFixed(2)}%`,
+    NONMEMBER_PARSE_ERRORS: NONMEMBER_PARSE_ERRORS,
+    NONMEMBER_PARSE_ERROR_RATE: `${parseFloat(`${nonmemberParseErrorRate * 100}`).toFixed(2)}%`,
+    NONMEMBER_CONVERSION_ERRORS: NONMEMBER_CONVERSION_ERRORS,
+    NONMEMBER_CONVERSION_ERROR_RATE: `${parseFloat(`${nonmemberConversionErrorRate * 100}`).toFixed(2)}%`,
+    MEMBER_COUNT: MEMBER_COUNT,
+    NONMEMBER_COUNT: NONMEMBER_COUNT,
+    ACTIVE_MEMBER_COUNT: ACTIVE_MEMBER_COUNT,
+    INACTIVE_MEMBER_COUNT: INACTIVE_MEMBER_COUNT
+}
+
+info.reportGeneratedDate = new Date()
+info.mostRecentlyUpdatedProfileDate = mostRecentlyUpdatedDate
+info.daysSinceDataRefresh = differenceInDays(new Date(), mostRecentlyUpdatedDate)
+
+result.info = info
+result.stats = stats
+result.profiles = profiles
+await Bun.write(jsonResultFile, JSON.stringify(result, null, 2))
