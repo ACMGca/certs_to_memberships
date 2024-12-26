@@ -501,7 +501,9 @@ test('An Active and ready-to-join member who has not yet joined gets no Wicket M
 // #2473 Something is up with the *Perm certs and RESIGNED
 // *** #2972 non-Perm has correct behaviour
 
+// TODO: Did not consider this one: This is a DHG with Winter Travel #83
 
+// TODO: GOOD SAMPLE >> #2227 - Good tiers closed in past for RESIGNED Member
 
 
 
