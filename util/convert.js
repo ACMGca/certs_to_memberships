@@ -133,6 +133,28 @@ export const convertCognitoToWicket = (cognito) => {
         return { ...parsedCognitoObject.data[certKey], certKey }
     }).sort(certSort)
 
+
+
+    // We can have Active Certificates on profiles of people who are not yet members.
+    // This happens when MemberServices is setting someone up to be able to join for the first time, but the person has not actioned it yet.
+    // If this is the case, the lastAnnualValidation=null and we should not create any Wicket Memberships for them:
+    // (We need to know if they have at least one Active Certificate to apply this logic...)
+    const hasActiveCert = certsArray.reduce((acc, cur) => {
+
+        if(cur.status === 'Active'){
+            acc = true
+        }
+        return acc
+    }, false)
+    if(!cognito.LastAnnualValidation && hasActiveCert){
+        
+        wicket.professional = [] // It becomes a valid conversion to receive no Wicket Memberships
+        // *RETURN EARLY* as none of the result of the conversion logic is applicable
+        return wicket
+    }
+
+
+
     // Now we have the cert objects in the right order (asc by date).
     // For each of the certs on the cognito object, convert it to a date bracketed membership:
     wicket.professional = certsArray.map((cert) => {

@@ -1,6 +1,6 @@
 {
   "info": {
-    "reportGeneratedDate": "2024-12-26T02:48:16.094Z",
+    "reportGeneratedDate": "2024-12-26T05:13:08.538Z",
     "mostRecentlyUpdatedProfileDate": "2024-12-24T15:04:43.704Z",
     "daysSinceDataRefresh": 1
   },
@@ -49149,7 +49149,9 @@
           "lastModified": "2024-08-29"
         }
       },
-      "conversionError": "null is not an object (evaluating 'dateString.split')"
+      "wicketMemberships": {
+        "professional": []
+      }
     },
     "1152_json": {
       "cognitoEntryId": "1152",
@@ -121643,7 +121645,9 @@
           "lastModified": "2024-12-16"
         }
       },
-      "conversionError": "null is not an object (evaluating 'dateString.split')"
+      "wicketMemberships": {
+        "professional": []
+      }
     }
   }
 }

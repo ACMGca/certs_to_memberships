@@ -451,7 +451,33 @@ test('A resigned member shows an Inactive Tier bracket ending in the past', () =
   expect(result).toMatchObject(expected)
 })
 
+// An otherwise ACTIVE looking profile without a LastAnnualValidation value is a person who is NOT YET a member. 
+// They have been set up to go through the Renewal Form but they have not yet done it. This breaks the ability to
+// determine their Active Membership end date. However, it makes sense not to give them any memberships because 
+// they have yet to actually join the ACMG. 
+test('An Active and ready-to-join member who has not yet joined gets no Wicket Memberships', () => {
 
+  const source = {
+    "DateJoined": "2024-12-18",
+    "DateEnd": null,
+    "DateReinstate": null,
+    "LastAnnualValidation": null,
+    "IFMGALicenseNumber": "0",
+    "SkiExamMode": "Ski",
+    "ASG": {
+      "status": "Active",
+      "date": "2024-12-16",
+      "lastModified": "2024-12-16"
+    }
+  }
+  const expected = {
+    "professional": [] // An empty set indicates no Wicket Memberships as possible valid representation
+  }
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result).toMatchObject(expected)
+})
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
 // This is an example of the data transformation business rule in the schema layer
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
