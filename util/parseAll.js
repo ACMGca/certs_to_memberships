@@ -39,6 +39,7 @@ for (const file of sortedProfileFileNames) {
         const profile = await profileFile.json();
         const entryName = file.replace('.', '_')
         profiles[entryName] = { 
+            cognitoEntryId: `${entryName.split('_')[0]}`,
             isFormalTestProfile: cognitoTestProfileUrlMatches.includes(`https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/${file.split('.')[0]}`) ? true : undefined,
             profileStatus: profile.ProfileStatus, 
             memberNumber: profile.MemberNumber,
