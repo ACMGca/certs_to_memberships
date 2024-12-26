@@ -487,3 +487,21 @@ test('An Active and ready-to-join member who has not yet joined gets no Wicket M
 
 // TEST CASE: History Interrupted by Resign / Reinstate
 // B.C. Cognito Row 296
+
+// TODO: TEST CASE Cognito Row#561 - Resigned Member should get an inactive Wicket Membership ending in the past
+// *** here is a good example of correct RESIGNED behavior to lock into a test first: Row#1965
+
+// TODO: TEST CASE Cognito Row#565 - Inactive Member with current LastAnnualValidation should get an Active "Inactive Membership" tier with the correct year end
+
+// TODO: TEST CASE Cognito Row#580 - Inactive Member should end with an Active Inactive Membership Tier
+
+// TODO: TEST CASE Cognito Row#2097 - Should have produced a past tier bracket
+// *** #2323 has good result to lock into a test case first
+
+// #2473 Something is up with the *Perm certs and RESIGNED
+// *** #2972 non-Perm has correct behaviour
+
+
+
+
+
