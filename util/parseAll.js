@@ -5,6 +5,7 @@ import { getCertificationHistory, sortProfileFileNames, CERTKEYLIST } from './he
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
 import { convertCognitoToWicket } from "./convert.js";
 import { parseISO, differenceInDays } from "date-fns";
+import { rules } from "./rules.js";
 
 const convertTestFile = Bun.file('test/util/convert.test.js')
 const convertTestFileContent = await convertTestFile.text()
@@ -139,3 +140,7 @@ result.info = info
 result.stats = stats
 result.profiles = profiles
 await Bun.write(jsonResultFile, JSON.stringify(result, null, 2))
+
+// Write the JSON Rules Output
+const jsonRulesFile = Bun.file('public/data/rules.json')
+await Bun.write(jsonRulesFile, JSON.stringify(rules, null, 2))

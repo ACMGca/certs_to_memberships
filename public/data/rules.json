@@ -1,0 +1,553 @@
+{
+  "ARG": {
+    "supervises": [],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Current Account Holder",
+        "with": "TAP Apprentice Rock Guide Designation",
+        "when": [
+          "First Aid is Current"
+        ]
+      },
+      {
+        "to": "Apprentice Rock Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current",
+          "Apprentice Time Limit is not exceeded"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "AAG",
+      "RG",
+      "AG",
+      "MG"
+    ],
+    "membership_tier_slug": "apprentice_rock_guide"
+  },
+  "AAG": {
+    "supervises": [],
+    "supersedes": [
+      "Apprentice Rock Guide Member"
+    ],
+    "eligible": [
+      {
+        "to": "Current Account Holder",
+        "with": "TAP Apprentice Alpine Guide Designation",
+        "when": [
+          "First Aid is Current"
+        ]
+      },
+      {
+        "to": "Apprentice Alpine Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current",
+          "Apprentice Time Limit is not exceeded"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "AG",
+      "MG"
+    ],
+    "membership_tier_slug": "apprentice_alpine_guide"
+  },
+  "ASG": {
+    "supervises": [],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Current Account Holder",
+        "with": "TAP Apprentice Ski Guide Designation",
+        "when": [
+          "First Aid is Current"
+        ]
+      },
+      {
+        "to": "Apprentice Ski Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current",
+          "Apprentice Time Limit is not exceeded"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "SG",
+      "MG"
+    ],
+    "membership_tier_slug": "apprentice_ski_guide"
+  },
+  "AHG": {
+    "supervises": [],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Current Account Holder",
+        "with": "TAP Apprentice Hiking Guide Designation",
+        "when": [
+          "First Aid is Current"
+        ]
+      },
+      {
+        "to": "Apprentice Hiking Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current",
+          "Apprentice Time Limit is not exceeded"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "AG",
+      "HG",
+      "HGW",
+      "MG"
+    ],
+    "membership_tier_slug": "apprentice_hiking_guide"
+  },
+  "AHGW": {
+    "supervises": [],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Apprentice Hiking Guide Member",
+        "with": "TAP Winter Travel Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current",
+          "Apprentice Time Limit is not exceeded"
+        ]
+      },
+      {
+        "to": "Apprentice Winter Hiking Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current",
+          "Apprentice Time Limit is not exceeded"
+        ]
+      },
+      {
+        "to": "Apprentice Ski Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current",
+          "Apprentice Time Limit is not exceeded",
+          "TAP Hiking Guide Bridge Designation"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "AG",
+      "HGW"
+    ],
+    "membership_tier_slug": "apprentice_winter_hiking_guide"
+  },
+  "RG": {
+    "supervises": [
+      "Apprentice Rock Guide Member",
+      "Apprentice Alpine Guide Member",
+      "Top Rope Climbing Instructor Member"
+    ],
+    "supersedes": [
+      "Apprentice Rock Guide Member",
+      "Top Rope Climbing Instructor Member"
+    ],
+    "eligible": [
+      {
+        "to": "Apprentice Rock Guide Member",
+        "with": "TAP Rock Guide Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Rock Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "MG"
+    ],
+    "membership_tier_slug": "rock_guide"
+  },
+  "SG": {
+    "supervises": [
+      "Apprentice Ski Guide Member",
+      "Apprentice Winter Hiking Guide Member"
+    ],
+    "supersedes": [
+      "Apprentice Ski Guide Member"
+    ],
+    "eligible": [
+      {
+        "to": "Apprentice Ski Guide Member",
+        "with": "TAP Ski Guide Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Ski Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "MG"
+    ],
+    "membership_tier_slug": "ski_guide"
+  },
+  "AG": {
+    "supervises": [
+      "Apprentice Alpine Guide Member",
+      "Apprentice Rock Guide Member",
+      "Apprentice Hiking Guide Member",
+      "Top Rope Climbing Instructor Member"
+    ],
+    "supersedes": [
+      "Apprentice Alpine Guide Member",
+      "Apprentice Rock Guide Member",
+      "Apprentice Hiking Guide Member",
+      "Apprentice Winter Hiking Guide Member",
+      "Hiking Guide Member",
+      "Winter Hiking Guide Member",
+      "Day Hiking Guide Member",
+      "Top Rope Climbing Instructor Member"
+    ],
+    "eligible": [
+      {
+        "to": "Apprentice Alpine Guide Member",
+        "with": "TAP Alpine Guide Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Alpine Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "MG"
+    ],
+    "membership_tier_slug": "alpine_guide"
+  },
+  "HG": {
+    "supervises": [
+      "Apprentice Hiking Guide Member",
+      "Apprentice Alpine Guide Member"
+    ],
+    "supersedes": [
+      "Apprentice Hiking Guide Member",
+      "Day Hiking Guide Member"
+    ],
+    "eligible": [
+      {
+        "to": "Apprentice Hiking Guide Member",
+        "with": "TAP Hiking Guide Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Hiking Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "AG",
+      "MG"
+    ],
+    "membership_tier_slug": "hiking_guide"
+  },
+  "DHG": {
+    "supervises": [],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Day Hiking Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "AG",
+      "HG"
+    ],
+    "membership_tier_slug": "day_hiking_guide"
+  },
+  "HGW": {
+    "supervises": [
+      "Apprentice Hiking Guide Member",
+      "Apprentice Winter Hiking Guide Member",
+      "Apprentice Alpine Guide Member"
+    ],
+    "supersedes": [
+      "Apprentice Hiking Guide Member",
+      "Apprentice Winter Hiking Guide Member"
+    ],
+    "eligible": [
+      {
+        "to": "Hiking Guide Member",
+        "with": "TAP Winter Travel Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Winter Hiking Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Ski Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current",
+          "TAP Hiking Guide Bridge Designation"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "AG"
+    ],
+    "membership_tier_slug": "winter_hiking_guide"
+  },
+  "CGI1": {
+    "supervises": [],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Current Account Holder",
+        "with": "TAP Climbing Gym Instructor Level 1 Designation",
+        "when": [
+          "First Aid is Current"
+        ]
+      },
+      {
+        "to": "Climbing Gym Instructor Level 1 Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "CGI2",
+      "CGI3"
+    ],
+    "membership_tier_slug": "climbing_gym_instructor_level_1"
+  },
+  "CGI2": {
+    "supervises": [],
+    "supersedes": [
+      "Climbing Gym Instructor Level 1 Member"
+    ],
+    "eligible": [
+      {
+        "to": "Climbing Gym Instructor Level 1 Member",
+        "with": "TAP Climbing Gym Instructor Level 2 Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Climbing Gym Instructor Level 2 Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "CGI3"
+    ],
+    "membership_tier_slug": "climbing_gym_instructor_level_2"
+  },
+  "CGI3": {
+    "supervises": [],
+    "supersedes": [
+      "Climbing Gym Instructor Level 1 Member",
+      "Climbing Gym Instructor Level 2 Member"
+    ],
+    "eligible": [
+      {
+        "to": "Climbing Gym Instructor Level 3 Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [],
+    "membership_tier_slug": "climbing_gym_instructor_level_3"
+  },
+  "TRCI": {
+    "supervises": [],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Current Account Holder",
+        "with": "TAP Top Rope Climbing Instructor Designation",
+        "when": [
+          "First Aid is Current"
+        ]
+      },
+      {
+        "to": "Top Rope Climbing Instructor Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [
+      "RG",
+      "AG",
+      "MG"
+    ],
+    "membership_tier_slug": "top_rope_climbing_instructor"
+  },
+  "VFG": {
+    "supervises": [],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Current Account Holder",
+        "with": "TAP Via Ferrata Guide Designation",
+        "when": [
+          "First Aid is Current"
+        ]
+      },
+      {
+        "to": "Via Ferrata Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [],
+    "membership_tier_slug": "via_ferrata_guide"
+  },
+  "MG": {
+    "supervises": [
+      "Apprentice Rock Guide Member",
+      "Apprentice Ski Guide Member",
+      "Apprentice Alpine Guide Member",
+      "Apprentice Hiking Guide Member",
+      "Top Rope Climbing Instructor Member"
+    ],
+    "supersedes": [
+      "Rock Guide Member",
+      "Alpine Guide Member",
+      "Ski Guide Member",
+      "Hiking Guide Member",
+      "Apprentice Alpine Guide Member",
+      "Apprentice Rock Guide Member",
+      "Apprentice Ski Guide Member",
+      "Apprentice Hiking Guide Member",
+      "Top Rope Climbing Instructor Member"
+    ],
+    "eligible": [
+      {
+        "to": "Alpine Guide Member",
+        "with": "TAP Ski Guide Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Ski Guide Member",
+        "with": "TAP Alpine Guide Designation",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      },
+      {
+        "to": "Mountain Guide Member",
+        "when": [
+          "First Aid is Current",
+          "Professional Practice is Current",
+          "Continuing Professional Development is Current"
+        ]
+      }
+    ],
+    "superseded_by": [],
+    "membership_tier_slug": "mountain_guide"
+  },
+  "IFMGA": {
+    "supervises": [
+      "Apprentice Rock Guide Member",
+      "Apprentice Ski Guide Member",
+      "Apprentice Alpine Guide Member",
+      "Apprentice Hiking Guide Member",
+      "Top Rope Climbing Instructor Member"
+    ],
+    "supersedes": [],
+    "eligible": [
+      {
+        "to": "Mountain Guide Member",
+        "when": [
+          "Ski Guide Assessment Completed on Skis"
+        ]
+      }
+    ],
+    "superseded_by": [],
+    "membership_tier_slug": "ifmga"
+  }
+}
