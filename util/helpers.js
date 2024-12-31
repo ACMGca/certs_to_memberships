@@ -30,14 +30,16 @@ export const getCertificationHistory = (profile) => {
         
     }, {})
 
-    const { DateJoined, 
+    const { ProfileStatus,
+            DateJoined, 
             DateEnd, 
             DateReinstate, 
             IFMGALicenseNumber, 
             LastAnnualValidation, 
             Mode } = profile
 
-    const result = { DateJoined, 
+    const result = { ProfileStatus,
+                     DateJoined, 
                      DateEnd, 
                      DateReinstate, 
                      LastAnnualValidation, 

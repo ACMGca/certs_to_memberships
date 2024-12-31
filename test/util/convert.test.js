@@ -10,6 +10,7 @@ const cognitoCertificateSchema = getCognitoCertificateSchema()
 test('Simple CGI1 to CGI2 Scenario', () => {
 
   const source = {
+    ProfileStatus: 'ACTIVE',
     DateJoined: '2023-11-03',
     DateEnd: null,
     DateReinstate: null,
@@ -58,6 +59,7 @@ test('Simple CGI1 to CGI2 Scenario', () => {
 test('Continuous Active Membership with Progression to Mountain Guide', () => {
 
   const source = {
+    ProfileStatus: 'ACTIVE',
     DateJoined: '2001-09-01',
     DateEnd: null,
     DateReinstate: null,
@@ -151,6 +153,7 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
 test.todo('Longstanding member with incomplete but inferrable date data', () => {
 
   const source = {
+    ProfileStatus: 'INACTIVE',
     DateJoined: '1978-01-01',
     DateEnd: '2005-01-01',
     DateReinstate: '2005-11-01',
@@ -197,6 +200,7 @@ test.todo('Longstanding member with incomplete but inferrable date data', () => 
 test('An Active HG+SG with DHG history and Winter Travel', () => {
 
   const source = {
+    ProfileStatus: 'ACTIVE',
     DateJoined: '2007-01-01',
     DateEnd: null,
     DateReinstate: null,
@@ -275,6 +279,7 @@ test('An Active HG+SG with DHG history and Winter Travel', () => {
 test('An Active AHG+ASG to demonstrate Winter Travel implementation', () => {
 
   const source = {
+    ProfileStatus: 'ACTIVE',
     DateJoined: '2006-09-15',
     DateEnd: null,
     DateReinstate: null,
@@ -331,6 +336,7 @@ test('An Active AHG+ASG to demonstrate Winter Travel implementation', () => {
 test('Winter Travel with an explicit date splits a AHG certificate into two memberships', () => {
 
   const source = {
+    ProfileStatus: 'ACTIVE',
     DateJoined: '2006-09-15',
     DateEnd: null,
     DateReinstate: null,
@@ -379,6 +385,7 @@ test('Winter Travel with an explicit date splits a AHG certificate into two memb
 test('New Member in 2024 with earlier designation dates', () => {
 
   const source = {
+    ProfileStatus: 'ACTIVE',
     DateJoined: '2024-09-09',
     DateEnd: null,
     DateReinstate: null,
@@ -423,6 +430,7 @@ test('New Member in 2024 with earlier designation dates', () => {
 test('A resigned member shows an Inactive Tier bracket ending in the past', () => {
 
   const source = { 
+    ProfileStatus: 'RESIGNED',
     DateJoined: '2016-05-01', 
     DateEnd: null, 
     DateReinstate: null, 
@@ -458,6 +466,7 @@ test('A resigned member shows an Inactive Tier bracket ending in the past', () =
 test('An Active and ready-to-join member who has not yet joined gets no Wicket Memberships', () => {
 
   const source = {
+    ProfileStatus: 'ACTIVE', // This needs to be confirmed that an unjoined new member is ACTIVE
     "DateJoined": "2024-12-18",
     "DateEnd": null,
     "DateReinstate": null,
@@ -478,6 +487,63 @@ test('An Active and ready-to-join member who has not yet joined gets no Wicket M
   const result = convertCognitoToWicket(parsedSource.data)
   expect(result).toMatchObject(expected)
 })
+
+// P.H. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/580
+// An Inactive Member should end with a Wicket *Active* "Inactive Membership" Tier
+test('An Inactive Member converts to a Wicket Active Inactive Membership tier', () => {
+
+  const source = {
+    ProfileStatus: 'INACTIVE',
+    DateJoined: '1988-01-01',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2024-02-25',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    transforms: [],
+    MG: {
+      status: 'Inactive',
+      date: '1994-01-01',
+      lastModified: '2023-01-28'
+    },
+    AAG: {
+      status: null,
+      date: '1988-01-01',
+      lastModified: null
+    }
+  }
+  
+  const expected = {
+    professional: [
+      [
+        'apprentice_alpine_guide',
+        'Inactive',
+        '1988-01-01',
+        '1993-12-31'
+      ],
+      [
+        'mountain_guide',
+        'Inactive',
+        '1994-01-01',
+        '2023-01-28'       // We can't know from the data but can presume that Inactive was preceded by Active
+      ],                   // and so the LastModified date forms the end of that bracket.
+      [
+        'inactive-member', // Because the source profile is known to be ProfileStatus: INACTIVE
+        'Active',          // we know that it should become a valid Inactive Membership in Wicket:
+        '2023-01-29',      // The Active 'Inactive Member' membership starts the day after the most recent ending date
+        '2024-12-31'       // And ends according to the normal year bracket for the LastAnnualValidation
+      ]
+    ]
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result).toMatchObject(expected)
+})
+
+
+
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
 // This is an example of the data transformation business rule in the schema layer
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
@@ -493,8 +559,6 @@ test('An Active and ready-to-join member who has not yet joined gets no Wicket M
 
 // TODO: TEST CASE Cognito Row#565 - Inactive Member with current LastAnnualValidation should get an Active "Inactive Membership" tier with the correct year end
 
-// TODO: TEST CASE Cognito Row#580 - Inactive Member should end with an Active Inactive Membership Tier
-
 // TODO: TEST CASE Cognito Row#2097 - Should have produced a past tier bracket
 // *** #2323 has good result to lock into a test case first
 
@@ -504,6 +568,14 @@ test('An Active and ready-to-join member who has not yet joined gets no Wicket M
 // TODO: Did not consider this one: This is a DHG with Winter Travel #83
 
 // TODO: GOOD SAMPLE >> #2227 - Good tiers closed in past for RESIGNED Member
+
+// TODO: #301 - Member lost standing as RG but remains active in other Scope of Practice
+
+// #1538 RG should be superseded by AG but the conversion fails
+
+// #744 Perm
+
+
 
 
 

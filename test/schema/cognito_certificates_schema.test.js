@@ -6,6 +6,7 @@ const cognitoCertificateSchema = getCognitoCertificateSchema()
 const getPlainSample = () => {
 
     return {
+        ProfileStatus: 'ACTIVE',
         DateJoined: '2023-11-03',
         DateEnd: null,
         DateReinstate: null,

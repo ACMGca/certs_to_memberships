@@ -6,6 +6,7 @@ import { CERTKEYLIST } from '../util/helpers.js';
 export const getCognitoCertificateSchema = () => {
 
     const cognitoSchemaObject = {
+        ProfileStatus: z.enum(['ACTIVE', 'INACTIVE', 'RESIGNED', 'STAFF', 'UNDEFINED']),
         DateJoined: z.string().nullable(),
         DateEnd: z.string().nullable(),
         DateReinstate: z.string().nullable(),

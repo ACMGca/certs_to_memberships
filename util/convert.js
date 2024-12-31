@@ -1,7 +1,10 @@
 'use strict';
-import { sub, format, compareDesc, intervalToDuration, formatISODuration, isWithinInterval, parseISO, subDays } from "date-fns";
+import { sub, format, compareDesc, intervalToDuration, formatISODuration, isWithinInterval, parseISO, subDays, addDays } from "date-fns";
 import { rules } from "./rules.js";
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
+
+// NOTE: ASCII titles used for emphasis in the code were generated here: 
+// https://patorjk.com/software/taag/#p=display&f=Small&t=Type%20Something%20
 
 const cognitoCertificateSchema = getCognitoCertificateSchema()
 
@@ -43,11 +46,11 @@ const getActiveMembershipEndDate = (lastAnnualValidation) => {
     return compare >= 0 ? decemberThirtyFirst2025 : decemberThirtyFirst2024
 }
 
-/*
-GOAL: Given a Cognito Certificates object, convert it to a Wicket Memberships object.
-*/
-// TODO: This can be better if we also pass the ProfileStatus and the yyyy-MM-dd of the 
-//       known membership year end date for this member (based on LastAnnualValidation)
+/**
+ * Given a Cognito Certificates object, convert it to a Wicket Memberships object.
+ * @param {Object} cognito - Object representing the Cognito My Profile source data
+ * @returns {Object} wicket - Object representing the Wicket Membership target data structure
+ */
 export const convertCognitoToWicket = (cognito) => {
 
     // Apply schema validation to the Cognito Certificate Object. 
@@ -134,11 +137,17 @@ export const convertCognitoToWicket = (cognito) => {
     }).sort(certSort)
 
 
-
-    // We can have Active Certificates on profiles of people who are not yet members.
-    // This happens when MemberServices is setting someone up to be able to join for the first time, but the person has not actioned it yet.
-    // If this is the case, the lastAnnualValidation=null and we should not create any Wicket Memberships for them:
+    //    _                      _     _  _     _    _               __ __   __   _     _            _     _       __  
+    //   /_\  __ __ ___ _  _ _ _| |_  | || |___| |__| |___ _ _ ___  / / \ \ / /__| |_  | |_ ___   _ | |___(_)_ _   \ \ 
+    //  / _ \/ _/ _/ _ \ || | ' \  _| | __ / _ \ / _` / -_) '_(_-< | |   \ V / -_)  _| |  _/ _ \ | || / _ \ | ' \   | |
+    // /_/ \_\__\__\___/\_,_|_||_\__| |_||_\___/_\__,_\___|_| /__/ | |    |_|\___|\__|  \__\___/  \__/\___/_|_||_|  | |
+    //                                                              \_\                                            /_/ 
+    // We can have Active Certificates on profiles of people who are not yet members. These are "Account Holders" who have yet to formally
+    // join the ACMG. This happens when MemberServices is setting someone up to be able to join for the first time, 
+    // but the person has not actioned it yet.
+    // If this is the case, the LastAnnualValidation=null and we SHOULD NOT create any Wicket Memberships for them:
     // (We need to know if they have at least one Active Certificate to apply this logic...)
+    // *** When this assessment applies, the process returns early and the rest of the following logic steps are skipped. ***
     const hasActiveCert = certsArray.reduce((acc, cur) => {
 
         if(cur.status === 'Active'){
@@ -149,19 +158,28 @@ export const convertCognitoToWicket = (cognito) => {
     if(!cognito.LastAnnualValidation && hasActiveCert){
         
         wicket.professional = [] // It becomes a valid conversion to receive no Wicket Memberships
-        // *RETURN EARLY* as none of the result of the conversion logic is applicable
-        return wicket
+        
+        return wicket // *** RETURN EARLY *** as none of the remaining conversion logic is applicable
     }
 
 
 
+    //  ___      _ _   _      _    ___                        _            ___                       
+    // |_ _|_ _ (_) |_(_)__ _| |  / __|___ _ ___ _____ _ _ __(_)___ _ _   | _ \_ _ ___  __ ___ ______
+    //  | || ' \| |  _| / _` | | | (__/ _ \ ' \ V / -_) '_(_-< / _ \ ' \  |  _/ '_/ _ \/ _/ -_|_-<_-<
+    // |___|_||_|_|\__|_\__,_|_|  \___\___/_||_\_/\___|_| /__/_\___/_||_| |_| |_| \___/\__\___/__/__/                                                                                          
     // Now we have the cert objects in the right order (asc by date).
-    // For each of the certs on the cognito object, convert it to a date bracketed membership:
+    // For each of the certs on the cognito object, convert it to a date bracketed Wicket Membership Tier:
     wicket.professional = certsArray.map((cert) => {
 
         return convertCert(cert, cognito.LastAnnualValidation)
     })
 
+    //  ___             ___              __  __           _                _    _         
+    // / _ \ _ _  ___  |   \ __ _ _  _  |  \/  |___ _ __ | |__  ___ _ _ __| |_ (_)_ __ ___
+    //| (_) | ' \/ -_) | |) / _` | || | | |\/| / -_) '  \| '_ \/ -_) '_(_-< ' \| | '_ (_-<
+    // \___/|_||_\___| |___/\__,_|\_, | |_|  |_\___|_|_|_|_.__/\___|_| /__/_||_|_| .__/__/
+    //                            |__/                                           |_|      
     // Due to supersedence rules, it is possible for the converter to introduce a 'one-day membership'. 
     // For example, an Alpine Guide passing a Ski Guide Exam technically becomes a Ski Guide for one day
     // because the Ski Guide Membership is immediately superseded by Mountain Guide.
@@ -177,6 +195,10 @@ export const convertCognitoToWicket = (cognito) => {
         return duration !== 'P0Y0M0DT0H0M0S' && duration !== 'P0Y0M-1DT0H0M0S' // zero or one days in ISO duration format
     })
 
+    // __      ___     _             _____                 _ 
+    // \ \    / (_)_ _| |_ ___ _ _  |_   _| _ __ ___ _____| |
+    //  \ \/\/ /| | ' \  _/ -_) '_|   | || '_/ _` \ V / -_) |
+    //   \_/\_/ |_|_||_\__\___|_|     |_||_| \__,_|\_/\___|_|                                                   
     // Winter Travel - `Implicit` Due to Skiing Scope of Practice OR `Explicit` due to designation date set on HGWT
     // The Winter Travel Certificate (WT) in the source data is an indicator that a member has an
     // enhanced Scope of Practice at the AHG or HG scope to include winter hiking. In the past, this
@@ -255,7 +277,15 @@ export const convertCognitoToWicket = (cognito) => {
         winterTravelSplitter(wicket, parsedCognitoObject.data.HGWT.date)
     }
 
-    // IFMGA: For any active Mountain Guide with an IFMGA License Number > 0 and a SkiExamMode of 'Ski', 
+
+    //  ___ ___ __  __  ___   _   
+    // |_ _| __|  \/  |/ __| /_\  
+    //  | || _|| |\/| | (_ |/ _ \ 
+    // |___|_| |_|  |_|\___/_/ \_\                        
+    // IFMGA: Note that there is no TAP Designation for IFMGA. It is a separate concept related to
+    // the status of being a Mountain Guide. This includes the idea that the member has paid IFMGA 
+    // dues as am additional line item to the IFMGA via the ACMG renewal. 
+    // For any active Mountain Guide with an IFMGA License Number > 0 and a SkiExamMode of 'Ski', 
     // an IFMGA Membership is implied. The approach is to clone the MG membership and change the
     // name of the Tier to IFMGA.
     // Any Active MG without an IFMGALicenseNumber > 0 would not receive an IFMGA Membership Tier in Wicket. 
@@ -268,6 +298,49 @@ export const convertCognitoToWicket = (cognito) => {
             ifmgaMembership[0] = 'ifmga' // just change the label
             wicket.professional.push(ifmgaMembership)
         }
+    }
+
+    //  ___              _   _           __  __           _                _    _      
+    // |_ _|_ _  __ _ __| |_(_)_ _____  |  \/  |___ _ __ | |__  ___ _ _ __| |_ (_)_ __ 
+    //  | || ' \/ _` / _|  _| \ V / -_) | |\/| / -_) '  \| '_ \/ -_) '_(_-< ' \| | '_ \
+    // |___|_||_\__,_\__|\__|_|\_/\___| |_|  |_\___|_|_|_|_.__/\___|_| /__/_||_|_| .__/
+    //                                                                           |_|   
+    // INACTIVE MEMBERS are actually ***Active*** "Inactive Members" in a Wicket Membership Tier context.
+    // Here we can know if this is an applicable condition based on the Cognito reported ProfileStatus. 
+    if(cognito.ProfileStatus && cognito.ProfileStatus === 'INACTIVE'){
+
+        // The assumption is that all of the Wicket Memberships calculated to this point are Inactive with End Dates in the past.
+        // The new Inactive Member Tier to be created needs a start date one day after the last end date
+        // and an End Date that is appropriate given the LastAnnualValidation date.
+
+        // Identify the latest end date: 
+        const seedDate = new Date('1940-01-01T00:00:00.000Z')
+        const latestEndDate = wicket.professional.reduce((acc, cur) => {
+
+            const tierEndDate = parseISO(cur[3])
+            if(tierEndDate >= acc){
+                acc = tierEndDate
+            }
+            return acc
+        }, seedDate) // seeded with a long ago date
+        
+        // Create the new Inactive Tier bracket:
+        const inactiveStartDate = addDays(latestEndDate, 1)
+        const inactiveEndDate = getActiveMembershipEndDate(cognito.LastAnnualValidation)
+        const inactiveMembershipTier = [
+            'inactive-member',
+            'Active',
+            format(inactiveStartDate, 'yyyy-MM-dd'),
+            format(inactiveEndDate, 'yyyy-MM-dd')
+        ]
+
+        // Protect against obviously incorrect dates: 
+        // Ie. - The person should have been something otherwise detectable prior to becoming Inactive
+        if(seedDate.toString() === latestEndDate.toString()){
+            throw new Error('Inactive Member profile lacks prior membership history.')
+        }
+        // And push it to the Wicket Professional memberships set:
+        wicket.professional.push(inactiveMembershipTier)
     }
 
     // TODO: Detectable 'mid career' Inactive periods can be filled with "Professional Inactive" membership
