@@ -87,12 +87,32 @@ export const convertCognitoToWicket = (cognito) => {
         // To do this, see if the `superseded_by` rule of the current cert intersects with other certs on the profile:
         const intersection = certRule.superseded_by.filter(x => certKeys.includes(x) && cognito[x].status !== 'RESIGNED');
 
-        // If the `intersection` has a value, it means that other certificate 'superseded' the first one. 
+        // If the `intersection` has a value, it means that another certificate 'superseded' the first one. 
         // And, based on that, we can use the start date of the second one to identify the end date of the first bracket.
 
         if (intersection.length > 0) {
 
-            const supersedingCertKey = intersection[0]
+            let supersedingCertKey
+            if(intersection.length > 1){
+
+                // This is an interesting case. When a member has multiple certs which allowably supersede the current one,
+                // we need to choose the earliest of the options:
+                const earliestSupersedingCert = intersection.reduce((acc, cur) => {
+
+                    if(acc.key === null || parseISO(cognito[cur].date) < acc.date){
+
+                        acc.key = cur
+                        acc.date = parseISO(cognito[cur].date)
+                    }
+                    return acc
+                },{key: null, date: new Date()})
+                supersedingCertKey = earliestSupersedingCert.key
+            }
+            else{
+                // by default, take the one and only
+                supersedingCertKey = intersection[0]
+            }
+            
             const supersedingCertDate = parseISO(cognito[supersedingCertKey].date)
             // Subtract one day so it ends the day before the next one starts
             const certDateLessOneDay = sub(supersedingCertDate, { days: 1 })
@@ -172,7 +192,8 @@ export const convertCognitoToWicket = (cognito) => {
     // For each of the certs on the cognito object, convert it to a date bracketed Wicket Membership Tier:
     wicket.professional = certsArray.map((cert) => {
 
-        return convertCert(cert, cognito.LastAnnualValidation)
+        const convertedCert = convertCert(cert, cognito.LastAnnualValidation)
+        return convertedCert
     })
 
     //  ___             ___              __  __           _                _    _         

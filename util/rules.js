@@ -104,7 +104,7 @@ const rulesObject = {
     },
     AG: {
         supervises: [AAG, ARG, AHG, TRCI],
-        supersedes: [AAG, ARG, AHG, AHGW, HG, HGW, DHG, TRCI],
+        supersedes: [AAG, ARG, AHG, AHGW, HG, HGW, DHG, TRCI, RG],
         eligible: [{to: AAG, with:dAG, when: [cFA, cPP, cCPD]}, {to: AG, when: [cFA, cPP, cCPD]}]
     },
     HG: {

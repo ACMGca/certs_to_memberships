@@ -429,19 +429,19 @@ test('New Member in 2024 with earlier designation dates', () => {
 // L.C. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/231 RESIGNED [231.json]
 test('A resigned member shows an Inactive Tier bracket ending in the past', () => {
 
-  const source = { 
+  const source = {
     ProfileStatus: 'RESIGNED',
-    DateJoined: '2016-05-01', 
-    DateEnd: null, 
-    DateReinstate: null, 
+    DateJoined: '2016-05-01',
+    DateEnd: null,
+    DateReinstate: null,
     LastAnnualValidation: '2023-01-01',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
-    CGI1: { 
-      status: 'Resigned', 
-      date: '2015-12-01', 
-      lastModified: '2024-03-01' 
-    } 
+    CGI1: {
+      status: 'Resigned',
+      date: '2015-12-01',
+      lastModified: '2024-03-01'
+    }
   }
   const expected = {
     "professional": [
@@ -512,7 +512,7 @@ test('An Inactive Member converts to a Wicket Active Inactive Membership tier', 
       lastModified: null
     }
   }
-  
+
   const expected = {
     professional: [
       [
@@ -542,6 +542,75 @@ test('An Inactive Member converts to a Wicket Active Inactive Membership tier', 
   expect(result).toMatchObject(expected)
 })
 
+// C.J. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/682
+// Active Alpine Guide, Conversion Error results in RG incomplete
+test('Prior Conversion Error - Active Alpine Guide results in correct RG inactive tier', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '1999-01-01',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2024-01-23',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    transforms: [],
+    AG: {
+      status: 'Active',
+      date: '2014-09-01',
+      lastModified: null
+    },
+    RG: {
+      status: null,
+      date: '2001-09-01',
+      lastModified: null
+    },
+    AAG: {
+      status: null,
+      date: '2010-09-01',
+      lastModified: null
+    },
+    ARG: {
+      status: null,
+      date: '1999-09-01',
+      lastModified: null
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        "apprentice_rock_guide",
+        "Inactive",
+        "1999-09-01",
+        "2001-08-31"
+      ],
+      [
+        "rock_guide",
+        "Inactive",
+        "2001-09-01",
+        "2014-08-31"
+      ],
+      [
+        "apprentice_alpine_guide",
+        "Inactive",
+        "2010-09-01",
+        "2014-08-31"
+      ],
+      [
+        "alpine_guide",
+        "Active",
+        "2014-09-01",
+        "2024-12-31"
+      ]
+    ]
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result).toMatchObject(expected)
+})
 
 
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
