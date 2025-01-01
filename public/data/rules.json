@@ -183,6 +183,7 @@
       }
     ],
     "superseded_by": [
+      "AG",
       "MG"
     ],
     "membership_tier_slug": "rock_guide"
@@ -234,7 +235,8 @@
       "Hiking Guide Member",
       "Winter Hiking Guide Member",
       "Day Hiking Guide Member",
-      "Top Rope Climbing Instructor Member"
+      "Top Rope Climbing Instructor Member",
+      "Rock Guide Member"
     ],
     "eligible": [
       {
