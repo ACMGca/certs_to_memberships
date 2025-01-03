@@ -613,6 +613,64 @@ test('Prior Conversion Error - Active Alpine Guide results in correct RG inactiv
 })
 
 
+test('Conversion correction: Produces correct order and outcome for Winter Travel', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2021-07-01',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2024-01-30',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    transforms: [],
+    AHG: {
+      status: null,
+      date: '2021-06-01',
+      lastModified: null
+    },
+    HG: {
+      status: 'Active',
+      date: '2024-06-08',
+      lastModified: '2024-06-24'
+    },
+    HGWT: {
+      status: 'Acquired',
+      date: '2021-12-01',
+      lastModified: null
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        "apprentice_hiking_guide",
+        "Inactive",
+        "2021-07-01",
+        "2021-11-30"
+      ],
+      [
+        "apprentice_hiking_guide_winter",
+        "Inactive",
+        "2021-12-01",
+        "2024-06-07"
+      ],
+      [
+        "hiking_guide_winter",
+        "Active",
+        "2024-06-08",
+        "2024-12-31"
+      ]
+    ]
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result).toMatchObject(expected)
+})
+
+
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
 // This is an example of the data transformation business rule in the schema layer
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
@@ -626,8 +684,6 @@ test('Prior Conversion Error - Active Alpine Guide results in correct RG inactiv
 // TODO: TEST CASE Cognito Row#561 - Resigned Member should get an inactive Wicket Membership ending in the past
 // *** here is a good example of correct RESIGNED behavior to lock into a test first: Row#1965
 
-// TODO: TEST CASE Cognito Row#565 - Inactive Member with current LastAnnualValidation should get an Active "Inactive Membership" tier with the correct year end
-
 // TODO: TEST CASE Cognito Row#2097 - Should have produced a past tier bracket
 // *** #2323 has good result to lock into a test case first
 
@@ -639,12 +695,11 @@ test('Prior Conversion Error - Active Alpine Guide results in correct RG inactiv
 // TODO: GOOD SAMPLE >> #2227 - Good tiers closed in past for RESIGNED Member
 
 // TODO: #301 - Member lost standing as RG but remains active in other Scope of Practice
-
-// #1538 RG should be superseded by AG but the conversion fails
+// I applied a fix to the member profile to set the ARG RESIGNED. Should fix the issue on next refresh. 
 
 // #744 Perm
 
+// #1245 https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries-TODO/1245
+// HGW gets put out of order relative to HG and the Tier states are backwards
 
-
-
-
+// #3075 Inactive TRCI - looks simple but gets conversion error

@@ -1,8 +1,8 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-01-01T04:37:57.179Z",
+    "reportGeneratedDate": "2025-01-03T00:21:06.045Z",
     "mostRecentlyUpdatedProfileDate": "2025-01-01T04:06:28.362Z",
-    "daysSinceDataRefresh": 0
+    "daysSinceDataRefresh": 1
   },
   "stats": {
     "MEMBER_PARSE_ERRORS": 68,
@@ -1081,7 +1081,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2023-04-01",
             "2025-12-30"
@@ -1941,7 +1941,7 @@
       "wicketMemberships": {
         "professional": [
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2016-05-01",
             "2024-12-30"
@@ -2287,16 +2287,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2013-10-01",
-            "2013-09-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2013-10-01",
             "2014-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2014-09-01",
             "2024-12-30"
@@ -3472,16 +3466,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2020-12-01",
-            "2020-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2020-12-01",
             "2022-05-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2022-06-01",
             "2025-12-30"
@@ -4228,7 +4216,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2016-05-01",
             "2025-12-30"
@@ -5170,13 +5158,13 @@
             "2025-12-30"
           ],
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Inactive",
             "2016-06-01",
             "2016-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2016-09-01",
             "2025-12-30"
@@ -9122,7 +9110,7 @@
             "2009-06-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Inactive",
             "2009-07-01",
             "2022-06-30"
@@ -9545,16 +9533,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2021-12-01",
-            "2021-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2021-12-01",
             "2024-06-07"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2024-06-08",
             "2024-12-30"
@@ -10944,7 +10926,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2025-12-30"
@@ -12805,16 +12787,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2016-12-01",
-            "2016-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2016-12-01",
             "2017-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2017-09-01",
             "2024-12-30"
@@ -13837,7 +13813,7 @@
             "2010-03-31"
           ],
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Inactive",
             "2009-06-01",
             "2013-02-28"
@@ -13855,7 +13831,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2013-03-01",
             "2025-12-30"
@@ -14379,16 +14355,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2018-01-01",
-            "2017-12-31"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2018-01-01",
             "2018-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2025-12-30"
@@ -16090,16 +16060,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2019-12-01",
-            "2019-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2019-12-01",
             "2020-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2020-09-01",
             "2025-12-30"
@@ -17736,16 +17700,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2022-12-01",
-            "2022-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2022-12-01",
             "2024-09-17"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2024-09-18",
             "2025-12-30"
@@ -18090,7 +18048,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2024-12-30"
@@ -18436,7 +18394,7 @@
       "wicketMemberships": {
         "professional": [
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Inactive",
             "2021-12-29",
             "2024-03-01"
@@ -18882,7 +18840,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2021-01-01",
             "2025-12-30"
@@ -19442,16 +19400,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2021-12-01",
-            "2021-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2021-12-01",
             "2022-05-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2022-06-01",
             "2025-12-30"
@@ -19545,7 +19497,7 @@
             "2012-03-31"
           ],
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Inactive",
             "2010-09-01",
             "2020-10-31"
@@ -19557,7 +19509,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2020-11-01",
             "2025-12-30"
@@ -20978,7 +20930,7 @@
             "2015-03-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2014-06-01",
             "2024-12-30"
@@ -23230,7 +23182,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2023-04-01",
             "2024-12-30"
@@ -23580,7 +23532,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-06-01",
             "2024-12-30"
@@ -26030,16 +25982,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2022-12-01",
-            "2022-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2022-12-01",
             "2024-09-17"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2024-09-18",
             "2025-12-30"
@@ -26787,7 +26733,7 @@
             "2019-03-31"
           ],
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Inactive",
             "2018-09-01",
             "2019-03-31"
@@ -26799,7 +26745,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-04-01",
             "2025-12-30"
@@ -26862,7 +26808,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Inactive",
             "2019-06-01",
             "2024-01-22"
@@ -27916,7 +27862,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2021-01-01",
             "2024-12-30"
@@ -33494,7 +33440,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2023-06-01",
             "2025-12-30"
@@ -35364,16 +35310,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2015-02-01",
-            "2015-01-31"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2015-02-01",
             "2016-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2016-09-01",
             "2025-12-30"
@@ -37410,7 +37350,7 @@
             "2024-04-02"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Inactive",
             "2001-06-01",
             "2024-04-02"
@@ -37670,7 +37610,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-06-01",
             "2025-12-30"
@@ -39932,7 +39872,7 @@
             "2018-03-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2017-11-01",
             "2025-12-30"
@@ -40486,13 +40426,13 @@
             "2010-06-30"
           ],
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Inactive",
             "2009-06-01",
             "2010-06-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2010-07-01",
             "2025-12-30"
@@ -42671,16 +42611,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2022-12-01",
-            "2022-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2022-12-01",
             "2023-05-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2023-06-01",
             "2025-12-30"
@@ -42811,7 +42745,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-06-01",
             "2024-12-30"
@@ -43525,13 +43459,13 @@
             "2025-12-30"
           ],
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Inactive",
             "2018-06-01",
             "2019-09-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-10-01",
             "2025-12-30"
@@ -43792,7 +43726,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2024-12-30"
@@ -44161,16 +44095,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2019-12-01",
-            "2019-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2019-12-01",
             "2022-05-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2022-06-01",
             "2025-12-30"
@@ -44711,7 +44639,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2025-12-30"
@@ -45244,7 +45172,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2024-12-30"
@@ -45698,16 +45626,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2016-12-01",
-            "2016-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2016-12-01",
             "2019-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-09-01",
             "2025-12-30"
@@ -46161,7 +46083,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-09-01",
             "2024-12-30"
@@ -46339,7 +46261,7 @@
             "2021-02-28"
           ],
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Inactive",
             "2018-09-01",
             "2021-02-28"
@@ -46351,7 +46273,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2021-03-01",
             "2025-12-30"
@@ -46939,16 +46861,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2022-12-01",
-            "2022-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2022-12-01",
             "2023-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2023-09-01",
             "2024-12-30"
@@ -47146,7 +47062,7 @@
       "wicketMemberships": {
         "professional": [
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2023-09-20",
             "2025-12-30"
@@ -48402,7 +48318,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2009-06-01",
             "2025-12-30"
@@ -48991,16 +48907,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2018-12-01",
-            "2018-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2018-12-01",
             "2020-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2020-09-01",
             "2025-12-30"
@@ -49050,16 +48960,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2016-12-01",
-            "2016-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2016-12-01",
             "2017-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2017-09-01",
             "2024-12-30"
@@ -49109,16 +49013,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2016-12-01",
-            "2016-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2016-12-01",
             "2017-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2017-09-01",
             "2024-12-30"
@@ -49285,16 +49183,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2020-12-01",
-            "2020-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2020-12-01",
             "2021-05-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2021-06-01",
             "2024-12-30"
@@ -49987,16 +49879,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2015-01-01",
-            "2014-12-31"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2015-01-01",
             "2022-05-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2022-06-01",
             "2025-12-30"
@@ -50392,7 +50278,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-06-01",
             "2025-12-30"
@@ -50574,16 +50460,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2021-12-01",
-            "2021-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2021-12-01",
             "2024-09-17"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2024-09-18",
             "2025-12-30"
@@ -50725,7 +50605,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2021-01-01",
             "2025-12-30"
@@ -51614,16 +51494,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2015-03-01",
-            "2015-02-28"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2015-03-01",
             "2015-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2015-09-01",
             "2024-12-30"
@@ -52264,7 +52138,7 @@
             "2023-12-21"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2024-12-30"
@@ -53802,7 +53676,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2019-06-01",
             "2025-12-30"
@@ -54176,16 +54050,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2023-12-03",
-            "2023-12-02"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2023-12-03",
             "2024-06-07"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2024-06-08",
             "2024-12-30"
@@ -54691,7 +54559,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2021-01-01",
             "2025-12-30"
@@ -55377,16 +55245,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2021-12-01",
-            "2021-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2021-12-01",
             "2024-06-07"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2024-06-08",
             "2024-12-30"
@@ -55903,7 +55765,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2016-05-01",
             "2024-12-30"
@@ -57707,7 +57569,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2025-12-30"
@@ -59111,7 +58973,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2016-05-01",
             "2025-12-30"
@@ -60988,7 +60850,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2017-11-01",
             "2024-12-30"
@@ -62157,16 +62019,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2014-07-01",
-            "2014-06-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2014-07-01",
             "2014-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2014-09-01",
             "2024-12-30"
@@ -65643,7 +65499,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2024-06-08",
             "2024-12-30"
@@ -66146,7 +66002,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2024-12-30"
@@ -68814,7 +68670,7 @@
             "2024-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2011-10-01",
             "2024-12-30"
@@ -70193,7 +70049,7 @@
             "2025-12-30"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Active",
             "2018-09-01",
             "2025-12-30"
@@ -112292,16 +112148,10 @@
             "apprentice_hiking_guide_winter",
             "Inactive",
             "2015-12-01",
-            "2015-11-30"
-          ],
-          [
-            "hiking_guide_winter",
-            "Inactive",
-            "2015-12-01",
             "2016-08-31"
           ],
           [
-            "hiking_guide",
+            "hiking_guide_winter",
             "Inactive",
             "2016-09-01",
             "2021-02-01"
@@ -121846,7 +121696,7 @@
       "wicketMemberships": {
         "professional": [
           [
-            "apprentice_hiking_guide",
+            "apprentice_hiking_guide_winter",
             "Active",
             "2024-01-20",
             "2024-12-30"

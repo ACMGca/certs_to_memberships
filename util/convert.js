@@ -255,28 +255,38 @@ export const convertCognitoToWicket = (cognito) => {
                 end: parseISO(wicket.professional[membershipIndex][3])
             })) {
 
-                // The original AHG Membership needs the following changes:
+                // The original Membership needs the following changes:
                 // 1) If it was ACTIVE, it should be set in INACTIVE
                 // 2) It should get a new END date set to `winterDesignationDateBySkiCertificate` minus one day
 
-                // Clone the AHG Membership as the basis for the AHGW Membership
-                const ahgMembershipClone = [...wicket.professional[membershipIndex]]
+                // Clone the Membership as the basis for the Winter Membership
+                const membershipClone = [...wicket.professional[membershipIndex]]
                 wicket.professional[membershipIndex][1] = 'Inactive'
                 wicket.professional[membershipIndex][3] = format(subDays(parseISO(splitDate), 1), 'yyyy-MM-dd')
 
-                // A new AHGW Membership needs to be created. It is a copy of the original AHG Membership with:
+                // A new Membership needs to be created. It is a copy of the original Membership with:
                 // 1) Gets the slug updated to include 'winter'
                 // 2) Gets a START date set to `winterDesignationDateBySkiCertificate`
-                // 3) Keeps the same END date as the original AHG
-                ahgMembershipClone[0] = `${slugs[slugIndex]}_winter`
-                ahgMembershipClone[2] = format(parseISO(splitDate), 'yyyy-MM-dd')
+                // 3) Keeps the same END date as the original Membership
+                membershipClone[0] = `${slugs[slugIndex]}_winter`
+                membershipClone[2] = format(parseISO(splitDate), 'yyyy-MM-dd')
 
                 // Push the new membership into the collection
-                wicket.professional.push(ahgMembershipClone)
-                // And re-sort it
-                wicket.professional.sort(membershipSort)
+                wicket.professional.push(membershipClone)
+            }
+            else{
+                // IF this is a *hiking_* membership that started after the split date
+                // then it needs to be relabeled as a _winter membership:
+                if(wicket.professional[membershipIndex] && 
+                   wicket.professional[membershipIndex][0].includes('hiking_') && 
+                   parseISO(wicket.professional[membershipIndex][2]) > parseISO(splitDate))
+                {
+                    wicket.professional[membershipIndex][0] = `${wicket.professional[membershipIndex][0]}_winter`
+                }
             }
         })
+        // Lastly, re-sort it
+        wicket.professional.sort(membershipSort)
     }
 
     const winterDesignationDateBySkiCertificate = (
