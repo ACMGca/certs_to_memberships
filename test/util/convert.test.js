@@ -612,7 +612,9 @@ test('Prior Conversion Error - Active Alpine Guide results in correct RG inactiv
   expect(result).toMatchObject(expected)
 })
 
-
+// S.R. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/2045
+// Conversion correction case. Produce correct order and outcome for a HG membership becoming HGW even
+// though the original _winter switch happened in the prior AHGW membership.
 test('Conversion correction: Produces correct order and outcome for Winter Travel', () => {
 
   const source = {
