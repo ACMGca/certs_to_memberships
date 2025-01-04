@@ -705,3 +705,10 @@ test('Conversion correction: Produces correct order and outcome for Winter Trave
 // HGW gets put out of order relative to HG and the Tier states are backwards
 
 // #3075 Inactive TRCI - looks simple but gets conversion error
+
+
+// TEST!!! New Rule: Filter out not only one day memberships but ones where the start date is earlier than the end date
+// This can happen when a designation was issued early but the person did not join until some time later when another superseding designation was acquired
+// #82 - certs before Join date result in out of sequence
+// #1342 + #2975 - out of sequence dates on winter travel END before START???
+// #24 + #53(similar) - wacky ASG dates - WT issue
