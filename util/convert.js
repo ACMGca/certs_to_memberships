@@ -374,6 +374,23 @@ export const convertCognitoToWicket = (cognito) => {
         wicket.professional.push(inactiveMembershipTier)
     }
 
+    // ___              _ _    _   _____ _           ___       _          
+    // |_ _|_ ___ ____ _| (_)__| | |_   _(_)___ _ _  |   \ __ _| |_ ___ ___
+    //  | || ' \ V / _` | | / _` |   | | | / -_) '_| | |) / _` |  _/ -_|_-<
+    // |___|_||_\_/\__,_|_|_\__,_|   |_| |_\___|_|   |___/\__,_|\__\___/__/
+    //
+    // We have observed some Tiers produced through the converter which create start dates before end dates.
+    // This is obviously incorrect. For now, we should detect these and note the error
+    wicket.professional.forEach((membership) => {
+
+        const tierStartDate = parseISO(membership[2])
+        const tierEndDate = parseISO(membership[3])
+        if(tierStartDate > tierEndDate){
+            throw new Error(`[${membership[0]}] Membership tier start date must be before end date.`)
+        }
+    })                                                                        
+
+
     // TODO: Detectable 'mid career' Inactive periods can be filled with "Professional Inactive" membership
     // TODO: Detectable 'mid career' Resigned periods can be void of any membership
     return wicket

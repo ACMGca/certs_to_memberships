@@ -708,7 +708,10 @@ test('Conversion correction: Produces correct order and outcome for Winter Trave
 
 
 // TEST!!! New Rule: Filter out not only one day memberships but ones where the start date is earlier than the end date
+// ^^^ Do this but one test at a time to make sure we understand what is happening.
 // This can happen when a designation was issued early but the person did not join until some time later when another superseding designation was acquired
 // #82 - certs before Join date result in out of sequence
 // #1342 + #2975 - out of sequence dates on winter travel END before START???
 // #24 + #53(similar) - wacky ASG dates - WT issue
+
+// #887 - should be AHGW because of the ASG cert
