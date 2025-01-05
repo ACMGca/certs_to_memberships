@@ -43,9 +43,3 @@ export const jsonToWorkbookOnDisk = async (jsonData, workbookPath) => {
 
     XLSX.writeFile(workbook, workbookPath, { compression: true });
 }
-
-const workbookJSON = workbookToJSON('/Users/mm/Downloads/wicket-person-import-test (3).xlsx')
-
-jsonToWorkbookOnDisk(workbookJSON, './newWorkbook.xlsx')
-
-// console.log(book)

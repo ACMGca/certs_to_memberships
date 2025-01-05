@@ -6,6 +6,7 @@ duckDb.json
 .wrangler/
 .dev.vars
 bun.lockb
+public/data/*.xlsx
 
 # Logs
 logs

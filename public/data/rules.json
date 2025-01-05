@@ -26,7 +26,7 @@
       "AG",
       "MG"
     ],
-    "membership_tier_slug": "apprentice_rock_guide"
+    "membership_tier_slug": "apprentice-rock-guide"
   },
   "AAG": {
     "supervises": [],
@@ -55,7 +55,7 @@
       "AG",
       "MG"
     ],
-    "membership_tier_slug": "apprentice_alpine_guide"
+    "membership_tier_slug": "apprentice-alpine-guide"
   },
   "ASG": {
     "supervises": [],
@@ -82,7 +82,7 @@
       "SG",
       "MG"
     ],
-    "membership_tier_slug": "apprentice_ski_guide"
+    "membership_tier_slug": "apprentice-ski-guide"
   },
   "AHG": {
     "supervises": [],
@@ -111,7 +111,7 @@
       "HGW",
       "MG"
     ],
-    "membership_tier_slug": "apprentice_hiking_guide"
+    "membership_tier_slug": "apprentice-hiking-guide"
   },
   "AHGW": {
     "supervises": [],
@@ -151,7 +151,7 @@
       "AG",
       "HGW"
     ],
-    "membership_tier_slug": "apprentice_winter_hiking_guide"
+    "membership_tier_slug": "apprentice-winter-hiking-guide"
   },
   "RG": {
     "supervises": [
@@ -186,7 +186,7 @@
       "AG",
       "MG"
     ],
-    "membership_tier_slug": "rock_guide"
+    "membership_tier_slug": "rock-guide"
   },
   "SG": {
     "supervises": [
@@ -218,7 +218,7 @@
     "superseded_by": [
       "MG"
     ],
-    "membership_tier_slug": "ski_guide"
+    "membership_tier_slug": "ski-guide"
   },
   "AG": {
     "supervises": [
@@ -260,7 +260,7 @@
     "superseded_by": [
       "MG"
     ],
-    "membership_tier_slug": "alpine_guide"
+    "membership_tier_slug": "alpine-guide"
   },
   "HG": {
     "supervises": [
@@ -294,7 +294,7 @@
       "AG",
       "MG"
     ],
-    "membership_tier_slug": "hiking_guide"
+    "membership_tier_slug": "hiking-guide"
   },
   "DHG": {
     "supervises": [],
@@ -313,7 +313,7 @@
       "AG",
       "HG"
     ],
-    "membership_tier_slug": "day_hiking_guide"
+    "membership_tier_slug": "day-hiking-guide"
   },
   "HGW": {
     "supervises": [
@@ -356,7 +356,7 @@
     "superseded_by": [
       "AG"
     ],
-    "membership_tier_slug": "winter_hiking_guide"
+    "membership_tier_slug": "winter-hiking-guide"
   },
   "CGI1": {
     "supervises": [],
@@ -382,7 +382,7 @@
       "CGI2",
       "CGI3"
     ],
-    "membership_tier_slug": "climbing_gym_instructor_level_1"
+    "membership_tier_slug": "climbing-gym-instructor-level-1"
   },
   "CGI2": {
     "supervises": [],
@@ -411,7 +411,7 @@
     "superseded_by": [
       "CGI3"
     ],
-    "membership_tier_slug": "climbing_gym_instructor_level_2"
+    "membership_tier_slug": "climbing-gym-instructor-level-2"
   },
   "CGI3": {
     "supervises": [],
@@ -430,7 +430,7 @@
       }
     ],
     "superseded_by": [],
-    "membership_tier_slug": "climbing_gym_instructor_level_3"
+    "membership_tier_slug": "climbing-gym-instructor-level-3"
   },
   "TRCI": {
     "supervises": [],
@@ -457,7 +457,7 @@
       "AG",
       "MG"
     ],
-    "membership_tier_slug": "top_rope_climbing_instructor"
+    "membership_tier_slug": "top-rope-climbing-instructor"
   },
   "VFG": {
     "supervises": [],
@@ -480,7 +480,7 @@
       }
     ],
     "superseded_by": [],
-    "membership_tier_slug": "via_ferrata_guide"
+    "membership_tier_slug": "via-ferrata-guide"
   },
   "MG": {
     "supervises": [
@@ -530,7 +530,7 @@
       }
     ],
     "superseded_by": [],
-    "membership_tier_slug": "mountain_guide"
+    "membership_tier_slug": "mountain-guide"
   },
   "IFMGA": {
     "supervises": [

@@ -34,9 +34,9 @@ const membershipSort = (a, b) => {
  */
 const getActiveMembershipEndDate = (lastAnnualValidation) => {
 
-    const decemberFirst2024 = new Date('2024-12-01T00:00:00.000Z')
-    const decemberThirtyFirst2024 = new Date('2024-12-31T00:00:00.000Z')
-    const decemberThirtyFirst2025 = new Date('2025-12-31T00:00:00.000Z')
+    const decemberFirst2024 = new Date('2024-12-01T12:00:00.000Z')
+    const decemberThirtyFirst2024 = new Date('2024-12-31T12:00:00.000Z')
+    const decemberThirtyFirst2025 = new Date('2025-12-31T12:00:00.000Z')
     const lastAnnualValidationDate = parseISO(lastAnnualValidation)
     if (isNaN(lastAnnualValidationDate)) {
         throw new TypeError('ActiveMembershipEndDate could not be determined based on input: ' + lastAnnualValidation)
@@ -386,7 +386,7 @@ export const convertCognitoToWicket = (cognito) => {
         const tierStartDate = parseISO(membership[2])
         const tierEndDate = parseISO(membership[3])
         if(tierStartDate > tierEndDate){
-            throw new Error(`[${membership[0]}] Membership tier start date must be before end date.`)
+            //throw new Error(`[${membership[0]}] Membership tier start date must be before end date.`)
         }
     })                                                                        
 

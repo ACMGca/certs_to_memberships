@@ -182,7 +182,7 @@ export const rules = (function (){
         }).filter(v => v) // remove undefined elements
 
         // add a membership tier slug based on the English label value
-        acc[cur].membership_tier_slug = labels[cur].toLowerCase().trim().replace(/ member/, '').replace(/\s/g, '_')
+        acc[cur].membership_tier_slug = labels[cur].toLowerCase().trim().replace(/ member/, '').replace(/\s/g, '-')
 
         return acc
     }, {})
