@@ -32,13 +32,13 @@ test('Simple CGI1 to CGI2 Scenario', () => {
   const expected = {
     professional: [
       [
-        'climbing_gym_instructor_level_1',
+        'climbing-gym-instructor-level-1',
         'Inactive',
         '2023-11-03',
         '2024-09-12'
       ],
       [
-        'climbing_gym_instructor_level_2',
+        'climbing-gym-instructor-level-2',
         'Active',
         '2024-09-13',
         '2024-12-31'
@@ -101,31 +101,31 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
   const expected = {
     "professional": [
       [
-        "apprentice_rock_guide",
+        "apprentice-rock-guide",
         "Inactive",
         "2001-09-01",
         "2003-08-31"
       ],
       [
-        "apprentice_alpine_guide",
+        "apprentice-alpine-guide",
         "Inactive",
         "2003-09-01",
         "2006-08-31"
       ],
       [
-        "alpine_guide",
+        "alpine-guide",
         "Inactive",
         "2006-09-01",
         "2009-03-31"
       ],
       [
-        "apprentice_ski_guide",
+        "apprentice-ski-guide",
         "Inactive",
         "2007-03-01",
         "2009-03-31"
       ],
       [
-        "mountain_guide",
+        "mountain-guide",
         "Active",
         "2009-04-01",
         "2025-12-31"
@@ -142,6 +142,7 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
+  console.log(result)
   expect(result).toMatchObject(expected)
 })
 
@@ -170,19 +171,19 @@ test.todo('Longstanding member with incomplete but inferrable date data', () => 
   const expected = {
     "professional": [
       [
-        "mountain_guide",
+        "mountain-guide",
         "Inactive",
         "1978-01-01",
         "2005-01-01"
       ],
       [
-        "inactive_member",
+        "inactive-member",
         "Inactive",
         "2005-11-01",
         "2023-12-31"
       ],
       [
-        "inactive_member",
+        "inactive-member",
         "Active",
         "2023-12-31",
         "2024-12-31"
@@ -237,31 +238,31 @@ test('An Active HG+SG with DHG history and Winter Travel', () => {
   const expected = {
     "professional": [
       [
-        "day_hiking_guide",
+        "day-hiking-guide",
         "Inactive",
         "2007-01-01",
         "2007-05-31" // one day before - ended by HG
       ],
       [
-        "hiking_guide",
+        "hiking-guide",
         "Inactive",
         "2007-06-01",
         "2009-03-31" // ended by the ASG -1 day
       ],
       [
-        "apprentice_ski_guide",
+        "apprentice-ski-guide",
         "Inactive",
         "2009-04-01",
         "2020-12-31" // ended by SG
       ],
       [
-        "hiking_guide_winter",
+        "hiking-guide-winter",
         "Active",
         "2009-04-01", // started by the ASG
         "2024-12-31"
       ],
       [
-        "ski_guide",
+        "ski-guide",
         "Active",
         "2021-01-01",
         "2024-12-31"
@@ -306,19 +307,19 @@ test('An Active AHG+ASG to demonstrate Winter Travel implementation', () => {
   const expected = {
     "professional": [
       [
-        "apprentice_hiking_guide",
+        "apprentice-hiking-guide",
         "Inactive",
         "2006-09-15", // starts with the Join date because it's later than the certificate date
         "2009-03-31"  // but ends the day before the ASG certificate
       ],
       [
-        "apprentice_ski_guide",
+        "apprentice-ski-guide",
         "Active",
         "2009-04-01", // starts with the ASG date
         "2024-12-31" // ends as normal annual membership
       ],
       [
-        "apprentice_hiking_guide_winter",
+        "apprentice-hiking-guide-winter",
         "Active",
         "2009-04-01", // starts the same day as the ASG due to the enhance winter scope of practice
         "2024-12-31"  // ends as normal for the year end
@@ -358,13 +359,13 @@ test('Winter Travel with an explicit date splits a AHG certificate into two memb
   const expected = {
     "professional": [
       [
-        "apprentice_hiking_guide",
+        "apprentice-hiking-guide",
         "Inactive",
         "2006-09-15", // starts with the Join date because it's later than the certificate date
         "2012-03-14"  // but ends the day before the WT Certificate was Acquired
       ],
       [
-        "apprentice_hiking_guide_winter",
+        "apprentice-hiking-guide-winter",
         "Active",
         "2012-03-15", // starts with the WT date
         "2024-12-31" // ends as normal annual membership
@@ -406,13 +407,13 @@ test('New Member in 2024 with earlier designation dates', () => {
   const expected = {
     "professional": [
       [
-        "climbing_gym_instructor_level_1",
+        "climbing-gym-instructor-level-1",
         "Active",
         "2024-09-09",
         "2024-12-31"
       ],
       [
-        "apprentice_hiking_guide",
+        "apprentice-hiking-guide",
         "Active",
         "2024-09-09",
         "2024-12-31"
@@ -446,7 +447,7 @@ test('A resigned member shows an Inactive Tier bracket ending in the past', () =
   const expected = {
     "professional": [
       [
-        "climbing_gym_instructor_level_1",
+        "climbing-gym-instructor-level-1",
         "Inactive",   // The tier status is Inactive because the bracket end date is in the past
         "2016-05-01", // Starts on the DateJoined because it is after the certificate date
         "2024-03-01"  // Ends on the LastModified date
@@ -516,13 +517,13 @@ test('An Inactive Member converts to a Wicket Active Inactive Membership tier', 
   const expected = {
     professional: [
       [
-        'apprentice_alpine_guide',
+        'apprentice-alpine-guide',
         'Inactive',
         '1988-01-01',
         '1993-12-31'
       ],
       [
-        'mountain_guide',
+        'mountain-guide',
         'Inactive',
         '1994-01-01',
         '2023-01-28'       // We can't know from the data but can presume that Inactive was preceded by Active
@@ -580,25 +581,25 @@ test('Prior Conversion Error - Active Alpine Guide results in correct RG inactiv
   const expected = {
     professional: [
       [
-        "apprentice_rock_guide",
+        "apprentice-rock-guide",
         "Inactive",
         "1999-09-01",
         "2001-08-31"
       ],
       [
-        "rock_guide",
+        "rock-guide",
         "Inactive",
         "2001-09-01",
         "2014-08-31"
       ],
       [
-        "apprentice_alpine_guide",
+        "apprentice-alpine-guide",
         "Inactive",
         "2010-09-01",
         "2014-08-31"
       ],
       [
-        "alpine_guide",
+        "alpine-guide",
         "Active",
         "2014-09-01",
         "2024-12-31"
@@ -646,19 +647,19 @@ test('Conversion correction: Produces correct order and outcome for Winter Trave
   const expected = {
     professional: [
       [
-        "apprentice_hiking_guide",
+        "apprentice-hiking-guide",
         "Inactive",
         "2021-07-01",
         "2021-11-30"
       ],
       [
-        "apprentice_hiking_guide_winter",
+        "apprentice-hiking-guide-winter",
         "Inactive",
         "2021-12-01",
         "2024-06-07"
       ],
       [
-        "hiking_guide_winter",
+        "hiking-guide-winter",
         "Active",
         "2024-06-08",
         "2024-12-31"

@@ -242,7 +242,7 @@ export const convertCognitoToWicket = (cognito) => {
     */
     const winterTravelSplitter = (wicket, splitDate) => {
 
-        const slugs = ['apprentice_hiking_guide', 'hiking_guide']
+        const slugs = ['apprentice-hiking-guide', 'hiking-guide']
         const affectedMemberships = slugs.map((slug) => {
 
             return wicket.professional.findIndex((membership) => membership[0] === slug)
@@ -268,7 +268,7 @@ export const convertCognitoToWicket = (cognito) => {
                 // 1) Gets the slug updated to include 'winter'
                 // 2) Gets a START date set to `winterDesignationDateBySkiCertificate`
                 // 3) Keeps the same END date as the original Membership
-                membershipClone[0] = `${slugs[slugIndex]}_winter`
+                membershipClone[0] = `${slugs[slugIndex]}-winter`
                 membershipClone[2] = format(parseISO(splitDate), 'yyyy-MM-dd')
 
                 // Push the new membership into the collection
@@ -278,10 +278,10 @@ export const convertCognitoToWicket = (cognito) => {
                 // IF this is a *hiking_* membership that started after the split date
                 // then it needs to be relabeled as a _winter membership:
                 if(wicket.professional[membershipIndex] && 
-                   wicket.professional[membershipIndex][0].includes('hiking_') && 
+                   wicket.professional[membershipIndex][0].includes('hiking-') && 
                    parseISO(wicket.professional[membershipIndex][2]) > parseISO(splitDate))
                 {
-                    wicket.professional[membershipIndex][0] = `${wicket.professional[membershipIndex][0]}_winter`
+                    wicket.professional[membershipIndex][0] = `${wicket.professional[membershipIndex][0]}-winter`
                 }
             }
         })
@@ -323,7 +323,7 @@ export const convertCognitoToWicket = (cognito) => {
     if (cognito.MG && cognito.MG.status === 'Active' && cognito.SkiExamMode === 'Ski' && Number(cognito.IFMGALicenseNumber) > 0) {
 
         // Find the MG membership on the Wicket object
-        const mgMembership = wicket.professional.find((m) => m[0] === 'mountain_guide' && m[1] === 'Active')
+        const mgMembership = wicket.professional.find((m) => m[0] === 'mountain-guide' && m[1] === 'Active')
         if (mgMembership) {
             const ifmgaMembership = [...mgMembership]
             ifmgaMembership[0] = 'ifmga' // just change the label
