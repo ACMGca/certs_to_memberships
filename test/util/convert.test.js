@@ -43,13 +43,18 @@ test('Simple CGI1 to CGI2 Scenario', () => {
         '2024-09-13',
         '2024-12-31'
       ]
-    ]
+    ],
+    designations: {
+      CGI1: '2023-10-01',
+      CGI2: '2024-09-13'
+    }
   }
 
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // CASE 12 Modeled after M.A. [ https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/12 ]
@@ -136,14 +141,22 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
         "2009-04-01",
         "2025-12-31"
       ]
-    ]
+    ],
+    designations: {
+      AAG: '2003-09-01',
+      AG: '2006-09-01',
+      ARG: '2001-09-01',
+      ASG: '2007-03-01',
+      MG: '2009-04-01',
+      SG: '2009-04-01',
+    }
   }
 
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  console.log(result)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // CASE 744 Modeled after R.K. [ https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/744 ]
@@ -267,13 +280,21 @@ test('An Active HG+SG with DHG history and Winter Travel', () => {
         "2021-01-01",
         "2024-12-31"
       ]
-    ]
+    ],
+    designations: {
+      ASG: '2009-04-01',
+      DHG: '2006-09-01',
+      HG: '2007-06-01',
+      SG: '2021-01-01'
+      // Note: Member has HGWT ***because of Ski qualifications*** hence there is no HGWT Designation to show.
+    }
   }
 
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // Similar to A.C. but detuned example to use AHG, ASG to trigger WT 
@@ -324,13 +345,19 @@ test('An Active AHG+ASG to demonstrate Winter Travel implementation', () => {
         "2009-04-01", // starts the same day as the ASG due to the enhance winter scope of practice
         "2024-12-31"  // ends as normal for the year end
       ]
-    ]
+    ],
+    designations: {
+      AHG: '2006-09-01',
+      ASG: '2009-04-01'
+      // Note: Member has HGWT ***because of Ski qualifications*** hence there is no HGWT Designation to show.
+    }
   }
 
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // Simplest test case to support an explicit date set for Winter Travel
@@ -370,13 +397,18 @@ test('Winter Travel with an explicit date splits a AHG certificate into two memb
         "2012-03-15", // starts with the WT date
         "2024-12-31" // ends as normal annual membership
       ]
-    ]
+    ],
+    designations: {
+      AHG: '2006-09-01',
+      HGWT: '2012-03-15'
+    }
   }
 
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // B.B. [https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/3184]
@@ -417,12 +449,18 @@ test('New Member in 2024 with earlier designation dates', () => {
         "Active",
         "2024-09-09",
         "2024-12-31"
-      ]]
+      ]
+    ],
+    designations: {
+      AHG: '2024-06-12',
+      CGI1: '2022-06-01',
+    }
   }
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // Recently resigned with good dates on the profile.
@@ -452,12 +490,16 @@ test('A resigned member shows an Inactive Tier bracket ending in the past', () =
         "2016-05-01", // Starts on the DateJoined because it is after the certificate date
         "2024-03-01"  // Ends on the LastModified date
       ]
-    ]
+    ],
+    designations: {
+      CGI1: '2015-12-01'
+    }
   }
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // An otherwise ACTIVE looking profile without a LastAnnualValidation value is a person who is NOT YET a member. 
@@ -481,12 +523,16 @@ test('An Active and ready-to-join member who has not yet joined gets no Wicket M
     }
   }
   const expected = {
-    "professional": [] // An empty set indicates no Wicket Memberships as possible valid representation
+    "professional": [], // An empty set indicates no Wicket Memberships as possible valid representation
+    designations: {
+      ASG: '2024-12-16' // However, we do expect that the designation will be retained as a past fact.
+    }
   }
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // P.H. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/580
@@ -534,13 +580,18 @@ test('An Inactive Member converts to a Wicket Active Inactive Membership tier', 
         '2023-01-29',      // The Active 'Inactive Member' membership starts the day after the most recent ending date
         '2024-12-31'       // And ends according to the normal year bracket for the LastAnnualValidation
       ]
-    ]
+    ],
+    designations: {
+      AAG: '1988-01-01',
+      MG: '1994-01-01',
+    }
   }
 
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // C.J. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/682
@@ -604,13 +655,20 @@ test('Prior Conversion Error - Active Alpine Guide results in correct RG inactiv
         "2014-09-01",
         "2024-12-31"
       ]
-    ]
+    ],
+    designations: {
+      AAG: '2010-09-01',
+      AG: '2014-09-01',
+      ARG: '1999-09-01',
+      RG: '2001-09-01',
+    }
   }
 
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 // S.R. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/2045
@@ -664,13 +722,19 @@ test('Conversion correction: Produces correct order and outcome for Winter Trave
         "2024-06-08",
         "2024-12-31"
       ]
-    ]
+    ],
+    designations: {
+      AHG: '2021-06-01',
+      HG: '2024-06-08',
+      HGWT: '2021-12-01',
+    }
   }
 
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  expect(result).toMatchObject(expected)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
 })
 
 

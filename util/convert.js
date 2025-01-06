@@ -59,9 +59,20 @@ export const convertCognitoToWicket = (cognito) => {
     const parsedCognitoObject = cognitoCertificateSchema.safeParse(cognito)
     if (parsedCognitoObject.error) console.log(parsedCognitoObject.error)
 
-    const wicket = { professional: [] }
+    const wicket = { professional: [], designations: {} }
 
     const convertCert = (certObject, lastAnnualValidation) => {
+
+        // Collect the designation data on the final Wicket Object.
+        // We need the Designation data from TAP to be retained as distinct
+        // data from the Membership Tiers. This is the major architectural change:
+        // Although these data share similar names, Memberships and Designations
+        // are separate concepts.
+        // The reality is, if there is a date on it, we can use it. 
+        // But if there is no date value then we will have to ignore it:
+        if(certObject.date){
+            wicket.designations[certObject.certKey] = certObject.date
+        }
 
         // Prepare the stub of the result array
         const result = [undefined, undefined, undefined, undefined]
@@ -176,8 +187,20 @@ export const convertCognitoToWicket = (cognito) => {
         return acc
     }, false)
     if(!cognito.LastAnnualValidation && hasActiveCert){
-        
+
         wicket.professional = [] // It becomes a valid conversion to receive no Wicket Memberships
+
+        // But, before returning, we still want to capture the Designations:
+        // ( This duplicates some of what would have happened in the full conversion process.
+        //   But now we'll also do it here to keep the Designations before returning early. )
+        wicket.designations = certsArray.reduce((acc, cert) => {
+
+            if(cert.date){
+
+                acc[cert.certKey] = cert.date
+            }
+            return acc
+        }, {})
         
         return wicket // *** RETURN EARLY *** as none of the remaining conversion logic is applicable
     }
@@ -195,6 +218,21 @@ export const convertCognitoToWicket = (cognito) => {
         const convertedCert = convertCert(cert, cognito.LastAnnualValidation)
         return convertedCert
     })
+
+
+    //   ___           _                  _  _  _____      _______   ___         _                _   _          
+    //  / __|__ _ _ __| |_ _  _ _ _ ___  | || |/ __\ \    / /_   _| |   \ ___ __(_)__ _ _ _  __ _| |_(_)___ _ _  
+    // | (__/ _` | '_ \  _| || | '_/ -_) | __ | (_ |\ \/\/ /  | |   | |) / -_|_-< / _` | ' \/ _` |  _| / _ \ ' \ 
+    //  \___\__,_| .__/\__|\_,_|_| \___| |_||_|\___| \_/\_/   |_|   |___/\___/__/_\__, |_||_\__,_|\__|_\___/_||_|
+    //           |_|                                                              |___/                          
+    // The Hiking Guide Winter Travel ( HGWT ) Designation is modelled like the other certificates in Cognito Forms although it is
+    // not a stand-alone Scope of Practice certificate. Because it is not in the Rules.js model, we need to explicitly
+    // check for it here. If it is present AND it has a date value, then we will keep it on the wicket.designations object.
+    if(parsedCognitoObject.data['HGWT'] && parsedCognitoObject.data['HGWT'].date){
+        
+        wicket.designations.HGWT = parsedCognitoObject.data['HGWT'].date
+    }
+
 
     //  ___             ___              __  __           _                _    _         
     // / _ \ _ _  ___  |   \ __ _ _  _  |  \/  |___ _ __ | |__  ___ _ _ __| |_ (_)_ __ ___
