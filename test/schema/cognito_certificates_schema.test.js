@@ -161,3 +161,27 @@ test('A Permanent Apprentice is replaced with the non-Apprentice certificate equ
         expect(result.data.transforms.length).toEqual(3)
     })
 })
+
+test('A NON ACTIVE Permanent Apprentice is replaced with the non-Apprentice certificate equivalent but it is NOT marked as isPermanent', () => {
+
+    const perms = ['AHGPerm', 'ARGPerm', 'AAGPerm', 'ASGPerm']
+    perms.forEach((permCertKey) => {
+
+        const sample = getPlainSample()
+        const regularCertKey = permCertKey.substring(0, 3)
+        delete sample.CGI1
+        delete sample.CGI2
+        sample[permCertKey] = {
+            status: 'Inactive',
+            date: '2023-06-25',
+            lastModified: '2024-06-20'
+        }
+
+        const result = cognitoCertificateSchema.safeParse(sample)
+        expect(result.error).toEqual(undefined)
+        expect(result.data[permCertKey]).toBeUndefined()
+        expect(result.data[regularCertKey]).toBeDefined()
+        expect(result.data[regularCertKey].isPermanent).toBeUndefined() // This is the key: Because this Perm cert was Inactive, this is not set.
+        expect(result.data.transforms.length).toEqual(2)
+    })
+})
