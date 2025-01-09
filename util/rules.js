@@ -14,18 +14,24 @@ const AG = 'Alpine Guide Member'
 const dAG = 'TAP Alpine Guide Designation'
 const AAG = 'Apprentice Alpine Guide Member'
 const dAAG = 'TAP Apprentice Alpine Guide Designation'
+const cAGTLD = 'Alpine Guide Time Limit Date'
+const cAGTLED = 'Alpine Guide Time Limit Extension Date '
 
 // Ski Guide
 const SG = 'Ski Guide Member'
 const dSG = 'TAP Ski Guide Designation'
 const ASG = 'Apprentice Ski Guide Member'
 const dASG = 'TAP Apprentice Ski Guide Designation'
+const cSGTLD = 'Ski Guide Time Limit Date'
+const cSGTLED = 'Ski Guide Time Limit Extension Date '
 
 // Rock Guide
 const RG = 'Rock Guide Member'
 const dRG = 'TAP Rock Guide Designation'
 const ARG = 'Apprentice Rock Guide Member'
 const dARG = 'TAP Apprentice Rock Guide Designation'
+const cRGTLD = 'Rock Guide Time Limit Date'
+const cRGTLED = 'Rock Guide Time Limit Extension Date '
 
 // Hiking Guide
 const HG = 'Hiking Guide Member'
@@ -37,6 +43,8 @@ const AHGW = 'Apprentice Winter Hiking Guide Member'
 const dWT = 'TAP Winter Travel Designation'
 const DHG = 'Day Hiking Guide Member'
 const dDHG = '-- DHG Deprecated TAP Designation --'
+const cHGTLD = 'Hiking Guide Time Limit Date'
+const cHGTLED = 'Hiking Guide Time Limit Extension Date '
 
 // Climbing Instructor
 const CGI1 = 'Climbing Gym Instructor Level 1 Member'
@@ -59,7 +67,7 @@ const cAH = 'Current Account Holder'
 const cATL = 'Apprentice Time Limit is not exceeded'
 const cSM = 'Ski Guide Assessment Completed on Skis'
 
-export const labels = {IFMGA, MG, AG, dAG, AAG, dAAG, SG, dSG, ASG, dASG, RG, dRG, ARG, dARG, HG, HGW, dHG, AHG, AHGW, dWT, dAHG, DHG, dDHG, CGI1, dCGI1, CGI2, dCGI2, CGI3, dCGI3, TRCI, dTRCI, VFG, dVFG, dHGB, cFA, cPP, cCPD, cAH, cSM}
+export const labels = {IFMGA, MG, AG, dAG, AAG, dAAG, SG, dSG, ASG, dASG, RG, dRG, ARG, dARG, HG, HGW, dHG, AHG, AHGW, dWT, dAHG, DHG, dDHG, CGI1, dCGI1, CGI2, dCGI2, CGI3, dCGI3, TRCI, dTRCI, VFG, dVFG, dHGB, cFA, cPP, cCPD, cAH, cSM, cAGTLD, cAGTLED, cSGTLD, cSGTLED, cRGTLD, cRGTLED, cHGTLD, cHGTLED}
 
 
 const rulesObject = {

@@ -147,8 +147,7 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
       AG: '2006-09-01',
       ARG: '2001-09-01',
       ASG: '2007-03-01',
-      MG: '2009-04-01',
-      SG: '2009-04-01',
+      SG: '2009-04-01', // TODO: Unconvinced that this test catches the MG not being meant to be there...
     }
   }
 
@@ -582,8 +581,8 @@ test('An Inactive Member converts to a Wicket Active Inactive Membership tier', 
       ]
     ],
     designations: {
-      AAG: '1988-01-01',
-      MG: '1994-01-01',
+      AAG: '1988-01-01'
+      // MG: '1994-01-01', // There really is no such thing as a MG Designation from TAP (only AG, SG)
     }
   }
 
@@ -727,6 +726,60 @@ test('Conversion correction: Produces correct order and outcome for Winter Trave
       AHG: '2021-06-01',
       HG: '2024-06-08',
       HGWT: '2021-12-01',
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
+// D.M. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/913
+test('Permanent Apprentice - Simple, long time ASGPerm, AAGPerm', () => {
+
+  const source = {
+    "ProfileStatus": "ACTIVE",
+    "DateJoined": "1987-01-01",
+    "DateEnd": null,
+    "DateReinstate": null,
+    "LastAnnualValidation": "2025-01-09",
+    "IFMGALicenseNumber": "0",
+    "SkiExamMode": "Ski",
+    "transforms": [],
+    "AAGPerm": {
+      "status": "Active",
+      "date": "1987-01-01",
+      "lastModified": null
+    },
+    "ASGPerm": {
+      "status": "Active",
+      "date": "1988-01-01",
+      "lastModified": null
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'apprentice-alpine-guide',
+        'Active',
+        '1987-01-01',
+        '2025-12-31'
+      ],
+      [
+        'apprentice-ski-guide',
+        'Active',
+        '1988-01-01',
+        '2025-12-31'
+      ]
+    ],
+    designations: {
+      AAG: '1987-01-01',
+      AAGisPermanent: true,
+      ASG: '1988-01-01',
+      ASGisPermanent: true,
     }
   }
 

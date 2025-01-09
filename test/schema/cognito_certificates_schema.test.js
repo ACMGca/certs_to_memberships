@@ -108,12 +108,37 @@ test('A Mountain Guide with no date on the certificate uses the DateJoined when 
     expect(result.data.transforms[0]).toEqual('MG.date backfilled with DateJoined')
 })
 
-test('A Permanent Apprentice without a date uses the date value from the non-Apprentice certificate when it is available', () => {
+test('A Permanent Apprentice is replaced with the non-Apprentice certificate equivalent', () => {
 
     const perms = ['AHGPerm', 'ARGPerm', 'AAGPerm', 'ASGPerm']
     perms.forEach((permCertKey) => {
 
         const sample = getPlainSample()
+        const regularCertKey = permCertKey.substring(0, 3)
+        delete sample.CGI1
+        delete sample.CGI2
+        sample[permCertKey] = {
+            status: 'Active',
+            date: '2023-06-25',
+            lastModified: null
+        }
+
+        const result = cognitoCertificateSchema.safeParse(sample)
+        expect(result.error).toEqual(undefined)
+        expect(result.data[permCertKey]).toBeUndefined()
+        expect(result.data[regularCertKey]).toBeDefined()
+        expect(result.data[regularCertKey].isPermanent).toEqual(true)
+        expect(result.data.transforms.length).toEqual(2)
+    })
+})
+
+test('A Permanent Apprentice is replaced with the non-Apprentice certificate equivalent and adopts the date of the regular certificate when it is otherwise missing', () => {
+
+    const perms = ['AHGPerm', 'ARGPerm', 'AAGPerm', 'ASGPerm']
+    perms.forEach((permCertKey) => {
+
+        const sample = getPlainSample()
+        const regularCertKey = permCertKey.substring(0, 3)
         delete sample.CGI1
         delete sample.CGI2
         sample[permCertKey] = {
@@ -129,8 +154,10 @@ test('A Permanent Apprentice without a date uses the date value from the non-App
 
         const result = cognitoCertificateSchema.safeParse(sample)
         expect(result.error).toEqual(undefined)
-        expect(result.data[permCertKey].date).toEqual(sample[permCertKey.substring(0,3)].date)
-        expect(result.data.transforms[0]).toEqual(`Set ${permCertKey}.date to ${permCertKey.substring(0,3)}.date`)
+        expect(result.data[permCertKey]).toBeUndefined()
+        expect(result.data[regularCertKey]).toBeDefined()
+        expect(result.data[regularCertKey].isPermanent).toEqual(true)
+        expect(result.data[regularCertKey].date).toEqual('2023-06-25')
+        expect(result.data.transforms.length).toEqual(3)
     })
-
 })

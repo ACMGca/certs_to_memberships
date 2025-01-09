@@ -72,6 +72,10 @@ export const convertCognitoToWicket = (cognito) => {
         // But if there is no date value then we will have to ignore it:
         if(certObject.date){
             wicket.designations[certObject.certKey] = certObject.date
+            // If this cert is marked as isPermanent, then write that to the Wicket Designations data:
+            if(certObject.isPermanent){
+                wicket.designations[`${certObject.certKey}isPermanent`] = true
+            }
         }
 
         // Prepare the stub of the result array
@@ -198,6 +202,11 @@ export const convertCognitoToWicket = (cognito) => {
             if(cert.date){
 
                 acc[cert.certKey] = cert.date
+                if(cert.isPermanent){
+
+                    // If this cert is marked as isPermanent, then write that to the Wicket Designations data:
+                    acc[`${certObject.certKey}isPermanent`] = true
+                }
             }
             return acc
         }, {})
@@ -424,7 +433,7 @@ export const convertCognitoToWicket = (cognito) => {
         const tierStartDate = parseISO(membership[2])
         const tierEndDate = parseISO(membership[3])
         if(tierStartDate > tierEndDate){
-            //throw new Error(`[${membership[0]}] Membership tier start date must be before end date.`)
+            throw new Error(`[${membership[0]}] Membership tier start date must be before end date.`)
         }
     })                                                                        
 

@@ -20,7 +20,8 @@ export const getCognitoCertificateSchema = () => {
     const certSchemaObject = z.object({
         status: z.string().nullable(),
         date: z.string().nullable(),
-        lastModified: z.string().nullable()
+        lastModified: z.string().nullable(),
+        isPermanent: z.boolean().optional()
     }).optional()
 
     // Add schema for each possible certificate object to the base schema
@@ -47,15 +48,35 @@ export const getCognitoCertificateSchema = () => {
             .transform((data, ctx) => {
 
                 // DATA_FIX_2
-                // Correct for PERM Apprentice profiles with no date on the PERM certificate(s):
-                // This uses the date from the non-apprentice value, if available, to create the start date used for the membership bracket.
+                // Coalesce PERM Apprentice certificates into the Regular Certificate Type and mark is as Permanent.
+                // This allows us to retain the original truth of the *Permanent cert, but drop the *Perm tags which
+                // we don't plan to support in the future. The goal is to preserve the business capability to support 
+                // the concept of extended limits for Apprentice renewal, without clouding the data architecture with
+                // specialized structures only used to support the legacy business decision.
                 const perms = ['AHGPerm', 'ARGPerm', 'AAGPerm', 'ASGPerm']
-                perms.forEach((permCert) => {
+                perms.forEach((permCertKey) => {
 
-                    if(data[permCert] && !data[permCert].date && data[permCert.substring(0,3)]){
+                    const regularCertKey = permCertKey.substring(0, 3)
 
-                        data[permCert].date = data[permCert.substring(0,3)].date
-                        data.transforms.push(`Set ${permCert}.date to ${permCert.substring(0,3)}.date`)
+                    // The goal is to drop the *Perm in favour of a regular version of the same
+                    if(data[permCertKey]){ // it has one, so we proceed to replace it...
+
+                        const certClone = Object.assign({}, data[permCertKey]) // create a copy as a starting point
+                        certClone.isPermanent = true                           // and mark is as permanent
+
+                        // In the case that there is no date on the *Perm cert, but there is one on the regular one, use it.
+                        if(!data[permCertKey].date && data[regularCertKey] && data[regularCertKey].date){
+                            certClone.date = data[regularCertKey].date
+                            data.transforms.push(`Backfilling ${permCertKey}.date with ${regularCertKey}.date: ${data[regularCertKey].date}`)    
+                        }
+
+                        // set the regular cert back onto the data
+                        data[regularCertKey] = certClone
+                        data.transforms.push(`Added ${regularCertKey}: ${Object.entries(certClone).join(' | ')}`)
+
+                        // Lastly, delete the old *Perm one
+                        data.transforms.push(`Removed ${permCertKey}: ${Object.entries(data[permCertKey]).join(' | ')}`)
+                        delete data[permCertKey]
                     }
                 })
                 return data

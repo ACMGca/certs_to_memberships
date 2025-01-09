@@ -1,4 +1,5 @@
 'use strict'
+import { addMonths } from "date-fns"
 
 export const CERTKEYLIST = ['MG','AG','SG','RG','AAG','ASG','ARG','AHG','DHG','HG','HGWT','CGI1','CGI2','CGI3','TRCI','VFG','AHGPerm','AAGPerm','ASGPerm','ARGPerm']
 
@@ -36,7 +37,12 @@ export const getCertificationHistory = (profile) => {
             DateReinstate, 
             IFMGALicenseNumber, 
             LastAnnualValidation, 
-            Mode } = profile
+            Mode,
+            HikeTimeLimit,
+            RockTimeLimit,
+            AlpineTimeLimit,
+            SkiTimeLimit,
+        } = profile
 
     const result = { ProfileStatus,
                      DateJoined, 
@@ -45,7 +51,23 @@ export const getCertificationHistory = (profile) => {
                      LastAnnualValidation, 
                      IFMGALicenseNumber, 
                      SkiExamMode: Mode,
+                     HikeTimeLimit,    // Add any known 
+                     RockTimeLimit,   // time limit 
+                     AlpineTimeLimit,// values available on the member profile
+                     SkiTimeLimit,  // to support Apprentice* TimeLimitDate and TimeLimitExtensionDate calculations (if applicable)
                      ...certs }
 
     return Object.keys(certs).length > 0 ? result : null
+}
+
+/**
+ * Add 44 months to a date
+ * @param {Date} date 
+ * @returns Date - the original date plus 44 months
+ */
+export const addFortyFourMonths = (date) => {
+
+    if(!date || !date instanceof Date) throw new TypeError('Input must be a Date to add 44 months to it.')
+
+    return addMonths(date, 44)
 }
