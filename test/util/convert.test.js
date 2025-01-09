@@ -833,3 +833,6 @@ test('Permanent Apprentice - Simple, long time ASGPerm, AAGPerm', () => {
 // #24 + #53(similar) - wacky ASG dates - WT issue
 
 // #887 - should be AHGW because of the ASG cert
+
+// !!!TODO IMPORTANT - Write a test about an Apprentice with a yyyy TimeLimit value that Mike has adjusted beyond the expected 3 years
+// and determine how to detect and express this as an explicit TimeLimitDateExtension value.

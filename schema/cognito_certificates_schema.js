@@ -62,8 +62,14 @@ export const getCognitoCertificateSchema = () => {
                     if(data[permCertKey]){ // it has one, so we proceed to replace it...
 
                         const certClone = Object.assign({}, data[permCertKey]) // create a copy as a starting point
-                        certClone.isPermanent = true                           // and mark is as permanent
-
+                        // The business rule is that, once a Permanent Apprentice becomes non-Active, they lose the 
+                        // privilege to renew as an Apprentice without being subject to reinstatement and current 
+                        // Apprentice timeline policy.
+                        // Upshot, only mark the record a *permanent* if it is Active:
+                        if(data[permCertKey].status === 'Active'){
+                            certClone.isPermanent = true  // then mark it as permanent
+                        }
+                        
                         // In the case that there is no date on the *Perm cert, but there is one on the regular one, use it.
                         if(!data[permCertKey].date && data[regularCertKey] && data[regularCertKey].date){
                             certClone.date = data[regularCertKey].date
