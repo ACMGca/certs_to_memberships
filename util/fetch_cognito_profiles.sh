@@ -9,13 +9,10 @@
 # Use the Cognito Forms API to fetch all the member profiles
 # was up to 3179
 for id in {1..3230}; do
-
-    declare -i idnumber
-    idnumber=$id
     
     while true; do
 
-        if (( ($idnumber+1) % 250 == 0 )); then
+        if (( ($id+1) % 250 == 0 )); then
 
             echo "Proactive 5 minute sleep to avoid rate limiting..."
             sleep 300
