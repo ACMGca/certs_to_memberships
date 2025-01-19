@@ -2,8 +2,8 @@
 
 #----
 # A local `cognito_api_key` variable should be set with a valid key for the profile form
-# Note that the Cognito API will rate limit after 200-300 requests and return HTTP::429
-# so it is helpful to watch this and cancel it or to run in smaller batches.
+# Note that the Cognito API will rate limit after 200-300 requests and return HTTP::429 
+# or HTTP::500. Basic protections are built into the script.
 #----
 
 # Use the Cognito Forms API to fetch all the member profiles
