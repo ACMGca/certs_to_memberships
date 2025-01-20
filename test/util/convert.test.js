@@ -147,7 +147,8 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
       AG: '2006-09-01',
       ARG: '2001-09-01',
       ASG: '2007-03-01',
-      SG: '2009-04-01', // TODO: Unconvinced that this test catches the MG not being meant to be there...
+      SG: '2009-04-01'
+      // MG: 'was here'  << This test explicitly checks that MG has been removed from the wicket.designations
     }
   }
 
@@ -156,6 +157,7 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
   const result = convertCognitoToWicket(parsedSource.data)
   expect(result.professional).toMatchObject(expected.professional)
   expect(result.designations).toMatchObject(expected.designations)
+  expect(result.designations.MG).toBeUndefined()
 })
 
 // CASE 744 Modeled after R.K. [ https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/744 ]

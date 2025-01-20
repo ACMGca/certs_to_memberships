@@ -437,6 +437,15 @@ export const convertCognitoToWicket = (cognito) => {
         }
     })                                                                        
 
+    // ___              _ _    _   ___         _                _   _             
+    // |_ _|_ ___ ____ _| (_)__| | |   \ ___ __(_)__ _ _ _  __ _| |_(_)___ _ _  ___
+    //  | || ' \ V / _` | | / _` | | |) / -_|_-< / _` | ' \/ _` |  _| / _ \ ' \(_-<
+    // |___|_||_\_/\__,_|_|_\__,_| |___/\___/__/_\__, |_||_\__,_|\__|_\___/_||_/__/
+    //                                           |___/                             
+    // It is incorrect to allow the Wicket Designations data to include Mountain Guide `MG` because
+    // there is no such direct Designation from the Training and Assessment Program. 
+    // This step ensures that MG is not present in the explicit wicket.designations data.
+    delete wicket.designations.MG
 
     // TODO: Detectable 'mid career' Inactive periods can be filled with "Professional Inactive" membership
     // TODO: Detectable 'mid career' Resigned periods can be void of any membership
