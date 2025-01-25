@@ -792,6 +792,63 @@ test('Permanent Apprentice - Simple, long time ASGPerm, AAGPerm', () => {
   expect(result.designations).toMatchObject(expected.designations)
 })
 
+// Basic functional check for the splitting of Membership Tiers when a valid resignation period is detected.
+test('CGI1 to CGI2 Scenario with resignation period', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2023-11-03',
+    DateEnd: '2024-02-15',
+    DateReinstate: '2024-03-15',
+    LastAnnualValidation: '2024-01-05',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    CGI1: {
+      status: null,
+      date: '2023-10-01',
+      lastModified: null
+    },
+    CGI2: {
+      status: 'Active',
+      date: '2024-09-13',
+      lastModified: '2024-09-13'
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'climbing-gym-instructor-level-1',
+        'Inactive',
+        '2023-11-03',
+        '2024-02-15'
+      ],
+      [
+        'climbing-gym-instructor-level-1',
+        'Inactive',
+        '2024-03-15',
+        '2024-09-12'
+      ],
+      [
+        'climbing-gym-instructor-level-2',
+        'Active',
+        '2024-09-13',
+        '2024-12-31'
+      ]
+    ],
+    designations: {
+      CGI1: '2023-10-01',
+      CGI2: '2024-09-13'
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
 
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
 // This is an example of the data transformation business rule in the schema layer

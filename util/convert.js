@@ -1,7 +1,8 @@
 'use strict';
-import { sub, format, compareDesc, intervalToDuration, formatISODuration, isWithinInterval, parseISO, subDays, addDays } from "date-fns";
+import { sub, format, compareDesc, intervalToDuration, formatISODuration, isWithinInterval, parseISO, subDays, addDays, isBefore } from "date-fns";
 import { rules } from "./rules.js";
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
+import { splitMembershipBracket } from "./helpers.js";
 
 // NOTE: ASCII titles used for emphasis in the code were generated here: 
 // https://patorjk.com/software/taag/#p=display&f=Small&t=Type%20Something%20
@@ -447,6 +448,37 @@ export const convertCognitoToWicket = (cognito) => {
     // This step ensures that MG is not present in the explicit wicket.designations data.
     delete wicket.designations.MG
 
+
+    //  ___      _ _ _      __           ___        _                _   _            ___         _         _    
+    // / __|_ __| (_) |_   / _|___ _ _  | _ \___ __(_)__ _ _ _  __ _| |_(_)___ _ _   | _ \___ _ _(_)___  __| |___
+    // \__ \ '_ \ | |  _| |  _/ _ \ '_| |   / -_|_-< / _` | ' \/ _` |  _| / _ \ ' \  |  _/ -_) '_| / _ \/ _` (_-<
+    // |___/ .__/_|_|\__| |_| \___/_|   |_|_\___/__/_\__, |_||_\__,_|\__|_\___/_||_| |_| \___|_| |_\___/\__,_/__/
+    //     |_|                                       |___/                                                       
+    // 
+    // It is possible that the profile has a valid period of resignation. In this case, each of the
+    // membership brackets should be checked to see if it should be split across the resignation.
+    
+    // It is only relevant if there is a valid resignation apparent on the profile
+    if(cognito.DateEnd && cognito.DateReinstate && isBefore(parseISO(cognito.DateEnd), parseISO(cognito.DateReinstate))){
+        
+        const resignedRange = [parseISO(cognito.DateEnd), parseISO(cognito.DateReinstate)]
+        // Check each of the generated memberships brackets for the split:
+        wicket.professional = wicket.professional.reduce((acc, tier) => {
+
+            const tierRange = [parseISO(tier[2]), parseISO(tier[3])]
+            const splitTiers = splitMembershipBracket(tierRange, resignedRange)
+            splitTiers.forEach((range) => {
+
+                acc.push([
+                    tier[0],
+                    tier[1],
+                    format(range[0], 'yyyy-MM-dd'),
+                    format(range[1], 'yyyy-MM-dd')
+                ])
+            })
+            return acc
+        }, [])
+    }
     // TODO: Detectable 'mid career' Inactive periods can be filled with "Professional Inactive" membership
     // TODO: Detectable 'mid career' Resigned periods can be void of any membership
     return wicket

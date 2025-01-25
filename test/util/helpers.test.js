@@ -1,4 +1,4 @@
-import { addFortyFourMonths, cleanCognitoMyProfile } from "../../util/helpers.js";
+import { addFortyFourMonths, cleanCognitoMyProfile, splitMembershipBracket } from "../../util/helpers.js";
 
 import { describe, expect, test } from "bun:test";
 
@@ -31,4 +31,45 @@ describe('Cognito profile simplification', () => {
         expect(cleanedProfile.split('\n')).toHaveLength(94)
     })
 
+})
+
+describe('Membership tier splitting', () => {
+
+    test('correctly divides a tier bracket based on a period of resignation' ,() => {
+
+        const tierRange = [new Date('2023-01-01T12:00:00.000Z'), new Date('2023-12-31T12:00:00.000Z')]
+        const resignedRange = [new Date('2023-06-01T12:00:00.000Z'), new Date('2023-07-31T12:00:00.000Z')]
+
+        const splitTier = splitMembershipBracket(tierRange, resignedRange)
+        expect(splitTier).toHaveLength(2)
+    })
+
+    test('correctly DOES NOT divide a tier bracket based on a period of resignation completely outside the range' ,() => {
+
+        const tierRange = [new Date('2023-01-01T12:00:00.000Z'), new Date('2023-12-31T12:00:00.000Z')]
+        const resignedRange = [new Date('2024-06-01T12:00:00.000Z'), new Date('2024-07-31T12:00:00.000Z')]
+
+        const splitTier = splitMembershipBracket(tierRange, resignedRange)
+        expect(splitTier).toHaveLength(1)
+    })
+
+    test('correctly DOES NOT divide a tier bracket based on a period of resignation outside the range start' ,() => {
+
+        const tierRange = [new Date('2023-01-01T12:00:00.000Z'), new Date('2023-12-31T12:00:00.000Z')]
+        const resignedRange = [new Date('2022-12-25T12:00:00.000Z'), new Date('2023-07-31T12:00:00.000Z')]
+
+        const splitTier = splitMembershipBracket(tierRange, resignedRange)
+        console.log(splitTier)
+        expect(splitTier).toHaveLength(1)
+    })
+
+    test('correctly DOES NOT divide a tier bracket based on a period of resignation outside the range end' ,() => {
+
+        const tierRange = [new Date('2023-01-01T12:00:00.000Z'), new Date('2023-12-31T12:00:00.000Z')]
+        const resignedRange = [new Date('2023-07-01T12:00:00.000Z'), new Date('2024-01-10T12:00:00.000Z')]
+
+        const splitTier = splitMembershipBracket(tierRange, resignedRange)
+        console.log(splitTier)
+        expect(splitTier).toHaveLength(1)
+    })
 })

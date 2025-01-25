@@ -1,15 +1,16 @@
 'use strict'
-import { addMonths } from "date-fns"
+import { addMonths, isBefore, isAfter, differenceInDays } from "date-fns"
+import { } from 'date-fns';
 
-export const CERTKEYLIST = ['MG','AG','SG','RG','AAG','ASG','ARG','AHG','DHG','HG','HGWT','CGI1','CGI2','CGI3','TRCI','VFG','AHGPerm','AAGPerm','ASGPerm','ARGPerm']
+export const CERTKEYLIST = ['MG', 'AG', 'SG', 'RG', 'AAG', 'ASG', 'ARG', 'AHG', 'DHG', 'HG', 'HGWT', 'CGI1', 'CGI2', 'CGI3', 'TRCI', 'VFG', 'AHGPerm', 'AAGPerm', 'ASGPerm', 'ARGPerm']
 
-export const sortProfileFileNames = (a,b) => {
+export const sortProfileFileNames = (a, b) => {
 
-    if(Number(a.split('.')[0]) < Number(b.split('.')[0])){
+    if (Number(a.split('.')[0]) < Number(b.split('.')[0])) {
         return -1
-    }else if(Number(a.split('.')[0]) > Number(b.split('.')[0])){
+    } else if (Number(a.split('.')[0]) > Number(b.split('.')[0])) {
         return 1
-    }else{
+    } else {
         return 0
     }
 }
@@ -19,7 +20,7 @@ export const getCertificationHistory = (profile) => {
 
     const certs = CERTKEYLIST.reduce((acc, cur) => {
 
-        if((profile[cur] || profile[`${cur}Date`] || profile[`${cur}LastModified`])){
+        if ((profile[cur] || profile[`${cur}Date`] || profile[`${cur}LastModified`])) {
             acc[cur] = {}
             acc[cur].status = profile[cur]
             acc[cur].date = profile[`${cur}Date`]
@@ -28,34 +29,36 @@ export const getCertificationHistory = (profile) => {
 
         return acc
 
-        
+
     }, {})
 
     const { ProfileStatus,
-            DateJoined, 
-            DateEnd, 
-            DateReinstate, 
-            IFMGALicenseNumber, 
-            LastAnnualValidation, 
-            Mode,
-            HikeTimeLimit,
-            RockTimeLimit,
-            AlpineTimeLimit,
-            SkiTimeLimit,
-        } = profile
+        DateJoined,
+        DateEnd,
+        DateReinstate,
+        IFMGALicenseNumber,
+        LastAnnualValidation,
+        Mode,
+        HikeTimeLimit,
+        RockTimeLimit,
+        AlpineTimeLimit,
+        SkiTimeLimit,
+    } = profile
 
-    const result = { ProfileStatus,
-                     DateJoined, 
-                     DateEnd, 
-                     DateReinstate, 
-                     LastAnnualValidation, 
-                     IFMGALicenseNumber, 
-                     SkiExamMode: Mode,
-                     HikeTimeLimit,    // Add any known 
-                     RockTimeLimit,   // time limit 
-                     AlpineTimeLimit,// values available on the member profile
-                     SkiTimeLimit,  // to support Apprentice* TimeLimitDate and TimeLimitExtensionDate calculations (if applicable)
-                     ...certs }
+    const result = {
+        ProfileStatus,
+        DateJoined,
+        DateEnd,
+        DateReinstate,
+        LastAnnualValidation,
+        IFMGALicenseNumber,
+        SkiExamMode: Mode,
+        HikeTimeLimit,    // Add any known 
+        RockTimeLimit,   // time limit 
+        AlpineTimeLimit,// values available on the member profile
+        SkiTimeLimit,  // to support Apprentice* TimeLimitDate and TimeLimitExtensionDate calculations (if applicable)
+        ...certs
+    }
 
     return Object.keys(certs).length > 0 ? result : null
 }
@@ -67,7 +70,7 @@ export const getCertificationHistory = (profile) => {
  */
 export const addFortyFourMonths = (date) => {
 
-    if(!date || !date instanceof Date) throw new TypeError('Input must be a Date to add 44 months to it.')
+    if (!date || !date instanceof Date) throw new TypeError('Input must be a Date to add 44 months to it.')
 
     return addMonths(date, 44)
 }
@@ -95,57 +98,82 @@ export const cleanCognitoMyProfile = (p) => {
     delete p.Entry.Document4
     Object.keys(p).forEach((k) => {
 
-        if(!p[k]) delete p[k]
-        if(k.endsWith('_QuantitySelected')) delete p[k]
-        if(k.endsWith('_QuantityUsed')) delete p[k]
-        if(k.endsWith('_QuantityLimit')) delete p[k]
-        if(k.endsWith('_QuantityLimitCalculated')) delete p[k]
-        if(k.endsWith('_IncrementBy')) delete p[k]
-        if(k.endsWith('_Maximum')) delete p[k]
-        if(Array.isArray(p[k]) && p[k].length === 0) delete p[k]
+        if (!p[k]) delete p[k]
+        if (k.endsWith('_QuantitySelected')) delete p[k]
+        if (k.endsWith('_QuantityUsed')) delete p[k]
+        if (k.endsWith('_QuantityLimit')) delete p[k]
+        if (k.endsWith('_QuantityLimitCalculated')) delete p[k]
+        if (k.endsWith('_IncrementBy')) delete p[k]
+        if (k.endsWith('_Maximum')) delete p[k]
+        if (Array.isArray(p[k]) && p[k].length === 0) delete p[k]
     })
-    if(!p?.Nationality1?.Id) delete p.Nationality1
-    if(!p?.Nationality2?.Id) delete p.Nationality2
-    if(p.AdministrativeNotes && p.AdministrativeNotes.length > 0){
+    if (!p?.Nationality1?.Id) delete p.Nationality1
+    if (!p?.Nationality2?.Id) delete p.Nationality2
+    if (p.AdministrativeNotes && p.AdministrativeNotes.length > 0) {
 
         p.AdministrativeNotes.forEach((note) => {
 
-            delete note.Id 
+            delete note.Id
             delete note.ItemNumber
         })
     }
     Object.keys(p.LegalName).forEach((k) => {
 
-        if(!p.LegalName[k]) delete p.LegalName[k]
+        if (!p.LegalName[k]) delete p.LegalName[k]
     })
     Object.keys(p.Residence).forEach((k) => {
 
-        if(!p.Residence[k]) delete p.Residence[k]
+        if (!p.Residence[k]) delete p.Residence[k]
         delete p.Residence.FullInternationalAddress
     })
-    if(p.Mailing){
+    if (p.Mailing) {
         Object.keys(p.Mailing).forEach((k) => {
 
-            if(!p.Mailing[k]) delete p.Mailing[k]
+            if (!p.Mailing[k]) delete p.Mailing[k]
             delete p.Mailing.FullInternationalAddress
         })
         // If mailing is the same as residence, delete mailing
         const keepMailing = Object.keys(p.Residence).map((k) => {
-    
+
             return p.Residence[k] !== p.Mailing[k]
         }).reduce((acc, cur) => {
-    
-            if(cur === true) acc = true
+
+            if (cur === true) acc = true
             return acc
         }, false)
-        if(!keepMailing) delete p.Mailing
+        if (!keepMailing) delete p.Mailing
     }
 
-    if(p.FirstAidProvider){
-        p.FirstAidProviderLabel = p.FirstAidProvider.Label 
+    if (p.FirstAidProvider) {
+        p.FirstAidProviderLabel = p.FirstAidProvider.Label
         delete p.FirstAidProvider
     }
 
     delete p.Id
     return JSON.stringify(p, null, 2)
+}
+
+/**
+ * Split a date range based on a second date range
+ * @param {Array} tierRange - The possibly 'outer' range representing the tier bracket
+ * @param {Array} resignedRange - The possibly 'inner' range representing the resignation date range
+ * @returns {Array} Either a single element array with the original date range, or 2 new date ranges
+ */
+export const splitMembershipBracket = (tierRange, resignedRange) => {
+
+    const [tierStart, tierEnd] = tierRange;
+    const [resignedStart, resignedEnd] = resignedRange;
+
+    // Check if resignedRange is completely within tierRange
+    if (isBefore(resignedStart, tierStart) || isAfter(resignedEnd, tierEnd)) {
+
+        // resigned range is not completely inside the tier range
+        return [tierRange];
+    }
+
+    // Split the tier range
+    const range1 = [tierStart, resignedStart];
+    const range2 = [resignedEnd, tierEnd];
+
+    return [range1, range2];
 }
