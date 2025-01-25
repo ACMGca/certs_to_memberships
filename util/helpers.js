@@ -104,8 +104,8 @@ export const cleanCognitoMyProfile = (p) => {
         if(k.endsWith('_Maximum')) delete p[k]
         if(Array.isArray(p[k]) && p[k].length === 0) delete p[k]
     })
-    if(!p.Nationality1.Id) delete p.Nationality1
-    if(!p.Nationality2.Id) delete p.Nationality2
+    if(!p?.Nationality1?.Id) delete p.Nationality1
+    if(!p?.Nationality2?.Id) delete p.Nationality2
     if(p.AdministrativeNotes && p.AdministrativeNotes.length > 0){
 
         p.AdministrativeNotes.forEach((note) => {
@@ -123,23 +123,29 @@ export const cleanCognitoMyProfile = (p) => {
         if(!p.Residence[k]) delete p.Residence[k]
         delete p.Residence.FullInternationalAddress
     })
-    Object.keys(p.Mailing).forEach((k) => {
+    if(p.Mailing){
+        Object.keys(p.Mailing).forEach((k) => {
 
-        if(!p.Mailing[k]) delete p.Mailing[k]
-        delete p.Mailing.FullInternationalAddress
-    })
-    // If mailing is the same as residence, delete mailing
-    const keepMailing = Object.keys(p.Residence).map((k) => {
+            if(!p.Mailing[k]) delete p.Mailing[k]
+            delete p.Mailing.FullInternationalAddress
+        })
+        // If mailing is the same as residence, delete mailing
+        const keepMailing = Object.keys(p.Residence).map((k) => {
+    
+            return p.Residence[k] !== p.Mailing[k]
+        }).reduce((acc, cur) => {
+    
+            if(cur === true) acc = true
+            return acc
+        }, false)
+        if(!keepMailing) delete p.Mailing
+    }
 
-        return p.Residence[k] !== p.Mailing[k]
-    }).reduce((acc, cur) => {
+    if(p.FirstAidProvider){
+        p.FirstAidProviderLabel = p.FirstAidProvider.Label 
+        delete p.FirstAidProvider
+    }
 
-        if(cur === true) acc = true
-        return acc
-    }, false)
-    if(!keepMailing) delete p.Mailing
-    p.FirstAidProviderLabel = p.FirstAidProvider.Label 
-    delete p.FirstAidProvider
     delete p.Id
     return JSON.stringify(p, null, 2)
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 import { readdir } from "node:fs/promises";
-import { getCertificationHistory, sortProfileFileNames, CERTKEYLIST } from './helpers.js';
+import { getCertificationHistory, sortProfileFileNames, CERTKEYLIST, cleanCognitoMyProfile } from './helpers.js';
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
 import { convertCognitoToWicket } from "./convert.js";
 import { parseISO, differenceInDays } from "date-fns";
@@ -33,6 +33,25 @@ let INACTIVE_MEMBER_COUNT = 0
 
 const membershipImportJson = {
     'Import Template': []
+}
+
+const cognitoProfileJson = {
+    'Field Descriptions': []
+}
+
+const buildCognitoJsonArchiveObject = (memberNumber, profile) => {
+
+    const cleanProfileJsonString = cleanCognitoMyProfile(profile)
+
+    const cognitoJson = {
+        Entity: 'Person',
+        'ID Scope': 'Identifying Number',
+        'ID': undefined,
+        'data[memberarchive]': cleanProfileJsonString
+    }
+    cognitoJson['ID'] = memberNumber
+
+    return cognitoJson
 }
 
 const buildPersonMembershipObject = (memberNumber, tier) => {
@@ -124,6 +143,10 @@ for (const file of sortedProfileFileNames) {
                     // hydrate the membership
                     const personMembership = buildPersonMembershipObject(profile.MemberNumber, membership)
                     membershipImportJson['Import Template'].push(personMembership)
+
+                    // And populate the structure for the Cognito JSON Archive:
+                    const profileJson = buildCognitoJsonArchiveObject(profile.MemberNumber, profile)
+                    cognitoProfileJson['Field Descriptions'].push(profileJson)
                 })
             } catch (error) {
                 if (!['ACTIVE', 'INACTIVE'].includes(profile.ProfileStatus)) MEMBER_CONVERSION_ERRORS++
@@ -190,3 +213,6 @@ await Bun.write(jsonPersonMemberships, JSON.stringify(membershipImportJson, null
 
 // Write the Person Membership Excel Workbook: 
 jsonToWorkbookOnDisk(membershipImportJson, './public/data/ACMG_Person_Memberships.xlsx')
+
+// Write the Cognito My Profile JSON Archive Workbook:
+jsonToWorkbookOnDisk(cognitoProfileJson, './public/data/ACMG_CognitoMyProfile_JSON_Additional_Info.xlsx')

@@ -41,5 +41,5 @@ export const jsonToWorkbookOnDisk = async (jsonData, workbookPath) => {
         XLSX.utils.book_append_sheet(workbook, worksheet, sheetName)
     })
 
-    XLSX.writeFile(workbook, workbookPath, { compression: true });
+    XLSX.writeFile(workbook, workbookPath, { compression: true, bookSST: true });
 }
