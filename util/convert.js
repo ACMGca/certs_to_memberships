@@ -467,11 +467,11 @@ export const convertCognitoToWicket = (cognito) => {
 
             const tierRange = [parseISO(tier[2]), parseISO(tier[3])]
             const splitTiers = splitMembershipBracket(tierRange, resignedRange)
-            splitTiers.forEach((range) => {
+            splitTiers.forEach((range, index) => {
 
                 acc.push([
                     tier[0],
-                    tier[1],
+                    (splitTiers.length === 2 && index === 0) ? 'Inactive' : tier[1],
                     format(range[0], 'yyyy-MM-dd'),
                     format(range[1], 'yyyy-MM-dd')
                 ])
