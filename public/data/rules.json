@@ -419,16 +419,7 @@
       "Climbing Gym Instructor Level 1 Member",
       "Climbing Gym Instructor Level 2 Member"
     ],
-    "eligible": [
-      {
-        "to": "Climbing Gym Instructor Level 3 Member",
-        "when": [
-          "First Aid is Current",
-          "Professional Practice is Current",
-          "Continuing Professional Development is Current"
-        ]
-      }
-    ],
+    "eligible": [],
     "superseded_by": [],
     "membership_tier_slug": "climbing-gym-instructor-level-3"
   },
