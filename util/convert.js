@@ -479,7 +479,27 @@ export const convertCognitoToWicket = (cognito) => {
             return acc
         }, [])
     }
-    // TODO: Detectable 'mid career' Inactive periods can be filled with "Professional Inactive" membership
-    // TODO: Detectable 'mid career' Resigned periods can be void of any membership
+
+    //  ___          _                  _ _       _    _                                  _         _               _              ____
+    // | _ \___ _ __| |__ _ __ ___   __| (_)_ __ | |__(_)_ _  __ _ ___ __ _ _  _ _ __ ___(_)_ _  __| |_ _ _ _  _ __| |_ ___ _ _ __|__ /
+    // |   / -_) '_ \ / _` / _/ -_) / _| | | '  \| '_ \ | ' \/ _` |___/ _` | || | '  \___| | ' \(_-<  _| '_| || / _|  _/ _ \ '_|___|_ \
+    // |_|_\___| .__/_\__,_\__\___| \__|_|_|_|_|_|_.__/_|_||_\__, |   \__, |\_, |_|_|_|  |_|_||_/__/\__|_|  \_,_\__|\__\___/_|    |___/
+    //         |_|                                           |___/    |___/ |__/                                                       
+    //
+    // Here, we simply detect any 'climbing-gym-instructor-level-3' membership tiers on the record and replace
+    // the tier slug value 'climbing-gym-instructor-level-3' with 'climbing-gym-instructor-level-2'. 
+    // This has the effect of removing the concept of a climbing-gym-instructor-level-3 scope of practice
+    // from the data set. However, we will still see that the member will have a TAP designation 'CGI3' which
+    // will stand in the data as an indicator of that prior state.
+    const cgi2Slug = 'climbing-gym-instructor-level-2'
+    const cgi3Slug = 'climbing-gym-instructor-level-3'
+    wicket.professional.forEach((tier) => {
+
+        if(tier[0] === cgi3Slug){
+
+            tier[0] = cgi2Slug
+        }
+    })
+
     return wicket
 }
