@@ -1,8 +1,8 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-01-26T14:13:17.502Z",
-    "mostRecentlyUpdatedProfileDate": "2025-01-24T17:16:49.201Z",
-    "daysSinceDataRefresh": 1
+    "reportGeneratedDate": "2025-01-26T18:16:26.073Z",
+    "mostRecentlyUpdatedProfileDate": "2025-01-26T17:39:35.523Z",
+    "daysSinceDataRefresh": 0
   },
   "stats": {
     "MEMBER_PARSE_ERRORS": 53,
@@ -10,13 +10,13 @@
     "MEMBER_CONVERSION_ERRORS": 16,
     "MEMBER_CONVERSION_ERROR_RATE": "0.93%",
     "NONMEMBER_PARSE_ERRORS": 843,
-    "NONMEMBER_PARSE_ERROR_RATE": "62.82%",
+    "NONMEMBER_PARSE_ERROR_RATE": "62.77%",
     "NONMEMBER_CONVERSION_ERRORS": 16,
     "NONMEMBER_CONVERSION_ERROR_RATE": "1.19%",
     "MEMBER_COUNT": 1718,
-    "NONMEMBER_COUNT": 1342,
-    "ACTIVE_MEMBER_COUNT": 1468,
-    "INACTIVE_MEMBER_COUNT": 250
+    "NONMEMBER_COUNT": 1343,
+    "ACTIVE_MEMBER_COUNT": 1466,
+    "INACTIVE_MEMBER_COUNT": 252
   },
   "profiles": {
     "3_json": {
@@ -1323,13 +1323,13 @@
       "cognitoEntryId": "29",
       "profileStatus": "ACTIVE",
       "memberNumber": "972",
-      "cognitoLastModified": "2025-01-23T03:03:08.552Z",
+      "cognitoLastModified": "2025-01-25T01:43:24.539Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-03-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2025-01-22",
+        "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "972",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -7537,13 +7537,13 @@
       "cognitoEntryId": "153",
       "profileStatus": "ACTIVE",
       "memberNumber": "134",
-      "cognitoLastModified": "2025-01-22T23:31:06.604Z",
+      "cognitoLastModified": "2025-01-25T06:07:01.493Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1996-01-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-28",
+        "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -7559,7 +7559,7 @@
             "day-hiking-guide",
             "Active",
             "1996-01-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -8189,7 +8189,7 @@
       "cognitoEntryId": "168",
       "profileStatus": "ACTIVE",
       "memberNumber": "859",
-      "cognitoLastModified": "2025-01-22T23:26:34.656Z",
+      "cognitoLastModified": "2025-01-26T17:39:35.523Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-04-01",
@@ -14552,13 +14552,13 @@
       "cognitoEntryId": "299",
       "profileStatus": "ACTIVE",
       "memberNumber": "2446",
-      "cognitoLastModified": "2025-01-22T23:26:05.316Z",
+      "cognitoLastModified": "2025-01-25T16:01:05.338Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-06-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-29",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -14574,7 +14574,7 @@
             "climbing-gym-instructor-level-1",
             "Active",
             "2018-06-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -19173,7 +19173,7 @@
       "cognitoEntryId": "393",
       "profileStatus": "ACTIVE",
       "memberNumber": "3078",
-      "cognitoLastModified": "2024-12-28T00:18:42.554Z",
+      "cognitoLastModified": "2025-01-26T17:13:34.491Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-05-15",
@@ -22441,7 +22441,7 @@
       "cognitoEntryId": "456",
       "profileStatus": "INACTIVE",
       "memberNumber": "1632",
-      "cognitoLastModified": "2025-01-22T23:25:47.978Z",
+      "cognitoLastModified": "2025-01-24T21:07:37.000Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2013-10-01",
@@ -23251,7 +23251,7 @@
       "cognitoEntryId": "472",
       "profileStatus": "INACTIVE",
       "memberNumber": "61",
-      "cognitoLastModified": "2025-01-22T23:30:24.452Z",
+      "cognitoLastModified": "2025-01-25T15:21:39.252Z",
       "parseError": {
         "issues": [
           {
@@ -23270,7 +23270,7 @@
         "DateJoined": "1966-01-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-02-29",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "HikeTimeLimit": null,
@@ -24969,13 +24969,13 @@
       "cognitoEntryId": "506",
       "profileStatus": "ACTIVE",
       "memberNumber": "1349",
-      "cognitoLastModified": "2025-01-22T23:25:42.413Z",
+      "cognitoLastModified": "2025-01-25T01:48:32.598Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-01-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-02",
+        "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -24996,13 +24996,13 @@
             "climbing-gym-instructor-level-1",
             "Active",
             "2011-01-01",
-            "2024-12-31"
+            "2025-12-31"
           ],
           [
             "top-rope-climbing-instructor",
             "Active",
             "2012-05-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -25145,13 +25145,13 @@
       "cognitoEntryId": "509",
       "profileStatus": "ACTIVE",
       "memberNumber": "3023",
-      "cognitoLastModified": "2025-01-22T23:25:41.303Z",
+      "cognitoLastModified": "2025-01-25T23:13:52.636Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2021-12-20",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-17",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -25167,7 +25167,7 @@
             "climbing-gym-instructor-level-1",
             "Active",
             "2021-12-20",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -28313,13 +28313,13 @@
       "cognitoEntryId": "575",
       "profileStatus": "INACTIVE",
       "memberNumber": "88",
-      "cognitoLastModified": "2025-01-22T23:30:08.567Z",
+      "cognitoLastModified": "2025-01-26T17:08:35.788Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1989-01-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-03-15",
+        "LastAnnualValidation": "2025-01-26",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -28352,7 +28352,7 @@
             "inactive-member",
             "Active",
             "2024-02-22",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -28849,7 +28849,7 @@
       "cognitoEntryId": "586",
       "profileStatus": "INACTIVE",
       "memberNumber": "1196",
-      "cognitoLastModified": "2025-01-22T23:30:04.938Z",
+      "cognitoLastModified": "2025-01-25T13:20:35.172Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2009-06-01",
@@ -30466,13 +30466,13 @@
       "cognitoEntryId": "618",
       "profileStatus": "ACTIVE",
       "memberNumber": "2759",
-      "cognitoLastModified": "2025-01-22T23:25:22.932Z",
+      "cognitoLastModified": "2025-01-25T19:28:22.207Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2020-02-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-30",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -30488,7 +30488,7 @@
             "climbing-gym-instructor-level-1",
             "Active",
             "2020-02-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -37571,13 +37571,13 @@
       "cognitoEntryId": "762",
       "profileStatus": "ACTIVE",
       "memberNumber": "3206",
-      "cognitoLastModified": "2025-01-22T23:29:43.191Z",
+      "cognitoLastModified": "2025-01-25T07:10:45.823Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-07-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2023-12-16",
+        "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -37604,7 +37604,7 @@
             "hiking-guide",
             "Active",
             "2024-06-08",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -40261,22 +40261,22 @@
     },
     "817_json": {
       "cognitoEntryId": "817",
-      "profileStatus": "INACTIVE",
+      "profileStatus": "RESIGNED",
       "memberNumber": "1911",
-      "cognitoLastModified": "2025-01-22T23:25:09.752Z",
+      "cognitoLastModified": "2025-01-25T18:02:10.876Z",
       "certsParsed": {
-        "ProfileStatus": "INACTIVE",
+        "ProfileStatus": "RESIGNED",
         "DateJoined": "2015-09-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-02-01",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
         "CGI1": {
-          "status": "Inactive",
+          "status": "Resigned",
           "date": "2015-07-01",
-          "lastModified": "2024-10-01"
+          "lastModified": "2025-01-25"
         }
       },
       "wicketMemberships": {
@@ -40285,13 +40285,7 @@
             "climbing-gym-instructor-level-1",
             "Inactive",
             "2015-09-01",
-            "2024-10-01"
-          ],
-          [
-            "inactive-member",
-            "Active",
-            "2024-10-02",
-            "2024-12-31"
+            "2025-01-25"
           ]
         ],
         "designations": {
@@ -41060,13 +41054,13 @@
       "cognitoEntryId": "834",
       "profileStatus": "INACTIVE",
       "memberNumber": "2355",
-      "cognitoLastModified": "2025-01-22T23:25:08.409Z",
+      "cognitoLastModified": "2025-01-25T02:08:40.572Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2018-02-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-28",
+        "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -41088,7 +41082,7 @@
             "inactive-member",
             "Active",
             "2024-01-29",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -41645,22 +41639,22 @@
     },
     "847_json": {
       "cognitoEntryId": "847",
-      "profileStatus": "ACTIVE",
+      "profileStatus": "INACTIVE",
       "memberNumber": "1473",
-      "cognitoLastModified": "2025-01-22T23:29:29.662Z",
+      "cognitoLastModified": "2025-01-25T15:07:34.898Z",
       "certsParsed": {
-        "ProfileStatus": "ACTIVE",
+        "ProfileStatus": "INACTIVE",
         "DateJoined": "2012-05-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-30",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
         "SG": {
-          "status": "Active",
+          "status": "Inactive",
           "date": "2015-04-01",
-          "lastModified": null
+          "lastModified": "2025-01-25"
         },
         "ASG": {
           "status": null,
@@ -41678,9 +41672,15 @@
           ],
           [
             "ski-guide",
-            "Active",
+            "Inactive",
             "2015-04-01",
-            "2024-12-31"
+            "2025-01-25"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2025-01-26",
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -41932,13 +41932,13 @@
       "cognitoEntryId": "853",
       "profileStatus": "ACTIVE",
       "memberNumber": "2233",
-      "cognitoLastModified": "2025-01-22T23:25:07.394Z",
+      "cognitoLastModified": "2025-01-26T17:01:54.894Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-07-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-06",
+        "LastAnnualValidation": "2025-01-26",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -41954,7 +41954,7 @@
             "top-rope-climbing-instructor",
             "Active",
             "2017-07-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -45429,13 +45429,13 @@
       "cognitoEntryId": "921",
       "profileStatus": "ACTIVE",
       "memberNumber": "2679",
-      "cognitoLastModified": "2025-01-22T23:24:58.965Z",
+      "cognitoLastModified": "2025-01-25T22:55:27.390Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-07-01",
         "DateEnd": null,
         "DateReinstate": "2022-04-14",
-        "LastAnnualValidation": "2024-01-21",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -45451,7 +45451,7 @@
             "climbing-gym-instructor-level-1",
             "Active",
             "2019-07-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -48356,7 +48356,7 @@
       "cognitoEntryId": "981",
       "profileStatus": "ACTIVE",
       "memberNumber": "1714",
-      "cognitoLastModified": "2025-01-22T17:52:39.586Z",
+      "cognitoLastModified": "2025-01-25T13:11:42.423Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-05-01",
@@ -56313,7 +56313,7 @@
       "cognitoEntryId": "1141",
       "profileStatus": "ACTIVE",
       "memberNumber": "322",
-      "cognitoLastModified": "2025-01-09T22:35:33.840Z",
+      "cognitoLastModified": "2025-01-25T23:01:14.949Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1994-01-01",
@@ -62078,13 +62078,13 @@
       "cognitoEntryId": "1258",
       "profileStatus": "ACTIVE",
       "memberNumber": "563",
-      "cognitoLastModified": "2025-01-22T23:28:43.738Z",
+      "cognitoLastModified": "2025-01-25T06:32:56.269Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-04-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-15",
+        "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -62115,13 +62115,13 @@
             "ski-guide",
             "Active",
             "2005-04-01",
-            "2024-12-31"
+            "2025-12-31"
           ],
           [
             "hiking-guide-winter",
             "Active",
             "2016-05-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -68411,13 +68411,13 @@
       "cognitoEntryId": "1393",
       "profileStatus": "ACTIVE",
       "memberNumber": "3237",
-      "cognitoLastModified": "2025-01-22T23:28:21.397Z",
+      "cognitoLastModified": "2025-01-25T19:39:39.399Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-09-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-02-29",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -68444,7 +68444,7 @@
             "apprentice-hiking-guide-winter",
             "Active",
             "2022-12-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -68704,7 +68704,7 @@
       "cognitoEntryId": "1399",
       "profileStatus": "INACTIVE",
       "memberNumber": "1630",
-      "cognitoLastModified": "2025-01-22T23:23:43.428Z",
+      "cognitoLastModified": "2025-01-25T15:37:45.719Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2013-10-01",
@@ -72740,13 +72740,13 @@
       "cognitoEntryId": "1486",
       "profileStatus": "ACTIVE",
       "memberNumber": "2663",
-      "cognitoLastModified": "2025-01-22T23:28:11.418Z",
+      "cognitoLastModified": "2025-01-25T20:59:03.725Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-07-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-17",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [
@@ -72766,7 +72766,7 @@
             "apprentice-hiking-guide",
             "Active",
             "2019-07-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -79257,40 +79257,44 @@
     },
     "1625_json": {
       "cognitoEntryId": "1625",
-      "profileStatus": "ACTIVE",
+      "profileStatus": "INACTIVE",
       "memberNumber": "1234",
-      "cognitoLastModified": "2025-01-22T23:27:46.896Z",
+      "cognitoLastModified": "2025-01-25T01:50:23.551Z",
       "certsParsed": {
-        "ProfileStatus": "ACTIVE",
+        "ProfileStatus": "INACTIVE",
         "DateJoined": "2009-10-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-30",
+        "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [
-          "Added ASG: status,Active | date,2009-04-01 | lastModified, | isPermanent,true",
-          "Removed ASGPerm: status,Active | date,2009-04-01 | lastModified,"
+          "Added ASG: status,Inactive | date,2009-04-01 | lastModified,2025-01-24",
+          "Removed ASGPerm: status,Inactive | date,2009-04-01 | lastModified,2025-01-24"
         ],
         "ASG": {
-          "status": "Active",
+          "status": "Inactive",
           "date": "2009-04-01",
-          "lastModified": null,
-          "isPermanent": true
+          "lastModified": "2025-01-24"
         }
       },
       "wicketMemberships": {
         "professional": [
           [
             "apprentice-ski-guide",
-            "Active",
+            "Inactive",
             "2009-10-01",
-            "2024-12-31"
+            "2025-01-24"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2025-01-25",
+            "2025-12-31"
           ]
         ],
         "designations": {
-          "ASG": "2009-04-01",
-          "ASGisPermanent": true
+          "ASG": "2009-04-01"
         }
       }
     },
@@ -136303,13 +136307,13 @@
       "cognitoEntryId": "3091",
       "profileStatus": "ACTIVE",
       "memberNumber": "3662",
-      "cognitoLastModified": "2025-01-22T23:22:03.252Z",
+      "cognitoLastModified": "2025-01-26T14:51:53.970Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-05-07",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-05-07",
+        "LastAnnualValidation": "2025-01-26",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -136325,7 +136329,7 @@
             "top-rope-climbing-instructor",
             "Active",
             "2024-05-07",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -136649,13 +136653,13 @@
       "cognitoEntryId": "3101",
       "profileStatus": "ACTIVE",
       "memberNumber": "3672",
-      "cognitoLastModified": "2025-01-22T23:22:02.018Z",
+      "cognitoLastModified": "2025-01-26T04:56:31.392Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-05-24",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-05-24",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -136671,7 +136675,7 @@
             "climbing-gym-instructor-level-1",
             "Active",
             "2024-05-24",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -136785,7 +136789,7 @@
       "cognitoEntryId": "3105",
       "profileStatus": "ACTIVE",
       "memberNumber": "3676",
-      "cognitoLastModified": "2025-01-08T00:37:09.362Z",
+      "cognitoLastModified": "2025-01-26T17:23:03.111Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-05-27",
@@ -139334,31 +139338,37 @@
     },
     "3196_json": {
       "cognitoEntryId": "3196",
-      "profileStatus": "ACTIVE",
+      "profileStatus": "INACTIVE",
       "memberNumber": "3783",
-      "cognitoLastModified": "2025-01-22T23:21:34.116Z",
+      "cognitoLastModified": "2025-01-25T21:38:37.772Z",
       "certsParsed": {
-        "ProfileStatus": "ACTIVE",
+        "ProfileStatus": "INACTIVE",
         "DateJoined": "2024-10-10",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-10-10",
+        "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
         "VFG": {
-          "status": "Active",
+          "status": "Inactive",
           "date": "2024-05-27",
-          "lastModified": "2024-05-27"
+          "lastModified": "2025-01-25"
         }
       },
       "wicketMemberships": {
         "professional": [
           [
             "via-ferrata-guide",
-            "Active",
+            "Inactive",
             "2024-10-10",
-            "2024-12-31"
+            "2025-01-25"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2025-01-26",
+            "2025-12-31"
           ]
         ],
         "designations": {
@@ -140034,6 +140044,33 @@
         ],
         "designations": {
           "TRCI": "2024-05-13"
+        }
+      }
+    },
+    "3220_json": {
+      "cognitoEntryId": "3220",
+      "profileStatus": "ACTIVE",
+      "memberNumber": "3805",
+      "cognitoLastModified": "2025-01-24T22:44:49.505Z",
+      "certsParsed": {
+        "ProfileStatus": "ACTIVE",
+        "DateJoined": "2025-01-24",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "transforms": [],
+        "HG": {
+          "status": "Active",
+          "date": "2024-09-13",
+          "lastModified": "2024-09-13"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [],
+        "designations": {
+          "HG": "2024-09-13"
         }
       }
     }
