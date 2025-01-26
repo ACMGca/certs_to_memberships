@@ -920,6 +920,102 @@ test('CGI1 to CGI2 Scenario with resignation period', () => {
   expect(result.designations).toMatchObject(expected.designations)
 })
 
+// D.W. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/1576
+// RG + CGI3 with resignation period.
+test('CGI3 correction and multiple effects to support resignation period', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2002-11-01',
+    DateEnd: '2005-03-01',
+    DateReinstate: '2009-01-01',
+    LastAnnualValidation: '2024-12-31',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    transforms: [],
+    RG: {
+      status: 'Active',
+      date: '2009-09-01',
+      lastModified: null
+    },
+    ARG: {
+      status: null,
+      date: '2004-09-01',
+      lastModified: null
+    },
+    CGI1: {
+      status: null,
+      date: '2002-11-01',
+      lastModified: null
+    },
+    CGI2: {
+      status: null,
+      date: '2003-04-01',
+      lastModified: null
+    },
+    CGI3: {
+      status: 'Active',
+      date: '2006-09-01',
+      lastModified: null
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'climbing-gym-instructor-level-1',
+        'Inactive',
+        '2002-11-01',
+        '2003-03-31'
+      ],
+      [
+        'climbing-gym-instructor-level-2',
+        'Inactive',
+        '2003-04-01',
+        '2005-03-01'
+      ],
+      [
+        'apprentice-rock-guide',
+        'Inactive',
+        '2004-09-01',
+        '2005-03-01'
+      ],
+      [
+        'apprentice-rock-guide',
+        'Inactive',
+        '2009-01-01',
+        '2009-08-31'
+      ],
+      [
+        'climbing-gym-instructor-level-2',
+        'Active',
+        '2009-01-01',
+        '2025-12-31'
+      ],
+      [
+        'rock-guide',
+        'Active',
+        '2009-09-01',
+        '2025-12-31'
+      ]
+    ],
+    designations: {
+      CGI1: '2002-11-01',
+      CGI2: '2003-04-01',
+      ARG: '2004-09-01',
+      CGI3: '2006-09-01',
+      RG: '2009-09-01'
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  console.log(result)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
 // This is an example of the data transformation business rule in the schema layer
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile

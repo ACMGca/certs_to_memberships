@@ -1,6 +1,6 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-01-26T12:53:26.552Z",
+    "reportGeneratedDate": "2025-01-26T14:13:17.502Z",
     "mostRecentlyUpdatedProfileDate": "2025-01-24T17:16:49.201Z",
     "daysSinceDataRefresh": 1
   },
@@ -8802,18 +8802,18 @@
             "climbing-gym-instructor-level-1",
             "Inactive",
             "2016-01-01",
-            "2019-04-10"
+            "2019-04-01"
           ],
           [
             "top-rope-climbing-instructor",
             "Inactive",
             "2016-06-01",
-            "2019-04-10"
+            "2019-04-01"
           ],
           [
             "inactive-member",
             "Active",
-            "2019-04-11",
+            "2022-04-25",
             "2025-12-31"
           ]
         ],
@@ -15915,12 +15915,12 @@
             "apprentice-ski-guide",
             "Inactive",
             "2008-04-01",
-            "2013-03-31"
+            "2010-01-01"
           ],
           [
             "ski-guide",
             "Active",
-            "2013-04-01",
+            "2024-01-19",
             "2025-12-31"
           ]
         ],
@@ -24954,7 +24954,7 @@
           [
             "apprentice-ski-guide",
             "Active",
-            "2022-04-01",
+            "2022-09-28",
             "2025-12-31"
           ]
         ],
@@ -25615,7 +25615,7 @@
           [
             "apprentice-rock-guide",
             "Inactive",
-            "2021-09-01",
+            "2021-09-30",
             "2023-08-31"
           ],
           [
@@ -30069,18 +30069,18 @@
             "apprentice-hiking-guide",
             "Inactive",
             "2010-08-01",
-            "2017-03-31"
+            "2015-06-01"
           ],
           [
             "apprentice-ski-guide",
             "Inactive",
-            "2017-04-01",
+            "2017-05-01",
             "2019-03-31"
           ],
           [
             "apprentice-hiking-guide-winter",
             "Inactive",
-            "2017-04-01",
+            "2017-05-01",
             "2023-12-23"
           ],
           [
@@ -31830,12 +31830,12 @@
             "apprentice-ski-guide",
             "Inactive",
             "2001-03-01",
-            "2013-03-31"
+            "2005-08-01"
           ],
           [
             "ski-guide",
             "Active",
-            "2013-04-01",
+            "2016-04-01",
             "2025-12-31"
           ]
         ],
@@ -34340,7 +34340,7 @@
           [
             "top-rope-climbing-instructor",
             "Active",
-            "2021-08-01",
+            "2021-08-26",
             "2025-12-31"
           ]
         ],
@@ -34982,7 +34982,7 @@
           [
             "apprentice-rock-guide",
             "Inactive",
-            "2007-09-01",
+            "2007-09-24",
             "2012-07-31"
           ],
           [
@@ -37512,7 +37512,7 @@
           [
             "top-rope-climbing-instructor",
             "Active",
-            "2014-05-01",
+            "2014-07-29",
             "2024-12-31"
           ]
         ],
@@ -38440,7 +38440,7 @@
             "apprentice-ski-guide",
             "Inactive",
             "1999-01-01",
-            "2003-03-31"
+            "2002-09-01"
           ],
           [
             "apprentice-rock-guide",
@@ -38457,7 +38457,7 @@
           [
             "ski-guide",
             "Active",
-            "2003-04-01",
+            "2003-05-01",
             "2025-12-31"
           ]
         ],
@@ -42199,7 +42199,7 @@
           [
             "apprentice-rock-guide",
             "Active",
-            "2007-09-01",
+            "2008-06-01",
             "2024-12-31"
           ],
           [
@@ -49129,12 +49129,12 @@
             "apprentice-rock-guide",
             "Inactive",
             "2002-09-01",
-            "2005-07-31"
+            "2003-03-01"
           ],
           [
             "apprentice-alpine-guide",
             "Inactive",
-            "2005-08-01",
+            "2006-10-01",
             "2008-08-31"
           ],
           [
@@ -64113,12 +64113,12 @@
             "apprentice-ski-guide",
             "Inactive",
             "1997-01-01",
-            "2003-03-31"
+            "2001-09-01"
           ],
           [
             "ski-guide",
             "Active",
-            "2003-04-01",
+            "2005-05-01",
             "2025-12-31"
           ],
           [
@@ -65980,7 +65980,7 @@
           [
             "climbing-gym-instructor-level-1",
             "Active",
-            "2019-07-01",
+            "2020-08-01",
             "2024-12-31"
           ]
         ],
@@ -69002,7 +69002,7 @@
           [
             "apprentice-hiking-guide",
             "Inactive",
-            "2012-06-01",
+            "2012-08-21",
             "2014-06-30"
           ],
           [
@@ -76984,6 +76984,7 @@
     },
     "1576_json": {
       "cognitoEntryId": "1576",
+      "isFormalTestProfile": true,
       "profileStatus": "ACTIVE",
       "memberNumber": "644",
       "cognitoLastModified": "2024-12-31T16:09:44.363Z",
@@ -77034,7 +77035,7 @@
             "climbing-gym-instructor-level-2",
             "Inactive",
             "2003-04-01",
-            "2006-08-31"
+            "2005-03-01"
           ],
           [
             "apprentice-rock-guide",
@@ -77051,7 +77052,7 @@
           [
             "climbing-gym-instructor-level-2",
             "Active",
-            "2006-09-01",
+            "2009-01-01",
             "2025-12-31"
           ],
           [
@@ -130856,12 +130857,12 @@
             "apprentice-rock-guide",
             "Inactive",
             "2018-01-01",
-            "2022-06-30"
+            "2022-04-01"
           ],
           [
             "rock-guide",
             "Active",
-            "2022-07-01",
+            "2024-04-15",
             "2024-12-31"
           ]
         ],

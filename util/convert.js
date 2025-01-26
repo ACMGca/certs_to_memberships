@@ -1,5 +1,5 @@
 'use strict';
-import { sub, format, compareDesc, intervalToDuration, formatISODuration, isWithinInterval, parseISO, subDays, addDays, isBefore } from "date-fns";
+import { sub, format, compareDesc, intervalToDuration, formatISODuration, isWithinInterval, parseISO, subDays, addDays, isBefore, isAfter } from "date-fns";
 import { rules } from "./rules.js";
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
 import { splitMembershipBracket } from "./helpers.js";
@@ -478,6 +478,27 @@ export const convertCognitoToWicket = (cognito) => {
             })
             return acc
         }, [])
+
+        // With the tier splitting now taken care of, it is still possible for other tiers to have either a start
+        // or end date within the resignation period. This scans the tiers again and makes adjustments to correct these
+        // issues where they exist: 
+        wicket.professional.forEach((tier) => {
+
+            const tierStart = parseISO(tier[2])
+            const tierEnd = parseISO(tier[3])
+            const dateEnd = parseISO(cognito.DateEnd)
+            const dateReinstate = parseISO(cognito.DateReinstate)
+
+            // If the start date of the tier falls inside the resigned period, we advance the start date to the DateReinstate
+            if(isAfter(tierStart, dateEnd) && isBefore(tierStart, dateReinstate)){
+                tier[2] = format(dateReinstate, 'yyyy-MM-dd')
+            }
+
+            // If the end date of the tier falls inside the resigned period, we rewind the end date to the DateEnd
+            if(isAfter(tierEnd, dateEnd) && isBefore(tierEnd, dateReinstate)){
+                tier[3] = format(dateEnd, 'yyyy-MM-dd')
+            }
+        })
     }
 
     //  ___          _                  _ _       _    _                                  _         _               _              ____
