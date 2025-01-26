@@ -147,7 +147,7 @@ const rulesObject = {
     CGI3: {
         supervises: [],
         supersedes: [CGI1, CGI2],
-        eligible: [{to: CGI3, when: [cFA, cPP, cCPD]}]
+        eligible: [] // Decommissioned. `climbing-gym-instructor-level-3` membership tier will not exist in Wicket
     },
     TRCI: {
         supervises: [],
