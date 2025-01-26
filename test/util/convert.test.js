@@ -1055,32 +1055,82 @@ test('Resigned member showing AHG Membership ending in the past', () => {
   expect(result.designations).toMatchObject(expected.designations)
 })
 
+
+// S.R. #1245 https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/1245
+// Good example of simple, explicit HGWT.
+test('Simple, explicit hiking guide winter travel example', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2021-07-01',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2025-01-03',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    AHG: {
+      status: null,
+      date: '2021-06-01',
+      lastModified: null
+    },
+    HG: {
+      status: 'Active',
+      date: '2024-06-08',
+      lastModified: '2024-06-24'
+    },
+    HGWT: {
+      status: 'Acquired',
+      date: '2021-12-01',
+      lastModified: null
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'apprentice-hiking-guide',
+        'Inactive',
+        '2021-07-01',
+        '2021-11-30'
+      ],
+      [
+        'apprentice-hiking-guide-winter',
+        'Inactive',
+        '2021-12-01',
+        '2024-06-07'
+      ],
+      [
+        'hiking-guide-winter',
+        'Active',
+        '2024-06-08',
+        '2025-12-31'
+      ]
+    ], designations: {
+      AHG: '2021-06-01',
+      HG: '2024-06-08',
+      HGWT: '2021-12-01'
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
 // This is an example of the data transformation business rule in the schema layer
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
 // then backfill the LastModified on each cert with that value.
 // R.L. Cognito Row 1788
 
-// TODO: TEST CASE Cognito Row#561 - Resigned Member should get an inactive Wicket Membership ending in the past
-// *** here is a good example of correct RESIGNED behavior to lock into a test first: Row#1965
 
-// TODO: TEST CASE Cognito Row#2097 - Should have produced a past tier bracket
-// *** #2323 has good result to lock into a test case first
 
-// #2473 Something is up with the *Perm certs and RESIGNED
-// *** #2972 non-Perm has correct behaviour
+// TODO: RESIGNED Member. Dates out of order error >> #2227
+// TODO: ACTIVE Member. Dates out of order error >> #301
 
-// TODO: Did not consider this one: This is a DHG with Winter Travel #83
-
-// TODO: GOOD SAMPLE >> #2227 - Good tiers closed in past for RESIGNED Member
-
-// TODO: #301 - Member lost standing as RG but remains active in other Scope of Practice
-// I applied a fix to the member profile to set the ARG RESIGNED. Should fix the issue on next refresh. 
-
-// #744 Perm
-
-// #1245 https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries-TODO/1245
-// HGW gets put out of order relative to HG and the Tier states are backwards
+// R.K. #744 Inactive, Honoured >> Last Modified date error for MG member
 
 // #3075 Inactive TRCI - looks simple but gets conversion error
 
