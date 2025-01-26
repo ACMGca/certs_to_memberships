@@ -6,7 +6,7 @@ import { CERTKEYLIST } from "../../util/helpers.js";
 const certRuleSchema = z.object({
     supervises: z.array(z.string()).min(0),
     supersedes: z.array(z.string()).min(0),
-    eligible: z.array(z.object({}).passthrough()).min(1),
+    eligible: z.array(z.object({}).passthrough()).min(0),
     superseded_by: z.array(z.string()).min(0),
     membership_tier_slug: z.string()
 })
