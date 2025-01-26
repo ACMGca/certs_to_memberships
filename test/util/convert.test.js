@@ -1011,7 +1011,46 @@ test('CGI3 correction and multiple effects to support resignation period', () =>
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  console.log(result)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
+// C.H. https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/561
+// Resigned member showing AHG Membership ending in the past.
+test('Resigned member showing AHG Membership ending in the past', () => {
+
+  const source = {
+    ProfileStatus: 'RESIGNED',
+    DateJoined: '2017-07-01',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2023-01-01',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    AHG: {
+      status: 'Resigned',
+      date: '2017-06-01',
+      lastModified: '2024-03-01'
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'apprentice-hiking-guide',
+        'Inactive',
+        '2017-07-01',
+        '2024-03-01'
+      ]
+    ],
+    designations: {
+      AHG: '2017-06-01'
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
   expect(result.professional).toMatchObject(expected.professional)
   expect(result.designations).toMatchObject(expected.designations)
 })
@@ -1021,10 +1060,6 @@ test('CGI3 correction and multiple effects to support resignation period', () =>
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
 // then backfill the LastModified on each cert with that value.
 // R.L. Cognito Row 1788
-
-
-// TEST CASE: History Interrupted by Resign / Reinstate
-// B.C. Cognito Row 296
 
 // TODO: TEST CASE Cognito Row#561 - Resigned Member should get an inactive Wicket Membership ending in the past
 // *** here is a good example of correct RESIGNED behavior to lock into a test first: Row#1965
