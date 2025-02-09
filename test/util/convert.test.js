@@ -1119,6 +1119,417 @@ test('Simple, explicit hiking guide winter travel example', () => {
   expect(result.designations).toMatchObject(expected.designations)
 })
 
+// J.S. #1410 https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/1410
+// Formal Review Test Case
+// Good sample as identified by K.D. during formal conversion review process
+// https://www.cognitoforms.com/acmg/wicketmembershipconversionreview/1-all-entries/3
+test('Row 1410 - Formal Review Test Case', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2003-11-01',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2024-12-02',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    transforms: [
+      'Added AHG: status,Active | date,2017-07-01 | lastModified, | isPermanent,true',
+      'Removed AHGPerm: status,Active | date,2017-07-01 | lastModified,'
+    ],
+    DHG: {
+      status: 'Active',
+      date: '2006-09-01',
+      lastModified: null
+    },
+    CGI1: {
+      status: 'Active',
+      date: '2003-11-01',
+      lastModified: null
+    },
+    TRCI: {
+      status: 'Active',
+      date: '2006-04-01',
+      lastModified: null
+    },
+    AHG: {
+      status: 'Active',
+      date: '2017-07-01',
+      lastModified: null,
+      isPermanent: true
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'climbing-gym-instructor-level-1',
+        'Active',
+        '2003-11-01',
+        '2025-12-31'
+      ],
+      [
+        'top-rope-climbing-instructor',
+        'Active',
+        '2006-04-01',
+        '2025-12-31'
+      ],
+      [
+        'day-hiking-guide',
+        'Active',
+        '2006-09-01',
+        '2025-12-31'
+      ],
+      [
+        'apprentice-hiking-guide',
+        'Active',
+        '2017-07-01',
+        '2025-12-31'
+      ]
+    ],
+    designations: {
+      CGI1: '2003-11-01',
+      TRCI: '2006-04-01',
+      DHG: '2006-09-01',
+      AHG: '2017-07-01',
+      AHGisPermanent: true
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
+// D.K. #708 https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/708
+// Formal Review Test Case
+// Good sample as identified by K.D. during formal conversion review process
+// https://www.cognitoforms.com/acmg/wicketmembershipconversionreview/1-all-entries/5
+test('Row 708 - Formal Review Test Case', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2001-09-01',
+    DateEnd: '2007-06-30',
+    DateReinstate: '2007-09-24',
+    LastAnnualValidation: '2024-12-08',
+    IFMGALicenseNumber: '512',
+    SkiExamMode: 'Ski',
+    transforms: [],
+    MG: {
+      status: 'Active',
+      date: '2019-08-01',
+      lastModified: null
+    },
+    SG: {
+      status: null,
+      date: '2012-04-01',
+      lastModified: null
+    },
+    AAG: {
+      status: null,
+      date: '2012-08-01',
+      lastModified: null
+    },
+    ASG: {
+      status: null,
+      date: '2009-04-01',
+      lastModified: null
+    },
+    ARG: {
+      status: null,
+      date: '2007-09-01',
+      lastModified: null
+    },
+    CGI1: {
+      status: null,
+      date: '2001-09-01',
+      lastModified: null
+    },
+    CGI2: {
+      status: null,
+      date: '2002-04-01',
+      lastModified: null
+    },
+    CGI3: {
+      status: 'Inactive',
+      date: '2003-04-01',
+      lastModified: '2024-01-31'
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'climbing-gym-instructor-level-1',
+        'Inactive',
+        '2001-09-01',
+        '2002-03-31'
+      ],
+      [
+        'climbing-gym-instructor-level-2',
+        'Inactive',
+        '2002-04-01',
+        '2003-03-31'
+      ],
+      [
+        'climbing-gym-instructor-level-2',
+        'Inactive',
+        '2003-04-01',
+        '2007-06-30'
+      ],
+      [
+        'climbing-gym-instructor-level-2',
+        'Inactive',
+        '2007-09-24',
+        '2024-01-31'
+      ],
+      [
+        'apprentice-rock-guide',
+        'Inactive',
+        '2007-09-24',
+        '2012-07-31'
+      ],
+      [
+        'apprentice-ski-guide',
+        'Inactive',
+        '2009-04-01',
+        '2012-03-31'
+      ],
+      [
+        'ski-guide',
+        'Inactive',
+        '2012-04-01',
+        '2019-07-31'
+      ],
+      [
+        'apprentice-alpine-guide',
+        'Inactive',
+        '2012-08-01',
+        '2019-07-31'
+      ],
+      [
+        'mountain-guide',
+        'Active',
+        '2019-08-01',
+        '2025-12-31'
+      ],
+      [
+        'ifmga',
+        'Active',
+        '2019-08-01',
+        '2025-12-31'
+      ]
+    ],
+    designations: {
+      CGI1: '2001-09-01',
+      CGI2: '2002-04-01',
+      CGI3: '2003-04-01',
+      ARG: '2007-09-01',
+      ASG: '2009-04-01',
+      SG: '2012-04-01',
+      AAG: '2012-08-01'
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
+// G.L. #776 https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/776
+// Formal Review Test Case
+// Good sample as identified by K.D. during formal conversion review process
+// https://www.cognitoforms.com/acmg/wicketmembershipconversionreview/1-all-entries/9
+test('Row 776 - Formal Review Test Case', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2018-03-01',
+    DateEnd: '2020-04-01',
+    DateReinstate: '2020-05-01',
+    LastAnnualValidation: '2025-01-08',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    transforms: [],
+    CGI1: {
+      status: null,
+      date: '2018-01-01',
+      lastModified: null
+    },
+    CGI2: {
+      status: 'Active',
+      date: '2019-02-01',
+      lastModified: null
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'climbing-gym-instructor-level-1',
+        'Inactive',
+        '2018-03-01',
+        '2019-01-31'
+      ],
+      [
+        'climbing-gym-instructor-level-2',
+        'Inactive',
+        '2019-02-01',
+        '2020-04-01'
+      ],
+      [
+        'climbing-gym-instructor-level-2',
+        'Active',
+        '2020-05-01',
+        '2025-12-31'
+      ]
+    ],
+    designations: {
+      CGI1: '2018-01-01',
+      CGI2: '2019-02-01'
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
+
+// M.W. #1520 https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/1520
+// Formal Review Test Case
+// Good sample as identified by D.W. during formal conversion review process
+// https://www.cognitoforms.com/acmg/wicketmembershipconversionreview/1-all-entries/11
+test('Row 1520 - Formal Review Test Case', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2008-08-01',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2024-12-08',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    transforms: [],
+    AHG: {
+      status: null,
+      date: '2008-08-01',
+      lastModified: null
+    },
+    DHG: {
+      status: null,
+      date: '2008-08-01',
+      lastModified: null
+    },
+    HG: {
+      status: 'Active',
+      date: '2014-09-01',
+      lastModified: null
+    },
+    HGWT: {
+      status: 'Acquired',
+      date: '2016-10-01',
+      lastModified: null
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'apprentice-hiking-guide',
+        'Inactive',
+        '2008-08-01',
+        '2014-08-31'
+      ],
+      [
+        'day-hiking-guide',
+        'Inactive',
+        '2008-08-01',
+        '2014-08-31'
+      ],
+      [
+        'hiking-guide',
+        'Inactive',
+        '2014-09-01',
+        '2016-09-30'
+      ],
+      [
+        'hiking-guide-winter',
+        'Active',
+        '2016-10-01',
+        '2025-12-31'
+      ]
+    ],
+    designations: {
+      AHG: '2008-08-01',
+      DHG: '2008-08-01',
+      HG: '2014-09-01',
+      HGWT: '2016-10-01'
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
+
+// W.R. #3219 https://www.cognitoforms.com/acmg/acmgmyprofile/entries/1-all-entries/3219
+// Formal Review Test Case
+// Good sample as identified by A.T. during formal conversion review process
+// https://www.cognitoforms.com/acmg/wicketmembershipconversionreview/1-all-entries/14
+test('Row 3219 - Formal Review Test Case', () => {
+
+  const source = {
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '2025-01-15',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2025-01-22',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    transforms: [],
+    TRCI: {
+      status: 'Active',
+      date: '2024-05-13',
+      lastModified: '2024-05-13'
+    }
+  }
+
+  const expected = {
+    professional: [
+      [
+        'top-rope-climbing-instructor',
+        'Active',
+        '2025-01-15',
+        '2025-12-31'
+      ]
+    ],
+    designations: {
+      TRCI: '2024-05-13'
+    }
+  }
+
+  const parsedSource = cognitoCertificateSchema.safeParse(source)
+  expect(parsedSource.error).toEqual(undefined)
+  const result = convertCognitoToWicket(parsedSource.data)
+  expect(result.professional).toMatchObject(expected.professional)
+  expect(result.designations).toMatchObject(expected.designations)
+})
+
+
+
+
+
 // TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
 // This is an example of the data transformation business rule in the schema layer
 // If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
