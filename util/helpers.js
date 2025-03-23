@@ -177,3 +177,43 @@ export const splitMembershipBracket = (tierRange, resignedRange) => {
 
     return [range1, range2];
 }
+
+export const convertDesignationsForImport = (designations) => {
+
+    const dmap = {
+        SG: 'data[sgrecentcert]',
+        ASG: 'data[asgrecentcert]',
+        AG: 'data[agrecentcert]',
+        AAG: 'data[aagrecentcert]',
+        RG: 'data[rgrecentcert]',
+        ARG: 'data[argrecentcert]',
+        HG: 'data[hgrecentcert]',
+        AHG: 'data[ahgrecentcert]',
+        HGWT: 'data[wtrecentcert]',
+        DHG: 'data[dhgrecentcert]',
+        CGI1: 'data[cgil1recentcert]',
+        CGI2: 'data[cgil2recentcert]',
+        CGI3: 'data[cgil3recentcert]',
+        TRCI: 'data[trcirecentcert]',
+        VFG: 'data[vfgrecentcert]'
+    }
+
+    const result = Object.keys(designations).reduce((acc, cur) => {
+
+
+        const importKey = dmap[cur]
+
+        // if we don't map something, throw
+        if(!cur.endsWith('isPermanent') && !importKey){
+            throw new Error(`FAILED_TO_MAP_DESIGNATION_IMPORT_KEY for "${cur}"`)
+        }
+        else{
+            acc[importKey] = designations[cur]
+        }
+
+        return acc
+
+    }, {})
+
+    return result
+}

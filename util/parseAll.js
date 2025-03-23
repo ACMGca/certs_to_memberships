@@ -1,7 +1,7 @@
 'use strict';
 
 import { readdir } from "node:fs/promises";
-import { getCertificationHistory, sortProfileFileNames, CERTKEYLIST, cleanCognitoMyProfile } from './helpers.js';
+import { getCertificationHistory, sortProfileFileNames, CERTKEYLIST, cleanCognitoMyProfile, convertDesignationsForImport } from './helpers.js';
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
 import { convertCognitoToWicket } from "./convert.js";
 import { parseISO, differenceInDays } from "date-fns";
@@ -41,6 +41,10 @@ const cognitoProfileJson = {
 
 const timeLimitsJson = {
     timelimits: []
+}
+
+const designationsJson = {
+    'Field Descriptions': []
 }
 
 const buildTimeLimitsObject = (memberNumber, profile) => {
@@ -92,6 +96,49 @@ const buildPersonMembershipObject = (memberNumber, tier) => {
     personMembership['End Date'] = tier[3]
 
     return personMembership
+}
+
+const buildDesignationsObject = (memberNumber, designations) => {
+
+    const designationsEntry = {
+        Entity: 'Person',
+        'ID Scope': 'Identifying Number',
+        'ID': undefined,
+        'data[mgrecentcert]': '',
+        'data[sgrecentcert]': '',
+        'data[asgrecentcert]': '',
+        'data[pasgrecentcert]': '',
+        'data[agrecentcert]': '',
+        'data[aagrecentcert]': '',
+        'data[paagrecentcert]': '',
+        'data[rgrecentcert]': '',
+        'data[argrecentcert]': '',
+        'data[pargrecentcert]': '',
+        'data[hgrecentcert]': '',
+        'data[hgbridgerecentcert]': '',
+        'data[ahgrecentcert]': '',
+        'data[pahgrecentcert]': '',
+        'data[wtrecentcert]': '',
+        'data[dhgrecentcert]': '',
+        'data[cgil1recentcert]': '',
+        'data[cgil2recentcert]': '',
+        'data[cgil3recentcert]': '',
+        'data[trcirecentcert]': '',
+        'data[vfgrecentcert]': ''
+    }
+
+    designationsEntry['ID'] = memberNumber
+
+    // convert the designations keys
+    const convertedDesignations = convertDesignationsForImport(designations)
+    
+    // for each entry in the converted designations, write it to the main object: 
+    Object.keys(convertedDesignations).forEach((dkey) => {
+
+        designationsEntry[dkey] = convertedDesignations[dkey]
+    })
+
+    return designationsEntry
 }
 
 
@@ -173,6 +220,10 @@ for (const file of sortedProfileFileNames) {
                     const profileJson = buildCognitoJsonArchiveObject(profile.MemberNumber, profile)
                     cognitoProfileJson['Field Descriptions'].push(profileJson)
                 })
+
+                // Produce the designations output data
+                const designationsOutput = buildDesignationsObject(profile.MemberNumber, wicket.designations)
+                designationsJson['Field Descriptions'].push(designationsOutput)
             } catch (error) {
                 if (!['ACTIVE', 'INACTIVE'].includes(profile.ProfileStatus)) MEMBER_CONVERSION_ERRORS++
                 if (profile.ProfileStatus === 'RESIGNED') NONMEMBER_CONVERSION_ERRORS++
@@ -240,5 +291,9 @@ await Bun.write(jsonPersonMemberships, JSON.stringify(membershipImportJson, null
 // Write the Person Membership Excel Workbook: 
 jsonToWorkbookOnDisk(membershipImportJson, './public/data/ACMG_Person_Memberships.xlsx')
 
+// Write the Designations Excel Workbook: 
+jsonToWorkbookOnDisk(designationsJson, './public/data/ACMG_Person_Designations.xlsx')
+
 // Write the Cognito My Profile JSON Archive Workbook:
 jsonToWorkbookOnDisk(cognitoProfileJson, './public/data/ACMG_CognitoMyProfile_JSON_Additional_Info.xlsx')
+
