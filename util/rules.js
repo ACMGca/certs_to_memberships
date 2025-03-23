@@ -161,7 +161,7 @@ const rulesObject = {
     },
     MG: {
         supervises: [ARG, ASG, AAG, AHG, TRCI],
-        supersedes: [RG, AG, SG, HG, AAG, ARG, ASG, AHG, TRCI],
+        supersedes: [RG, AG, SG, HG, DHG, AAG, ARG, ASG, AHG, TRCI],
         eligible: [{to: AG, with:dSG, when: [cFA, cPP, cCPD]},{to: SG, with:dAG, when: [cFA, cPP, cCPD]}, {to: MG, when: [cFA, cPP, cCPD]}]
     },
     IFMGA: {

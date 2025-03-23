@@ -311,7 +311,8 @@
     ],
     "superseded_by": [
       "AG",
-      "HG"
+      "HG",
+      "MG"
     ],
     "membership_tier_slug": "day-hiking-guide"
   },
@@ -486,6 +487,7 @@
       "Alpine Guide Member",
       "Ski Guide Member",
       "Hiking Guide Member",
+      "Day Hiking Guide Member",
       "Apprentice Alpine Guide Member",
       "Apprentice Rock Guide Member",
       "Apprentice Ski Guide Member",

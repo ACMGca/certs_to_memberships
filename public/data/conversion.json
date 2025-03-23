@@ -1,6 +1,6 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-23T02:23:56.124Z",
+    "reportGeneratedDate": "2025-03-23T15:11:05.697Z",
     "mostRecentlyUpdatedProfileDate": "2025-03-21T16:02:12.523Z",
     "daysSinceDataRefresh": 1
   },
@@ -40328,7 +40328,59 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"day-hiking-guide\",null,\"2003-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "day-hiking-guide",
+            "Inactive",
+            "2003-09-01",
+            "2019-07-31"
+          ],
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2006-09-01",
+            "2010-08-31"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2008-03-01",
+            "2010-03-31"
+          ],
+          [
+            "ski-guide",
+            "Inactive",
+            "2010-04-01",
+            "2019-07-31"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Inactive",
+            "2010-09-01",
+            "2019-07-31"
+          ],
+          [
+            "mountain-guide",
+            "Inactive",
+            "2019-08-01",
+            "2025-01-23"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2025-01-24",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "DHG": "2003-09-01",
+          "ARG": "2006-09-01",
+          "ASG": "2008-03-01",
+          "SG": "2010-04-01",
+          "AAG": "2010-09-01"
+        }
+      }
     },
     "893_json": {
       "cognitoEntryId": "893",
@@ -50898,7 +50950,31 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"day-hiking-guide\",null,\"1996-01-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "day-hiking-guide",
+            "Inactive",
+            "1996-01-01",
+            "2001-08-31"
+          ],
+          [
+            "mountain-guide",
+            "Active",
+            "2001-09-01",
+            "2025-12-31"
+          ],
+          [
+            "ifmga",
+            "Active",
+            "2001-09-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "DHG": "1996-01-01"
+        }
+      }
     },
     "1133_json": {
       "cognitoEntryId": "1133",
@@ -64910,7 +64986,31 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"day-hiking-guide\",null,\"1997-01-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "day-hiking-guide",
+            "Inactive",
+            "1997-01-01",
+            "2004-08-31"
+          ],
+          [
+            "mountain-guide",
+            "Active",
+            "2004-09-01",
+            "2025-12-31"
+          ],
+          [
+            "ifmga",
+            "Active",
+            "2004-09-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "DHG": "1997-01-01"
+        }
+      }
     },
     "1461_json": {
       "cognitoEntryId": "1461",
