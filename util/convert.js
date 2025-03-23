@@ -428,14 +428,17 @@ export const convertCognitoToWicket = (cognito) => {
     // |___|_||_\_/\__,_|_|_\__,_|   |_| |_\___|_|   |___/\__,_|\__\___/__/
     //
     // We have observed some Tiers produced through the converter which create start dates before end dates.
-    // This is obviously incorrect. For now, we should detect these and note the error
-    wicket.professional.forEach((membership) => {
+    // This is obviously incorrect. 
+    wicket.professional = wicket.professional.filter((membership) => {
 
         const tierStartDate = parseISO(membership[2])
         const tierEndDate = parseISO(membership[3])
-        if(tierStartDate > tierEndDate){
-            throw new Error(`[${membership[0]}] Membership tier start date must be before end date.`)
-        }
+
+        // Decision (March 23): When the process creates a Tier with out of order start/end dates, it indicates
+        // that that particular Tier state was not valid for the member. 
+        // Instead of an error, now we will remove the invalid tier and pass the conversion step successfully.
+        // throw new Error(`[${membership[0]}] Membership tier start date must be before end date.`)
+        return (tierEndDate >= tierStartDate)
     })                                                                        
 
     //  ___              _ _    _   ___         _                _   _             
