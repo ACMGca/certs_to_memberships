@@ -53,10 +53,10 @@ export const getCertificationHistory = (profile) => {
         LastAnnualValidation,
         IFMGALicenseNumber,
         SkiExamMode: Mode,
-        HikeTimeLimit,    // Add any known 
-        RockTimeLimit,   // time limit 
-        AlpineTimeLimit,// values available on the member profile
-        SkiTimeLimit,  // to support Apprentice* TimeLimitDate and TimeLimitExtensionDate calculations (if applicable)
+        HikeTimeLimit,
+        RockTimeLimit,
+        AlpineTimeLimit,
+        SkiTimeLimit,
         ...certs
     }
 

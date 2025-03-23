@@ -39,6 +39,22 @@ const cognitoProfileJson = {
     'Field Descriptions': []
 }
 
+const timeLimitsJson = {
+    timelimits: []
+}
+
+const buildTimeLimitsObject = (memberNumber, profile) => {
+
+    const tlo = {
+        Entity: 'Person',
+        'ID Scope': 'Identifying Number',
+        'ID': undefined,
+    }
+    tlo['ID'] = memberNumber
+
+    return tlo
+}
+
 const buildCognitoJsonArchiveObject = (memberNumber, profile) => {
 
     const cleanProfileJsonString = cleanCognitoMyProfile(profile)
@@ -101,7 +117,14 @@ for (const file of sortedProfileFileNames) {
         }
 
         // Skip any non-relevant Cognito Profiles
-        if (!['ACTIVE', 'INACTIVE', 'RESIGNED'].includes(profile.ProfileStatus)) continue
+        if (!['ACTIVE', 'INACTIVE', 'RESIGNED'].includes(profile.ProfileStatus)) continue                          // skip processing
+
+        // Mar 22, 2025 - MM, KD business decision reached to SKIP resigned members where the DateEnd is missing
+        if (profile.ProfileStatus === 'RESIGNED' && !profile.DateEnd ) continue                                    // skip processing
+        // AND where the DateEnd is before 2021-01-01.
+        if (profile.ProfileStatus === 'RESIGNED' && parseISO(profile.DateEnd) < parseISO('2021-01-01') ) continue  // skip processing
+
+        
         if (['ACTIVE', 'INACTIVE'].includes(profile.ProfileStatus)) MEMBER_COUNT++
         if (profile.ProfileStatus === 'RESIGNED') NONMEMBER_COUNT++
         if (profile.ProfileStatus === 'ACTIVE') ACTIVE_MEMBER_COUNT++
