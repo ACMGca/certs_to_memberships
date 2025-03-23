@@ -101,8 +101,19 @@ const profiles = {}
 for (const file of sortedProfileFileNames) {
 
     if (inspect === '' || file === inspect) {
+
         const profileFile = Bun.file(`./profile_data/${file}`);
         const profile = await profileFile.json();
+
+        // Skip any non-relevant Cognito Profiles
+        if (!['ACTIVE', 'INACTIVE', 'RESIGNED'].includes(profile.ProfileStatus)) continue                          // skip processing
+
+        // Mar 22, 2025 - MM, KD business decision reached to SKIP resigned members where the DateEnd is missing
+        if (profile.ProfileStatus === 'RESIGNED' && !profile.DateEnd ) continue                                    // skip processing
+        // AND where the DateEnd is before 2021-01-01.
+        if (profile.ProfileStatus === 'RESIGNED' && parseISO(profile.DateEnd) < parseISO('2021-01-01') ) continue  // skip processing
+
+
         const entryName = file.replace('.', '_')
         profiles[entryName] = {
             cognitoEntryId: `${entryName.split('_')[0]}`,
@@ -115,15 +126,6 @@ for (const file of sortedProfileFileNames) {
         if (profileLastUpdatedDate > mostRecentlyUpdatedDate) {
             mostRecentlyUpdatedDate = profileLastUpdatedDate
         }
-
-        // Skip any non-relevant Cognito Profiles
-        if (!['ACTIVE', 'INACTIVE', 'RESIGNED'].includes(profile.ProfileStatus)) continue                          // skip processing
-
-        // Mar 22, 2025 - MM, KD business decision reached to SKIP resigned members where the DateEnd is missing
-        if (profile.ProfileStatus === 'RESIGNED' && !profile.DateEnd ) continue                                    // skip processing
-        // AND where the DateEnd is before 2021-01-01.
-        if (profile.ProfileStatus === 'RESIGNED' && parseISO(profile.DateEnd) < parseISO('2021-01-01') ) continue  // skip processing
-
         
         if (['ACTIVE', 'INACTIVE'].includes(profile.ProfileStatus)) MEMBER_COUNT++
         if (profile.ProfileStatus === 'RESIGNED') NONMEMBER_COUNT++
