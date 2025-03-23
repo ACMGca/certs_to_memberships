@@ -177,6 +177,7 @@ for (const file of sortedProfileFileNames) {
                 if (!['ACTIVE', 'INACTIVE'].includes(profile.ProfileStatus)) MEMBER_CONVERSION_ERRORS++
                 if (profile.ProfileStatus === 'RESIGNED') NONMEMBER_CONVERSION_ERRORS++
                 profiles[entryName].conversionError = error.message
+                profiles[entryName].conversionErrorStack = error.stack
                 process.stdout.write('Conversion Error >> ' + error.message + ' >> ' + JSON.stringify(parsedCognitoObject.data) + '\n')
             }
         }

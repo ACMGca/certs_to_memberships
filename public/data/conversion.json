@@ -1,6 +1,6 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-23T20:38:32.048Z",
+    "reportGeneratedDate": "2025-03-23T20:50:26.289Z",
     "mostRecentlyUpdatedProfileDate": "2025-03-21T16:02:12.523Z",
     "daysSinceDataRefresh": 2
   },
@@ -4955,7 +4955,8 @@
           "lastModified": null
         }
       },
-      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')"
+      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')",
+      "conversionErrorStack": "TypeError: undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:353:35)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:159:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
     },
     "107_json": {
       "cognitoEntryId": "107",
@@ -6540,7 +6541,8 @@
           "lastModified": null
         }
       },
-      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')"
+      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')",
+      "conversionErrorStack": "TypeError: undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:353:35)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:159:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
     },
     "140_json": {
       "cognitoEntryId": "140",
@@ -15605,7 +15607,8 @@
           "lastModified": null
         }
       },
-      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')"
+      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')",
+      "conversionErrorStack": "TypeError: undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:353:35)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:159:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
     },
     "343_json": {
       "cognitoEntryId": "343",
@@ -31884,7 +31887,8 @@
           "lastModified": null
         }
       },
-      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')"
+      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')",
+      "conversionErrorStack": "TypeError: undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:353:35)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:159:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
     },
     "692_json": {
       "cognitoEntryId": "692",
@@ -44272,7 +44276,8 @@
           "lastModified": null
         }
       },
-      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')"
+      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')",
+      "conversionErrorStack": "TypeError: undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:353:35)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:159:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
     },
     "957_json": {
       "cognitoEntryId": "957",
@@ -44694,7 +44699,8 @@
           "lastModified": null
         }
       },
-      "conversionError": "null is not an object (evaluating 'dateString.split')"
+      "conversionError": "null is not an object (evaluating 'dateString.split')",
+      "conversionErrorStack": "TypeError: null is not an object (evaluating 'dateString.split')\n    at splitDateString (/Users/mm/github/ACMGca/certs_to_memberships/node_modules/date-fns/parseISO.js:105:17)\n    at parseISO (/Users/mm/github/ACMGca/certs_to_memberships/node_modules/date-fns/parseISO.js:49:23)\n    at certSort (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:14:9)\n    at sort (unknown)\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:179:8)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:159:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
     },
     "967_json": {
       "cognitoEntryId": "967",
@@ -44772,7 +44778,8 @@
           "lastModified": null
         }
       },
-      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')"
+      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')",
+      "conversionErrorStack": "TypeError: undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:353:35)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:159:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
     },
     "969_json": {
       "cognitoEntryId": "969",
@@ -52003,7 +52010,8 @@
           "isPermanent": true
         }
       },
-      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')"
+      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')",
+      "conversionErrorStack": "TypeError: undefined is not an object (evaluating 'parsedCognitoObject.data.ASG.date')\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:353:35)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:159:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
     },
     "1131_json": {
       "cognitoEntryId": "1131",
