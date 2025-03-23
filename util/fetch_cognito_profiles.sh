@@ -10,7 +10,7 @@
 # was up to 3227
 
 request_counter=0
-for id in {3095..3227}; do
+for id in {1..3227}; do
 
     request_counter=$((request_counter + 1))
     
