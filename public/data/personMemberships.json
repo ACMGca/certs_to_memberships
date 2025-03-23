@@ -49533,19 +49533,6 @@
     {
       "Entity": "Person",
       "ID Scope": "Identifying Number",
-      "ID": "3790",
-      "Membership Tier Slug": "apprentice-ski-guide",
-      "Start Date": "2023-04-01",
-      "End Date": "2024-12-31",
-      "Membership Owner ID Scope": "",
-      "Membership Owner ID": "",
-      "Enable Cascade": "",
-      "Cascade Type": "",
-      "Allowed Relationship Types": ""
-    },
-    {
-      "Entity": "Person",
-      "ID Scope": "Identifying Number",
       "ID": "3792",
       "Membership Tier Slug": "climbing-gym-instructor-level-1",
       "Start Date": "2024-10-28",
