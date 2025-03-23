@@ -1,18 +1,18 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-23T19:22:25.924Z",
+    "reportGeneratedDate": "2025-03-23T20:38:32.048Z",
     "mostRecentlyUpdatedProfileDate": "2025-03-21T16:02:12.523Z",
     "daysSinceDataRefresh": 2
   },
   "stats": {
     "MEMBER_PARSE_ERRORS": 44,
     "MEMBER_PARSE_ERROR_RATE": "2.79%",
-    "MEMBER_CONVERSION_ERRORS": 3,
-    "MEMBER_CONVERSION_ERROR_RATE": "0.19%",
+    "MEMBER_CONVERSION_ERRORS": 0,
+    "MEMBER_CONVERSION_ERROR_RATE": "0.00%",
     "NONMEMBER_PARSE_ERRORS": 39,
     "NONMEMBER_PARSE_ERROR_RATE": "12.79%",
-    "NONMEMBER_CONVERSION_ERRORS": 3,
-    "NONMEMBER_CONVERSION_ERROR_RATE": "0.98%",
+    "NONMEMBER_CONVERSION_ERRORS": 0,
+    "NONMEMBER_CONVERSION_ERROR_RATE": "0.00%",
     "MEMBER_COUNT": 1576,
     "NONMEMBER_COUNT": 305,
     "ACTIVE_MEMBER_COUNT": 1389,
@@ -5920,7 +5920,27 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2014-09-29\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2018-04-01",
+            "2022-02-28"
+          ],
+          [
+            "ski-guide",
+            "Active",
+            "2022-03-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "2014-09-01",
+          "ASG": "2018-04-01",
+          "SG": "2022-03-01"
+        }
+      }
     },
     "128_json": {
       "cognitoEntryId": "128",
@@ -8088,7 +8108,54 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"climbing-gym-instructor-level-1\",null,\"2007-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2007-09-01",
+            "2009-07-31"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2008-03-01",
+            "2010-03-31"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Inactive",
+            "2009-08-01",
+            "2011-08-31"
+          ],
+          [
+            "ski-guide",
+            "Inactive",
+            "2010-04-01",
+            "2011-08-31"
+          ],
+          [
+            "mountain-guide",
+            "Inactive",
+            "2011-09-01",
+            "2024-12-24"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2024-12-25",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2000-11-01",
+          "ARG": "2007-09-01",
+          "ASG": "2008-03-01",
+          "AAG": "2009-08-01",
+          "SG": "2010-04-01",
+          "AG": "2011-09-01"
+        }
+      }
     },
     "178_json": {
       "cognitoEntryId": "178",
@@ -8865,7 +8932,13 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-hiking-guide\",null,\"2018-11-01\",null]"
+      "wicketMemberships": {
+        "professional": [],
+        "designations": {
+          "AHG": "2018-09-01",
+          "HGWT": "2020-12-01"
+        }
+      }
     },
     "193_json": {
       "cognitoEntryId": "193",
@@ -12972,7 +13045,26 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"via-ferrata-guide\",null,\"2020-06-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2020-02-01",
+            "2024-01-22"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2024-01-23",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2020-02-01",
+          "VFG": "2020-06-01"
+        }
+      }
     },
     "287_json": {
       "cognitoEntryId": "287",
@@ -14083,7 +14175,34 @@
           "lastModified": "2024-05-01"
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2020-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2015-05-01",
+            "2017-03-31"
+          ],
+          [
+            "ski-guide",
+            "Active",
+            "2017-04-01",
+            "2025-12-31"
+          ],
+          [
+            "top-rope-climbing-instructor",
+            "Active",
+            "2024-05-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "2015-04-01",
+          "SG": "2017-04-01",
+          "ARG": "2020-09-01",
+          "TRCI": "2024-05-01"
+        }
+      }
     },
     "313_json": {
       "cognitoEntryId": "313",
@@ -20834,7 +20953,20 @@
           "lastModified": "2025-03-14"
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2013-10-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Active",
+            "2018-12-27",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "2013-09-01",
+          "TRCI": "2018-12-01"
+        }
+      }
     },
     "457_json": {
       "cognitoEntryId": "457",
@@ -23983,7 +24115,27 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2016-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2015-05-01",
+            "2018-03-31"
+          ],
+          [
+            "ski-guide",
+            "Active",
+            "2018-04-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "2015-04-01",
+          "ARG": "2016-09-01",
+          "SG": "2018-04-01"
+        }
+      }
     },
     "522_json": {
       "cognitoEntryId": "522",
@@ -30029,7 +30181,41 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"climbing-gym-instructor-level-1\",null,\"2005-12-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2009-01-01",
+            "2009-07-31"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Inactive",
+            "2009-08-01",
+            "2012-08-31"
+          ],
+          [
+            "alpine-guide",
+            "Active",
+            "2012-09-01",
+            "2025-12-31"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Active",
+            "2023-04-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2005-12-01",
+          "ARG": "2008-09-01",
+          "AAG": "2009-08-01",
+          "AG": "2012-09-01",
+          "ASG": "2023-04-01"
+        }
+      }
     },
     "655_json": {
       "cognitoEntryId": "655",
@@ -34773,7 +34959,27 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"via-ferrata-guide\",null,\"2021-06-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2021-09-01",
+            "2023-08-31"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Active",
+            "2023-09-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "VFG": "2021-06-01",
+          "ARG": "2021-09-01",
+          "AAG": "2023-09-01"
+        }
+      }
     },
     "758_json": {
       "cognitoEntryId": "758",
@@ -36632,7 +36838,54 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2015-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "day-hiking-guide",
+            "Inactive",
+            "2008-02-01",
+            "2010-06-30"
+          ],
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2009-06-01",
+            "2010-06-30"
+          ],
+          [
+            "hiking-guide",
+            "Inactive",
+            "2010-07-01",
+            "2013-02-28"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2013-03-01",
+            "2016-03-31"
+          ],
+          [
+            "hiking-guide-winter",
+            "Active",
+            "2013-03-01",
+            "2025-12-31"
+          ],
+          [
+            "ski-guide",
+            "Active",
+            "2016-04-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "DHG": "2007-07-01",
+          "AHG": "2009-06-01",
+          "HG": "2010-07-01",
+          "ASG": "2013-03-01",
+          "ARG": "2015-09-01",
+          "SG": "2016-04-01"
+        }
+      }
     },
     "799_json": {
       "cognitoEntryId": "799",
@@ -38783,7 +39036,39 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2010-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2009-11-01",
+            "2012-06-01"
+          ],
+          [
+            "climbing-gym-instructor-level-1",
+            "Active",
+            "2014-05-01",
+            "2025-12-31"
+          ],
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2009-11-01",
+            "2012-06-01"
+          ],
+          [
+            "top-rope-climbing-instructor",
+            "Active",
+            "2014-05-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2008-11-01",
+          "TRCI": "2009-05-01",
+          "ARG": "2010-09-01"
+        }
+      }
     },
     "852_json": {
       "cognitoEntryId": "852",
@@ -39796,7 +40081,41 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-ski-guide\",null,\"2006-04-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "day-hiking-guide",
+            "Inactive",
+            "2003-06-01",
+            "2023-05-31"
+          ],
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2022-06-01",
+            "2022-11-30"
+          ],
+          [
+            "apprentice-hiking-guide-winter",
+            "Inactive",
+            "2022-12-01",
+            "2023-05-31"
+          ],
+          [
+            "hiking-guide-winter",
+            "Active",
+            "2023-06-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "DHG": "2003-06-01",
+          "ASG": "2006-04-01",
+          "AHG": "2022-06-01",
+          "HG": "2023-06-01",
+          "HGWT": "2022-12-01"
+        }
+      }
     },
     "872_json": {
       "cognitoEntryId": "872",
@@ -41359,7 +41678,20 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2019-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Active",
+            "2017-06-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2017-05-01",
+          "ARG": "2019-09-01"
+        }
+      }
     },
     "901_json": {
       "cognitoEntryId": "901",
@@ -43872,7 +44204,48 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2020-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Active",
+            "2019-04-01",
+            "2025-12-31"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2019-04-01",
+            "2021-02-28"
+          ],
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2020-06-01",
+            "2021-05-31"
+          ],
+          [
+            "ski-guide",
+            "Active",
+            "2021-03-01",
+            "2025-12-31"
+          ],
+          [
+            "hiking-guide",
+            "Active",
+            "2021-06-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2017-06-01",
+          "ASG": "2019-04-01",
+          "AHG": "2020-06-01",
+          "ARG": "2020-09-01",
+          "SG": "2021-03-01",
+          "HG": "2021-06-01"
+        }
+      }
     },
     "955_json": {
       "cognitoEntryId": "955",
@@ -47241,7 +47614,21 @@
           "isPermanent": true
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"via-ferrata-guide\",null,\"2019-06-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Active",
+            "2018-11-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "AHG": "2018-09-01",
+          "AHGisPermanent": true,
+          "VFG": "2019-06-01"
+        }
+      }
     },
     "1035_json": {
       "cognitoEntryId": "1035",
@@ -56629,7 +57016,34 @@
           "lastModified": "2025-01-08"
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2019-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2018-06-01",
+            "2018-10-31"
+          ],
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2018-06-01",
+            "2025-01-08"
+          ],
+          [
+            "climbing-gym-instructor-level-2",
+            "Active",
+            "2018-11-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2018-05-01",
+          "TRCI": "2018-06-01",
+          "CGI2": "2018-11-01",
+          "ARG": "2019-09-01"
+        }
+      }
     },
     "1241_json": {
       "cognitoEntryId": "1241",
@@ -56727,7 +57141,54 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"climbing-gym-instructor-level-1\",null,\"1998-05-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2002-09-01",
+            "2005-07-31"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2003-04-01",
+            "2004-03-31"
+          ],
+          [
+            "ski-guide",
+            "Inactive",
+            "2004-04-01",
+            "2007-08-31"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Inactive",
+            "2005-08-01",
+            "2007-08-31"
+          ],
+          [
+            "mountain-guide",
+            "Active",
+            "2007-09-01",
+            "2025-12-31"
+          ],
+          [
+            "ifmga",
+            "Active",
+            "2007-09-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "1998-05-01",
+          "ARG": "2002-09-01",
+          "ASG": "2003-04-01",
+          "SG": "2004-04-01",
+          "AAG": "2005-08-01",
+          "AG": "2007-09-01"
+        }
+      }
     },
     "1244_json": {
       "cognitoEntryId": "1244",
@@ -60887,7 +61348,27 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2015-08-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2012-05-01",
+            "2014-03-31"
+          ],
+          [
+            "ski-guide",
+            "Active",
+            "2014-04-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "2012-04-01",
+          "SG": "2014-04-01",
+          "ARG": "2015-08-01"
+        }
+      }
     },
     "1337_json": {
       "cognitoEntryId": "1337",
@@ -73720,7 +74201,54 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"climbing-gym-instructor-level-1\",null,\"2011-11-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2002-09-01",
+            "2006-07-31"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2005-04-01",
+            "2007-03-31"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Inactive",
+            "2006-08-01",
+            "2010-08-31"
+          ],
+          [
+            "ski-guide",
+            "Inactive",
+            "2007-04-01",
+            "2010-08-31"
+          ],
+          [
+            "mountain-guide",
+            "Active",
+            "2010-09-01",
+            "2025-12-31"
+          ],
+          [
+            "ifmga",
+            "Active",
+            "2010-09-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "2002-09-01",
+          "ASG": "2005-04-01",
+          "AAG": "2006-08-01",
+          "SG": "2007-04-01",
+          "AG": "2010-09-01",
+          "CGI1": "2011-11-01"
+        }
+      }
     },
     "1648_json": {
       "cognitoEntryId": "1648",
@@ -76890,7 +77418,27 @@
           "lastModified": "2024-12-31"
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"climbing-gym-instructor-level-2\",null,\"2018-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2018-05-01",
+            "2018-08-31"
+          ],
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2023-06-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2017-12-01",
+          "CGI2": "2018-09-01",
+          "TRCI": "2023-06-01"
+        }
+      }
     },
     "1744_json": {
       "cognitoEntryId": "1744",
@@ -77557,7 +78105,34 @@
           "lastModified": null
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-ski-guide\",null,\"1997-01-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "1993-01-01",
+            "1995-12-31"
+          ],
+          [
+            "alpine-guide",
+            "Inactive",
+            "1996-01-01",
+            "2021-03-01"
+          ],
+          [
+            "alpine-guide",
+            "Active",
+            "2023-09-15",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "1993-01-01",
+          "AG": "1996-01-01",
+          "ASG": "1997-01-01",
+          "VFG": "2023-05-01"
+        }
+      }
     },
     "1762_json": {
       "cognitoEntryId": "1762",
@@ -78610,7 +79185,21 @@
           "lastModified": "2022-04-01"
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2013-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-2",
+            "Inactive",
+            "2009-02-01",
+            "2022-04-01"
+          ]
+        ],
+        "designations": {
+          "CGI2": "2006-02-01",
+          "CGI3": "2009-01-01",
+          "ARG": "2013-09-01"
+        }
+      }
     },
     "2372_json": {
       "cognitoEntryId": "2372",
@@ -81934,7 +82523,20 @@
           "lastModified": "2022-04-01"
         }
       },
-      "conversionError": "Invalid Membership Tier Result: [\"apprentice-rock-guide\",null,\"2021-09-01\",null]"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2017-04-01",
+            "2022-04-01"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2017-01-01",
+          "ARG": "2021-09-01"
+        }
+      }
     },
     "2872_json": {
       "cognitoEntryId": "2872",

@@ -157,8 +157,14 @@ export const convertCognitoToWicket = (cognito) => {
             }
         }
 
-        // Prevent the return of invalid Tier results by throwing an error if anything is undefined:
-        if(result.includes(undefined)) throw new Error(`Invalid Membership Tier Result: ${JSON.stringify(result)}`)
+        // Decision: March 23 If a valid Tier could not be defined, allow it, then filter it downstream. 
+        // ( I did extensive spot testing on this question where we had been throwing errors. 
+        // Without exception, I found that the member was not endorsed with the stated scope
+        // of practice. This indicated that it was a correct outcome to be otherwise unable
+        // to build a Tier to represent the scope of practice for them. ) 
+        
+        // Previously:
+        // if(result.includes(undefined)) throw new Error(`Invalid Membership Tier Result: ${JSON.stringify(result)}`)
 
         return result
     }
@@ -227,7 +233,10 @@ export const convertCognitoToWicket = (cognito) => {
 
         const convertedCert = convertCert(cert, cognito.LastAnnualValidation)
         return convertedCert
-    })
+    }).filter((result) => {
+
+        return !result.includes(undefined)
+    }) // remove invalid Tiers
 
 
     //   ___           _                  _  _  _____      _______   ___         _                _   _          
