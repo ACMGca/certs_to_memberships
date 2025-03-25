@@ -1,12 +1,12 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-25T03:14:56.921Z",
-    "mostRecentlyUpdatedProfileDate": "2025-03-25T03:04:25.996Z",
+    "reportGeneratedDate": "2025-03-25T13:55:48.682Z",
+    "mostRecentlyUpdatedProfileDate": "2025-03-25T04:39:43.705Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
-    "MEMBER_PARSE_ERRORS": 13,
-    "MEMBER_PARSE_ERROR_RATE": "0.82%",
+    "MEMBER_PARSE_ERRORS": 1,
+    "MEMBER_PARSE_ERROR_RATE": "0.06%",
     "MEMBER_CONVERSION_ERRORS": 0,
     "MEMBER_CONVERSION_ERROR_RATE": "0.00%",
     "NONMEMBER_PARSE_ERRORS": 39,
@@ -41331,21 +41331,8 @@
       "cognitoEntryId": "888",
       "profileStatus": "INACTIVE",
       "memberNumber": "273",
-      "cognitoLastModified": "2025-03-21T15:52:40.224Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "ASG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-25T04:37:25.955Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1999-01-01",
         "DateEnd": null,
@@ -41353,19 +41340,33 @@
         "LastAnnualValidation": "2025-01-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added ASG: status,Inactive | date,1999-01-01 | lastModified,2015-02-01",
+          "Removed ASGPerm: status,Inactive | date,1999-01-01 | lastModified,2015-02-01"
+        ],
         "ASG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2023-01-03"
-        },
-        "ASGPerm": {
           "status": "Inactive",
           "date": "1999-01-01",
-          "lastModified": null
+          "lastModified": "2015-02-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "1999-01-01",
+            "2015-02-01"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2015-02-02",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "1999-01-01"
         }
       }
     },
@@ -59080,37 +59081,38 @@
       "cognitoEntryId": "1274",
       "profileStatus": "INACTIVE",
       "memberNumber": "498",
-      "cognitoLastModified": "2025-03-21T15:49:34.211Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "MG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:39:12.663Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
-        "DateJoined": null,
+        "DateJoined": "1967-01-01",
         "DateEnd": null,
         "DateReinstate": null,
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [],
         "MG": {
           "status": "Inactive",
           "date": "1967-01-01",
-          "lastModified": null
+          "lastModified": "2013-01-01"
         }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "mountain-guide",
+            "Inactive",
+            "1967-01-01",
+            "2013-01-01"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2013-01-02",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {}
       }
     },
     "1275_json": {
@@ -59210,21 +59212,8 @@
       "cognitoEntryId": "1276",
       "profileStatus": "INACTIVE",
       "memberNumber": "354",
-      "cognitoLastModified": "2025-03-21T15:49:33.007Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "MG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:39:55.759Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1967-01-01",
         "DateEnd": null,
@@ -59232,15 +59221,29 @@
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [],
         "MG": {
           "status": "Inactive",
           "date": "1970-01-01",
-          "lastModified": null
+          "lastModified": "2013-01-01"
         }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "mountain-guide",
+            "Inactive",
+            "1970-01-01",
+            "2013-01-01"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2013-01-02",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {}
       }
     },
     "1277_json": {
@@ -59373,7 +59376,7 @@
       "cognitoEntryId": "1280",
       "profileStatus": "INACTIVE",
       "memberNumber": "359",
-      "cognitoLastModified": "2025-03-21T15:49:30.734Z",
+      "cognitoLastModified": "2025-03-24T23:43:38.671Z",
       "parseError": {
         "issues": [
           {
@@ -59381,14 +59384,6 @@
             "message": "Certificates with Inactive or Resigned status require a lastModified date",
             "path": [
               "AAG",
-              "lastModified"
-            ]
-          },
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "ASG",
               "lastModified"
             ]
           }
@@ -59407,16 +59402,6 @@
         "RockTimeLimit": "No",
         "AlpineTimeLimit": "No",
         "SkiTimeLimit": "No",
-        "AAG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2021-12-30"
-        },
-        "ASG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2021-12-30"
-        },
         "AAGPerm": {
           "status": "Inactive",
           "date": "1980-01-01",
@@ -59425,7 +59410,7 @@
         "ASGPerm": {
           "status": "Inactive",
           "date": "1978-01-01",
-          "lastModified": null
+          "lastModified": "2015-12-31"
         }
       }
     },
@@ -59519,21 +59504,8 @@
       "cognitoEntryId": "1285",
       "profileStatus": "INACTIVE",
       "memberNumber": "360",
-      "cognitoLastModified": "2025-03-21T15:49:28.797Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "MG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:44:52.847Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1967-01-01",
         "DateEnd": null,
@@ -59541,15 +59513,29 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [],
         "MG": {
           "status": "Inactive",
-          "date": "1962-01-01",
-          "lastModified": null
+          "date": "1967-01-01",
+          "lastModified": "2013-01-01"
         }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "mountain-guide",
+            "Inactive",
+            "1967-01-01",
+            "2013-01-01"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2013-01-02",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {}
       }
     },
     "1286_json": {
@@ -59614,21 +59600,8 @@
       "cognitoEntryId": "1287",
       "profileStatus": "INACTIVE",
       "memberNumber": "361",
-      "cognitoLastModified": "2025-03-21T15:49:27.658Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "ASG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-25T04:39:43.705Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1990-01-01",
         "DateEnd": null,
@@ -59636,14 +59609,33 @@
         "LastAnnualValidation": "2025-01-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "ASGPerm": {
+        "transforms": [
+          "Added ASG: status,Inactive | date,1990-01-01 | lastModified,2023-01-01",
+          "Removed ASGPerm: status,Inactive | date,1990-01-01 | lastModified,2023-01-01"
+        ],
+        "ASG": {
           "status": "Inactive",
           "date": "1990-01-01",
-          "lastModified": null
+          "lastModified": "2023-01-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "1990-01-01",
+            "2023-01-01"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2023-01-02",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "1990-01-01"
         }
       }
     },
@@ -59909,21 +59901,8 @@
       "cognitoEntryId": "1294",
       "profileStatus": "INACTIVE",
       "memberNumber": "2701",
-      "cognitoLastModified": "2025-03-21T15:49:24.137Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "AHG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:46:29.502Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2019-09-01",
         "DateEnd": null,
@@ -59931,19 +59910,33 @@
         "LastAnnualValidation": "2025-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added AHG: status,Inactive | date,2019-09-01 | lastModified,2021-01-20",
+          "Removed AHGPerm: status,Inactive | date,2019-09-01 | lastModified,2021-01-20"
+        ],
         "AHG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2023-01-03"
-        },
-        "AHGPerm": {
           "status": "Inactive",
           "date": "2019-09-01",
-          "lastModified": null
+          "lastModified": "2021-01-20"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2019-09-01",
+            "2021-01-20"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2021-01-21",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "AHG": "2019-09-01"
         }
       }
     },
@@ -61692,21 +61685,8 @@
       "cognitoEntryId": "1334",
       "profileStatus": "INACTIVE",
       "memberNumber": "1235",
-      "cognitoLastModified": "2025-03-21T15:49:07.235Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "ARG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:47:04.164Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2009-10-01",
         "DateEnd": null,
@@ -61714,19 +61694,33 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added ARG: status,Inactive | date,2009-09-01 | lastModified,2020-02-06",
+          "Removed ARGPerm: status,Inactive | date,2009-09-01 | lastModified,2020-02-06"
+        ],
         "ARG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2023-02-27"
-        },
-        "ARGPerm": {
           "status": "Inactive",
           "date": "2009-09-01",
-          "lastModified": null
+          "lastModified": "2020-02-06"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2009-10-01",
+            "2020-02-06"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2020-02-07",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "2009-09-01"
         }
       }
     },
@@ -65126,21 +65120,8 @@
       "cognitoEntryId": "1415",
       "profileStatus": "INACTIVE",
       "memberNumber": "2644",
-      "cognitoLastModified": "2025-03-21T15:48:32.767Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "AHG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:47:33.681Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2019-06-01",
         "DateEnd": null,
@@ -65148,19 +65129,33 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added AHG: status,Inactive | date,2019-06-01 | lastModified,2022-01-31",
+          "Removed AHGPerm: status,Inactive | date,2019-06-01 | lastModified,2022-01-31"
+        ],
         "AHG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2022-12-31"
-        },
-        "AHGPerm": {
           "status": "Inactive",
           "date": "2019-06-01",
-          "lastModified": null
+          "lastModified": "2022-01-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2019-06-01",
+            "2022-01-31"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2022-02-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "AHG": "2019-06-01"
         }
       }
     },
@@ -66662,21 +66657,8 @@
       "cognitoEntryId": "1456",
       "profileStatus": "INACTIVE",
       "memberNumber": "408",
-      "cognitoLastModified": "2025-03-21T15:48:19.030Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "ASG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:48:04.529Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1998-01-01",
         "DateEnd": "2003-11-01",
@@ -66684,19 +66666,39 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added ASG: status,Inactive | date,1998-01-01 | lastModified,2017-01-25",
+          "Removed ASGPerm: status,Inactive | date,1998-01-01 | lastModified,2017-01-25"
+        ],
         "ASG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2022-12-15"
-        },
-        "ASGPerm": {
           "status": "Inactive",
           "date": "1998-01-01",
-          "lastModified": null
+          "lastModified": "2017-01-25"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "1998-01-01",
+            "2003-11-01"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2012-01-01",
+            "2017-01-25"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2017-01-26",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "1998-01-01"
         }
       }
     },
@@ -72349,36 +72351,39 @@
       "cognitoEntryId": "1590",
       "profileStatus": "INACTIVE",
       "memberNumber": "2802",
-      "cognitoLastModified": "2025-03-21T15:47:22.428Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "VFG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:48:52.801Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
-        "DateJoined": "2020-07-01",
+        "DateJoined": "2020-06-01",
         "DateEnd": null,
         "DateReinstate": null,
         "LastAnnualValidation": "2025-01-11",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [],
         "VFG": {
           "status": "Inactive",
           "date": "2020-06-01",
-          "lastModified": null
+          "lastModified": "2023-12-11"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "via-ferrata-guide",
+            "Inactive",
+            "2020-06-01",
+            "2023-12-11"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2023-12-12",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "VFG": "2020-06-01"
         }
       }
     },
@@ -73659,36 +73664,39 @@
       "cognitoEntryId": "1620",
       "profileStatus": "INACTIVE",
       "memberNumber": "2931",
-      "cognitoLastModified": "2025-03-21T15:47:07.012Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "ASG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:50:28.462Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
-        "DateJoined": "2021-06-01",
+        "DateJoined": "2021-03-01",
         "DateEnd": null,
         "DateReinstate": null,
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "2024",
+        "transforms": [],
         "ASG": {
           "status": "Inactive",
           "date": "2021-03-01",
-          "lastModified": null
+          "lastModified": "2025-01-15"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2021-03-01",
+            "2025-01-15"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2025-01-16",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "2021-03-01"
         }
       }
     },
@@ -75366,29 +75374,8 @@
       "cognitoEntryId": "1664",
       "profileStatus": "INACTIVE",
       "memberNumber": "177",
-      "cognitoLastModified": "2025-03-21T15:46:49.633Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "AAG",
-              "lastModified"
-            ]
-          },
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "ASG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-24T23:51:27.227Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1997-01-01",
         "DateEnd": null,
@@ -75396,39 +75383,71 @@
         "LastAnnualValidation": "2025-01-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added AAG: status,Inactive | date,1999-01-01 | lastModified,2015-01-19",
+          "Removed AAGPerm: status,Inactive | date,1999-01-01 | lastModified,2015-01-19",
+          "Added ASG: status,Inactive | date,1998-01-01 | lastModified,2015-01-19",
+          "Removed ASGPerm: status,Inactive | date,1998-01-01 | lastModified,2015-01-19"
+        ],
         "RG": {
           "status": "Inactive",
           "date": "2003-09-01",
-          "lastModified": "2023-01-03"
-        },
-        "AAG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2023-01-03"
-        },
-        "ASG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2023-01-03"
+          "lastModified": "2015-01-19"
         },
         "ARG": {
           "status": null,
           "date": "1997-01-01",
           "lastModified": null
         },
-        "AAGPerm": {
+        "AAG": {
           "status": "Inactive",
           "date": "1999-01-01",
-          "lastModified": null
+          "lastModified": "2015-01-19"
         },
-        "ASGPerm": {
+        "ASG": {
           "status": "Inactive",
           "date": "1998-01-01",
-          "lastModified": null
+          "lastModified": "2015-01-19"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "1997-01-01",
+            "1998-12-31"
+          ],
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "1998-01-01",
+            "2015-01-19"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Inactive",
+            "1999-01-01",
+            "2015-01-19"
+          ],
+          [
+            "rock-guide",
+            "Inactive",
+            "2003-09-01",
+            "2015-01-19"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2015-01-20",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "1997-01-01",
+          "ASG": "1998-01-01",
+          "AAG": "1999-01-01",
+          "RG": "2003-09-01"
         }
       }
     },
