@@ -1,7 +1,7 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-24T23:22:02.024Z",
-    "mostRecentlyUpdatedProfileDate": "2025-03-24T22:57:16.972Z",
+    "reportGeneratedDate": "2025-03-25T03:14:56.921Z",
+    "mostRecentlyUpdatedProfileDate": "2025-03-25T03:04:25.996Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
@@ -45049,7 +45049,7 @@
       "cognitoEntryId": "966",
       "profileStatus": "ACTIVE",
       "memberNumber": "2017",
-      "cognitoLastModified": "2025-03-24T22:18:09.290Z",
+      "cognitoLastModified": "2025-03-25T03:04:25.996Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-05-01",
@@ -45064,11 +45064,6 @@
           "date": "2019-04-01",
           "lastModified": null
         },
-        "AAG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2024-09-03"
-        },
         "ASG": {
           "status": null,
           "date": "2016-04-01",
@@ -45080,8 +45075,33 @@
           "lastModified": null
         }
       },
-      "conversionError": "null is not an object (evaluating 'dateString.split')",
-      "conversionErrorStack": "TypeError: null is not an object (evaluating 'dateString.split')\n    at splitDateString (/Users/mm/github/ACMGca/certs_to_memberships/node_modules/date-fns/parseISO.js:105:17)\n    at parseISO (/Users/mm/github/ACMGca/certs_to_memberships/node_modules/date-fns/parseISO.js:49:23)\n    at certSort (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:14:9)\n    at sort (unknown)\n    at convertCognitoToWicket (/Users/mm/github/ACMGca/certs_to_memberships/util/convert.js:179:8)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:206:32\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2016-05-01",
+            "2019-03-31"
+          ],
+          [
+            "ski-guide",
+            "Active",
+            "2019-04-01",
+            "2025-12-31"
+          ],
+          [
+            "apprentice-rock-guide",
+            "Active",
+            "2022-09-12",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "2016-04-01",
+          "SG": "2019-04-01",
+          "ARG": "2022-09-12"
+        }
+      }
     },
     "967_json": {
       "cognitoEntryId": "967",
