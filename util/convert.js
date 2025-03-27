@@ -380,12 +380,14 @@ export const convertCognitoToWicket = (cognito) => {
     if (cognito.MG && cognito.MG.status === 'Active' && cognito.SkiExamMode === 'Ski' && Number(cognito.IFMGALicenseNumber) > 0) {
 
         // Find the MG membership on the Wicket object
-        const mgMembership = wicket.professional.find((m) => m[0] === 'mountain-guide' && m[1] === 'Active')
-        if (mgMembership) {
-            const ifmgaMembership = [...mgMembership]
-            ifmgaMembership[0] = 'ifmga' // just change the label
-            wicket.professional.push(ifmgaMembership)
-        }
+        
+        // March 27 - Support decision to drop IFMGA tier
+        // const mgMembership = wicket.professional.find((m) => m[0] === 'mountain-guide' && m[1] === 'Active')
+        // if (mgMembership) {
+        //     const ifmgaMembership = [...mgMembership]
+        //     ifmgaMembership[0] = 'ifmga' // just change the label
+        //     wicket.professional.push(ifmgaMembership)
+        // }
     }
 
     //  ___              _   _           __  __           _                _    _      
