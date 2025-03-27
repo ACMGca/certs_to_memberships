@@ -42058,6 +42058,19 @@
     {
       "Entity": "Person",
       "ID Scope": "Identifying Number",
+      "ID": "2932",
+      "Membership Tier Slug": "via-ferrata-guide",
+      "Start Date": "2021-09-06",
+      "End Date": "2024-12-31",
+      "Membership Owner ID Scope": "",
+      "Membership Owner ID": "",
+      "Enable Cascade": "",
+      "Cascade Type": "",
+      "Allowed Relationship Types": ""
+    },
+    {
+      "Entity": "Person",
+      "ID Scope": "Identifying Number",
       "ID": "2192",
       "Membership Tier Slug": "climbing-gym-instructor-level-1",
       "Start Date": "2017-05-01",

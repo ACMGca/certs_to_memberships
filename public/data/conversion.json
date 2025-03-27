@@ -1,7 +1,7 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-27T22:00:23.275Z",
-    "mostRecentlyUpdatedProfileDate": "2025-03-27T21:46:25.601Z",
+    "reportGeneratedDate": "2025-03-27T22:16:55.110Z",
+    "mostRecentlyUpdatedProfileDate": "2025-03-27T22:12:47.284Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
@@ -9,8 +9,8 @@
     "MEMBER_PARSE_ERROR_RATE": "0.00%",
     "MEMBER_CONVERSION_ERRORS": 0,
     "MEMBER_CONVERSION_ERROR_RATE": "0.00%",
-    "NONMEMBER_PARSE_ERRORS": 1,
-    "NONMEMBER_PARSE_ERROR_RATE": "0.33%",
+    "NONMEMBER_PARSE_ERRORS": 0,
+    "NONMEMBER_PARSE_ERROR_RATE": "0.00%",
     "NONMEMBER_CONVERSION_ERRORS": 0,
     "NONMEMBER_CONVERSION_ERROR_RATE": "0.00%",
     "MEMBER_COUNT": 1577,
@@ -68214,21 +68214,8 @@
       "cognitoEntryId": "1506",
       "profileStatus": "RESIGNED",
       "memberNumber": "2932",
-      "cognitoLastModified": "2025-02-01T14:21:08.677Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with a defined status require a date",
-            "path": [
-              "VFG",
-              "date"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-27T22:12:47.284Z",
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2021-09-06",
         "DateEnd": "2024-12-31",
@@ -68236,14 +68223,24 @@
         "LastAnnualValidation": "2023-12-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [],
         "VFG": {
           "status": "Resigned",
-          "date": null,
+          "date": "2021-06-06",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "via-ferrata-guide",
+            "Inactive",
+            "2021-09-06",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "VFG": "2021-06-06"
         }
       }
     },
