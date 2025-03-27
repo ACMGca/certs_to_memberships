@@ -185,3 +185,16 @@ test('A NON ACTIVE Permanent Apprentice is replaced with the non-Apprentice cert
         expect(result.data.transforms.length).toEqual(2)
     })
 })
+
+// For a resigned member, a DateReinstate later than DateEnd is corrected before it becomes an error
+test('A Resigned member with a DateReinstate later than DateEnd will have the DateReinstate set to null', () => {
+
+    const sample = getPlainSample()
+    sample.ProfileStatus = 'RESIGNED',
+    sample.DateEnd = '2024-11-03'
+    sample.DateReinstate = '2024-09-03'
+    const result = cognitoCertificateSchema.safeParse(sample)
+    expect(result.error).toBeUndefined()
+    expect(result.data.DateReinstate).toEqual(null)
+    expect(result.data.transforms[0]).toEqual("DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate")
+})

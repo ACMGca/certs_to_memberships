@@ -1,6 +1,7 @@
 'use strict';
 
 import { z } from 'zod'
+import { parseISO } from 'date-fns'
 import { CERTKEYLIST } from '../util/helpers.js';
 
 export const getCognitoCertificateSchema = () => {
@@ -48,7 +49,7 @@ export const getCognitoCertificateSchema = () => {
             .transform((data, ctx) => {
 
                 // DATA_FIX_2
-                // Coalesce PERM Apprentice certificates into the Regular Certificate Type and mark is as Permanent.
+                // Coalesce PERM Apprentice certificates into the Regular Certificate Type and mark each as Permanent.
                 // This allows us to retain the original truth of the *Permanent cert, but drop the *Perm tags which
                 // we don't plan to support in the future. The goal is to preserve the business capability to support 
                 // the concept of extended limits for Apprentice renewal, without clouding the data architecture with
@@ -105,6 +106,13 @@ export const getCognitoCertificateSchema = () => {
                 return data
             })
             .superRefine((data, ctx) => {
+
+
+                // March 26, 2025 - Correct for Resigned Members parse_error on bad DateReinstate
+                if(data.ProfileStatus === 'RESIGNED' && data.DateReinstate && data.DateEnd && (parseISO(data.DateReinstate) < parseISO(data.DateEnd))){
+                    data.DateReinstate = null
+                    data.transforms.push('DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate')
+                }
 
                 if(data.DateReinstate && data.DateEnd && (new Date(data.DateReinstate) < new Date(data.DateEnd))){
                     ctx.addIssue({
