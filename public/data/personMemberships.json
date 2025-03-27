@@ -49858,6 +49858,19 @@
     {
       "Entity": "Person",
       "ID Scope": "Identifying Number",
+      "ID": "156",
+      "Membership Tier Slug": "ski-guide",
+      "Start Date": "1998-04-12",
+      "End Date": "2023-12-05",
+      "Membership Owner ID Scope": "",
+      "Membership Owner ID": "",
+      "Enable Cascade": "",
+      "Cascade Type": "",
+      "Allowed Relationship Types": ""
+    },
+    {
+      "Entity": "Person",
+      "ID Scope": "Identifying Number",
       "ID": "194",
       "Membership Tier Slug": "climbing-gym-instructor-level-1",
       "Start Date": "2017-07-01",

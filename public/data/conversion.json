@@ -1,21 +1,21 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-27T03:02:59.315Z",
-    "mostRecentlyUpdatedProfileDate": "2025-03-25T04:39:43.705Z",
-    "daysSinceDataRefresh": 1
+    "reportGeneratedDate": "2025-03-27T03:10:08.834Z",
+    "mostRecentlyUpdatedProfileDate": "2025-03-27T02:51:54.038Z",
+    "daysSinceDataRefresh": 0
   },
   "stats": {
     "MEMBER_PARSE_ERRORS": 1,
     "MEMBER_PARSE_ERROR_RATE": "0.06%",
     "MEMBER_CONVERSION_ERRORS": 0,
     "MEMBER_CONVERSION_ERROR_RATE": "0.00%",
-    "NONMEMBER_PARSE_ERRORS": 6,
-    "NONMEMBER_PARSE_ERROR_RATE": "1.97%",
+    "NONMEMBER_PARSE_ERRORS": 5,
+    "NONMEMBER_PARSE_ERROR_RATE": "1.64%",
     "NONMEMBER_CONVERSION_ERRORS": 0,
     "NONMEMBER_CONVERSION_ERROR_RATE": "0.00%",
-    "MEMBER_COUNT": 1576,
-    "NONMEMBER_COUNT": 305,
-    "ACTIVE_MEMBER_COUNT": 1390,
+    "MEMBER_COUNT": 1577,
+    "NONMEMBER_COUNT": 304,
+    "ACTIVE_MEMBER_COUNT": 1391,
     "INACTIVE_MEMBER_COUNT": 186
   },
   "profiles": {
@@ -5635,7 +5635,7 @@
       "cognitoEntryId": "120",
       "profileStatus": "ACTIVE",
       "memberNumber": "461",
-      "cognitoLastModified": "2025-03-24T21:20:31.090Z",
+      "cognitoLastModified": "2025-03-26T19:12:28.646Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2001-04-01",
@@ -79426,36 +79426,33 @@
       "cognitoEntryId": "1819",
       "profileStatus": "RESIGNED",
       "memberNumber": "156",
-      "cognitoLastModified": "2025-02-04T17:31:51.344Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with a defined status require a date",
-            "path": [
-              "SG",
-              "date"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-27T02:51:54.038Z",
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
-        "DateJoined": null,
+        "DateJoined": "1998-04-12",
         "DateEnd": "2023-12-05",
         "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": null,
-        "AlpineTimeLimit": null,
-        "SkiTimeLimit": null,
+        "SkiExamMode": "Ski",
+        "transforms": [],
         "SG": {
           "status": "Resigned",
-          "date": null,
+          "date": "1998-04-12",
           "lastModified": "2023-12-05"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "ski-guide",
+            "Inactive",
+            "1998-04-12",
+            "2023-12-05"
+          ]
+        ],
+        "designations": {
+          "SG": "1998-04-12"
         }
       }
     },
@@ -89348,13 +89345,13 @@
     },
     "3160_json": {
       "cognitoEntryId": "3160",
-      "profileStatus": "RESIGNED",
+      "profileStatus": "ACTIVE",
       "memberNumber": "3742",
-      "cognitoLastModified": "2025-02-01T14:19:59.276Z",
+      "cognitoLastModified": "2025-03-26T20:26:23.551Z",
       "certsParsed": {
-        "ProfileStatus": "RESIGNED",
+        "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-08-15",
-        "DateEnd": "2024-12-31",
+        "DateEnd": null,
         "DateReinstate": null,
         "LastAnnualValidation": "2024-08-15",
         "IFMGALicenseNumber": "0",
@@ -89366,16 +89363,16 @@
           "lastModified": "2024-12-31"
         },
         "VFG": {
-          "status": "Resigned",
+          "status": "Active",
           "date": "2024-05-01",
-          "lastModified": "2024-12-31"
+          "lastModified": "2024-05-01"
         }
       },
       "wicketMemberships": {
         "professional": [
           [
             "via-ferrata-guide",
-            "Inactive",
+            "Active",
             "2024-08-15",
             "2024-12-31"
           ],
