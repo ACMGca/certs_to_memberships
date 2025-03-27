@@ -1,16 +1,16 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-25T13:55:48.682Z",
+    "reportGeneratedDate": "2025-03-27T03:02:59.315Z",
     "mostRecentlyUpdatedProfileDate": "2025-03-25T04:39:43.705Z",
-    "daysSinceDataRefresh": 0
+    "daysSinceDataRefresh": 1
   },
   "stats": {
     "MEMBER_PARSE_ERRORS": 1,
     "MEMBER_PARSE_ERROR_RATE": "0.06%",
     "MEMBER_CONVERSION_ERRORS": 0,
     "MEMBER_CONVERSION_ERROR_RATE": "0.00%",
-    "NONMEMBER_PARSE_ERRORS": 39,
-    "NONMEMBER_PARSE_ERROR_RATE": "12.79%",
+    "NONMEMBER_PARSE_ERRORS": 6,
+    "NONMEMBER_PARSE_ERROR_RATE": "1.97%",
     "NONMEMBER_CONVERSION_ERRORS": 0,
     "NONMEMBER_CONVERSION_ERROR_RATE": "0.00%",
     "MEMBER_COUNT": 1576,
@@ -723,34 +723,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2489",
       "cognitoLastModified": "2025-02-01T14:25:33.548Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-07-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2020-05-01",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-02-05",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2018-07-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2018-07-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2018-07-01"
         }
       }
     },
@@ -7154,35 +7154,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "993",
       "cognitoLastModified": "2025-02-19T22:18:36.612Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2007-05-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2022-05-20",
+        "DateReinstate": null,
         "LastAnnualValidation": "2023-12-27",
         "IFMGALicenseNumber": "993",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "MG.date backfilled with DateJoined",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "MG": {
           "status": "Resigned",
-          "date": null,
+          "date": "2007-05-01",
           "lastModified": "2024-12-31"
         }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "mountain-guide",
+            "Inactive",
+            "2007-05-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {}
       }
     },
     "152_json": {
@@ -11821,39 +11820,36 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1427",
       "cognitoLastModified": "2025-02-01T14:25:08.862Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2011-09-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2014-08-15",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added ARG: status,Resigned | date,2011-09-01 | lastModified,2024-12-31",
+          "Removed ARGPerm: status,Resigned | date,2011-09-01 | lastModified,2024-12-31",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "ARG": {
-          "status": null,
-          "date": null,
-          "lastModified": "2023-03-31"
-        },
-        "ARGPerm": {
           "status": "Resigned",
           "date": "2011-09-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2011-09-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "2011-09-01"
         }
       }
     },
@@ -12033,39 +12029,50 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1351",
       "cognitoLastModified": "2024-08-17T00:55:45.030Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2011-01-01",
         "DateEnd": "2021-03-01",
-        "DateReinstate": "2015-07-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added AHG: status,Resigned | date,2011-06-01 | lastModified,",
+          "Removed AHGPerm: status,Resigned | date,2011-06-01 | lastModified,",
+          "AHG.lastModified backfilled with DateEnd",
+          "CGI1.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2010-11-01",
-          "lastModified": null
+          "lastModified": "2021-03-01"
         },
-        "AHGPerm": {
+        "AHG": {
           "status": "Resigned",
           "date": "2011-06-01",
-          "lastModified": null
+          "lastModified": "2021-03-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2011-01-01",
+            "2021-03-01"
+          ],
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2011-06-01",
+            "2021-03-01"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2010-11-01",
+          "AHG": "2011-06-01"
         }
       }
     },
@@ -12707,30 +12714,17 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2535",
       "cognitoLastModified": "2025-02-01T14:25:06.443Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-12-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2022-11-01",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": null,
           "date": "2018-11-01",
@@ -12740,6 +12734,26 @@
           "status": "Resigned",
           "date": "2019-10-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2018-12-01",
+            "2019-09-30"
+          ],
+          [
+            "climbing-gym-instructor-level-2",
+            "Inactive",
+            "2019-10-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2018-11-01",
+          "CGI2": "2019-10-01"
         }
       }
     },
@@ -16434,34 +16448,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1975",
       "cognitoLastModified": "2025-02-01T14:25:05.317Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2016-01-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2022-05-09",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-01-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2015-11-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2016-01-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2015-11-01"
         }
       }
     },
@@ -18486,34 +18500,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "544",
       "cognitoLastModified": "2025-02-01T14:24:57.465Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2002-03-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2020-07-01",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-02-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2002-03-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2002-03-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2002-03-01"
         }
       }
     },
@@ -22293,30 +22307,19 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1014",
       "cognitoLastModified": "2025-02-01T14:24:47.962Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2007-07-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2009-07-01",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-01-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added AHG: status,Resigned | date,2009-08-01 | lastModified,2024-12-31",
+          "Removed AHGPerm: status,Resigned | date,2009-08-01 | lastModified,2024-12-31",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "DHG": {
           "status": "Resigned",
           "date": "2007-06-01",
@@ -22327,10 +22330,37 @@
           "date": "2017-06-01",
           "lastModified": "2024-12-31"
         },
-        "AHGPerm": {
+        "AHG": {
           "status": "Resigned",
           "date": "2009-08-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "day-hiking-guide",
+            "Inactive",
+            "2007-07-01",
+            "2024-12-31"
+          ],
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2009-08-01",
+            "2024-12-31"
+          ],
+          [
+            "via-ferrata-guide",
+            "Inactive",
+            "2017-06-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "DHG": "2007-06-01",
+          "AHG": "2009-08-01",
+          "VFG": "2017-06-01"
         }
       }
     },
@@ -27677,34 +27707,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2632",
       "cognitoLastModified": "2025-02-01T14:24:32.541Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2019-06-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2020-06-01",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-01-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "TRCI": {
           "status": "Resigned",
           "date": "2019-05-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2019-06-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2019-05-01"
         }
       }
     },
@@ -36823,13 +36853,6 @@
         "issues": [
           {
             "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          },
-          {
-            "code": "custom",
             "message": "Certificates with a defined status require a date",
             "path": [
               "HGWT",
@@ -40897,30 +40920,17 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1803",
       "cognitoLastModified": "2025-02-01T14:24:11.816Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2015-01-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2024-03-05",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-03-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2014-11-01",
@@ -40930,6 +40940,26 @@
           "status": "Resigned",
           "date": "2018-06-01",
           "lastModified": "2024-03-05"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2015-01-01",
+            "2024-12-31"
+          ],
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2018-06-01",
+            "2024-03-05"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2014-11-01",
+          "TRCI": "2018-06-01"
         }
       }
     },
@@ -42345,30 +42375,18 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "938",
       "cognitoLastModified": "2024-08-17T00:54:08.534Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2006-07-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": "2010-07-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "CGI2.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": null,
           "date": "2006-02-01",
@@ -42377,7 +42395,27 @@
         "CGI2": {
           "status": "Resigned",
           "date": "2014-02-01",
-          "lastModified": null
+          "lastModified": "2022-04-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2006-07-01",
+            "2014-01-31"
+          ],
+          [
+            "climbing-gym-instructor-level-2",
+            "Inactive",
+            "2014-02-01",
+            "2022-04-01"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2006-02-01",
+          "CGI2": "2014-02-01"
         }
       }
     },
@@ -47529,34 +47567,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1628",
       "cognitoLastModified": "2025-02-02T20:48:20.790Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2013-08-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2024-11-07",
+        "DateReinstate": null,
         "LastAnnualValidation": "2023-01-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2013-04-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2013-08-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2013-04-01"
         }
       }
     },
@@ -50344,34 +50382,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2660",
       "cognitoLastModified": "2025-02-01T14:21:49.003Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2019-08-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2023-11-21",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-03-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2019-05-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2019-08-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2019-05-01"
         }
       }
     },
@@ -53535,30 +53573,17 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2098",
       "cognitoLastModified": "2025-02-01T14:21:37.590Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2016-08-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2020-05-01",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-02-11",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "ARG": {
           "status": null,
           "date": "2017-09-01",
@@ -53568,6 +53593,20 @@
           "status": "Resigned",
           "date": "2016-06-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2016-08-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2016-06-01",
+          "ARG": "2017-09-01"
         }
       }
     },
@@ -54736,39 +54775,48 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2512",
       "cognitoLastModified": "2025-02-01T14:21:35.187Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-10-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2021-08-01",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-02-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added AHG: status,Resigned | date,2018-09-01 | lastModified,2024-12-31",
+          "Removed AHGPerm: status,Resigned | date,2018-09-01 | lastModified,2024-12-31",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "HGWT": {
           "status": "Resigned",
           "date": "2021-12-01",
           "lastModified": "2024-12-31"
         },
-        "AHGPerm": {
+        "AHG": {
           "status": "Resigned",
           "date": "2018-09-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2018-10-01",
+            "2021-11-30"
+          ],
+          [
+            "apprentice-hiking-guide-winter",
+            "Inactive",
+            "2021-12-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "AHG": "2018-09-01",
+          "HGWT": "2021-12-01"
         }
       }
     },
@@ -59695,34 +59743,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "3207",
       "cognitoLastModified": "2025-02-01T14:21:26.519Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2022-08-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2024-01-24",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-01-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "TRCI": {
           "status": "Resigned",
           "date": "2022-06-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2022-08-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2022-06-01"
         }
       }
     },
@@ -65611,30 +65659,17 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1654",
       "cognitoLastModified": "2025-02-01T14:21:13.231Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2013-11-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2017-04-20",
+        "DateReinstate": null,
         "LastAnnualValidation": "2023-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "Complete",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "RG": {
           "status": "Resigned",
           "date": "2019-09-01",
@@ -65644,6 +65679,26 @@
           "status": null,
           "date": "2013-09-01",
           "lastModified": null
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2013-11-01",
+            "2019-08-31"
+          ],
+          [
+            "rock-guide",
+            "Inactive",
+            "2019-09-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "2013-09-01",
+          "RG": "2019-09-01"
         }
       }
     },
@@ -66064,30 +66119,17 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "858",
       "cognitoLastModified": "2025-03-10T16:44:13.758Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2005-03-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2008-02-01",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-01-26",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "2021",
-        "SkiTimeLimit": "Complete",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "SG": {
           "status": "Resigned",
           "date": "2009-07-01",
@@ -66107,6 +66149,40 @@
           "status": null,
           "date": "2009-09-01",
           "lastModified": null
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2005-03-01",
+            "2009-06-30"
+          ],
+          [
+            "ski-guide",
+            "Inactive",
+            "2009-07-01",
+            "2024-12-31"
+          ],
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2009-09-01",
+            "2011-07-31"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Inactive",
+            "2011-08-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "2005-03-01",
+          "SG": "2009-07-01",
+          "ARG": "2009-09-01",
+          "AAG": "2011-08-01"
         }
       }
     },
@@ -72897,34 +72973,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2787",
       "cognitoLastModified": "2025-02-01T14:21:00.476Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2020-11-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2022-04-20",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "TRCI": {
           "status": "Resigned",
           "date": "2020-06-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2020-11-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2020-06-01"
         }
       }
     },
@@ -74769,34 +74845,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2381",
       "cognitoLastModified": "2025-02-01T14:20:54.907Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-03-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2023-02-06",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-02-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2017-12-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2018-03-01",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2017-12-01"
         }
       }
     },
@@ -79278,34 +79354,35 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "296",
       "cognitoLastModified": "2024-08-17T00:47:11.665Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "1993-01-01",
         "DateEnd": "2021-01-01",
-        "DateReinstate": "2005-01-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "SG.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "SG": {
           "status": "Resigned",
           "date": "1993-01-01",
-          "lastModified": null
+          "lastModified": "2021-01-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "ski-guide",
+            "Inactive",
+            "1993-01-01",
+            "2021-01-01"
+          ]
+        ],
+        "designations": {
+          "SG": "1993-01-01"
         }
       }
     },
@@ -79608,39 +79685,47 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "936",
       "cognitoLastModified": "2024-08-17T00:46:19.904Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2006-06-01",
         "DateEnd": "2021-03-01",
-        "DateReinstate": "2011-07-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "SG.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "SG": {
           "status": "Resigned",
           "date": "2012-04-01",
-          "lastModified": null
+          "lastModified": "2021-03-01"
         },
         "ASG": {
           "status": null,
           "date": "2006-04-01",
           "lastModified": null
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "2006-06-01",
+            "2012-03-31"
+          ],
+          [
+            "ski-guide",
+            "Inactive",
+            "2012-04-01",
+            "2021-03-01"
+          ]
+        ],
+        "designations": {
+          "ASG": "2006-04-01",
+          "SG": "2012-04-01"
         }
       }
     },
@@ -79897,30 +79982,18 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1308",
       "cognitoLastModified": "2024-08-17T00:45:35.273Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2010-06-01",
         "DateEnd": "2022-02-26",
-        "DateReinstate": "2014-03-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "CGI2.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": null,
           "date": "2010-04-01",
@@ -79929,7 +80002,21 @@
         "CGI2": {
           "status": "Resigned",
           "date": "2010-05-01",
-          "lastModified": null
+          "lastModified": "2022-02-26"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-2",
+            "Inactive",
+            "2010-06-01",
+            "2022-02-26"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2010-04-01",
+          "CGI2": "2010-05-01"
         }
       }
     },
@@ -79986,34 +80073,35 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2466",
       "cognitoLastModified": "2024-08-17T00:45:28.938Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-07-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": "2019-06-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "TRCI.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "TRCI": {
           "status": "Resigned",
           "date": "2018-06-01",
-          "lastModified": null
+          "lastModified": "2022-04-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2018-07-01",
+            "2022-04-01"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2018-06-01"
         }
       }
     },
@@ -80425,34 +80513,35 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1915",
       "cognitoLastModified": "2024-08-17T00:52:03.821Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2015-10-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": "2021-08-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "2022",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "ARG.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "ARG": {
           "status": "Resigned",
           "date": "2015-09-01",
-          "lastModified": null
+          "lastModified": "2022-04-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2015-10-01",
+            "2022-04-01"
+          ]
+        ],
+        "designations": {
+          "ARG": "2015-09-01"
         }
       }
     },
@@ -80965,34 +81054,35 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2495",
       "cognitoLastModified": "2024-08-17T00:44:41.898Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-07-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": "2021-01-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "TRCI.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "TRCI": {
           "status": "Resigned",
           "date": "2018-06-01",
-          "lastModified": null
+          "lastModified": "2022-04-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2018-07-01",
+            "2022-04-01"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2018-06-01"
         }
       }
     },
@@ -81001,39 +81091,50 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1468",
       "cognitoLastModified": "2024-03-08T19:53:23.120Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2012-05-01",
         "DateEnd": "2021-03-01",
-        "DateReinstate": "2014-07-15",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "Added AHG: status,Resigned | date,2014-06-01 | lastModified,",
+          "Removed AHGPerm: status,Resigned | date,2014-06-01 | lastModified,",
+          "AHG.lastModified backfilled with DateEnd",
+          "CGI1.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2012-02-01",
-          "lastModified": null
+          "lastModified": "2021-03-01"
         },
-        "AHGPerm": {
+        "AHG": {
           "status": "Resigned",
           "date": "2014-06-01",
-          "lastModified": null
+          "lastModified": "2021-03-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2012-05-01",
+            "2021-03-01"
+          ],
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2014-06-01",
+            "2021-03-01"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2012-02-01",
+          "AHG": "2014-06-01"
         }
       }
     },
@@ -81162,30 +81263,19 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1589",
       "cognitoLastModified": "2024-08-17T00:44:13.248Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2013-06-01",
         "DateEnd": "2022-12-15",
-        "DateReinstate": "2022-04-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "CGI2.lastModified backfilled with DateEnd",
+          "TRCI.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": null,
           "date": "2014-04-01",
@@ -81194,12 +81284,39 @@
         "CGI2": {
           "status": "Resigned",
           "date": "2015-11-01",
-          "lastModified": null
+          "lastModified": "2022-12-15"
         },
         "TRCI": {
           "status": "Resigned",
           "date": "2013-05-01",
-          "lastModified": null
+          "lastModified": "2022-12-15"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2013-06-01",
+            "2022-12-15"
+          ],
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2014-04-01",
+            "2015-10-31"
+          ],
+          [
+            "climbing-gym-instructor-level-2",
+            "Inactive",
+            "2015-11-01",
+            "2022-12-15"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2013-05-01",
+          "CGI1": "2014-04-01",
+          "CGI2": "2015-11-01"
         }
       }
     },
@@ -81208,34 +81325,35 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1598",
       "cognitoLastModified": "2024-08-17T00:51:55.531Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2013-06-01",
         "DateEnd": "2021-03-01",
-        "DateReinstate": "2016-07-22",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "TRCI.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "TRCI": {
           "status": "Resigned",
           "date": "2013-05-01",
-          "lastModified": null
+          "lastModified": "2021-03-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2013-06-01",
+            "2021-03-01"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2013-05-01"
         }
       }
     },
@@ -81710,34 +81828,35 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "1820",
       "cognitoLastModified": "2024-08-17T00:43:36.892Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2015-03-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": "2020-12-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "CGI1.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": "Resigned",
           "date": "2014-10-01",
-          "lastModified": null
+          "lastModified": "2022-04-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2015-03-01",
+            "2022-04-01"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2014-10-01"
         }
       }
     },
@@ -84013,30 +84132,18 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "2619",
       "cognitoLastModified": "2024-08-17T00:42:18.796Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2019-06-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": "2021-09-01",
+        "DateReinstate": null,
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "CGI2.lastModified backfilled with DateEnd",
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "CGI1": {
           "status": null,
           "date": "2019-05-01",
@@ -84045,7 +84152,27 @@
         "CGI2": {
           "status": "Resigned",
           "date": "2019-10-01",
-          "lastModified": null
+          "lastModified": "2022-04-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2019-06-01",
+            "2019-09-30"
+          ],
+          [
+            "climbing-gym-instructor-level-2",
+            "Inactive",
+            "2019-10-01",
+            "2022-04-01"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2019-05-01",
+          "CGI2": "2019-10-01"
         }
       }
     },
@@ -84852,34 +84979,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "3391",
       "cognitoLastModified": "2025-02-01T14:20:23.938Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2023-06-21",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2024-05-14",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-05-14",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "2027",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "ARG": {
           "status": "Resigned",
           "date": "2022-09-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2023-06-21",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "ARG": "2022-09-01"
         }
       }
     },
@@ -85505,34 +85632,34 @@
       "profileStatus": "RESIGNED",
       "memberNumber": "3475",
       "cognitoLastModified": "2025-02-01T14:20:20.359Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Reinstatement date should be later than the End date",
-            "path": [
-              "DateReinstate"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2023-11-03",
         "DateEnd": "2024-12-31",
-        "DateReinstate": "2024-04-12",
+        "DateReinstate": null,
         "LastAnnualValidation": "2024-04-12",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "HikeTimeLimit": "2026",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [
+          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+        ],
         "AHG": {
           "status": "Resigned",
           "date": "2023-10-01",
           "lastModified": "2024-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2023-11-03",
+            "2024-12-31"
+          ]
+        ],
+        "designations": {
+          "AHG": "2023-10-01"
         }
       }
     },
