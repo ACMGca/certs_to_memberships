@@ -142,12 +142,6 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
         "Active",
         "2009-04-01",
         "2025-12-31"
-      ],
-      [
-        "ifmga",
-        "Active",
-        "2009-04-01",
-        "2025-12-31"
       ]
     ],
     designations: {
@@ -1391,12 +1385,6 @@ test('Row 708 - Formal Review Test Case', () => {
       ],
       [
         'mountain-guide',
-        'Active',
-        '2019-08-01',
-        '2025-12-31'
-      ],
-      [
-        'ifmga',
         'Active',
         '2019-08-01',
         '2025-12-31'
