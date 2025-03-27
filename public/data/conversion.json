@@ -1,12 +1,12 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-27T03:10:08.834Z",
-    "mostRecentlyUpdatedProfileDate": "2025-03-27T02:51:54.038Z",
+    "reportGeneratedDate": "2025-03-27T08:35:34.182Z",
+    "mostRecentlyUpdatedProfileDate": "2025-03-27T08:34:49.951Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
-    "MEMBER_PARSE_ERRORS": 1,
-    "MEMBER_PARSE_ERROR_RATE": "0.06%",
+    "MEMBER_PARSE_ERRORS": 0,
+    "MEMBER_PARSE_ERROR_RATE": "0.00%",
     "MEMBER_CONVERSION_ERRORS": 0,
     "MEMBER_CONVERSION_ERROR_RATE": "0.00%",
     "NONMEMBER_PARSE_ERRORS": 5,
@@ -59424,21 +59424,8 @@
       "cognitoEntryId": "1280",
       "profileStatus": "INACTIVE",
       "memberNumber": "359",
-      "cognitoLastModified": "2025-03-24T23:43:38.671Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "AAG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-03-27T08:34:49.951Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1978-01-01",
         "DateEnd": null,
@@ -59446,19 +59433,47 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "AAGPerm": {
+        "transforms": [
+          "Added AAG: status,Inactive | date,1980-01-01 | lastModified,2015-12-31",
+          "Removed AAGPerm: status,Inactive | date,1980-01-01 | lastModified,2015-12-31",
+          "Added ASG: status,Inactive | date,1978-01-01 | lastModified,2015-12-31",
+          "Removed ASGPerm: status,Inactive | date,1978-01-01 | lastModified,2015-12-31"
+        ],
+        "AAG": {
           "status": "Inactive",
           "date": "1980-01-01",
-          "lastModified": null
+          "lastModified": "2015-12-31"
         },
-        "ASGPerm": {
+        "ASG": {
           "status": "Inactive",
           "date": "1978-01-01",
           "lastModified": "2015-12-31"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-ski-guide",
+            "Inactive",
+            "1978-01-01",
+            "2015-12-31"
+          ],
+          [
+            "apprentice-alpine-guide",
+            "Inactive",
+            "1980-01-01",
+            "2015-12-31"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2016-01-01",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "ASG": "1978-01-01",
+          "AAG": "1980-01-01"
         }
       }
     },
