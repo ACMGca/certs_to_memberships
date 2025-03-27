@@ -17,6 +17,10 @@ test('Simple CGI1 to CGI2 Scenario', () => {
     LastAnnualValidation: '2024-01-05',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     CGI1: {
       status: null,
       date: '2023-10-01',
@@ -69,6 +73,10 @@ test('Continuous Active Membership with Progression to Mountain Guide', () => {
     DateEnd: null,
     DateReinstate: null,
     LastAnnualValidation: '2024-12-05',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     IFMGALicenseNumber: '499', // Because of this,
     SkiExamMode: 'Ski',        // and this, 
     "MG": {                    //
@@ -175,6 +183,10 @@ test.todo('Longstanding member with incomplete but inferrable date data', () => 
     LastAnnualValidation: '2024-01-05',
     IFMGALicenseNumber: '0', // TODO: Review - Inactive means no license number, I think? 
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     "MG": {
       "status": "Inactive",
       "date": null,
@@ -222,6 +234,10 @@ test('An Active HG+SG with DHG history and Winter Travel', () => {
     LastAnnualValidation: '2024-01-05',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     "SG": {
       "status": "Active",
       "date": "2021-01-01",
@@ -309,6 +325,10 @@ test('An Active AHG+ASG to demonstrate Winter Travel implementation', () => {
     LastAnnualValidation: '2024-01-05',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     "ASG": {
       "status": 'Active',
       "date": "2009-04-01",
@@ -372,6 +392,10 @@ test('Winter Travel with an explicit date splits a AHG certificate into two memb
     LastAnnualValidation: '2024-01-05',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     "AHG": {
       "status": 'Active',
       "date": "2006-09-01",
@@ -426,6 +450,10 @@ test('New Member in 2024 with earlier designation dates', () => {
     LastAnnualValidation: '2024-01-05',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     "AHG": {
       "status": "Active",
       "date": "2024-06-12",
@@ -477,6 +505,10 @@ test('A resigned member shows an Inactive Tier bracket ending in the past', () =
     LastAnnualValidation: '2023-01-01',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     CGI1: {
       status: 'Resigned',
       date: '2015-12-01',
@@ -511,16 +543,20 @@ test('An Active and ready-to-join member who has not yet joined gets no Wicket M
 
   const source = {
     ProfileStatus: 'ACTIVE', // This needs to be confirmed that an unjoined new member is ACTIVE
-    "DateJoined": "2024-12-18",
-    "DateEnd": null,
-    "DateReinstate": null,
-    "LastAnnualValidation": null,
-    "IFMGALicenseNumber": "0",
-    "SkiExamMode": "Ski",
-    "ASG": {
-      "status": "Active",
-      "date": "2024-12-16",
-      "lastModified": "2024-12-16"
+    DateJoined: "2024-12-18",
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: null,
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
+    ASG: {
+      status: 'Active',
+      date: '2024-12-16',
+      lastModified: '2024-12-16'
     }
   }
   const expected = {
@@ -548,6 +584,10 @@ test('An Inactive Member converts to a Wicket Active Inactive Membership tier', 
     LastAnnualValidation: '2024-02-25',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [],
     MG: {
       status: 'Inactive',
@@ -607,6 +647,10 @@ test('Prior Conversion Error - Active Alpine Guide results in correct RG inactiv
     LastAnnualValidation: '2024-01-23',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [],
     AG: {
       status: 'Active',
@@ -685,6 +729,10 @@ test('Conversion correction: Produces correct order and outcome for Winter Trave
     LastAnnualValidation: '2024-01-30',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [],
     AHG: {
       status: null,
@@ -742,23 +790,27 @@ test('Conversion correction: Produces correct order and outcome for Winter Trave
 test('Permanent Apprentice - Simple, long time ASGPerm, AAGPerm', () => {
 
   const source = {
-    "ProfileStatus": "ACTIVE",
-    "DateJoined": "1987-01-01",
-    "DateEnd": null,
-    "DateReinstate": null,
-    "LastAnnualValidation": "2025-01-09",
-    "IFMGALicenseNumber": "0",
-    "SkiExamMode": "Ski",
-    "transforms": [],
-    "AAGPerm": {
-      "status": "Active",
-      "date": "1987-01-01",
-      "lastModified": null
+    ProfileStatus: 'ACTIVE',
+    DateJoined: '1987-01-01',
+    DateEnd: null,
+    DateReinstate: null,
+    LastAnnualValidation: '2025-01-09',
+    IFMGALicenseNumber: '0',
+    SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
+    transforms: [],
+    AAGPerm: {
+      status: 'Active',
+      date: '1987-01-01',
+      lastModified: null
     },
-    "ASGPerm": {
-      "status": "Active",
-      "date": "1988-01-01",
-      "lastModified": null
+    ASGPerm: {
+      status: 'Active',
+      date: '1988-01-01',
+      lastModified: null
     }
   }
 
@@ -803,6 +855,10 @@ test('CGI1 to CGI2 Scenario with resignation period', () => {
     LastAnnualValidation: '2024-01-05',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     CGI1: {
       status: null,
       date: '2023-10-01',
@@ -861,6 +917,10 @@ test('CGI1 to CGI2 Scenario with resignation period', () => {
     LastAnnualValidation: '2024-01-05',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     CGI1: {
       status: null,
       date: '2023-10-01',
@@ -915,7 +975,6 @@ test('CGI1 to CGI2 Scenario with resignation period', () => {
   const parsedSource = cognitoCertificateSchema.safeParse(source)
   expect(parsedSource.error).toEqual(undefined)
   const result = convertCognitoToWicket(parsedSource.data)
-  console.log(result)
   expect(result.professional).toMatchObject(expected.professional)
   expect(result.designations).toMatchObject(expected.designations)
 })
@@ -932,6 +991,10 @@ test('CGI3 correction and multiple effects to support resignation period', () =>
     LastAnnualValidation: '2024-12-31',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [],
     RG: {
       status: 'Active',
@@ -1027,6 +1090,10 @@ test('Resigned member showing AHG Membership ending in the past', () => {
     LastAnnualValidation: '2023-01-01',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     AHG: {
       status: 'Resigned',
       date: '2017-06-01',
@@ -1068,6 +1135,10 @@ test('Simple, explicit hiking guide winter travel example', () => {
     LastAnnualValidation: '2025-01-03',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     AHG: {
       status: null,
       date: '2021-06-01',
@@ -1133,6 +1204,10 @@ test('Row 1410 - Formal Review Test Case', () => {
     LastAnnualValidation: '2024-12-02',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [
       'Added AHG: status,Active | date,2017-07-01 | lastModified, | isPermanent,true',
       'Removed AHGPerm: status,Active | date,2017-07-01 | lastModified,'
@@ -1217,6 +1292,10 @@ test('Row 708 - Formal Review Test Case', () => {
     LastAnnualValidation: '2024-12-08',
     IFMGALicenseNumber: '512',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [],
     MG: {
       status: 'Active',
@@ -1355,6 +1434,10 @@ test('Row 776 - Formal Review Test Case', () => {
     LastAnnualValidation: '2025-01-08',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [],
     CGI1: {
       status: null,
@@ -1417,6 +1500,10 @@ test('Row 1520 - Formal Review Test Case', () => {
     LastAnnualValidation: '2024-12-08',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [],
     AHG: {
       status: null,
@@ -1497,6 +1584,10 @@ test('Row 3219 - Formal Review Test Case', () => {
     LastAnnualValidation: '2025-01-22',
     IFMGALicenseNumber: '0',
     SkiExamMode: 'Ski',
+    HikeTimeLimit: 'No',
+    RockTimeLimit: 'No',
+    AlpineTimeLimit: 'No',
+    SkiTimeLimit: 'No',
     transforms: [],
     TRCI: {
       status: 'Active',
@@ -1527,33 +1618,7 @@ test('Row 3219 - Formal Review Test Case', () => {
 })
 
 
-
-
-
-// TEST CASE: Resigned Member with no LastModified on the Cert but a Resigned date on the profile
-// This is an example of the data transformation business rule in the schema layer
-// If all the Certs.status are resigned or null and any are missing the LastModifiedDate and the ResignedDate is present on the profile
-// then backfill the LastModified on each cert with that value.
-// R.L. Cognito Row 1788
-
-
-
-// TODO: RESIGNED Member. Dates out of order error >> #2227
-// TODO: ACTIVE Member. Dates out of order error >> #301
-
-// R.K. #744 Inactive, Honoured >> Last Modified date error for MG member
-
-// #3075 Inactive TRCI - looks simple but gets conversion error
-
-
-// TEST!!! New Rule: Filter out not only one day memberships but ones where the start date is earlier than the end date
-// ^^^ Do this but one test at a time to make sure we understand what is happening.
-// This can happen when a designation was issued early but the person did not join until some time later when another superseding designation was acquired
-// #82 - certs before Join date result in out of sequence
-// #1342 + #2975 - out of sequence dates on winter travel END before START???
-// #24 + #53(similar) - wacky ASG dates - WT issue
-
-// #887 - should be AHGW because of the ASG cert
+// BUG: #887 - should be AHGW because of the ASG cert
 
 // !!!TODO IMPORTANT - Write a test about an Apprentice with a yyyy TimeLimit value that Mike has adjusted beyond the expected 3 years
 // and determine how to detect and express this as an explicit TimeLimitDateExtension value.

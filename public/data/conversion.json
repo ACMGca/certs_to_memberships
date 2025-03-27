@@ -1,6 +1,6 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-27T08:35:34.182Z",
+    "reportGeneratedDate": "2025-03-27T10:07:01.947Z",
     "mostRecentlyUpdatedProfileDate": "2025-03-27T08:34:49.951Z",
     "daysSinceDataRefresh": 0
   },
@@ -100,6 +100,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "RG": {
           "status": "Active",
@@ -767,6 +768,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -911,6 +913,7 @@
         "LastAnnualValidation": "2025-01-17",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -2187,6 +2190,7 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -2361,6 +2365,7 @@
         "LastAnnualValidation": "2025-01-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Inactive",
@@ -2493,6 +2498,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -2722,6 +2728,7 @@
         "LastAnnualValidation": "2025-01-05",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2025",
         "transforms": [
           "Added ARG: status, | date,2020-09-01 | lastModified,",
           "Removed ARGPerm: status, | date,2020-09-01 | lastModified,"
@@ -2833,6 +2840,7 @@
         "LastAnnualValidation": "2025-01-23",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -2879,6 +2887,7 @@
         "LastAnnualValidation": "2024-12-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -3010,6 +3019,7 @@
         "LastAnnualValidation": "2024-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -3965,6 +3975,7 @@
         "LastAnnualValidation": "2025-01-11",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -4037,6 +4048,7 @@
         "LastAnnualValidation": "2025-01-21",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2027",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -4368,6 +4380,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2022",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd"
         ],
@@ -4450,6 +4463,7 @@
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [
           "Added AHG: status,Active | date,2019-06-01 | lastModified, | isPermanent,true",
           "Removed AHGPerm: status,Active | date,2019-06-01 | lastModified,"
@@ -5475,6 +5489,7 @@
         "LastAnnualValidation": "2025-01-19",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -5788,6 +5803,7 @@
         "LastAnnualValidation": "2024-01-14",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -5965,6 +5981,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2019",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -6017,6 +6034,8 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
+        "SkiTimeLimit": "2026",
         "transforms": [
           "Added ARG: status, | date,2020-09-01 | lastModified,",
           "Removed ARGPerm: status, | date,2020-09-01 | lastModified,"
@@ -6078,6 +6097,7 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -6551,6 +6571,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -6719,6 +6740,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2022",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -7116,6 +7138,7 @@
         "LastAnnualValidation": "2025-01-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -8257,6 +8280,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "AG": {
           "status": "Active",
@@ -9003,6 +9027,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [
           "Backfilling AHGPerm.date with AHG.date: 2018-09-01",
           "Added AHG: status, | date,2018-09-01 | lastModified,2024-02-17",
@@ -9443,6 +9468,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2025",
         "transforms": [
           "Added ARG: status, | date,2017-09-01 | lastModified,",
           "Removed ARGPerm: status, | date,2017-09-01 | lastModified,"
@@ -10135,6 +10161,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -10327,6 +10354,7 @@
         "LastAnnualValidation": "2024-12-12",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -11350,6 +11378,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2025",
         "transforms": [
           "Added AHG: status,Inactive | date,2011-09-01 | lastModified,2023-12-28",
           "Removed AHGPerm: status,Inactive | date,2011-09-01 | lastModified,2023-12-28",
@@ -12089,6 +12118,7 @@
         "LastAnnualValidation": "2025-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -12336,6 +12366,7 @@
         "LastAnnualValidation": "2024-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -12963,6 +12994,7 @@
         "LastAnnualValidation": "2024-12-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2024",
         "transforms": [],
         "AAG": {
           "status": "Inactive",
@@ -13811,6 +13843,7 @@
         "LastAnnualValidation": "2025-01-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2018",
         "transforms": [],
         "ARG": {
           "status": "Resigned",
@@ -14014,6 +14047,7 @@
         "LastAnnualValidation": "2025-01-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -14272,6 +14306,7 @@
         "LastAnnualValidation": "2024-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2023",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -14554,6 +14589,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "1834",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "MG": {
           "status": "Active",
@@ -14792,6 +14828,7 @@
         "LastAnnualValidation": "2024-12-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2024",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -15087,6 +15124,8 @@
         "LastAnnualValidation": "2025-01-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2023",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "AG": {
           "status": "Active",
@@ -15423,6 +15462,7 @@
         "LastAnnualValidation": "2024-12-05",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -16032,6 +16072,7 @@
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -16340,6 +16381,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": null,
@@ -16880,6 +16922,7 @@
         "LastAnnualValidation": "2024-12-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -17247,6 +17290,7 @@
         "LastAnnualValidation": "2025-01-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -17785,6 +17829,7 @@
         "LastAnnualValidation": "2025-01-10",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": null,
@@ -18091,6 +18136,7 @@
         "LastAnnualValidation": "2024-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -18205,6 +18251,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2024",
         "transforms": [
           "Added ARG: status, | date,2017-09-01 | lastModified,",
           "Removed ARGPerm: status, | date,2017-09-01 | lastModified,"
@@ -19854,6 +19901,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": null,
@@ -20001,6 +20049,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "2014",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2022",
         "transforms": [],
         "MG": {
           "status": "Active",
@@ -21230,6 +21279,7 @@
         "LastAnnualValidation": "2025-03-14",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2018",
         "transforms": [],
         "ARG": {
           "status": null,
@@ -21761,6 +21811,7 @@
         "LastAnnualValidation": "2025-01-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -21996,6 +22047,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -22092,6 +22144,7 @@
         "LastAnnualValidation": "2024-12-23",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -23153,6 +23206,8 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -23490,6 +23545,7 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -23633,6 +23689,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -24008,6 +24065,7 @@
         "LastAnnualValidation": "2024-12-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [
           "Added ASG: status,Active | date,1996-01-01 | lastModified, | isPermanent,true",
           "Removed ASGPerm: status,Active | date,1996-01-01 | lastModified,"
@@ -24059,6 +24117,7 @@
         "LastAnnualValidation": "2025-01-10",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -24258,6 +24317,7 @@
         "LastAnnualValidation": "2025-01-02",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -24408,6 +24468,7 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2019",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -24741,6 +24802,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -25193,6 +25255,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2022",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -25356,6 +25419,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -25402,6 +25466,7 @@
         "LastAnnualValidation": "2024-12-03",
         "IFMGALicenseNumber": "2554",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2021",
         "transforms": [
           "MG.date backfilled with DateJoined"
         ],
@@ -25578,6 +25643,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2025",
         "transforms": [
           "Added ARG: status, | date,2015-09-01 | lastModified,",
           "Removed ARGPerm: status, | date,2015-09-01 | lastModified,"
@@ -25651,6 +25717,7 @@
         "LastAnnualValidation": "2025-01-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [
           "Added AHG: status,Active | date,2019-09-01 | lastModified, | isPermanent,true",
           "Removed AHGPerm: status,Active | date,2019-09-01 | lastModified,"
@@ -25799,6 +25866,7 @@
         "LastAnnualValidation": "2025-01-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -26030,6 +26098,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -26281,6 +26350,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -26327,6 +26397,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -26581,6 +26652,7 @@
         "LastAnnualValidation": "2024-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -26615,6 +26687,7 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -26710,6 +26783,7 @@
         "LastAnnualValidation": "2023-01-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2023",
         "transforms": [],
         "ARG": {
           "status": "Resigned",
@@ -26930,6 +27004,8 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -27930,6 +28006,7 @@
         "LastAnnualValidation": "2025-01-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2024",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -28762,6 +28839,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2017",
         "transforms": [],
         "ASG": {
           "status": "Inactive",
@@ -29569,6 +29647,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -29651,6 +29730,8 @@
         "LastAnnualValidation": "2025-01-02",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -30252,6 +30333,7 @@
         "LastAnnualValidation": "2024-12-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2018",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -30413,6 +30495,7 @@
         "LastAnnualValidation": "2025-01-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2022",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -30505,6 +30588,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "AG": {
           "status": "Active",
@@ -32155,6 +32239,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -32873,6 +32958,7 @@
         "LastAnnualValidation": "2025-01-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -33472,6 +33558,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -34025,6 +34112,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2027",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -34406,6 +34494,8 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
+        "AlpineTimeLimit": "2027",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -34528,6 +34618,7 @@
         "LastAnnualValidation": "2024-01-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -34687,6 +34778,7 @@
         "LastAnnualValidation": "2025-01-13",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2024",
         "transforms": [],
         "ASG": {
           "status": "Inactive",
@@ -34818,6 +34910,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -35120,6 +35213,7 @@
         "LastAnnualValidation": "2024-12-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [
           "Added AHG: status,Active | date,2016-06-01 | lastModified, | isPermanent,true",
           "Removed AHGPerm: status,Active | date,2016-06-01 | lastModified,"
@@ -35321,6 +35415,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -35539,6 +35634,7 @@
         "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": null,
@@ -35807,6 +35903,7 @@
         "LastAnnualValidation": "2024-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2024",
         "transforms": [],
         "ASG": {
           "status": "Resigned",
@@ -36449,6 +36546,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [
           "Added ARG: status, | date,2020-09-01 | lastModified,",
           "Removed ARGPerm: status, | date,2020-09-01 | lastModified,"
@@ -37173,6 +37271,7 @@
         "LastAnnualValidation": "2024-12-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2018",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -37857,6 +37956,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -38301,6 +38401,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "AG": {
           "status": "Active",
@@ -38860,6 +38961,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -39038,6 +39140,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -39391,6 +39494,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2018",
         "transforms": [],
         "ARG": {
           "status": null,
@@ -40338,6 +40442,7 @@
         "LastAnnualValidation": "2024-12-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2023",
         "transforms": [],
         "AAG": {
           "status": "Inactive",
@@ -40502,6 +40607,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "AG": {
           "status": "Active",
@@ -40734,6 +40840,7 @@
         "LastAnnualValidation": "2024-01-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2023",
         "transforms": [],
         "ARG": {
           "status": "Resigned",
@@ -41120,6 +41227,8 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -41312,6 +41421,8 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -41792,6 +41903,7 @@
         "LastAnnualValidation": "2024-12-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -42046,6 +42158,7 @@
         "LastAnnualValidation": "2025-01-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2022",
         "transforms": [],
         "ARG": {
           "status": null,
@@ -42871,6 +42984,7 @@
         "LastAnnualValidation": "2024-12-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -43322,6 +43436,7 @@
         "LastAnnualValidation": "2024-02-02",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Resigned",
@@ -43676,6 +43791,7 @@
         "LastAnnualValidation": "2025-01-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Inactive",
@@ -44578,6 +44694,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2023",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -45097,6 +45214,7 @@
         "LastAnnualValidation": "2024-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -45713,6 +45831,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2023",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -47425,6 +47544,7 @@
         "LastAnnualValidation": "2025-02-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": null,
@@ -50518,6 +50638,7 @@
         "LastAnnualValidation": "2025-01-20",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -50725,6 +50846,7 @@
         "LastAnnualValidation": "2025-01-20",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -50845,6 +50967,8 @@
         "LastAnnualValidation": "2025-01-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2018",
+        "AlpineTimeLimit": "2025",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -51089,6 +51213,7 @@
         "LastAnnualValidation": "2025-01-23",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -51557,6 +51682,7 @@
         "LastAnnualValidation": "2024-12-12",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2024",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -51774,6 +51900,7 @@
         "LastAnnualValidation": "2025-01-14",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": "Inactive",
@@ -52663,6 +52790,7 @@
         "LastAnnualValidation": "2025-01-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "RG": {
           "status": "Active",
@@ -53455,6 +53583,7 @@
         "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -54220,6 +54349,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2023",
         "transforms": [],
         "AG": {
           "status": "Active",
@@ -54590,6 +54720,7 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -55370,6 +55501,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -55704,6 +55836,7 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2027",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -55953,6 +56086,7 @@
         "LastAnnualValidation": "2025-01-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -56530,6 +56664,7 @@
         "LastAnnualValidation": "2025-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": null,
@@ -56986,6 +57121,7 @@
         "LastAnnualValidation": "2024-12-20",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -57137,6 +57273,7 @@
         "LastAnnualValidation": "2024-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2027",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -57241,6 +57378,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -57501,6 +57639,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2023",
         "transforms": [],
         "ARG": {
           "status": null,
@@ -57757,6 +57896,7 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": null,
@@ -58212,6 +58352,7 @@
         "LastAnnualValidation": "2024-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2024",
         "transforms": [],
         "ARG": {
           "status": "Resigned",
@@ -58506,6 +58647,7 @@
         "LastAnnualValidation": "2025-01-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [
           "Added AHG: status,Inactive | date,2017-09-01 | lastModified,2024-01-11",
           "Removed AHGPerm: status,Inactive | date,2017-09-01 | lastModified,2024-01-11"
@@ -58964,6 +59106,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -59080,6 +59223,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "RG": {
           "status": "Active",
@@ -59614,6 +59758,8 @@
         "LastAnnualValidation": "2025-01-19",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -60080,6 +60226,7 @@
         "LastAnnualValidation": "2024-12-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2027",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -60431,6 +60578,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -61103,6 +61251,7 @@
         "LastAnnualValidation": "2025-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": "Inactive",
@@ -61943,6 +62092,7 @@
         "LastAnnualValidation": "2024-12-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -62167,6 +62317,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -63150,6 +63301,7 @@
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Inactive",
@@ -64345,6 +64497,7 @@
         "LastAnnualValidation": "2025-01-25",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -64553,6 +64706,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [
           "Added ARG: status,Inactive | date,2010-09-01 | lastModified,2025-01-09",
           "Removed ARGPerm: status,Inactive | date,2010-09-01 | lastModified,2025-01-09"
@@ -66050,6 +66204,7 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2024",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -66142,6 +66297,7 @@
         "LastAnnualValidation": "2024-01-26",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2021",
         "transforms": [
           "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
         ],
@@ -66475,6 +66631,7 @@
         "LastAnnualValidation": "2024-12-02",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -66521,6 +66678,7 @@
         "LastAnnualValidation": "2024-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -66653,6 +66811,7 @@
         "LastAnnualValidation": "2024-12-13",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2024",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -67033,6 +67192,7 @@
         "LastAnnualValidation": "2025-01-05",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -67091,6 +67251,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -69140,6 +69301,7 @@
         "LastAnnualValidation": "2024-12-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "AG": {
           "status": "Active",
@@ -69256,6 +69418,7 @@
         "LastAnnualValidation": "2025-01-19",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2022",
         "transforms": [],
         "ASG": {
           "status": "Inactive",
@@ -69330,6 +69493,7 @@
         "LastAnnualValidation": "2025-01-21",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -69826,6 +69990,7 @@
         "LastAnnualValidation": "2025-01-06",
         "IFMGALicenseNumber": "2162",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "MG": {
           "status": "Active",
@@ -70020,6 +70185,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "2396",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2023",
         "transforms": [],
         "MG": {
           "status": "Active",
@@ -70643,6 +70809,7 @@
         "LastAnnualValidation": "2025-01-12",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -72729,6 +72896,7 @@
         "LastAnnualValidation": "2024-12-13",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2028",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -73032,6 +73200,7 @@
         "LastAnnualValidation": "2024-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2024",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -73078,6 +73247,7 @@
         "LastAnnualValidation": "2023-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2024",
         "transforms": [],
         "ARG": {
           "status": "Resigned",
@@ -73461,6 +73631,7 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2024",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -73495,6 +73666,7 @@
         "LastAnnualValidation": "2025-01-11",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2027",
         "transforms": [],
         "AAG": {
           "status": "Active",
@@ -73971,6 +74143,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -74005,6 +74178,7 @@
         "LastAnnualValidation": "2024-12-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -74051,6 +74225,7 @@
         "LastAnnualValidation": "2024-12-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "AlpineTimeLimit": "2026",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -74643,6 +74818,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2019",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -74950,6 +75126,7 @@
         "LastAnnualValidation": "2025-01-20",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "RG": {
           "status": "Active",
@@ -75032,6 +75209,7 @@
         "LastAnnualValidation": "2024-12-13",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2025",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -75066,6 +75244,7 @@
         "LastAnnualValidation": "2025-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2018",
         "transforms": [],
         "AG": {
           "status": "Active",
@@ -76397,6 +76576,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76465,6 +76645,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76499,6 +76680,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76533,6 +76715,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76693,6 +76876,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76727,6 +76911,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76761,6 +76946,7 @@
         "LastAnnualValidation": "2024-12-21",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76829,6 +77015,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76863,6 +77050,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -76965,6 +77153,7 @@
         "LastAnnualValidation": "2025-01-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -77011,6 +77200,7 @@
         "LastAnnualValidation": "2025-01-17",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -77309,6 +77499,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77355,6 +77546,8 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -77401,6 +77594,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77481,6 +77675,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77515,6 +77710,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77561,6 +77757,7 @@
         "LastAnnualValidation": "2024-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77595,6 +77792,7 @@
         "LastAnnualValidation": "2024-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -77629,6 +77827,7 @@
         "LastAnnualValidation": "2025-01-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77675,6 +77874,7 @@
         "LastAnnualValidation": "2024-12-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77721,6 +77921,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77755,6 +77956,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -77869,6 +78071,7 @@
         "LastAnnualValidation": "2025-01-13",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -77915,6 +78118,7 @@
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -77949,6 +78153,7 @@
         "LastAnnualValidation": "2025-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -78069,6 +78274,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -78183,6 +78389,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -78229,6 +78436,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -78371,6 +78579,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -78517,6 +78726,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -78619,6 +78829,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -78836,6 +79047,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -78870,6 +79082,7 @@
         "LastAnnualValidation": "2024-12-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -78904,6 +79117,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -78972,6 +79186,7 @@
         "LastAnnualValidation": "2024-12-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -79006,6 +79221,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -79074,6 +79290,7 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -79176,6 +79393,7 @@
         "LastAnnualValidation": "2025-01-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -79806,6 +80024,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2018",
         "transforms": [
           "CGI3.lastModified backfilled with DateEnd"
         ],
@@ -80497,6 +80716,8 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2021",
+        "AlpineTimeLimit": "2021",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd"
         ],
@@ -80533,6 +80754,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2022",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd",
           "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
@@ -80648,6 +80870,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -80820,6 +81043,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2020",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd"
         ],
@@ -80892,6 +81116,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "SkiTimeLimit": "2024",
         "transforms": [
           "ASG.lastModified backfilled with DateEnd"
         ],
@@ -83060,6 +83285,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2019",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd"
         ],
@@ -83183,6 +83409,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "AlpineTimeLimit": "2024",
         "transforms": [
           "CGI1.lastModified backfilled with DateEnd"
         ],
@@ -83307,6 +83534,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "AlpineTimeLimit": "2023",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd"
         ],
@@ -83343,6 +83571,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "AlpineTimeLimit": "2021",
         "transforms": [
           "AAG.lastModified backfilled with DateEnd"
         ],
@@ -84491,6 +84720,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2022",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd"
         ],
@@ -84709,6 +84939,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2024",
         "transforms": [
           "AHG.lastModified backfilled with DateEnd"
         ],
@@ -84817,6 +85048,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2023",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -84919,6 +85151,7 @@
         "LastAnnualValidation": "2025-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -84999,6 +85232,7 @@
         "LastAnnualValidation": "2024-05-14",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2027",
         "transforms": [
           "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
         ],
@@ -85145,6 +85379,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2024",
         "transforms": [
           "AHG.lastModified backfilled with DateEnd"
         ],
@@ -85181,6 +85416,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2024",
         "transforms": [
           "AHG.lastModified backfilled with DateEnd"
         ],
@@ -85253,6 +85489,7 @@
         "LastAnnualValidation": "2025-01-05",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -85457,6 +85694,8 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2026",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -85503,6 +85742,7 @@
         "LastAnnualValidation": "2025-01-19",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -85537,6 +85777,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -85618,6 +85859,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -85652,6 +85894,7 @@
         "LastAnnualValidation": "2024-04-12",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2026",
         "transforms": [
           "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
         ],
@@ -85688,6 +85931,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -85722,6 +85966,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -85824,6 +86069,7 @@
         "LastAnnualValidation": "2025-01-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -85858,6 +86104,7 @@
         "LastAnnualValidation": "2024-12-13",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -85926,6 +86173,7 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -86120,6 +86368,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -86154,6 +86403,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -86256,6 +86506,7 @@
         "LastAnnualValidation": "2024-12-12",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2026",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -86314,6 +86565,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -86382,6 +86634,7 @@
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -86496,6 +86749,7 @@
         "LastAnnualValidation": "2024-01-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -86740,6 +86994,7 @@
         "LastAnnualValidation": "2025-02-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -86842,6 +87097,7 @@
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -87160,6 +87416,7 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -87228,6 +87485,7 @@
         "LastAnnualValidation": "2024-04-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -87330,6 +87588,7 @@
         "LastAnnualValidation": "2025-01-04",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2026",
         "transforms": [],
         "AHG": {
           "status": "Inactive",
@@ -87370,6 +87629,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -87472,6 +87732,7 @@
         "LastAnnualValidation": "2024-12-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -87540,6 +87801,7 @@
         "LastAnnualValidation": "2025-01-05",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -87574,6 +87836,7 @@
         "LastAnnualValidation": "2025-01-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2026",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -87608,6 +87871,7 @@
         "LastAnnualValidation": "2024-12-10",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -87886,6 +88150,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -87954,6 +88219,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2025",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -87988,6 +88254,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -88022,6 +88289,7 @@
         "LastAnnualValidation": "2025-01-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88263,6 +88531,7 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88383,6 +88652,7 @@
         "LastAnnualValidation": "2024-12-02",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88463,6 +88733,7 @@
         "LastAnnualValidation": "2025-01-31",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88565,6 +88836,7 @@
         "LastAnnualValidation": "2025-01-23",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88611,6 +88883,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88645,6 +88918,7 @@
         "LastAnnualValidation": "2024-12-12",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88713,6 +88987,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88747,6 +89022,7 @@
         "LastAnnualValidation": "2024-12-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2028",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -88781,6 +89057,7 @@
         "LastAnnualValidation": "2024-12-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2028",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -88815,6 +89092,7 @@
         "LastAnnualValidation": "2025-01-23",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -88849,6 +89127,7 @@
         "LastAnnualValidation": "2025-01-10",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -88883,6 +89162,7 @@
         "LastAnnualValidation": "2025-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -89019,6 +89299,7 @@
         "LastAnnualValidation": "2025-01-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -89053,6 +89334,7 @@
         "LastAnnualValidation": "2025-01-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -89167,6 +89449,7 @@
         "LastAnnualValidation": "2025-01-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -89371,6 +89654,7 @@
         "LastAnnualValidation": "2024-08-15",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -89553,6 +89837,7 @@
         "LastAnnualValidation": "2025-01-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -89667,6 +89952,7 @@
         "LastAnnualValidation": "2025-01-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2027",
         "transforms": [],
         "ASG": {
           "status": "Active",
@@ -90020,6 +90306,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -90054,6 +90341,7 @@
         "LastAnnualValidation": "2025-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -90088,6 +90376,7 @@
         "LastAnnualValidation": "2025-01-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -90122,6 +90411,7 @@
         "LastAnnualValidation": "2025-01-11",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -90190,6 +90480,7 @@
         "LastAnnualValidation": "2024-10-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Inactive",
@@ -90224,6 +90515,7 @@
         "LastAnnualValidation": "2024-10-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Resigned",
@@ -90258,6 +90550,7 @@
         "LastAnnualValidation": "2025-01-28",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -90332,6 +90625,7 @@
         "LastAnnualValidation": "2025-01-11",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2027",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -90406,6 +90700,7 @@
         "LastAnnualValidation": "2025-01-13",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -90440,6 +90735,7 @@
         "LastAnnualValidation": "2025-01-18",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -90548,6 +90844,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -90718,6 +91015,7 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "SkiTimeLimit": "2028",
         "transforms": [],
         "ASG": {
           "status": "Resigned",
@@ -90752,6 +91050,7 @@
         "LastAnnualValidation": "2025-01-13",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2028",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -90786,6 +91085,7 @@
         "LastAnnualValidation": "2025-01-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",
@@ -90854,6 +91154,7 @@
         "LastAnnualValidation": "2025-03-03",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2028",
         "transforms": [],
         "ARG": {
           "status": "Active",
@@ -91139,6 +91440,7 @@
         "LastAnnualValidation": "2025-03-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2027",
         "transforms": [],
         "AHG": {
           "status": "Active",

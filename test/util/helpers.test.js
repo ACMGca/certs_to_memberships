@@ -59,7 +59,6 @@ describe('Membership tier splitting', () => {
         const resignedRange = [new Date('2022-12-25T12:00:00.000Z'), new Date('2023-07-31T12:00:00.000Z')]
 
         const splitTier = splitMembershipBracket(tierRange, resignedRange)
-        console.log(splitTier)
         expect(splitTier).toHaveLength(1)
     })
 
@@ -69,7 +68,6 @@ describe('Membership tier splitting', () => {
         const resignedRange = [new Date('2023-07-01T12:00:00.000Z'), new Date('2024-01-10T12:00:00.000Z')]
 
         const splitTier = splitMembershipBracket(tierRange, resignedRange)
-        console.log(splitTier)
         expect(splitTier).toHaveLength(1)
     })
 })

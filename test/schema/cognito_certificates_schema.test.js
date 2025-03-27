@@ -13,6 +13,10 @@ const getPlainSample = () => {
         LastAnnualValidation: '2024-01-05',
         IFMGALicenseNumber: '0',
         SkiExamMode: 'Ski',
+        HikeTimeLimit: 'No',
+        RockTimeLimit: 'No',
+        AlpineTimeLimit: 'No',
+        SkiTimeLimit: 'No',
         CGI1: {
             status: null,
             date: '2023-10-01',
@@ -146,7 +150,7 @@ test('A Permanent Apprentice is replaced with the non-Apprentice certificate equ
             date: null,
             lastModified: null
         }
-        sample[permCertKey.substring(0,3)] = {
+        sample[permCertKey.substring(0, 3)] = {
             status: null,
             date: '2023-06-25',
             lastModified: null
@@ -190,11 +194,40 @@ test('A NON ACTIVE Permanent Apprentice is replaced with the non-Apprentice cert
 test('A Resigned member with a DateReinstate later than DateEnd will have the DateReinstate set to null', () => {
 
     const sample = getPlainSample()
-    sample.ProfileStatus = 'RESIGNED',
+    sample.ProfileStatus = 'RESIGNED'
     sample.DateEnd = '2024-11-03'
     sample.DateReinstate = '2024-09-03'
     const result = cognitoCertificateSchema.safeParse(sample)
     expect(result.error).toBeUndefined()
     expect(result.data.DateReinstate).toEqual(null)
     expect(result.data.transforms[0]).toEqual("DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate")
+})
+
+test('Time limits without year values are removed', () => {
+
+    const result = cognitoCertificateSchema.safeParse(getPlainSample())
+    expect(result.error).toBeUndefined()
+    const timeLimitFields = ['HikeTimeLimit', 'RockTimeLimit', 'AlpineTimeLimit', 'SkiTimeLimit']
+    timeLimitFields.forEach((timeLimitField) => {
+
+        expect(result.data[timeLimitField]).toBeUndefined()
+    })
+})
+
+test('Preserves Time limits with year values', () => {
+
+    const sample = getPlainSample()
+
+    const timeLimitFields = ['HikeTimeLimit', 'RockTimeLimit', 'AlpineTimeLimit', 'SkiTimeLimit']
+    timeLimitFields.forEach((timeLimitField) => {
+
+        sample[timeLimitField] = '2025'
+    })
+    const result = cognitoCertificateSchema.safeParse(sample)
+    expect(result.error).toBeUndefined()
+    
+    timeLimitFields.forEach((timeLimitField) => {
+
+        expect(result.data[timeLimitField]).toEqual('2025')
+    })
 })
