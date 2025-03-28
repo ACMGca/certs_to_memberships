@@ -1,7 +1,7 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-27T22:16:55.110Z",
-    "mostRecentlyUpdatedProfileDate": "2025-03-27T22:12:47.284Z",
+    "reportGeneratedDate": "2025-03-28T14:34:44.728Z",
+    "mostRecentlyUpdatedProfileDate": "2025-03-28T14:33:45.240Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
@@ -13,9 +13,9 @@
     "NONMEMBER_PARSE_ERROR_RATE": "0.00%",
     "NONMEMBER_CONVERSION_ERRORS": 0,
     "NONMEMBER_CONVERSION_ERROR_RATE": "0.00%",
-    "MEMBER_COUNT": 1577,
-    "NONMEMBER_COUNT": 305,
-    "ACTIVE_MEMBER_COUNT": 1391,
+    "MEMBER_COUNT": 1578,
+    "NONMEMBER_COUNT": 304,
+    "ACTIVE_MEMBER_COUNT": 1392,
     "INACTIVE_MEMBER_COUNT": 186
   },
   "profiles": {
@@ -3833,7 +3833,7 @@
       "cognitoEntryId": "81",
       "profileStatus": "ACTIVE",
       "memberNumber": "117",
-      "cognitoLastModified": "2025-03-21T16:01:35.974Z",
+      "cognitoLastModified": "2025-03-28T01:28:48.357Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1985-01-01",
@@ -65429,25 +65429,23 @@
     },
     "1438_json": {
       "cognitoEntryId": "1438",
-      "profileStatus": "RESIGNED",
+      "profileStatus": "ACTIVE",
       "memberNumber": "858",
-      "cognitoLastModified": "2025-03-10T16:44:13.758Z",
+      "cognitoLastModified": "2025-03-28T14:33:45.240Z",
       "certsParsed": {
-        "ProfileStatus": "RESIGNED",
+        "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-03-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2025-03-28",
         "LastAnnualValidation": "2024-01-26",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "AlpineTimeLimit": "2021",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "SG": {
-          "status": "Resigned",
+          "status": "Active",
           "date": "2009-07-01",
-          "lastModified": "2024-12-31"
+          "lastModified": "2025-03-28"
         },
         "AAG": {
           "status": "Resigned",
@@ -65475,7 +65473,7 @@
           ],
           [
             "ski-guide",
-            "Inactive",
+            "Active",
             "2009-07-01",
             "2024-12-31"
           ],
@@ -85213,7 +85211,7 @@
       "cognitoEntryId": "3016",
       "profileStatus": "ACTIVE",
       "memberNumber": "3486",
-      "cognitoLastModified": "2025-03-21T15:45:40.812Z",
+      "cognitoLastModified": "2025-03-28T10:48:19.434Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2023-11-03",
