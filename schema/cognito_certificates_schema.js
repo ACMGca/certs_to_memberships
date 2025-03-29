@@ -127,13 +127,8 @@ export const getCognitoCertificateSchema = () => {
         .superRefine((data, ctx) => {
 
 
-            // March 26, 2025 - Correct for Resigned Members parse_error on bad DateReinstate
-            if (data.ProfileStatus === 'RESIGNED' && data.DateReinstate && data.DateEnd && (parseISO(data.DateReinstate) < parseISO(data.DateEnd))) {
-                data.DateReinstate = null
-                data.transforms.push('DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate')
-            }
-
-            if (data.DateReinstate && data.DateEnd && (parseISO(data.DateReinstate) < parseISO(data.DateEnd))) {
+            // March 29, 2025 - Correct for Resigned Members parse_error to ignore DateReinstate / DateEnd check
+            if (data.ProfileStatus !== 'RESIGNED' && data.DateReinstate && data.DateEnd && (parseISO(data.DateReinstate) < parseISO(data.DateEnd))) {
                 ctx.addIssue({
                     code: z.ZodIssueCode.custom,
                     message: "Reinstatement date should be later than the End date",
