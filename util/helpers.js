@@ -208,7 +208,11 @@ export const convertDesignationsForImport = (designations) => {
             throw new Error(`FAILED_TO_MAP_DESIGNATION_IMPORT_KEY for "${cur}"`)
         }
         else{
-            acc[importKey] = designations[cur]
+
+            if(!/[a-z]/.test(cur)){
+
+                acc[importKey] = designations[cur]
+            }
         }
 
         return acc
