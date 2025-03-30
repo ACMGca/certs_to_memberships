@@ -1,7 +1,7 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-03-28T14:34:44.728Z",
-    "mostRecentlyUpdatedProfileDate": "2025-03-28T14:33:45.240Z",
+    "reportGeneratedDate": "2025-03-30T17:56:13.387Z",
+    "mostRecentlyUpdatedProfileDate": "2025-03-30T16:45:08.524Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
@@ -722,13 +722,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-07-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2020-05-01",
         "LastAnnualValidation": "2024-02-05",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "CGI1": {
           "status": "Resigned",
           "date": "2018-07-01",
@@ -7120,13 +7118,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2007-05-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2022-05-20",
         "LastAnnualValidation": "2023-12-27",
         "IFMGALicenseNumber": "993",
         "SkiExamMode": "Ski",
         "transforms": [
-          "MG.date backfilled with DateJoined",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "MG.date backfilled with DateJoined"
         ],
         "MG": {
           "status": "Resigned",
@@ -11732,14 +11729,13 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2011-09-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2014-08-15",
         "LastAnnualValidation": "2024-01-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [
           "Added ARG: status,Resigned | date,2011-09-01 | lastModified,2024-12-31",
-          "Removed ARGPerm: status,Resigned | date,2011-09-01 | lastModified,2024-12-31",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "Removed ARGPerm: status,Resigned | date,2011-09-01 | lastModified,2024-12-31"
         ],
         "ARG": {
           "status": "Resigned",
@@ -11941,7 +11937,7 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2011-01-01",
         "DateEnd": "2021-03-01",
-        "DateReinstate": null,
+        "DateReinstate": "2015-07-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
@@ -11949,8 +11945,7 @@
           "Added AHG: status,Resigned | date,2011-06-01 | lastModified,",
           "Removed AHGPerm: status,Resigned | date,2011-06-01 | lastModified,",
           "AHG.lastModified backfilled with DateEnd",
-          "CGI1.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "CGI1.lastModified backfilled with DateEnd"
         ],
         "CGI1": {
           "status": "Resigned",
@@ -12622,13 +12617,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-12-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2022-11-01",
         "LastAnnualValidation": "2024-01-09",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "CGI1": {
           "status": null,
           "date": "2018-11-01",
@@ -16307,13 +16300,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2016-01-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2022-05-09",
         "LastAnnualValidation": "2024-01-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "CGI1": {
           "status": "Resigned",
           "date": "2015-11-01",
@@ -18340,13 +18331,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2002-03-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2020-07-01",
         "LastAnnualValidation": "2024-02-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "CGI1": {
           "status": "Resigned",
           "date": "2002-03-01",
@@ -22111,14 +22100,13 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2007-07-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2009-07-01",
         "LastAnnualValidation": "2024-01-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [
           "Added AHG: status,Resigned | date,2009-08-01 | lastModified,2024-12-31",
-          "Removed AHGPerm: status,Resigned | date,2009-08-01 | lastModified,2024-12-31",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "Removed AHGPerm: status,Resigned | date,2009-08-01 | lastModified,2024-12-31"
         ],
         "DHG": {
           "status": "Resigned",
@@ -25137,7 +25125,7 @@
       "cognitoEntryId": "543",
       "profileStatus": "ACTIVE",
       "memberNumber": "2554",
-      "cognitoLastModified": "2025-03-21T15:43:09.436Z",
+      "cognitoLastModified": "2025-03-30T16:24:16.432Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-12-01",
@@ -25146,7 +25134,6 @@
         "LastAnnualValidation": "2024-12-03",
         "IFMGALicenseNumber": "2554",
         "SkiExamMode": "Ski",
-        "RockTimeLimit": "2021",
         "transforms": [
           "MG.date backfilled with DateJoined"
         ],
@@ -27425,13 +27412,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2019-06-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2020-06-01",
         "LastAnnualValidation": "2024-01-22",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "TRCI": {
           "status": "Resigned",
           "date": "2019-05-01",
@@ -36448,13 +36433,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2016-06-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2024-01-22",
         "LastAnnualValidation": "2024-01-24",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "HG": {
           "status": "Resigned",
           "date": "2016-06-01",
@@ -40498,13 +40481,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2015-01-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2024-03-05",
         "LastAnnualValidation": "2024-03-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "CGI1": {
           "status": "Resigned",
           "date": "2014-11-01",
@@ -41935,13 +41916,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2006-07-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": null,
+        "DateReinstate": "2010-07-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [
-          "CGI2.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "CGI2.lastModified backfilled with DateEnd"
         ],
         "CGI1": {
           "status": null,
@@ -47080,13 +47060,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2013-08-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2024-11-07",
         "LastAnnualValidation": "2023-01-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "CGI1": {
           "status": "Resigned",
           "date": "2013-04-01",
@@ -49853,13 +49831,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2019-08-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2023-11-21",
         "LastAnnualValidation": "2024-03-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "CGI1": {
           "status": "Resigned",
           "date": "2019-05-01",
@@ -53017,13 +52993,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2016-08-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2020-05-01",
         "LastAnnualValidation": "2024-02-11",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "ARG": {
           "status": null,
           "date": "2017-09-01",
@@ -54209,14 +54183,13 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-10-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2021-08-01",
         "LastAnnualValidation": "2024-02-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [
           "Added AHG: status,Resigned | date,2018-09-01 | lastModified,2024-12-31",
-          "Removed AHGPerm: status,Resigned | date,2018-09-01 | lastModified,2024-12-31",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "Removed AHGPerm: status,Resigned | date,2018-09-01 | lastModified,2024-12-31"
         ],
         "HGWT": {
           "status": "Resigned",
@@ -59123,13 +59096,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2022-08-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2024-01-24",
         "LastAnnualValidation": "2024-01-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "TRCI": {
           "status": "Resigned",
           "date": "2022-06-01",
@@ -64975,13 +64946,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2013-11-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2017-04-20",
         "LastAnnualValidation": "2023-12-27",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "RG": {
           "status": "Resigned",
           "date": "2019-09-01",
@@ -72190,13 +72159,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2020-11-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2022-04-20",
         "LastAnnualValidation": "2024-01-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "TRCI": {
           "status": "Resigned",
           "date": "2020-06-01",
@@ -74046,13 +74013,11 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-03-01",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2023-02-06",
         "LastAnnualValidation": "2024-02-29",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "CGI1": {
           "status": "Resigned",
           "date": "2017-12-01",
@@ -78591,13 +78556,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "1993-01-01",
         "DateEnd": "2021-01-01",
-        "DateReinstate": null,
+        "DateReinstate": "2005-01-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
-          "SG.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "SG.lastModified backfilled with DateEnd"
         ],
         "SG": {
           "status": "Resigned",
@@ -78919,13 +78883,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2006-06-01",
         "DateEnd": "2021-03-01",
-        "DateReinstate": null,
+        "DateReinstate": "2011-07-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
-          "SG.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "SG.lastModified backfilled with DateEnd"
         ],
         "SG": {
           "status": "Resigned",
@@ -79217,13 +79180,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2010-06-01",
         "DateEnd": "2022-02-26",
-        "DateReinstate": null,
+        "DateReinstate": "2014-03-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
-          "CGI2.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "CGI2.lastModified backfilled with DateEnd"
         ],
         "CGI1": {
           "status": null,
@@ -79308,13 +79270,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-07-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": null,
+        "DateReinstate": "2019-06-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
-          "TRCI.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "TRCI.lastModified backfilled with DateEnd"
         ],
         "TRCI": {
           "status": "Resigned",
@@ -79707,7 +79668,7 @@
       "cognitoEntryId": "2544",
       "profileStatus": "RESIGNED",
       "memberNumber": "1941",
-      "cognitoLastModified": "2024-08-17T00:52:04.451Z",
+      "cognitoLastModified": "2025-03-30T16:31:32.720Z",
       "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2015-10-01",
@@ -79716,8 +79677,6 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "RockTimeLimit": "2021",
-        "AlpineTimeLimit": "2021",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd"
         ],
@@ -79750,14 +79709,13 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2015-10-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": null,
+        "DateReinstate": "2021-08-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "RockTimeLimit": "2022",
         "transforms": [
-          "ARG.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "ARG.lastModified backfilled with DateEnd"
         ],
         "ARG": {
           "status": "Resigned",
@@ -80295,13 +80253,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2018-07-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": null,
+        "DateReinstate": "2021-01-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
-          "TRCI.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "TRCI.lastModified backfilled with DateEnd"
         ],
         "TRCI": {
           "status": "Resigned",
@@ -80332,7 +80289,7 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2012-05-01",
         "DateEnd": "2021-03-01",
-        "DateReinstate": null,
+        "DateReinstate": "2014-07-15",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
@@ -80340,8 +80297,7 @@
           "Added AHG: status,Resigned | date,2014-06-01 | lastModified,",
           "Removed AHGPerm: status,Resigned | date,2014-06-01 | lastModified,",
           "AHG.lastModified backfilled with DateEnd",
-          "CGI1.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "CGI1.lastModified backfilled with DateEnd"
         ],
         "CGI1": {
           "status": "Resigned",
@@ -80504,14 +80460,13 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2013-06-01",
         "DateEnd": "2022-12-15",
-        "DateReinstate": null,
+        "DateReinstate": "2022-04-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
           "CGI2.lastModified backfilled with DateEnd",
-          "TRCI.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "TRCI.lastModified backfilled with DateEnd"
         ],
         "CGI1": {
           "status": null,
@@ -80566,13 +80521,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2013-06-01",
         "DateEnd": "2021-03-01",
-        "DateReinstate": null,
+        "DateReinstate": "2016-07-22",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
-          "TRCI.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "TRCI.lastModified backfilled with DateEnd"
         ],
         "TRCI": {
           "status": "Resigned",
@@ -81069,13 +81023,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2015-03-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": null,
+        "DateReinstate": "2020-12-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
-          "CGI1.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "CGI1.lastModified backfilled with DateEnd"
         ],
         "CGI1": {
           "status": "Resigned",
@@ -82400,7 +82353,7 @@
       "cognitoEntryId": "2871",
       "profileStatus": "RESIGNED",
       "memberNumber": "2185",
-      "cognitoLastModified": "2024-08-17T00:42:45.001Z",
+      "cognitoLastModified": "2025-03-30T16:36:20.595Z",
       "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2017-04-01",
@@ -82409,7 +82362,6 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "AlpineTimeLimit": "2024",
         "transforms": [
           "CGI1.lastModified backfilled with DateEnd"
         ],
@@ -82525,7 +82477,7 @@
       "cognitoEntryId": "2886",
       "profileStatus": "RESIGNED",
       "memberNumber": "2309",
-      "cognitoLastModified": "2024-08-17T00:51:46.940Z",
+      "cognitoLastModified": "2025-03-30T16:45:08.524Z",
       "certsParsed": {
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2017-10-01",
@@ -82534,7 +82486,6 @@
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
-        "AlpineTimeLimit": "2023",
         "transforms": [
           "ARG.lastModified backfilled with DateEnd"
         ],
@@ -83377,13 +83328,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2019-06-01",
         "DateEnd": "2022-04-01",
-        "DateReinstate": null,
+        "DateReinstate": "2021-09-01",
         "LastAnnualValidation": null,
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "transforms": [
-          "CGI2.lastModified backfilled with DateEnd",
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
+          "CGI2.lastModified backfilled with DateEnd"
         ],
         "CGI1": {
           "status": null,
@@ -84228,14 +84178,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2023-06-21",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2024-05-14",
         "LastAnnualValidation": "2024-05-14",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "RockTimeLimit": "2027",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "ARG": {
           "status": "Resigned",
           "date": "2022-09-01",
@@ -84890,14 +84838,12 @@
         "ProfileStatus": "RESIGNED",
         "DateJoined": "2023-11-03",
         "DateEnd": "2024-12-31",
-        "DateReinstate": null,
+        "DateReinstate": "2024-04-12",
         "LastAnnualValidation": "2024-04-12",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": null,
         "HikeTimeLimit": "2026",
-        "transforms": [
-          "DateReinstate set to null for RESIGNED Member where DateEnd was before DateReinstate"
-        ],
+        "transforms": [],
         "AHG": {
           "status": "Resigned",
           "date": "2023-10-01",
@@ -87039,7 +86985,7 @@
       "cognitoEntryId": "3102",
       "profileStatus": "ACTIVE",
       "memberNumber": "3673",
-      "cognitoLastModified": "2025-03-21T15:45:11.331Z",
+      "cognitoLastModified": "2025-03-29T23:38:20.590Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-05-24",

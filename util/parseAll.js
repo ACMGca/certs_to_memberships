@@ -1,12 +1,14 @@
 'use strict';
 
 import { readdir } from "node:fs/promises";
-import { getCertificationHistory, sortProfileFileNames, CERTKEYLIST, cleanCognitoMyProfile, convertDesignationsForImport } from './helpers.js';
+import { getCertificationHistory, sortProfileFileNames, 
+    cleanCognitoMyProfile, convertDesignationsForImport, convertTimeLimit } from './helpers.js';
 import { getCognitoCertificateSchema } from "../schema/cognito_certificates_schema.js";
 import { convertCognitoToWicket } from "./convert.js";
-import { parseISO, differenceInDays } from "date-fns";
+import { parseISO, differenceInDays, format } from "date-fns";
 import { rules } from "./rules.js";
 import { jsonToWorkbookOnDisk } from "./excel.js";
+import { googleDriveUpload } from "./googleDrive.js";
 
 const convertTestFile = Bun.file('test/util/convert.test.js')
 const convertTestFileContent = await convertTestFile.text()
@@ -31,6 +33,10 @@ let NONMEMBER_COUNT = 0
 let ACTIVE_MEMBER_COUNT = 0
 let INACTIVE_MEMBER_COUNT = 0
 
+const timeLimitExtensionsJson = {
+    'Field Descriptions': []
+}
+
 const membershipImportJson = {
     'Import Template': []
 }
@@ -39,22 +45,34 @@ const cognitoProfileJson = {
     'Field Descriptions': []
 }
 
-const timeLimitsJson = {
-    timelimits: []
-}
-
 const designationsJson = {
     'Field Descriptions': []
 }
 
-const buildTimeLimitsObject = (memberNumber, profile) => {
+const buildTimeLimitsObject = (memberNumber, extensions) => {
+
+    const fieldMap = {
+        AAG: 'data[agexamextension]',
+        AHG: 'data[hgexamextension]',
+        ARG: 'data[rgexamextension]',
+        ASG: 'data[sgexamextension]'
+    }
 
     const tlo = {
         Entity: 'Person',
         'ID Scope': 'Identifying Number',
         'ID': undefined,
+        'data[agexamextension]': '',
+        'data[hgexamextension]': '',
+        'data[rgexamextension]': '',
+        'data[sgexamextension]': ''
     }
     tlo['ID'] = memberNumber
+
+    extensions.forEach((timeLimit) => {
+
+        tlo[fieldMap[Object.keys(timeLimit)[0]]] = Object.values(timeLimit)[0]
+    })
 
     return tlo
 }
@@ -224,6 +242,54 @@ for (const file of sortedProfileFileNames) {
                 // Produce the designations output data
                 const designationsOutput = buildDesignationsObject(profile.MemberNumber, wicket.designations)
                 designationsJson['Field Descriptions'].push(designationsOutput)
+
+                // Produce the Time Limit Extensions output data
+                const limitCertMap = {
+                    RockTimeLimit: 'ARG',
+                    SkiTimeLimit: 'ASG',
+                    AlpineTimeLimit: 'AAG',
+                    HikeTimeLimit: 'AHG'
+                }
+                // collect any applicable time limit year values
+                const applicableTimeLimits = Object.keys(limitCertMap).filter(timeLimit => Object.keys(parsedCognitoObject.data).includes(timeLimit));
+
+                let tlObjectsArray = []
+                if(applicableTimeLimits.length > 0){
+                    // for each time limit, check for active apprentice certificate:
+                    tlObjectsArray = applicableTimeLimits.map((timeLimit) => {
+
+                        const convertedTimeLimit = convertTimeLimit(parsedCognitoObject.data[limitCertMap[timeLimit]].date, parsedCognitoObject.data[timeLimit])
+
+                        if(convertedTimeLimit){
+
+                            const tlObj = {}
+                            tlObj[limitCertMap[timeLimit]] = convertedTimeLimit
+                            return tlObj
+                        }
+                        return undefined
+                    }).filter(n => n)
+                }
+
+                // And TimeLimits for Permanent Apprentices are identified and set here too:
+                const PERM_APPRENTICE_EXTENSION = '2100-01-01' // 75 year horizon
+                const perms = Object.keys(wicket.designations)
+                    .filter(k => k.endsWith('isPermanent'))
+                    .map(k => k.substring(0,3))
+                
+                perms.forEach((perm) => {
+
+                    tlObjectsArray.push({[perm]: PERM_APPRENTICE_EXTENSION})
+                })
+
+                if(tlObjectsArray.length > 0){
+
+                    const timeLimitsObj = buildTimeLimitsObject(profile.MemberNumber, tlObjectsArray)
+                    process.stdout.write(`GOOP>> ${JSON.stringify(timeLimitsObj)}\n`)
+                    timeLimitExtensionsJson['Field Descriptions'].push(timeLimitsObj)    
+                }
+
+                // prep Google API publish for Production
+
             } catch (error) {
                 if (!['ACTIVE', 'INACTIVE'].includes(profile.ProfileStatus)) MEMBER_CONVERSION_ERRORS++
                 if (profile.ProfileStatus === 'RESIGNED') NONMEMBER_CONVERSION_ERRORS++
@@ -272,6 +338,8 @@ const stats = {
 }
 
 info.reportGeneratedDate = new Date()
+const runTimeStamp = format(info.reportGeneratedDate, "yyyy-MM-dd'T'HH:mm:ss")
+console.log(runTimeStamp)
 info.mostRecentlyUpdatedProfileDate = mostRecentlyUpdatedDate
 info.daysSinceDataRefresh = differenceInDays(new Date(), mostRecentlyUpdatedDate)
 
@@ -297,3 +365,11 @@ jsonToWorkbookOnDisk(designationsJson, './public/data/ACMG_Person_Designations.x
 // Write the Cognito My Profile JSON Archive Workbook:
 jsonToWorkbookOnDisk(cognitoProfileJson, './public/data/ACMG_CognitoMyProfile_JSON_Additional_Info.xlsx')
 
+// Write the Exam Extension Dates Workbook
+jsonToWorkbookOnDisk(timeLimitExtensionsJson, './public/data/ACMG_Person_Exam_Time_Limit_Extensions.xlsx')
+
+// Google Drive Uploads
+await googleDriveUpload('./public/data/ACMG_Person_Memberships.xlsx', runTimeStamp)
+await googleDriveUpload('./public/data/ACMG_Person_Designations.xlsx', runTimeStamp)
+await googleDriveUpload('./public/data/ACMG_CognitoMyProfile_JSON_Additional_Info.xlsx', runTimeStamp)
+await googleDriveUpload('./public/data/ACMG_Person_Exam_Time_Limit_Extensions.xlsx', runTimeStamp)

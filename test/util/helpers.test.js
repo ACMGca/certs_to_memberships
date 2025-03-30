@@ -1,4 +1,4 @@
-import { addFortyFourMonths, cleanCognitoMyProfile, splitMembershipBracket } from "../../util/helpers.js";
+import { addFortyFourMonths, cleanCognitoMyProfile, splitMembershipBracket, convertTimeLimit } from "../../util/helpers.js";
 
 import { describe, expect, test } from "bun:test";
 
@@ -69,5 +69,39 @@ describe('Membership tier splitting', () => {
 
         const splitTier = splitMembershipBracket(tierRange, resignedRange)
         expect(splitTier).toHaveLength(1)
+    })
+})
+
+describe('Apprentice Time Limits helper', () => {
+
+    test('returns null when either designationDate or timeLimit year are not available', () => {
+
+        const timeLimitResult = convertTimeLimit('2023-09-15', null)
+        expect(timeLimitResult).toEqual(null)
+
+        const timeLimitResult2 = convertTimeLimit('2023-09-15', null)
+        expect(timeLimitResult2).toEqual(null)
+    })
+
+    test('throws an error if either of the inputs are in a bad format', () => {
+
+        expect(() => { convertTimeLimit('2023-09-15', 'abcd') }).toThrow('timeLimitYear must be a 4 digit string year [yyyy]')
+        expect(() => { convertTimeLimit('2023-09-15', 2023) }).toThrow('timeLimitYear must be a 4 digit string year [yyyy]')
+        expect(() => { convertTimeLimit('2023-09', '2026') }).toThrow('designationDate must be an ISO format date string [yyyy-MM-dd]')
+    })
+
+
+    test('returns null when there is no indication of a time extension', () => {
+
+        const result = convertTimeLimit('2023-09-15', '2026')
+
+        expect(result).toEqual(null)
+    })
+
+    test('returns an ISO date string when there is a time extension indicated', () => {
+
+        const result = convertTimeLimit('2023-09-15', '2027')
+
+        expect(result).toEqual('2027-09-15')
     })
 })

@@ -2,6 +2,7 @@
     "dependencies": {
         "@date-fns/tz": "^1.2.0",
         "date-fns": "^4.1.0",
+        "googleapis": "^148.0.0",
         "hono": "^4.7.5",
         "reveal.js": "^5.2.0",
         "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",

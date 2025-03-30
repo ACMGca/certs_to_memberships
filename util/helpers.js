@@ -1,6 +1,5 @@
 'use strict'
-import { addMonths, isBefore, isAfter, differenceInDays } from "date-fns"
-import { } from 'date-fns';
+import { addMonths, isBefore, isAfter, parseISO, format } from "date-fns"
 
 export const CERTKEYLIST = ['MG', 'AG', 'SG', 'RG', 'AAG', 'ASG', 'ARG', 'AHG', 'DHG', 'HG', 'HGWT', 'CGI1', 'CGI2', 'CGI3', 'TRCI', 'VFG', 'AHGPerm', 'AAGPerm', 'ASGPerm', 'ARGPerm']
 
@@ -220,4 +219,38 @@ export const convertDesignationsForImport = (designations) => {
     }, {})
 
     return result
+}
+
+export const convertTimeLimit = (designationDateString = null, timeLimitYearString = null) => {
+
+    if(!designationDateString || !timeLimitYearString){
+        return null
+    }
+
+    if(typeof timeLimitYearString !== 'string' || !/^[\d]{4}$/.test(timeLimitYearString)){
+
+        throw new Error('timeLimitYear must be a 4 digit string year [yyyy]')
+    }
+
+    const designationDate = parseISO(designationDateString)
+
+    if(typeof designationDateString !== 'string' || !/^[\d]{4}-[\d]{2}-[\d]{2}$/.test(designationDateString) || isNaN(designationDate)){
+
+        throw new Error('designationDate must be an ISO format date string [yyyy-MM-dd]')
+    }
+
+    const designationDateYear = designationDate.getFullYear()
+    const timeLimitYear = Number(timeLimitYearString)
+    const yearsDifference = timeLimitYear - designationDateYear
+
+    if(yearsDifference > 3){
+
+        // calculate the appropriate time limit for Wicket
+        const preciseTimeLimitDate = parseISO(`${String(timeLimitYear)}${designationDateString.substring(4)}`)
+
+        // this is where we can add 8 months if that is the business decision
+        const extendedTimeLimitDate = addMonths(preciseTimeLimitDate, 0)
+        return format(extendedTimeLimitDate, 'yyyy-MM-dd')
+    }
+    return null
 }
