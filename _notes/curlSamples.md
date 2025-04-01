@@ -24,6 +24,35 @@ in Wicket Staging.
 
 When nothing is found for that Member Number, the `meta.page.total_items` will equal zero.
 
+## Find a Person by PublicULID
+
+    # Working
+    curl --location --request POST 'https://acmg-admin.staging.wicketcloud.com/api/people/query' \
+    --header "Authorization: Bearer $WICKET_STAGING_JWT" \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+    "filter": {
+        "membership_people_status_eq": "Active",
+        "search_query": {
+        "_and": [
+            {
+            "family_name": "Miller"
+            },
+            {
+            "data_fields.publiculid.value.ulid": "01HGY4PCQFK9M9H517RE0Y4T3J"
+            }
+        ]
+        }
+    }
+    }'
+
+    # Working
+    curl --location --request POST 'https://acmg-admin.staging.wicketcloud.com/api/people/query?include=emails,phones,addresses' \
+    --header "Authorization: Bearer $WICKET_STAGING_JWT" \
+    --header 'Content-Type: application/json' \
+    --data-raw '{ "filter": { "membership_people_status_eq": "Active", "search_query": { "data_fields.publiculid.value.ulid": "01HGY4PCQFK9M9H517RE0Y4T3J" } } }'
+
+
 ## Create Person
 
 Create a Wicket Staging Person with First (`given_name`), Last (`family_name`), Member Number (`identifying_number`), and Email.
