@@ -369,7 +369,9 @@ jsonToWorkbookOnDisk(cognitoProfileJson, './public/data/ACMG_CognitoMyProfile_JS
 jsonToWorkbookOnDisk(timeLimitExtensionsJson, './public/data/ACMG_Person_Exam_Time_Limit_Extensions.xlsx')
 
 // Google Drive Uploads
-await googleDriveUpload('./public/data/ACMG_Person_Memberships.xlsx', runTimeStamp)
-await googleDriveUpload('./public/data/ACMG_Person_Designations.xlsx', runTimeStamp)
-await googleDriveUpload('./public/data/ACMG_CognitoMyProfile_JSON_Additional_Info.xlsx', runTimeStamp)
-await googleDriveUpload('./public/data/ACMG_Person_Exam_Time_Limit_Extensions.xlsx', runTimeStamp)
+if(process.env.PUBLISH && process.env.PUBLISH.toLowerCase().trim() === 'true'){
+    await googleDriveUpload('./public/data/ACMG_Person_Memberships.xlsx', runTimeStamp)
+    await googleDriveUpload('./public/data/ACMG_Person_Designations.xlsx', runTimeStamp)
+    await googleDriveUpload('./public/data/ACMG_CognitoMyProfile_JSON_Additional_Info.xlsx', runTimeStamp)
+    await googleDriveUpload('./public/data/ACMG_Person_Exam_Time_Limit_Extensions.xlsx', runTimeStamp)
+}
