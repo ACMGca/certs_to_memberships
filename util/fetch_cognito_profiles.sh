@@ -29,6 +29,13 @@ for id in {1..3227}; do
             echo "($request_counter) $id >> $status_code"
             echo "Backing off due to rate limiting... Sleep for 5 minutes."
             sleep 300
+        elif [[ "$status_code" == "200" ]]; then
+            echo "($request_counter) $id >> $status_code"
+
+            # On each successful profile download, parse the profile and download 
+            # associated photo and first aid certs which the URL tokens are fresh
+            bun util/fetchMemberfiles.js ./profile_data/${id}.json
+            break
         else
             echo "($request_counter) $id >> $status_code"
             break

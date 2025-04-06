@@ -1,7 +1,12 @@
 #!/bin/bash
 
+export PUBLISH=true
+# unset PUBLISH
+
 # clear old artifacts
 rm ./public/data/*.xlsx
+rm ./public/data/*.zip
+rm -rf ./public/data/ACMG_Member_Files
 
 bun util/parseAll.js
 

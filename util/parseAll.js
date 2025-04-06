@@ -8,6 +8,7 @@ import { convertCognitoToWicket } from "./convert.js";
 import { parseISO, differenceInDays, format } from "date-fns";
 import { rules } from "./rules.js";
 import { jsonToWorkbookOnDisk } from "./excel.js";
+import { buildMemberFilesMetadata } from "./buildMemberFilesMetadata.js";
 import { googleDriveUpload } from "./googleDrive.js";
 
 const convertTestFile = Bun.file('test/util/convert.test.js')
@@ -233,11 +234,11 @@ for (const file of sortedProfileFileNames) {
                     // hydrate the membership
                     const personMembership = buildPersonMembershipObject(profile.MemberNumber, membership)
                     membershipImportJson['Import Template'].push(personMembership)
-
-                    // And populate the structure for the Cognito JSON Archive:
-                    const profileJson = buildCognitoJsonArchiveObject(profile.MemberNumber, profile)
-                    cognitoProfileJson['Field Descriptions'].push(profileJson)
                 })
+
+                // And populate the structure for the Cognito JSON Archive:
+                const profileJson = buildCognitoJsonArchiveObject(profile.MemberNumber, profile)
+                cognitoProfileJson['Field Descriptions'].push(profileJson)
 
                 // Produce the designations output data
                 const designationsOutput = buildDesignationsObject(profile.MemberNumber, wicket.designations)
@@ -284,11 +285,8 @@ for (const file of sortedProfileFileNames) {
                 if(tlObjectsArray.length > 0){
 
                     const timeLimitsObj = buildTimeLimitsObject(profile.MemberNumber, tlObjectsArray)
-                    process.stdout.write(`GOOP>> ${JSON.stringify(timeLimitsObj)}\n`)
                     timeLimitExtensionsJson['Field Descriptions'].push(timeLimitsObj)    
                 }
-
-                // prep Google API publish for Production
 
             } catch (error) {
                 if (!['ACTIVE', 'INACTIVE'].includes(profile.ProfileStatus)) MEMBER_CONVERSION_ERRORS++
@@ -368,10 +366,32 @@ jsonToWorkbookOnDisk(cognitoProfileJson, './public/data/ACMG_CognitoMyProfile_JS
 // Write the Exam Extension Dates Workbook
 jsonToWorkbookOnDisk(timeLimitExtensionsJson, './public/data/ACMG_Person_Exam_Time_Limit_Extensions.xlsx')
 
+// Write the Member Files Metadata Workbook
+await buildMemberFilesMetadata()
+
+console.log('Creating the zip archive of member photos... (takes a minute)')
+const proc1 = Bun.spawn(['zip', '-rq', 'ACMG_Member_Files.zip', 'memberFiles'], {
+    cwd: "./public/files", // specify a working directory
+})
+
+const output1 = await new Response(proc1.stdout).text();
+console.log(output1)
+await proc1.exited;
+
+const proc2 = Bun.spawn(['mv', 'ACMG_Member_Files.zip', '../data/'], {
+    cwd: "./public/files", // specify a working directory
+})
+
+const output2 = await new Response(proc2.stdout).text();
+console.log(output2)
+await proc2.exited;
+
 // Google Drive Uploads
 if(process.env.PUBLISH && process.env.PUBLISH.toLowerCase().trim() === 'true'){
     await googleDriveUpload('./public/data/ACMG_Person_Memberships.xlsx', runTimeStamp)
     await googleDriveUpload('./public/data/ACMG_Person_Designations.xlsx', runTimeStamp)
     await googleDriveUpload('./public/data/ACMG_CognitoMyProfile_JSON_Additional_Info.xlsx', runTimeStamp)
     await googleDriveUpload('./public/data/ACMG_Person_Exam_Time_Limit_Extensions.xlsx', runTimeStamp)
+    await googleDriveUpload('./public/data/ACMG_Member_Files_Metadata.xlsx', runTimeStamp)
+    await googleDriveUpload('./public/data/ACMG_Member_Files.zip', runTimeStamp)
 }

@@ -83,6 +83,7 @@ export const cleanCognitoMyProfile = (p) => {
 
     delete p.Form
     delete p.MemberPhoto
+    delete p.FirstAidCertificate
     delete p.IFMGAPadLeft
     delete p.Entry.User
     delete p.Entry.Action
@@ -254,3 +255,34 @@ export const convertTimeLimit = (designationDateString = null, timeLimitYearStri
     }
     return null
 }
+
+/**
+ * Fetches a file from a given URL and saves it to the specified file path using Bun.file.
+ *
+ * @param {string} url The URL of the file to fetch.
+ * @param {string} filePath The path where the file should be saved.
+ * @returns {Promise<void>} A promise that resolves when the file is successfully fetched and saved,
+ * or rejects if an error occurs.
+ */
+export const fetchAndSave = async (url, filePath) => {
+    try {
+      console.log(`Fetching file from: ${url}`);
+      const response = await fetch(url);
+  
+      if (!response.ok) {
+        throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+      }
+  
+      console.log(`Successfully fetched. Saving to: ${filePath}`);
+      const blob = await response.blob();
+      const arrayBuffer = await blob.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+  
+      await Bun.file(filePath).write(buffer);
+      console.log(`File saved successfully to: ${filePath}`);
+  
+    } catch (error) {
+      console.error(`Error fetching and saving file:`, error);
+      throw error; // Re-throw the error for the caller to handle
+    }
+  }
