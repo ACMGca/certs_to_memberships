@@ -1,7 +1,7 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-04-02T01:46:19.444Z",
-    "mostRecentlyUpdatedProfileDate": "2025-04-01T21:35:44.216Z",
+    "reportGeneratedDate": "2025-04-06T04:19:30.042Z",
+    "mostRecentlyUpdatedProfileDate": "2025-04-05T19:36:21.996Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
@@ -13,9 +13,9 @@
     "NONMEMBER_PARSE_ERROR_RATE": "0.00%",
     "NONMEMBER_CONVERSION_ERRORS": 0,
     "NONMEMBER_CONVERSION_ERROR_RATE": "0.00%",
-    "MEMBER_COUNT": 1578,
-    "NONMEMBER_COUNT": 304,
-    "ACTIVE_MEMBER_COUNT": 1392,
+    "MEMBER_COUNT": 1579,
+    "NONMEMBER_COUNT": 303,
+    "ACTIVE_MEMBER_COUNT": 1393,
     "INACTIVE_MEMBER_COUNT": 186
   },
   "profiles": {
@@ -3797,7 +3797,7 @@
       "cognitoEntryId": "80",
       "profileStatus": "ACTIVE",
       "memberNumber": "1033",
-      "cognitoLastModified": "2025-04-01T02:39:33.877Z",
+      "cognitoLastModified": "2025-04-05T19:36:21.996Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-02-01",
@@ -7109,33 +7109,33 @@
     },
     "151_json": {
       "cognitoEntryId": "151",
-      "profileStatus": "RESIGNED",
+      "profileStatus": "ACTIVE",
       "memberNumber": "993",
-      "cognitoLastModified": "2025-02-19T22:18:36.612Z",
+      "cognitoLastModified": "2025-04-04T04:12:03.258Z",
       "certsParsed": {
-        "ProfileStatus": "RESIGNED",
+        "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-05-01",
-        "DateEnd": "2024-12-31",
+        "DateEnd": null,
         "DateReinstate": "2022-05-20",
-        "LastAnnualValidation": "2023-12-27",
+        "LastAnnualValidation": "2025-04-03",
         "IFMGALicenseNumber": "993",
         "SkiExamMode": "Ski",
         "transforms": [
           "MG.date backfilled with DateJoined"
         ],
         "MG": {
-          "status": "Resigned",
+          "status": "Active",
           "date": "2007-05-01",
-          "lastModified": "2024-12-31"
+          "lastModified": "2025-04-02"
         }
       },
       "wicketMemberships": {
         "professional": [
           [
             "mountain-guide",
-            "Inactive",
+            "Active",
             "2007-05-01",
-            "2024-12-31"
+            "2025-12-31"
           ]
         ],
         "designations": {}
@@ -9202,7 +9202,7 @@
       "cognitoEntryId": "198",
       "profileStatus": "ACTIVE",
       "memberNumber": "2497",
-      "cognitoLastModified": "2025-04-01T02:40:58.938Z",
+      "cognitoLastModified": "2025-04-05T02:32:11.283Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-08-01",
@@ -14085,7 +14085,7 @@
       "cognitoEntryId": "311",
       "profileStatus": "ACTIVE",
       "memberNumber": "1243",
-      "cognitoLastModified": "2025-04-01T02:42:10.805Z",
+      "cognitoLastModified": "2025-04-05T18:14:36.846Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2009-10-01",
@@ -14143,7 +14143,7 @@
       "cognitoEntryId": "312",
       "profileStatus": "ACTIVE",
       "memberNumber": "1846",
-      "cognitoLastModified": "2025-04-01T02:37:45.868Z",
+      "cognitoLastModified": "2025-04-02T21:18:39.985Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-05-01",
@@ -14165,9 +14165,9 @@
           "lastModified": null
         },
         "ARG": {
-          "status": null,
+          "status": "Resigned",
           "date": "2020-09-01",
-          "lastModified": null
+          "lastModified": "2023-09-30"
         },
         "TRCI": {
           "status": "Active",
@@ -14188,6 +14188,12 @@
             "Active",
             "2017-04-01",
             "2025-12-31"
+          ],
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2020-09-01",
+            "2023-09-30"
           ],
           [
             "top-rope-climbing-instructor",
@@ -25690,7 +25696,7 @@
       "cognitoEntryId": "554",
       "profileStatus": "ACTIVE",
       "memberNumber": "2531",
-      "cognitoLastModified": "2025-04-01T02:44:48.447Z",
+      "cognitoLastModified": "2025-04-02T17:21:47.312Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-12-01",
@@ -65237,7 +65243,7 @@
       "cognitoEntryId": "1433",
       "profileStatus": "ACTIVE",
       "memberNumber": "1599",
-      "cognitoLastModified": "2025-04-01T02:53:31.782Z",
+      "cognitoLastModified": "2025-04-05T15:13:35.353Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-07-01",
@@ -88577,13 +88583,13 @@
       "cognitoEntryId": "3160",
       "profileStatus": "ACTIVE",
       "memberNumber": "3742",
-      "cognitoLastModified": "2025-04-01T02:37:53.424Z",
+      "cognitoLastModified": "2025-04-02T17:21:45.855Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-08-15",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-08-15",
+        "LastAnnualValidation": "2025-04-02",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "HikeTimeLimit": "2027",
@@ -88605,7 +88611,7 @@
             "via-ferrata-guide",
             "Active",
             "2024-08-15",
-            "2024-12-31"
+            "2025-12-31"
           ],
           [
             "apprentice-hiking-guide",
@@ -89403,13 +89409,13 @@
       "cognitoEntryId": "3191",
       "profileStatus": "INACTIVE",
       "memberNumber": "3777",
-      "cognitoLastModified": "2025-04-01T02:57:57.535Z",
+      "cognitoLastModified": "2025-04-02T04:33:37.520Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2024-10-01",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": "2024-10-01",
+        "LastAnnualValidation": "2025-04-01",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "HikeTimeLimit": "2027",
@@ -89427,6 +89433,12 @@
             "Inactive",
             "2024-10-01",
             "2024-12-31"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2025-01-01",
+            "2025-12-31"
           ]
         ],
         "designations": {
