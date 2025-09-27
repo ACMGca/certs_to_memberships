@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export PUBLISH=true
-# unset PUBLISH
+# export PUBLISH=true
+unset PUBLISH
 
 # clear old artifacts
 rm ./public/data/*.xlsx

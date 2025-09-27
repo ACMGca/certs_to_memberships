@@ -7,7 +7,10 @@ duckDb.json
 .dev.vars
 bun.lockb
 public/data/*.xlsx
+public/data/*.zip
+public/files/
 credentials.json
+*.dat
 
 # Logs
 logs
