@@ -1,12 +1,12 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-10-06T18:10:19.380Z",
-    "mostRecentlyUpdatedProfileDate": "2025-10-06T16:43:33.271Z",
+    "reportGeneratedDate": "2025-10-06T18:28:50.807Z",
+    "mostRecentlyUpdatedProfileDate": "2025-10-06T18:27:56.647Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
-    "MEMBER_PARSE_ERRORS": 1,
-    "MEMBER_PARSE_ERROR_RATE": "0.06%",
+    "MEMBER_PARSE_ERRORS": 0,
+    "MEMBER_PARSE_ERROR_RATE": "0.00%",
     "MEMBER_CONVERSION_ERRORS": 0,
     "MEMBER_CONVERSION_ERROR_RATE": "0.00%",
     "NONMEMBER_PARSE_ERRORS": 0,
@@ -14335,21 +14335,8 @@
       "cognitoEntryId": "313",
       "profileStatus": "INACTIVE",
       "memberNumber": "2666",
-      "cognitoLastModified": "2025-10-01T11:29:44.159Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "custom",
-            "message": "Certificates with Inactive or Resigned status require a lastModified date",
-            "path": [
-              "HG",
-              "lastModified"
-            ]
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
+      "cognitoLastModified": "2025-10-06T18:27:56.647Z",
+      "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2019-07-01",
         "DateEnd": null,
@@ -14357,14 +14344,30 @@
         "LastAnnualValidation": "2025-01-16",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
+        "transforms": [],
         "HG": {
           "status": "Inactive",
           "date": "2019-06-01",
-          "lastModified": null
+          "lastModified": "2025-10-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "hiking-guide",
+            "Inactive",
+            "2019-07-01",
+            "2025-10-01"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2025-10-02",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "HG": "2019-06-01"
         }
       }
     },
@@ -54568,7 +54571,7 @@
       "cognitoEntryId": "1177",
       "profileStatus": "ACTIVE",
       "memberNumber": "1712",
-      "cognitoLastModified": "2025-10-01T21:47:19.717Z",
+      "cognitoLastModified": "2025-10-06T18:21:40.370Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-05-16",
@@ -54588,7 +54591,7 @@
         "ASG": {
           "status": null,
           "date": "2014-04-01",
-          "lastModified": "2016-04-01"
+          "lastModified": null
         },
         "ARG": {
           "status": "Active",
