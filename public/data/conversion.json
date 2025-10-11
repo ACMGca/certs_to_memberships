@@ -1,7 +1,7 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-10-06T18:28:50.807Z",
-    "mostRecentlyUpdatedProfileDate": "2025-10-06T18:27:56.647Z",
+    "reportGeneratedDate": "2025-10-11T16:04:32.851Z",
+    "mostRecentlyUpdatedProfileDate": "2025-10-11T05:48:37.179Z",
     "daysSinceDataRefresh": 0
   },
   "stats": {
@@ -13,10 +13,11 @@
     "NONMEMBER_PARSE_ERROR_RATE": "0.00%",
     "NONMEMBER_CONVERSION_ERRORS": 0,
     "NONMEMBER_CONVERSION_ERROR_RATE": "0.00%",
-    "MEMBER_COUNT": 1680,
-    "NONMEMBER_COUNT": 286,
-    "ACTIVE_MEMBER_COUNT": 1495,
-    "INACTIVE_MEMBER_COUNT": 185
+    "MEMBER_COUNT": 1685,
+    "NONMEMBER_COUNT": 329,
+    "ACTIVE_MEMBER_COUNT": 1499,
+    "INACTIVE_MEMBER_COUNT": 186,
+    "CONVERTED_PROFILES_COUNT": 2014
   },
   "profiles": {
     "3_json": {
@@ -367,7 +368,7 @@
       "isFormalTestProfile": true,
       "profileStatus": "ACTIVE",
       "memberNumber": "499",
-      "cognitoLastModified": "2025-04-25T16:50:59.469Z",
+      "cognitoLastModified": "2025-10-10T19:36:53.606Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2001-09-01",
@@ -625,7 +626,7 @@
       "cognitoEntryId": "16",
       "profileStatus": "ACTIVE",
       "memberNumber": "1140",
-      "cognitoLastModified": "2025-04-01T02:36:14.602Z",
+      "cognitoLastModified": "2025-10-10T19:36:29.550Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-10-01",
@@ -843,7 +844,7 @@
       "cognitoEntryId": "22",
       "profileStatus": "ACTIVE",
       "memberNumber": "1455",
-      "cognitoLastModified": "2025-07-16T15:23:29.524Z",
+      "cognitoLastModified": "2025-10-10T19:44:40.635Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2012-01-01",
@@ -1088,7 +1089,7 @@
       "cognitoEntryId": "26",
       "profileStatus": "ACTIVE",
       "memberNumber": "97",
-      "cognitoLastModified": "2025-04-01T02:59:09.832Z",
+      "cognitoLastModified": "2025-10-10T19:37:04.488Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1983-01-01",
@@ -1290,7 +1291,7 @@
       "cognitoEntryId": "29",
       "profileStatus": "ACTIVE",
       "memberNumber": "972",
-      "cognitoLastModified": "2025-04-01T02:36:21.402Z",
+      "cognitoLastModified": "2025-10-10T19:36:00.873Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-03-01",
@@ -1572,7 +1573,7 @@
       "cognitoEntryId": "34",
       "profileStatus": "ACTIVE",
       "memberNumber": "787",
-      "cognitoLastModified": "2025-04-08T23:14:45.188Z",
+      "cognitoLastModified": "2025-10-10T19:37:26.265Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2004-06-01",
@@ -1890,7 +1891,7 @@
       "cognitoEntryId": "38",
       "profileStatus": "ACTIVE",
       "memberNumber": "2021",
-      "cognitoLastModified": "2025-04-01T02:59:51.360Z",
+      "cognitoLastModified": "2025-10-10T19:36:31.482Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-05-01",
@@ -2796,7 +2797,7 @@
       "cognitoEntryId": "57",
       "profileStatus": "ACTIVE",
       "memberNumber": "109",
-      "cognitoLastModified": "2025-07-18T14:30:35.430Z",
+      "cognitoLastModified": "2025-10-10T19:35:31.936Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2000-01-01",
@@ -3843,7 +3844,7 @@
       "cognitoEntryId": "81",
       "profileStatus": "ACTIVE",
       "memberNumber": "117",
-      "cognitoLastModified": "2025-07-18T14:18:23.471Z",
+      "cognitoLastModified": "2025-10-10T19:37:00.547Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1985-01-01",
@@ -4011,6 +4012,50 @@
         }
       }
     },
+    "85_json": {
+      "cognitoEntryId": "85",
+      "profileStatus": "DECEASED",
+      "memberNumber": "119",
+      "cognitoLastModified": "2024-08-17T00:39:15.284Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "1983-01-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "1983-01-01",
+          "lastModified": null
+        }
+      }
+    },
     "86_json": {
       "cognitoEntryId": "86",
       "profileStatus": "ACTIVE",
@@ -4136,7 +4181,7 @@
       "cognitoEntryId": "88",
       "profileStatus": "ACTIVE",
       "memberNumber": "2439",
-      "cognitoLastModified": "2025-07-18T14:01:53.808Z",
+      "cognitoLastModified": "2025-10-10T19:36:56.673Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-05-01",
@@ -5632,7 +5677,7 @@
       "cognitoEntryId": "120",
       "profileStatus": "ACTIVE",
       "memberNumber": "461",
-      "cognitoLastModified": "2025-07-18T14:24:31.425Z",
+      "cognitoLastModified": "2025-10-10T19:36:27.990Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2001-04-01",
@@ -6393,7 +6438,7 @@
       "cognitoEntryId": "135",
       "profileStatus": "ACTIVE",
       "memberNumber": "1144",
-      "cognitoLastModified": "2025-04-01T17:57:43.001Z",
+      "cognitoLastModified": "2025-10-10T19:36:54.401Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-11-01",
@@ -6508,7 +6553,7 @@
       "cognitoEntryId": "137",
       "profileStatus": "ACTIVE",
       "memberNumber": "688",
-      "cognitoLastModified": "2025-05-17T01:54:24.193Z",
+      "cognitoLastModified": "2025-10-10T19:36:44.826Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2003-07-01",
@@ -6924,7 +6969,7 @@
       "cognitoEntryId": "147",
       "profileStatus": "ACTIVE",
       "memberNumber": "881",
-      "cognitoLastModified": "2025-04-01T02:59:40.167Z",
+      "cognitoLastModified": "2025-10-10T19:36:50.669Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-06-01",
@@ -7387,7 +7432,7 @@
       "cognitoEntryId": "157",
       "profileStatus": "ACTIVE",
       "memberNumber": "1212",
-      "cognitoLastModified": "2025-04-01T02:59:28.348Z",
+      "cognitoLastModified": "2025-10-10T19:35:43.747Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2009-06-01",
@@ -7578,7 +7623,7 @@
       "cognitoEntryId": "161",
       "profileStatus": "ACTIVE",
       "memberNumber": "2887",
-      "cognitoLastModified": "2025-04-01T02:58:38.272Z",
+      "cognitoLastModified": "2025-10-10T19:37:22.859Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2021-04-01",
@@ -8116,7 +8161,7 @@
       "cognitoEntryId": "175",
       "profileStatus": "ACTIVE",
       "memberNumber": "2126",
-      "cognitoLastModified": "2025-04-01T02:59:39.302Z",
+      "cognitoLastModified": "2025-10-10T19:36:54.781Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-10-01",
@@ -8261,7 +8306,7 @@
       "cognitoEntryId": "178",
       "profileStatus": "ACTIVE",
       "memberNumber": "1768",
-      "cognitoLastModified": "2025-07-18T13:55:42.779Z",
+      "cognitoLastModified": "2025-10-10T19:36:15.057Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-09-29",
@@ -8492,7 +8537,7 @@
       "cognitoEntryId": "182",
       "profileStatus": "ACTIVE",
       "memberNumber": "142",
-      "cognitoLastModified": "2025-07-18T14:33:24.175Z",
+      "cognitoLastModified": "2025-10-10T19:34:55.286Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1998-01-01",
@@ -9185,7 +9230,7 @@
       "cognitoEntryId": "196",
       "profileStatus": "ACTIVE",
       "memberNumber": "147",
-      "cognitoLastModified": "2025-04-01T02:59:00.922Z",
+      "cognitoLastModified": "2025-10-10T19:36:20.001Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1989-01-01",
@@ -9338,7 +9383,7 @@
       "cognitoEntryId": "199",
       "profileStatus": "ACTIVE",
       "memberNumber": "184",
-      "cognitoLastModified": "2025-07-16T20:27:06.211Z",
+      "cognitoLastModified": "2025-10-10T19:36:13.876Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2004-04-01",
@@ -9459,7 +9504,7 @@
       "cognitoEntryId": "201",
       "profileStatus": "ACTIVE",
       "memberNumber": "2290",
-      "cognitoLastModified": "2025-09-02T23:11:20.012Z",
+      "cognitoLastModified": "2025-10-10T19:35:55.486Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-10-01",
@@ -9690,7 +9735,7 @@
       "cognitoEntryId": "203",
       "profileStatus": "ACTIVE",
       "memberNumber": "1333",
-      "cognitoLastModified": "2025-07-25T17:46:53.081Z",
+      "cognitoLastModified": "2025-10-10T19:36:57.805Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2010-10-01",
@@ -9959,7 +10004,7 @@
       "cognitoEntryId": "210",
       "profileStatus": "ACTIVE",
       "memberNumber": "1699",
-      "cognitoLastModified": "2025-07-18T13:55:21.785Z",
+      "cognitoLastModified": "2025-10-10T19:36:13.476Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-07-27",
@@ -10098,7 +10143,7 @@
       "cognitoEntryId": "212",
       "profileStatus": "ACTIVE",
       "memberNumber": "1929",
-      "cognitoLastModified": "2025-07-18T14:03:04.496Z",
+      "cognitoLastModified": "2025-10-10T19:37:09.123Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-10-19",
@@ -10149,6 +10194,60 @@
           "AHG": "2015-09-01",
           "HG": "2017-09-01",
           "HGWT": "2018-12-01"
+        }
+      }
+    },
+    "213_json": {
+      "cognitoEntryId": "213",
+      "profileStatus": "DECEASED",
+      "memberNumber": "3141",
+      "cognitoLastModified": "2025-10-09T21:47:44.076Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2022-07-01",
+        "DateEnd": "2025-08-20",
+        "DateReinstate": null,
+        "LastAnnualValidation": "2025-01-07",
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2025",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "AHG": {
+          "status": "Active",
+          "date": "2022-06-01",
+          "lastModified": null
+        },
+        "TRCI": {
+          "status": "Active",
+          "date": "2022-06-01",
+          "lastModified": null
+        },
+        "VFG": {
+          "status": "Inactive",
+          "date": "2022-06-01",
+          "lastModified": "2024-01-06"
         }
       }
     },
@@ -11095,7 +11194,7 @@
       "cognitoEntryId": "233",
       "profileStatus": "ACTIVE",
       "memberNumber": "1857",
-      "cognitoLastModified": "2025-04-01T02:58:37.266Z",
+      "cognitoLastModified": "2025-10-10T19:34:14.966Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-05-01",
@@ -11181,7 +11280,7 @@
       "cognitoEntryId": "235",
       "profileStatus": "ACTIVE",
       "memberNumber": "1530",
-      "cognitoLastModified": "2025-04-01T02:59:36.327Z",
+      "cognitoLastModified": "2025-10-10T19:36:32.274Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2012-09-01",
@@ -11268,7 +11367,7 @@
       "cognitoEntryId": "237",
       "profileStatus": "ACTIVE",
       "memberNumber": "2463",
-      "cognitoLastModified": "2025-07-22T16:54:32.805Z",
+      "cognitoLastModified": "2025-10-10T19:36:05.667Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-07-01",
@@ -11545,7 +11644,7 @@
       "cognitoEntryId": "242",
       "profileStatus": "ACTIVE",
       "memberNumber": "896",
-      "cognitoLastModified": "2025-09-17T11:27:16.550Z",
+      "cognitoLastModified": "2025-10-10T15:58:10.495Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-09-01",
@@ -12065,7 +12164,7 @@
       "cognitoEntryId": "257",
       "profileStatus": "ACTIVE",
       "memberNumber": "2741",
-      "cognitoLastModified": "2025-07-18T14:20:40.492Z",
+      "cognitoLastModified": "2025-10-10T19:36:01.662Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-11-01",
@@ -12112,7 +12211,7 @@
       "cognitoEntryId": "258",
       "profileStatus": "ACTIVE",
       "memberNumber": "2268",
-      "cognitoLastModified": "2025-04-01T02:36:30.032Z",
+      "cognitoLastModified": "2025-10-10T19:37:06.573Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-07-01",
@@ -12267,7 +12366,7 @@
       "cognitoEntryId": "261",
       "profileStatus": "ACTIVE",
       "memberNumber": "2544",
-      "cognitoLastModified": "2025-04-01T02:59:58.980Z",
+      "cognitoLastModified": "2025-10-10T19:36:59.317Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-12-01",
@@ -12877,6 +12976,50 @@
         }
       }
     },
+    "279_json": {
+      "cognitoEntryId": "279",
+      "profileStatus": "DECEASED",
+      "memberNumber": "2986",
+      "cognitoLastModified": "2024-09-15T13:00:19.775Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2021-09-21",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": "2023-01-01",
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": null,
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "HG": {
+          "status": "Resigned",
+          "date": "2021-08-01",
+          "lastModified": null
+        }
+      }
+    },
     "280_json": {
       "cognitoEntryId": "280",
       "profileStatus": "INACTIVE",
@@ -13058,6 +13201,55 @@
         "designations": {
           "ASG": "2001-04-01",
           "SG": "2004-04-01"
+        }
+      }
+    },
+    "284_json": {
+      "cognitoEntryId": "284",
+      "profileStatus": "DECEASED",
+      "memberNumber": "1629",
+      "cognitoLastModified": "2025-10-09T21:44:15.007Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2013-10-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "Complete",
+        "SG": {
+          "status": "Resigned",
+          "date": "2017-04-01",
+          "lastModified": null
+        },
+        "ASG": {
+          "status": null,
+          "date": "2013-03-01",
+          "lastModified": null
         }
       }
     },
@@ -13416,7 +13608,7 @@
       "cognitoEntryId": "292",
       "profileStatus": "ACTIVE",
       "memberNumber": "2881",
-      "cognitoLastModified": "2025-10-01T21:41:40.820Z",
+      "cognitoLastModified": "2025-10-10T19:35:52.667Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2021-03-01",
@@ -13525,7 +13717,7 @@
       "cognitoEntryId": "294",
       "profileStatus": "ACTIVE",
       "memberNumber": "1659",
-      "cognitoLastModified": "2025-07-18T14:00:16.680Z",
+      "cognitoLastModified": "2025-10-10T19:36:47.922Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-01-01",
@@ -13893,7 +14085,7 @@
       "cognitoEntryId": "305",
       "profileStatus": "ACTIVE",
       "memberNumber": "2029",
-      "cognitoLastModified": "2025-04-01T02:59:49.750Z",
+      "cognitoLastModified": "2025-10-10T19:35:55.085Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-06-01",
@@ -14375,7 +14567,7 @@
       "cognitoEntryId": "314",
       "profileStatus": "ACTIVE",
       "memberNumber": "16",
-      "cognitoLastModified": "2025-04-01T02:59:33.532Z",
+      "cognitoLastModified": "2025-10-10T19:36:07.685Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1992-01-01",
@@ -15093,7 +15285,7 @@
       "cognitoEntryId": "326",
       "profileStatus": "ACTIVE",
       "memberNumber": "2120",
-      "cognitoLastModified": "2025-09-05T14:02:01.584Z",
+      "cognitoLastModified": "2025-10-10T19:35:53.907Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-09-01",
@@ -15331,7 +15523,7 @@
       "cognitoEntryId": "330",
       "profileStatus": "ACTIVE",
       "memberNumber": "21",
-      "cognitoLastModified": "2025-07-18T13:59:54.967Z",
+      "cognitoLastModified": "2025-10-10T19:36:45.597Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1998-01-01",
@@ -15971,7 +16163,7 @@
       "cognitoEntryId": "347",
       "profileStatus": "ACTIVE",
       "memberNumber": "30",
-      "cognitoLastModified": "2025-08-25T21:50:00.931Z",
+      "cognitoLastModified": "2025-10-10T19:35:39.391Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1981-05-01",
@@ -16299,7 +16491,7 @@
       "cognitoEntryId": "356",
       "profileStatus": "ACTIVE",
       "memberNumber": "2351",
-      "cognitoLastModified": "2025-06-01T21:05:25.693Z",
+      "cognitoLastModified": "2025-10-10T19:44:19.772Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-01-01",
@@ -16508,7 +16700,7 @@
       "cognitoEntryId": "361",
       "profileStatus": "ACTIVE",
       "memberNumber": "2295",
-      "cognitoLastModified": "2025-04-01T02:42:43.606Z",
+      "cognitoLastModified": "2025-10-11T05:48:37.179Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-10-01",
@@ -17281,7 +17473,7 @@
       "cognitoEntryId": "377",
       "profileStatus": "ACTIVE",
       "memberNumber": "694",
-      "cognitoLastModified": "2025-09-17T18:54:05.015Z",
+      "cognitoLastModified": "2025-10-10T19:37:18.288Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2003-06-01",
@@ -17867,7 +18059,7 @@
       "cognitoEntryId": "388",
       "profileStatus": "ACTIVE",
       "memberNumber": "1638",
-      "cognitoLastModified": "2025-08-15T19:03:16.092Z",
+      "cognitoLastModified": "2025-10-10T19:35:41.776Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-10-01",
@@ -17913,7 +18105,7 @@
       "cognitoEntryId": "390",
       "profileStatus": "ACTIVE",
       "memberNumber": "2676",
-      "cognitoLastModified": "2025-04-01T02:59:06.837Z",
+      "cognitoLastModified": "2025-10-10T19:35:35.986Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-07-01",
@@ -18033,7 +18225,7 @@
       "cognitoEntryId": "392",
       "profileStatus": "ACTIVE",
       "memberNumber": "2568",
-      "cognitoLastModified": "2025-07-18T13:50:56.664Z",
+      "cognitoLastModified": "2025-10-10T19:35:53.017Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-03-01",
@@ -18235,7 +18427,7 @@
       "cognitoEntryId": "396",
       "profileStatus": "ACTIVE",
       "memberNumber": "2289",
-      "cognitoLastModified": "2025-08-25T21:08:32.681Z",
+      "cognitoLastModified": "2025-10-10T19:35:03.141Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-10-01",
@@ -18389,7 +18581,7 @@
       "cognitoEntryId": "399",
       "profileStatus": "ACTIVE",
       "memberNumber": "3003",
-      "cognitoLastModified": "2025-08-11T17:06:15.070Z",
+      "cognitoLastModified": "2025-10-10T19:36:08.480Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-01-25",
@@ -18435,7 +18627,7 @@
       "cognitoEntryId": "400",
       "profileStatus": "ACTIVE",
       "memberNumber": "2812",
-      "cognitoLastModified": "2025-04-01T02:59:46.814Z",
+      "cognitoLastModified": "2025-10-10T19:36:25.759Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2020-09-01",
@@ -18720,7 +18912,7 @@
       "cognitoEntryId": "408",
       "profileStatus": "INACTIVE",
       "memberNumber": "762",
-      "cognitoLastModified": "2025-04-01T02:59:38.562Z",
+      "cognitoLastModified": "2025-10-10T19:35:44.232Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2004-04-01",
@@ -18875,7 +19067,7 @@
       "cognitoEntryId": "411",
       "profileStatus": "ACTIVE",
       "memberNumber": "1573",
-      "cognitoLastModified": "2025-04-01T02:59:18.017Z",
+      "cognitoLastModified": "2025-10-10T19:36:20.381Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-05-01",
@@ -19248,7 +19440,7 @@
       "cognitoEntryId": "420",
       "profileStatus": "ACTIVE",
       "memberNumber": "2023",
-      "cognitoLastModified": "2025-07-18T13:57:53.779Z",
+      "cognitoLastModified": "2025-10-10T19:36:21.832Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-05-01",
@@ -19549,7 +19741,7 @@
       "cognitoEntryId": "425",
       "profileStatus": "ACTIVE",
       "memberNumber": "1426",
-      "cognitoLastModified": "2025-07-18T14:32:19.433Z",
+      "cognitoLastModified": "2025-10-10T19:35:38.666Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-10-01",
@@ -20094,7 +20286,7 @@
       "cognitoEntryId": "435",
       "profileStatus": "ACTIVE",
       "memberNumber": "2030",
-      "cognitoLastModified": "2025-06-20T00:57:27.038Z",
+      "cognitoLastModified": "2025-10-10T19:36:58.160Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-05-01",
@@ -20617,7 +20809,7 @@
       "cognitoEntryId": "445",
       "profileStatus": "ACTIVE",
       "memberNumber": "2700",
-      "cognitoLastModified": "2025-06-24T20:07:20.771Z",
+      "cognitoLastModified": "2025-10-10T19:36:08.115Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-09-01",
@@ -20837,7 +21029,7 @@
       "cognitoEntryId": "449",
       "profileStatus": "ACTIVE",
       "memberNumber": "668",
-      "cognitoLastModified": "2025-04-28T21:38:02.332Z",
+      "cognitoLastModified": "2025-10-10T19:37:15.068Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2003-04-01",
@@ -21291,7 +21483,7 @@
       "cognitoEntryId": "458",
       "profileStatus": "ACTIVE",
       "memberNumber": "994",
-      "cognitoLastModified": "2025-04-01T02:58:26.324Z",
+      "cognitoLastModified": "2025-10-10T16:16:57.762Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-05-01",
@@ -21496,7 +21688,7 @@
       "cognitoEntryId": "462",
       "profileStatus": "ACTIVE",
       "memberNumber": "1531",
-      "cognitoLastModified": "2025-07-18T14:01:02.954Z",
+      "cognitoLastModified": "2025-10-10T19:36:55.533Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2012-09-01",
@@ -21595,7 +21787,7 @@
       "cognitoEntryId": "463",
       "profileStatus": "ACTIVE",
       "memberNumber": "501",
-      "cognitoLastModified": "2025-04-01T02:59:43.294Z",
+      "cognitoLastModified": "2025-10-10T19:36:20.766Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2001-09-01",
@@ -21674,7 +21866,7 @@
       "cognitoEntryId": "465",
       "profileStatus": "ACTIVE",
       "memberNumber": "1419",
-      "cognitoLastModified": "2025-04-01T02:59:31.896Z",
+      "cognitoLastModified": "2025-10-10T19:37:22.134Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-09-01",
@@ -22514,7 +22706,7 @@
       "cognitoEntryId": "484",
       "profileStatus": "ACTIVE",
       "memberNumber": "1003",
-      "cognitoLastModified": "2025-07-18T13:33:21.848Z",
+      "cognitoLastModified": "2025-10-10T19:34:30.611Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-10-01",
@@ -22651,7 +22843,7 @@
       "cognitoEntryId": "486",
       "profileStatus": "ACTIVE",
       "memberNumber": "2648",
-      "cognitoLastModified": "2025-07-18T13:46:22.092Z",
+      "cognitoLastModified": "2025-10-10T19:35:48.296Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-06-29",
@@ -22761,7 +22953,7 @@
       "cognitoEntryId": "488",
       "profileStatus": "ACTIVE",
       "memberNumber": "1652",
-      "cognitoLastModified": "2025-04-01T02:58:59.317Z",
+      "cognitoLastModified": "2025-10-10T19:35:35.156Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-11-01",
@@ -23162,7 +23354,7 @@
       "cognitoEntryId": "496",
       "profileStatus": "ACTIVE",
       "memberNumber": "1737",
-      "cognitoLastModified": "2025-04-01T02:58:46.762Z",
+      "cognitoLastModified": "2025-10-10T19:35:39.966Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-06-06",
@@ -23288,7 +23480,7 @@
       "cognitoEntryId": "499",
       "profileStatus": "ACTIVE",
       "memberNumber": "559",
-      "cognitoLastModified": "2025-04-01T02:59:23.498Z",
+      "cognitoLastModified": "2025-10-10T19:35:49.452Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2002-04-01",
@@ -23409,7 +23601,7 @@
       "cognitoEntryId": "501",
       "profileStatus": "ACTIVE",
       "memberNumber": "2065",
-      "cognitoLastModified": "2025-04-01T02:36:43.022Z",
+      "cognitoLastModified": "2025-10-10T19:37:00.127Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-05-01",
@@ -23487,7 +23679,7 @@
       "cognitoEntryId": "503",
       "profileStatus": "ACTIVE",
       "memberNumber": "74",
-      "cognitoLastModified": "2025-04-01T02:59:41.002Z",
+      "cognitoLastModified": "2025-10-10T19:36:03.694Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1989-01-01",
@@ -23901,7 +24093,7 @@
       "cognitoEntryId": "512",
       "profileStatus": "ACTIVE",
       "memberNumber": "486",
-      "cognitoLastModified": "2025-09-05T16:48:31.793Z",
+      "cognitoLastModified": "2025-10-10T19:36:26.834Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2001-06-01",
@@ -24578,7 +24770,7 @@
       "cognitoEntryId": "525",
       "profileStatus": "ACTIVE",
       "memberNumber": "1840",
-      "cognitoLastModified": "2025-04-01T02:58:55.052Z",
+      "cognitoLastModified": "2025-10-10T19:37:19.663Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-05-01",
@@ -24641,7 +24833,7 @@
       "cognitoEntryId": "526",
       "profileStatus": "ACTIVE",
       "memberNumber": "2610",
-      "cognitoLastModified": "2025-04-01T02:59:19.502Z",
+      "cognitoLastModified": "2025-10-10T19:37:21.314Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-05-01",
@@ -24847,7 +25039,7 @@
       "cognitoEntryId": "530",
       "profileStatus": "ACTIVE",
       "memberNumber": "77",
-      "cognitoLastModified": "2025-04-01T02:58:45.962Z",
+      "cognitoLastModified": "2025-10-10T19:35:27.731Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1994-01-01",
@@ -25063,6 +25255,50 @@
         ],
         "designations": {
           "AAG": "1979-01-01"
+        }
+      }
+    },
+    "534_json": {
+      "cognitoEntryId": "534",
+      "profileStatus": "DECEASED",
+      "memberNumber": "82",
+      "cognitoLastModified": "2024-08-17T00:38:50.189Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "1963-01-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "1962-01-01",
+          "lastModified": null
         }
       }
     },
@@ -25376,7 +25612,7 @@
       "cognitoEntryId": "543",
       "profileStatus": "ACTIVE",
       "memberNumber": "2554",
-      "cognitoLastModified": "2025-06-09T12:02:42.390Z",
+      "cognitoLastModified": "2025-10-10T19:34:58.261Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-12-01",
@@ -25416,7 +25652,7 @@
       "cognitoEntryId": "544",
       "profileStatus": "ACTIVE",
       "memberNumber": "83",
-      "cognitoLastModified": "2025-07-18T14:25:08.513Z",
+      "cognitoLastModified": "2025-10-10T19:36:11.606Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1994-01-01",
@@ -25845,7 +26081,7 @@
       "cognitoEntryId": "552",
       "profileStatus": "ACTIVE",
       "memberNumber": "1198",
-      "cognitoLastModified": "2025-04-01T02:59:00.082Z",
+      "cognitoLastModified": "2025-10-10T19:34:35.251Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2009-05-01",
@@ -26264,7 +26500,7 @@
       "cognitoEntryId": "562",
       "profileStatus": "ACTIVE",
       "memberNumber": "2622",
-      "cognitoLastModified": "2025-07-18T14:26:05.966Z",
+      "cognitoLastModified": "2025-10-10T19:35:04.376Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-06-01",
@@ -26311,7 +26547,7 @@
       "cognitoEntryId": "563",
       "profileStatus": "ACTIVE",
       "memberNumber": "2620",
-      "cognitoLastModified": "2025-07-18T14:29:23.979Z",
+      "cognitoLastModified": "2025-10-10T19:36:57.079Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-06-01",
@@ -27593,7 +27829,7 @@
       "cognitoEntryId": "595",
       "profileStatus": "ACTIVE",
       "memberNumber": "2505",
-      "cognitoLastModified": "2025-04-01T02:59:32.727Z",
+      "cognitoLastModified": "2025-10-10T19:37:20.044Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-10-01",
@@ -27939,7 +28175,7 @@
       "cognitoEntryId": "601",
       "profileStatus": "ACTIVE",
       "memberNumber": "860",
-      "cognitoLastModified": "2025-04-01T02:58:42.922Z",
+      "cognitoLastModified": "2025-10-10T19:36:01.267Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-04-01",
@@ -28067,7 +28303,7 @@
       "cognitoEntryId": "603",
       "profileStatus": "ACTIVE",
       "memberNumber": "3113",
-      "cognitoLastModified": "2025-07-18T13:40:00.196Z",
+      "cognitoLastModified": "2025-10-10T19:35:08.036Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-01-01",
@@ -28153,7 +28389,7 @@
       "cognitoEntryId": "605",
       "profileStatus": "ACTIVE",
       "memberNumber": "1433",
-      "cognitoLastModified": "2025-04-01T02:58:51.657Z",
+      "cognitoLastModified": "2025-10-10T19:36:28.699Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-12-01",
@@ -28279,7 +28515,7 @@
       "cognitoEntryId": "609",
       "profileStatus": "ACTIVE",
       "memberNumber": "2784",
-      "cognitoLastModified": "2025-04-01T02:59:42.509Z",
+      "cognitoLastModified": "2025-10-10T19:35:30.241Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2021-01-01",
@@ -28370,7 +28606,7 @@
       "cognitoEntryId": "611",
       "profileStatus": "ACTIVE",
       "memberNumber": "1323",
-      "cognitoLastModified": "2025-04-01T02:58:49.162Z",
+      "cognitoLastModified": "2025-10-10T19:34:25.066Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2010-08-01",
@@ -28500,7 +28736,7 @@
       "cognitoEntryId": "613",
       "profileStatus": "ACTIVE",
       "memberNumber": "1575",
-      "cognitoLastModified": "2025-04-01T02:59:54.465Z",
+      "cognitoLastModified": "2025-10-10T19:36:21.142Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-05-01",
@@ -29565,7 +29801,7 @@
       "cognitoEntryId": "634",
       "profileStatus": "ACTIVE",
       "memberNumber": "2621",
-      "cognitoLastModified": "2025-09-02T23:11:03.682Z",
+      "cognitoLastModified": "2025-10-10T19:37:16.712Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-06-01",
@@ -29939,7 +30175,7 @@
       "cognitoEntryId": "640",
       "profileStatus": "ACTIVE",
       "memberNumber": "2210",
-      "cognitoLastModified": "2025-04-01T02:45:44.526Z",
+      "cognitoLastModified": "2025-10-06T19:01:46.579Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-05-01",
@@ -30133,7 +30369,7 @@
       "cognitoEntryId": "646",
       "profileStatus": "ACTIVE",
       "memberNumber": "1088",
-      "cognitoLastModified": "2025-04-01T02:59:56.625Z",
+      "cognitoLastModified": "2025-10-10T19:37:05.314Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-05-01",
@@ -30220,7 +30456,7 @@
       "cognitoEntryId": "647",
       "profileStatus": "ACTIVE",
       "memberNumber": "206",
-      "cognitoLastModified": "2025-07-17T03:16:18.166Z",
+      "cognitoLastModified": "2025-10-10T19:37:19.258Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1997-01-01",
@@ -30283,7 +30519,7 @@
       "cognitoEntryId": "649",
       "profileStatus": "ACTIVE",
       "memberNumber": "1766",
-      "cognitoLastModified": "2025-04-01T02:59:06.112Z",
+      "cognitoLastModified": "2025-10-10T19:35:42.441Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-09-30",
@@ -30532,7 +30768,7 @@
       "cognitoEntryId": "654",
       "profileStatus": "ACTIVE",
       "memberNumber": "920",
-      "cognitoLastModified": "2025-07-18T13:59:16.093Z",
+      "cognitoLastModified": "2025-10-10T19:36:31.887Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-12-01",
@@ -30625,7 +30861,7 @@
       "cognitoEntryId": "655",
       "profileStatus": "ACTIVE",
       "memberNumber": "211",
-      "cognitoLastModified": "2025-04-01T02:59:04.512Z",
+      "cognitoLastModified": "2025-10-10T19:36:02.868Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1982-01-01",
@@ -30773,7 +31009,7 @@
       "cognitoEntryId": "658",
       "profileStatus": "ACTIVE",
       "memberNumber": "604",
-      "cognitoLastModified": "2025-07-18T14:11:10.761Z",
+      "cognitoLastModified": "2025-10-10T19:37:09.955Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2002-09-01",
@@ -31660,7 +31896,7 @@
       "cognitoEntryId": "680",
       "profileStatus": "ACTIVE",
       "memberNumber": "731",
-      "cognitoLastModified": "2025-07-18T13:43:57.259Z",
+      "cognitoLastModified": "2025-10-10T19:35:44.797Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2010-06-01",
@@ -32458,7 +32694,7 @@
       "cognitoEntryId": "696",
       "profileStatus": "ACTIVE",
       "memberNumber": "1718",
-      "cognitoLastModified": "2025-04-01T02:58:39.697Z",
+      "cognitoLastModified": "2025-10-10T19:36:07.283Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-05-17",
@@ -33779,7 +34015,7 @@
       "cognitoEntryId": "725",
       "profileStatus": "ACTIVE",
       "memberNumber": "1000",
-      "cognitoLastModified": "2025-04-01T02:59:01.637Z",
+      "cognitoLastModified": "2025-10-10T19:36:06.497Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-03-01",
@@ -33825,7 +34061,7 @@
       "cognitoEntryId": "726",
       "profileStatus": "ACTIVE",
       "memberNumber": "235",
-      "cognitoLastModified": "2025-08-11T15:55:25.997Z",
+      "cognitoLastModified": "2025-10-10T19:36:47.449Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1993-01-01",
@@ -33921,7 +34157,7 @@
       "cognitoEntryId": "728",
       "profileStatus": "ACTIVE",
       "memberNumber": "2809",
-      "cognitoLastModified": "2025-10-02T15:56:55.152Z",
+      "cognitoLastModified": "2025-10-10T19:35:54.703Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2020-10-01",
@@ -34078,7 +34314,7 @@
       "cognitoEntryId": "731",
       "profileStatus": "ACTIVE",
       "memberNumber": "237",
-      "cognitoLastModified": "2025-04-23T15:44:24.397Z",
+      "cognitoLastModified": "2025-10-10T19:36:30.352Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1995-01-01",
@@ -34343,7 +34579,7 @@
       "cognitoEntryId": "739",
       "profileStatus": "ACTIVE",
       "memberNumber": "2888",
-      "cognitoLastModified": "2025-04-01T02:59:25.075Z",
+      "cognitoLastModified": "2025-10-10T19:36:55.838Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2021-11-09",
@@ -35373,7 +35609,7 @@
       "cognitoEntryId": "759",
       "profileStatus": "ACTIVE",
       "memberNumber": "2591",
-      "cognitoLastModified": "2025-04-01T02:58:43.752Z",
+      "cognitoLastModified": "2025-10-10T19:36:48.697Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-04-01",
@@ -35638,7 +35874,7 @@
       "cognitoEntryId": "765",
       "profileStatus": "ACTIVE",
       "memberNumber": "1913",
-      "cognitoLastModified": "2025-04-01T02:59:07.597Z",
+      "cognitoLastModified": "2025-10-10T19:36:28.348Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-10-20",
@@ -36443,7 +36679,7 @@
       "cognitoEntryId": "783",
       "profileStatus": "ACTIVE",
       "memberNumber": "251",
-      "cognitoLastModified": "2025-04-01T02:59:34.172Z",
+      "cognitoLastModified": "2025-10-10T19:37:08.323Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1987-01-01",
@@ -36565,7 +36801,7 @@
       "cognitoEntryId": "785",
       "profileStatus": "ACTIVE",
       "memberNumber": "913",
-      "cognitoLastModified": "2025-07-18T14:02:47.723Z",
+      "cognitoLastModified": "2025-10-10T19:37:05.736Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-11-01",
@@ -36732,7 +36968,7 @@
       "cognitoEntryId": "788",
       "profileStatus": "ACTIVE",
       "memberNumber": "252",
-      "cognitoLastModified": "2025-07-18T13:43:03.102Z",
+      "cognitoLastModified": "2025-10-10T19:35:40.541Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1993-01-01",
@@ -37208,7 +37444,7 @@
       "cognitoEntryId": "798",
       "profileStatus": "ACTIVE",
       "memberNumber": "1031",
-      "cognitoLastModified": "2025-06-13T21:06:54.031Z",
+      "cognitoLastModified": "2025-10-10T19:36:49.078Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-02-01",
@@ -38332,7 +38568,7 @@
       "cognitoEntryId": "823",
       "profileStatus": "ACTIVE",
       "memberNumber": "1424",
-      "cognitoLastModified": "2025-07-18T14:02:10.911Z",
+      "cognitoLastModified": "2025-10-10T19:36:59.712Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-10-01",
@@ -39160,7 +39396,7 @@
       "cognitoEntryId": "846",
       "profileStatus": "ACTIVE",
       "memberNumber": "264",
-      "cognitoLastModified": "2025-04-16T21:24:28.600Z",
+      "cognitoLastModified": "2025-10-10T15:45:47.304Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2000-04-01",
@@ -39309,7 +39545,7 @@
       "cognitoEntryId": "849",
       "profileStatus": "ACTIVE",
       "memberNumber": "1487",
-      "cognitoLastModified": "2025-07-18T14:34:09.837Z",
+      "cognitoLastModified": "2025-10-10T19:36:27.574Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2012-05-01",
@@ -39372,7 +39608,7 @@
       "cognitoEntryId": "850",
       "profileStatus": "ACTIVE",
       "memberNumber": "2022",
-      "cognitoLastModified": "2025-04-01T02:58:33.747Z",
+      "cognitoLastModified": "2025-10-10T19:35:57.976Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-05-01",
@@ -40062,7 +40298,7 @@
       "cognitoEntryId": "863",
       "profileStatus": "ACTIVE",
       "memberNumber": "2019",
-      "cognitoLastModified": "2025-04-01T02:58:44.542Z",
+      "cognitoLastModified": "2025-10-10T19:35:05.441Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-04-01",
@@ -40513,7 +40749,7 @@
       "cognitoEntryId": "872",
       "profileStatus": "ACTIVE",
       "memberNumber": "2187",
-      "cognitoLastModified": "2025-07-18T13:58:11.376Z",
+      "cognitoLastModified": "2025-10-10T19:36:26.129Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-04-01",
@@ -40889,7 +41125,7 @@
       "cognitoEntryId": "879",
       "profileStatus": "ACTIVE",
       "memberNumber": "1195",
-      "cognitoLastModified": "2025-05-02T20:06:06.188Z",
+      "cognitoLastModified": "2025-10-10T19:36:30.717Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2009-05-01",
@@ -41692,7 +41928,7 @@
       "cognitoEntryId": "893",
       "profileStatus": "ACTIVE",
       "memberNumber": "276",
-      "cognitoLastModified": "2025-04-01T02:58:40.457Z",
+      "cognitoLastModified": "2025-10-10T19:37:06.171Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1989-01-01",
@@ -42182,7 +42418,7 @@
       "cognitoEntryId": "903",
       "profileStatus": "ACTIVE",
       "memberNumber": "186",
-      "cognitoLastModified": "2025-07-18T14:25:37.509Z",
+      "cognitoLastModified": "2025-10-10T19:36:29.967Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2004-03-01",
@@ -42270,7 +42506,7 @@
       "cognitoEntryId": "905",
       "profileStatus": "ACTIVE",
       "memberNumber": "1041",
-      "cognitoLastModified": "2025-07-18T14:10:36.285Z",
+      "cognitoLastModified": "2025-10-10T19:37:20.485Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-02-01",
@@ -42357,7 +42593,7 @@
       "cognitoEntryId": "906",
       "profileStatus": "ACTIVE",
       "memberNumber": "552",
-      "cognitoLastModified": "2025-05-17T14:33:16.945Z",
+      "cognitoLastModified": "2025-10-10T19:36:19.635Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2002-03-01",
@@ -42593,11 +42829,11 @@
     },
     "911_json": {
       "cognitoEntryId": "911",
-      "profileStatus": "ACTIVE",
+      "profileStatus": "INACTIVE",
       "memberNumber": "887",
-      "cognitoLastModified": "2025-04-01T02:48:29.569Z",
+      "cognitoLastModified": "2025-10-10T20:41:58.233Z",
       "certsParsed": {
-        "ProfileStatus": "ACTIVE",
+        "ProfileStatus": "INACTIVE",
         "DateJoined": "2005-06-01",
         "DateEnd": null,
         "DateReinstate": null,
@@ -42606,17 +42842,23 @@
         "SkiExamMode": "Ski",
         "transforms": [],
         "DHG": {
-          "status": "Active",
+          "status": "Inactive",
           "date": "2005-06-01",
-          "lastModified": null
+          "lastModified": "2025-10-10"
         }
       },
       "wicketMemberships": {
         "professional": [
           [
             "day-hiking-guide",
-            "Active",
+            "Inactive",
             "2005-06-01",
+            "2025-10-10"
+          ],
+          [
+            "inactive-member",
+            "Active",
+            "2025-10-11",
             "2025-12-31"
           ]
         ],
@@ -43498,7 +43740,7 @@
       "cognitoEntryId": "932",
       "profileStatus": "ACTIVE",
       "memberNumber": "3034",
-      "cognitoLastModified": "2025-07-18T14:26:45.176Z",
+      "cognitoLastModified": "2025-10-10T19:37:09.520Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2021-12-23",
@@ -43544,7 +43786,7 @@
       "cognitoEntryId": "933",
       "profileStatus": "ACTIVE",
       "memberNumber": "935",
-      "cognitoLastModified": "2025-07-18T14:03:22.641Z",
+      "cognitoLastModified": "2025-10-10T19:37:11.630Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2006-08-01",
@@ -43985,7 +44227,7 @@
       "cognitoEntryId": "941",
       "profileStatus": "ACTIVE",
       "memberNumber": "2950",
-      "cognitoLastModified": "2025-09-19T18:58:25.344Z",
+      "cognitoLastModified": "2025-10-08T19:19:19.662Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2021-07-01",
@@ -44449,7 +44691,7 @@
       "cognitoEntryId": "952",
       "profileStatus": "ACTIVE",
       "memberNumber": "1154",
-      "cognitoLastModified": "2025-04-01T02:37:03.945Z",
+      "cognitoLastModified": "2025-10-10T19:37:17.088Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-10-01",
@@ -44581,7 +44823,7 @@
       "cognitoEntryId": "954",
       "profileStatus": "ACTIVE",
       "memberNumber": "2603",
-      "cognitoLastModified": "2025-04-01T02:37:05.175Z",
+      "cognitoLastModified": "2025-10-10T19:35:09.231Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-04-01",
@@ -45655,7 +45897,7 @@
       "cognitoEntryId": "979",
       "profileStatus": "ACTIVE",
       "memberNumber": "1474",
-      "cognitoLastModified": "2025-04-01T02:59:30.416Z",
+      "cognitoLastModified": "2025-10-10T19:37:21.742Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2012-05-01",
@@ -45777,7 +46019,7 @@
       "cognitoEntryId": "981",
       "profileStatus": "ACTIVE",
       "memberNumber": "1714",
-      "cognitoLastModified": "2025-07-18T14:23:51.587Z",
+      "cognitoLastModified": "2025-10-10T19:36:15.417Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-05-01",
@@ -45904,7 +46146,7 @@
       "cognitoEntryId": "984",
       "profileStatus": "ACTIVE",
       "memberNumber": "1588",
-      "cognitoLastModified": "2025-04-01T02:59:57.365Z",
+      "cognitoLastModified": "2025-10-10T19:36:12.032Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-06-01",
@@ -46039,7 +46281,7 @@
       "cognitoEntryId": "987",
       "profileStatus": "ACTIVE",
       "memberNumber": "1391",
-      "cognitoLastModified": "2025-04-01T02:59:22.758Z",
+      "cognitoLastModified": "2025-10-10T19:36:14.712Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-06-01",
@@ -46206,7 +46448,7 @@
       "cognitoEntryId": "990",
       "profileStatus": "ACTIVE",
       "memberNumber": "288",
-      "cognitoLastModified": "2025-04-01T02:59:52.155Z",
+      "cognitoLastModified": "2025-10-10T19:36:43.700Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1997-01-01",
@@ -46305,7 +46547,7 @@
       "cognitoEntryId": "991",
       "profileStatus": "ACTIVE",
       "memberNumber": "2513",
-      "cognitoLastModified": "2025-04-08T01:48:53.659Z",
+      "cognitoLastModified": "2025-10-10T19:44:05.955Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-09-01",
@@ -46452,7 +46694,7 @@
       "cognitoEntryId": "994",
       "profileStatus": "ACTIVE",
       "memberNumber": "605",
-      "cognitoLastModified": "2025-04-08T01:50:09.374Z",
+      "cognitoLastModified": "2025-10-10T19:43:53.885Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2002-09-01",
@@ -46510,7 +46752,7 @@
       "cognitoEntryId": "996",
       "profileStatus": "ACTIVE",
       "memberNumber": "1025",
-      "cognitoLastModified": "2025-07-18T14:03:49.227Z",
+      "cognitoLastModified": "2025-10-10T19:37:16.304Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-08-01",
@@ -46699,7 +46941,7 @@
       "cognitoEntryId": "1001",
       "profileStatus": "ACTIVE",
       "memberNumber": "1353",
-      "cognitoLastModified": "2025-07-18T13:40:37.029Z",
+      "cognitoLastModified": "2025-10-10T19:35:33.786Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-01-01",
@@ -46814,7 +47056,7 @@
       "cognitoEntryId": "1003",
       "profileStatus": "ACTIVE",
       "memberNumber": "1380",
-      "cognitoLastModified": "2025-04-01T02:59:02.322Z",
+      "cognitoLastModified": "2025-10-10T19:35:48.666Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-06-01",
@@ -47512,7 +47754,7 @@
       "cognitoEntryId": "1021",
       "profileStatus": "ACTIVE",
       "memberNumber": "2103",
-      "cognitoLastModified": "2025-07-18T13:56:18.339Z",
+      "cognitoLastModified": "2025-10-10T19:36:15.769Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-08-01",
@@ -47784,7 +48026,7 @@
       "cognitoEntryId": "1027",
       "profileStatus": "ACTIVE",
       "memberNumber": "2085",
-      "cognitoLastModified": "2025-04-16T21:24:50.638Z",
+      "cognitoLastModified": "2025-10-10T19:35:00.806Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-07-01",
@@ -47968,7 +48210,7 @@
       "cognitoEntryId": "1031",
       "profileStatus": "ACTIVE",
       "memberNumber": "3248",
-      "cognitoLastModified": "2025-09-24T23:33:47.615Z",
+      "cognitoLastModified": "2025-10-07T16:05:09.648Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-11-01",
@@ -48655,7 +48897,7 @@
       "cognitoEntryId": "1043",
       "profileStatus": "ACTIVE",
       "memberNumber": "1207",
-      "cognitoLastModified": "2025-04-01T02:59:08.327Z",
+      "cognitoLastModified": "2025-10-10T19:36:26.479Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2009-06-01",
@@ -48942,7 +49184,7 @@
       "cognitoEntryId": "1051",
       "profileStatus": "ACTIVE",
       "memberNumber": "3077",
-      "cognitoLastModified": "2025-07-18T14:19:04.737Z",
+      "cognitoLastModified": "2025-10-10T19:35:54.348Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-05-09",
@@ -49539,7 +49781,7 @@
       "cognitoEntryId": "1065",
       "profileStatus": "ACTIVE",
       "memberNumber": "560",
-      "cognitoLastModified": "2025-04-01T02:49:58.424Z",
+      "cognitoLastModified": "2025-10-09T17:40:44.484Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2002-04-01",
@@ -49787,7 +50029,7 @@
       "cognitoEntryId": "1071",
       "profileStatus": "ACTIVE",
       "memberNumber": "1028",
-      "cognitoLastModified": "2025-07-18T14:35:08.426Z",
+      "cognitoLastModified": "2025-10-10T19:36:02.442Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-11-01",
@@ -49874,7 +50116,7 @@
       "cognitoEntryId": "1072",
       "profileStatus": "ACTIVE",
       "memberNumber": "1086",
-      "cognitoLastModified": "2025-07-18T13:52:54.379Z",
+      "cognitoLastModified": "2025-10-10T19:35:56.798Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-04-01",
@@ -51103,7 +51345,7 @@
       "cognitoEntryId": "1102",
       "profileStatus": "ACTIVE",
       "memberNumber": "1084",
-      "cognitoLastModified": "2025-04-01T02:50:26.775Z",
+      "cognitoLastModified": "2025-10-11T02:43:42.198Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-05-01",
@@ -51738,7 +51980,7 @@
       "cognitoEntryId": "1118",
       "profileStatus": "ACTIVE",
       "memberNumber": "2297",
-      "cognitoLastModified": "2025-04-01T02:58:50.947Z",
+      "cognitoLastModified": "2025-10-10T19:36:44.090Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-10-01",
@@ -51905,7 +52147,7 @@
       "cognitoEntryId": "1121",
       "profileStatus": "ACTIVE",
       "memberNumber": "714",
-      "cognitoLastModified": "2025-04-01T02:37:10.940Z",
+      "cognitoLastModified": "2025-10-10T15:57:48.529Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2003-09-01",
@@ -51998,7 +52240,7 @@
       "cognitoEntryId": "1122",
       "profileStatus": "ACTIVE",
       "memberNumber": "314",
-      "cognitoLastModified": "2025-04-01T02:59:03.777Z",
+      "cognitoLastModified": "2025-10-10T19:36:44.441Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1998-01-01",
@@ -52085,7 +52327,7 @@
       "cognitoEntryId": "1123",
       "profileStatus": "ACTIVE",
       "memberNumber": "2452",
-      "cognitoLastModified": "2025-08-05T23:07:32.619Z",
+      "cognitoLastModified": "2025-10-10T19:35:45.217Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-06-01",
@@ -52134,7 +52376,7 @@
       "cognitoEntryId": "1124",
       "profileStatus": "ACTIVE",
       "memberNumber": "1606",
-      "cognitoLastModified": "2025-04-01T02:59:44.664Z",
+      "cognitoLastModified": "2025-10-10T19:37:10.460Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-07-01",
@@ -52238,7 +52480,7 @@
       "cognitoEntryId": "1126",
       "profileStatus": "ACTIVE",
       "memberNumber": "1138",
-      "cognitoLastModified": "2025-09-27T19:05:55.987Z",
+      "cognitoLastModified": "2025-10-10T19:34:40.566Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-10-01",
@@ -52342,7 +52584,7 @@
       "cognitoEntryId": "1128",
       "profileStatus": "ACTIVE",
       "memberNumber": "1309",
-      "cognitoLastModified": "2025-07-18T13:36:41.175Z",
+      "cognitoLastModified": "2025-10-10T19:35:06.921Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2010-08-01",
@@ -52553,7 +52795,7 @@
       "cognitoEntryId": "1132",
       "profileStatus": "ACTIVE",
       "memberNumber": "318",
-      "cognitoLastModified": "2025-04-01T02:37:13.585Z",
+      "cognitoLastModified": "2025-10-10T19:36:46.018Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1996-01-01",
@@ -53759,7 +54001,7 @@
       "cognitoEntryId": "1158",
       "profileStatus": "ACTIVE",
       "memberNumber": "2250",
-      "cognitoLastModified": "2025-04-01T02:58:34.471Z",
+      "cognitoLastModified": "2025-10-10T19:37:15.472Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-07-01",
@@ -53834,6 +54076,55 @@
           "AHG": "2021-06-01",
           "SG": "2024-05-07",
           "HG": "2024-05-07"
+        }
+      }
+    },
+    "1159_json": {
+      "cognitoEntryId": "1159",
+      "profileStatus": "DECEASED",
+      "memberNumber": "323",
+      "cognitoLastModified": "2024-08-17T00:37:53.228Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2000-09-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": "2023-01-01",
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": null,
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "2006-10-01",
+          "lastModified": null
+        },
+        "ARG": {
+          "status": null,
+          "date": "2000-09-01",
+          "lastModified": null
         }
       }
     },
@@ -54052,7 +54343,7 @@
       "cognitoEntryId": "1166",
       "profileStatus": "ACTIVE",
       "memberNumber": "490",
-      "cognitoLastModified": "2025-04-01T02:59:43.994Z",
+      "cognitoLastModified": "2025-10-10T19:35:55.936Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2001-06-01",
@@ -54200,7 +54491,7 @@
       "cognitoEntryId": "1170",
       "profileStatus": "ACTIVE",
       "memberNumber": "1538",
-      "cognitoLastModified": "2025-07-18T13:53:22.318Z",
+      "cognitoLastModified": "2025-10-10T19:36:04.065Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2012-10-01",
@@ -54513,7 +54804,7 @@
       "cognitoEntryId": "1176",
       "profileStatus": "ACTIVE",
       "memberNumber": "1452",
-      "cognitoLastModified": "2025-07-18T14:00:36.853Z",
+      "cognitoLastModified": "2025-10-10T19:36:55.157Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2012-01-01",
@@ -54571,7 +54862,7 @@
       "cognitoEntryId": "1177",
       "profileStatus": "ACTIVE",
       "memberNumber": "1712",
-      "cognitoLastModified": "2025-10-06T18:21:40.370Z",
+      "cognitoLastModified": "2025-10-06T18:53:14.875Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-05-16",
@@ -54591,7 +54882,7 @@
         "ASG": {
           "status": null,
           "date": "2014-04-01",
-          "lastModified": null
+          "lastModified": "2016-03-31"
         },
         "ARG": {
           "status": "Active",
@@ -54904,7 +55195,7 @@
       "cognitoEntryId": "1185",
       "profileStatus": "ACTIVE",
       "memberNumber": "329",
-      "cognitoLastModified": "2025-07-18T14:27:53.725Z",
+      "cognitoLastModified": "2025-10-10T19:36:12.397Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1993-01-01",
@@ -55384,7 +55675,7 @@
       "cognitoEntryId": "1196",
       "profileStatus": "ACTIVE",
       "memberNumber": "1422",
-      "cognitoLastModified": "2025-07-18T13:34:43.108Z",
+      "cognitoLastModified": "2025-10-10T19:34:45.291Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-10-01",
@@ -56055,7 +56346,7 @@
       "cognitoEntryId": "1212",
       "profileStatus": "ACTIVE",
       "memberNumber": "2214",
-      "cognitoLastModified": "2025-07-18T13:45:58.554Z",
+      "cognitoLastModified": "2025-10-10T19:53:33.495Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-05-01",
@@ -56499,7 +56790,7 @@
       "cognitoEntryId": "1221",
       "profileStatus": "ACTIVE",
       "memberNumber": "3235",
-      "cognitoLastModified": "2025-08-11T18:41:42.237Z",
+      "cognitoLastModified": "2025-10-10T19:36:58.541Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-09-01",
@@ -56603,7 +56894,7 @@
       "cognitoEntryId": "1224",
       "profileStatus": "ACTIVE",
       "memberNumber": "1926",
-      "cognitoLastModified": "2025-07-14T20:35:35.783Z",
+      "cognitoLastModified": "2025-10-10T19:36:29.069Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-10-01",
@@ -56754,7 +57045,7 @@
       "cognitoEntryId": "1226",
       "profileStatus": "ACTIVE",
       "memberNumber": "900",
-      "cognitoLastModified": "2025-07-22T15:26:04.313Z",
+      "cognitoLastModified": "2025-10-10T19:35:57.158Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-09-01",
@@ -57288,7 +57579,7 @@
       "cognitoEntryId": "1237",
       "profileStatus": "ACTIVE",
       "memberNumber": "1116",
-      "cognitoLastModified": "2025-04-01T02:59:45.379Z",
+      "cognitoLastModified": "2025-10-10T19:35:36.931Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-07-01",
@@ -57824,7 +58115,7 @@
       "cognitoEntryId": "1247",
       "profileStatus": "ACTIVE",
       "memberNumber": "2310",
-      "cognitoLastModified": "2025-09-18T16:51:23.520Z",
+      "cognitoLastModified": "2025-10-10T19:36:50.309Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-10-01",
@@ -58331,7 +58622,7 @@
       "cognitoEntryId": "1258",
       "profileStatus": "ACTIVE",
       "memberNumber": "563",
-      "cognitoLastModified": "2025-04-01T02:37:17.255Z",
+      "cognitoLastModified": "2025-10-10T19:35:50.287Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2005-04-01",
@@ -58778,7 +59069,7 @@
       "cognitoEntryId": "1268",
       "profileStatus": "ACTIVE",
       "memberNumber": "1905",
-      "cognitoLastModified": "2025-07-18T13:36:07.352Z",
+      "cognitoLastModified": "2025-10-10T19:35:02.041Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-08-01",
@@ -59941,7 +60232,7 @@
       "cognitoEntryId": "1295",
       "profileStatus": "ACTIVE",
       "memberNumber": "1294",
-      "cognitoLastModified": "2025-07-18T14:02:30.716Z",
+      "cognitoLastModified": "2025-10-10T19:37:04.093Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2010-05-01",
@@ -60005,7 +60296,7 @@
       "cognitoEntryId": "1297",
       "profileStatus": "ACTIVE",
       "memberNumber": "1843",
-      "cognitoLastModified": "2025-07-18T14:04:21.635Z",
+      "cognitoLastModified": "2025-10-10T19:37:17.463Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-04-01",
@@ -60128,7 +60419,7 @@
       "cognitoEntryId": "1300",
       "profileStatus": "ACTIVE",
       "memberNumber": "877",
-      "cognitoLastModified": "2025-04-01T02:59:50.460Z",
+      "cognitoLastModified": "2025-10-10T19:37:06.958Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1997-01-01",
@@ -60673,7 +60964,7 @@
       "cognitoEntryId": "1313",
       "profileStatus": "ACTIVE",
       "memberNumber": "367",
-      "cognitoLastModified": "2025-04-28T16:46:09.135Z",
+      "cognitoLastModified": "2025-10-10T19:36:24.989Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2000-09-01",
@@ -60938,7 +61229,7 @@
       "cognitoEntryId": "1318",
       "profileStatus": "ACTIVE",
       "memberNumber": "368",
-      "cognitoLastModified": "2025-07-18T13:45:21.345Z",
+      "cognitoLastModified": "2025-10-10T21:42:03.354Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1981-01-01",
@@ -60983,7 +61274,7 @@
       "cognitoEntryId": "1319",
       "profileStatus": "ACTIVE",
       "memberNumber": "2218",
-      "cognitoLastModified": "2025-10-06T16:43:33.271Z",
+      "cognitoLastModified": "2025-10-10T19:36:54.006Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-05-01",
@@ -61356,7 +61647,7 @@
       "cognitoEntryId": "1328",
       "profileStatus": "ACTIVE",
       "memberNumber": "2304",
-      "cognitoLastModified": "2025-07-18T13:41:31.837Z",
+      "cognitoLastModified": "2025-10-10T19:35:41.201Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-10-01",
@@ -62059,7 +62350,7 @@
       "cognitoEntryId": "1343",
       "profileStatus": "ACTIVE",
       "memberNumber": "1751",
-      "cognitoLastModified": "2025-06-09T11:36:54.536Z",
+      "cognitoLastModified": "2025-10-10T19:37:10.883Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-07-11",
@@ -62323,7 +62614,7 @@
       "cognitoEntryId": "1349",
       "profileStatus": "ACTIVE",
       "memberNumber": "374",
-      "cognitoLastModified": "2025-06-23T20:49:25.559Z",
+      "cognitoLastModified": "2025-10-10T19:36:04.876Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1987-01-01",
@@ -62944,7 +63235,7 @@
       "cognitoEntryId": "1362",
       "profileStatus": "ACTIVE",
       "memberNumber": "806",
-      "cognitoLastModified": "2025-09-07T20:28:03.837Z",
+      "cognitoLastModified": "2025-10-10T19:36:58.922Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2003-08-01",
@@ -63124,7 +63415,7 @@
       "cognitoEntryId": "1366",
       "profileStatus": "ACTIVE",
       "memberNumber": "377",
-      "cognitoLastModified": "2025-07-27T13:57:27.912Z",
+      "cognitoLastModified": "2025-10-10T19:36:35.233Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1986-01-01",
@@ -63480,7 +63771,7 @@
       "cognitoEntryId": "1375",
       "profileStatus": "ACTIVE",
       "memberNumber": "1293",
-      "cognitoLastModified": "2025-04-01T02:59:37.072Z",
+      "cognitoLastModified": "2025-10-10T19:35:56.373Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2010-05-01",
@@ -63749,7 +64040,7 @@
       "cognitoEntryId": "1381",
       "profileStatus": "ACTIVE",
       "memberNumber": "998",
-      "cognitoLastModified": "2025-04-01T02:37:25.453Z",
+      "cognitoLastModified": "2025-10-10T19:35:57.606Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-07-05",
@@ -64050,7 +64341,7 @@
       "cognitoEntryId": "1389",
       "profileStatus": "ACTIVE",
       "memberNumber": "388",
-      "cognitoLastModified": "2025-07-18T13:54:10.020Z",
+      "cognitoLastModified": "2025-10-10T19:36:06.076Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1988-01-01",
@@ -64412,7 +64703,7 @@
       "cognitoEntryId": "1398",
       "profileStatus": "ACTIVE",
       "memberNumber": "1360",
-      "cognitoLastModified": "2025-06-20T15:50:44.834Z",
+      "cognitoLastModified": "2025-10-10T19:35:43.166Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2011-02-01",
@@ -64996,7 +65287,7 @@
       "cognitoEntryId": "1414",
       "profileStatus": "ACTIVE",
       "memberNumber": "2131",
-      "cognitoLastModified": "2025-07-18T14:03:36.933Z",
+      "cognitoLastModified": "2025-10-10T19:37:15.899Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2016-10-01",
@@ -65097,7 +65388,7 @@
       "cognitoEntryId": "1416",
       "profileStatus": "ACTIVE",
       "memberNumber": "1625",
-      "cognitoLastModified": "2025-06-03T16:06:50.114Z",
+      "cognitoLastModified": "2025-10-10T19:37:17.863Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-07-01",
@@ -65202,7 +65493,7 @@
       "cognitoEntryId": "1417",
       "profileStatus": "ACTIVE",
       "memberNumber": "1909",
-      "cognitoLastModified": "2025-04-01T02:53:25.307Z",
+      "cognitoLastModified": "2025-10-09T22:26:58.436Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2015-09-01",
@@ -65340,7 +65631,7 @@
       "cognitoEntryId": "1420",
       "profileStatus": "ACTIVE",
       "memberNumber": "1214",
-      "cognitoLastModified": "2025-07-18T14:10:02.150Z",
+      "cognitoLastModified": "2025-10-10T19:37:20.865Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2009-07-01",
@@ -66144,7 +66435,7 @@
       "cognitoEntryId": "1441",
       "profileStatus": "ACTIVE",
       "memberNumber": "1579",
-      "cognitoLastModified": "2025-04-01T02:59:09.042Z",
+      "cognitoLastModified": "2025-10-10T19:37:12.050Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-11-01",
@@ -67076,7 +67367,7 @@
       "cognitoEntryId": "1468",
       "profileStatus": "ACTIVE",
       "memberNumber": "411",
-      "cognitoLastModified": "2025-07-21T16:06:45.715Z",
+      "cognitoLastModified": "2025-10-10T19:37:07.363Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1999-01-01",
@@ -67254,7 +67545,7 @@
       "cognitoEntryId": "1471",
       "profileStatus": "ACTIVE",
       "memberNumber": "2199",
-      "cognitoLastModified": "2025-09-09T13:04:09.434Z",
+      "cognitoLastModified": "2025-10-10T19:35:52.302Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-05-01",
@@ -67385,7 +67676,7 @@
       "cognitoEntryId": "1474",
       "profileStatus": "ACTIVE",
       "memberNumber": "952",
-      "cognitoLastModified": "2025-04-01T02:53:53.082Z",
+      "cognitoLastModified": "2025-10-07T22:56:45.098Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2007-03-01",
@@ -67953,7 +68244,7 @@
       "cognitoEntryId": "1486",
       "profileStatus": "ACTIVE",
       "memberNumber": "2663",
-      "cognitoLastModified": "2025-07-09T00:47:56.371Z",
+      "cognitoLastModified": "2025-10-10T19:36:46.378Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-07-01",
@@ -67992,7 +68283,7 @@
       "cognitoEntryId": "1487",
       "profileStatus": "ACTIVE",
       "memberNumber": "1101",
-      "cognitoLastModified": "2025-07-18T14:28:35.452Z",
+      "cognitoLastModified": "2025-10-10T19:36:49.478Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-10-01",
@@ -69093,7 +69384,7 @@
       "cognitoEntryId": "1513",
       "profileStatus": "ACTIVE",
       "memberNumber": "1582",
-      "cognitoLastModified": "2025-09-04T17:55:58.527Z",
+      "cognitoLastModified": "2025-10-10T19:36:25.384Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-06-01",
@@ -69261,7 +69552,7 @@
       "cognitoEntryId": "1517",
       "profileStatus": "ACTIVE",
       "memberNumber": "2598",
-      "cognitoLastModified": "2025-04-01T02:58:50.132Z",
+      "cognitoLastModified": "2025-10-10T19:36:57.474Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-09-01",
@@ -69359,7 +69650,7 @@
       "cognitoEntryId": "1519",
       "profileStatus": "ACTIVE",
       "memberNumber": "1715",
-      "cognitoLastModified": "2025-07-18T14:27:18.252Z",
+      "cognitoLastModified": "2025-10-10T19:37:01.033Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-05-01",
@@ -69607,7 +69898,7 @@
       "cognitoEntryId": "1524",
       "profileStatus": "ACTIVE",
       "memberNumber": "2280",
-      "cognitoLastModified": "2025-07-18T13:53:40.652Z",
+      "cognitoLastModified": "2025-10-10T19:36:05.267Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-08-01",
@@ -69704,6 +69995,52 @@
         ],
         "designations": {
           "TRCI": "2016-06-01"
+        }
+      }
+    },
+    "1527_json": {
+      "cognitoEntryId": "1527",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "2153",
+      "cognitoLastModified": "2025-10-09T22:59:06.464Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2017-01-01",
+        "DateEnd": "2024-03-17",
+        "DateReinstate": null,
+        "LastAnnualValidation": "2023-01-01",
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "transforms": [],
+        "CGI1": {
+          "status": null,
+          "date": "2016-11-01",
+          "lastModified": "2017-09-01"
+        },
+        "CGI2": {
+          "status": "Resigned",
+          "date": "2017-09-01",
+          "lastModified": "2024-03-17"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2017-01-01",
+            "2017-08-31"
+          ],
+          [
+            "climbing-gym-instructor-level-2",
+            "Inactive",
+            "2017-09-01",
+            "2024-03-17"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2016-11-01",
+          "CGI2": "2017-09-01"
         }
       }
     },
@@ -69899,7 +70236,7 @@
       "cognitoEntryId": "1532",
       "profileStatus": "ACTIVE",
       "memberNumber": "2396",
-      "cognitoLastModified": "2025-06-17T17:28:13.245Z",
+      "cognitoLastModified": "2025-10-10T19:36:46.753Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-04-01",
@@ -69986,7 +70323,7 @@
       "cognitoEntryId": "1533",
       "profileStatus": "ACTIVE",
       "memberNumber": "704",
-      "cognitoLastModified": "2025-04-01T02:37:32.078Z",
+      "cognitoLastModified": "2025-10-10T19:36:56.223Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2003-06-01",
@@ -70407,7 +70744,7 @@
       "cognitoEntryId": "1545",
       "profileStatus": "ACTIVE",
       "memberNumber": "1943",
-      "cognitoLastModified": "2025-07-18T14:17:43.438Z",
+      "cognitoLastModified": "2025-10-10T19:34:59.916Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-10-01",
@@ -70670,7 +71007,7 @@
       "cognitoEntryId": "1551",
       "profileStatus": "ACTIVE",
       "memberNumber": "2196",
-      "cognitoLastModified": "2025-07-18T13:54:41.766Z",
+      "cognitoLastModified": "2025-10-10T19:36:06.882Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-05-01",
@@ -70854,7 +71191,7 @@
       "cognitoEntryId": "1555",
       "profileStatus": "ACTIVE",
       "memberNumber": "711",
-      "cognitoLastModified": "2025-07-18T13:33:54.743Z",
+      "cognitoLastModified": "2025-10-10T19:34:51.036Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2008-02-01",
@@ -71260,7 +71597,7 @@
       "cognitoEntryId": "1565",
       "profileStatus": "ACTIVE",
       "memberNumber": "440",
-      "cognitoLastModified": "2025-04-01T02:59:22.043Z",
+      "cognitoLastModified": "2025-10-10T19:36:12.772Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "1999-01-01",
@@ -71323,7 +71660,7 @@
       "cognitoEntryId": "1566",
       "profileStatus": "ACTIVE",
       "memberNumber": "1317",
-      "cognitoLastModified": "2025-04-08T13:15:28.405Z",
+      "cognitoLastModified": "2025-10-10T19:43:34.689Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2010-07-01",
@@ -71565,7 +71902,7 @@
       "cognitoEntryId": "1571",
       "profileStatus": "ACTIVE",
       "memberNumber": "2400",
-      "cognitoLastModified": "2025-04-01T02:58:33.105Z",
+      "cognitoLastModified": "2025-10-10T19:37:04.875Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-04-01",
@@ -71652,7 +71989,7 @@
       "cognitoEntryId": "1572",
       "profileStatus": "ACTIVE",
       "memberNumber": "3138",
-      "cognitoLastModified": "2025-04-01T02:59:47.534Z",
+      "cognitoLastModified": "2025-10-10T19:36:49.888Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2022-06-01",
@@ -71802,7 +72139,7 @@
       "cognitoEntryId": "1575",
       "profileStatus": "INACTIVE",
       "memberNumber": "442",
-      "cognitoLastModified": "2025-04-01T02:59:15.792Z",
+      "cognitoLastModified": "2025-10-10T19:36:31.107Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "1997-01-01",
@@ -71861,7 +72198,7 @@
       "isFormalTestProfile": true,
       "profileStatus": "ACTIVE",
       "memberNumber": "644",
-      "cognitoLastModified": "2025-05-14T20:47:49.575Z",
+      "cognitoLastModified": "2025-10-10T19:35:53.412Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2002-11-01",
@@ -72031,7 +72368,7 @@
       "cognitoEntryId": "1583",
       "profileStatus": "ACTIVE",
       "memberNumber": "2605",
-      "cognitoLastModified": "2025-04-01T02:58:35.441Z",
+      "cognitoLastModified": "2025-10-10T19:36:02.072Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2019-05-01",
@@ -72659,7 +72996,7 @@
       "cognitoEntryId": "1598",
       "profileStatus": "ACTIVE",
       "memberNumber": "777",
-      "cognitoLastModified": "2025-04-01T02:59:12.232Z",
+      "cognitoLastModified": "2025-10-10T19:37:08.723Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-01-01",
@@ -73243,7 +73580,7 @@
       "cognitoEntryId": "1609",
       "profileStatus": "ACTIVE",
       "memberNumber": "1518",
-      "cognitoLastModified": "2025-04-01T02:59:15.092Z",
+      "cognitoLastModified": "2025-10-10T19:37:22.509Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2012-07-01",
@@ -73671,6 +74008,55 @@
         }
       }
     },
+    "1619_json": {
+      "cognitoEntryId": "1619",
+      "profileStatus": "DECEASED",
+      "memberNumber": "2699",
+      "cognitoLastModified": "2024-08-17T00:52:25.415Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2019-09-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": "2024-01-01",
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "2025",
+        "SkiTimeLimit": "No",
+        "AAG": {
+          "status": "Resigned",
+          "date": "2022-09-01",
+          "lastModified": null
+        },
+        "ARGPerm": {
+          "status": null,
+          "date": "2019-09-01",
+          "lastModified": null
+        }
+      }
+    },
     "1620_json": {
       "cognitoEntryId": "1620",
       "profileStatus": "INACTIVE",
@@ -73964,7 +74350,7 @@
       "cognitoEntryId": "1628",
       "profileStatus": "ACTIVE",
       "memberNumber": "2393",
-      "cognitoLastModified": "2025-07-18T14:04:36.180Z",
+      "cognitoLastModified": "2025-10-10T19:37:18.693Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2018-04-01",
@@ -74190,7 +74576,7 @@
       "cognitoEntryId": "1632",
       "profileStatus": "ACTIVE",
       "memberNumber": "1574",
-      "cognitoLastModified": "2025-04-01T02:37:46.778Z",
+      "cognitoLastModified": "2025-10-10T19:37:07.817Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2013-07-01",
@@ -74499,7 +74885,7 @@
       "cognitoEntryId": "1642",
       "profileStatus": "ACTIVE",
       "memberNumber": "2307",
-      "cognitoLastModified": "2025-04-01T02:58:57.692Z",
+      "cognitoLastModified": "2025-10-10T19:34:20.756Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-10-01",
@@ -74845,7 +75231,7 @@
       "cognitoEntryId": "1651",
       "profileStatus": "ACTIVE",
       "memberNumber": "2296",
-      "cognitoLastModified": "2025-09-24T22:53:58.627Z",
+      "cognitoLastModified": "2025-10-10T19:36:22.182Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2017-10-01",
@@ -74974,7 +75360,7 @@
       "cognitoEntryId": "1653",
       "profileStatus": "ACTIVE",
       "memberNumber": "1675",
-      "cognitoLastModified": "2025-04-01T02:37:37.818Z",
+      "cognitoLastModified": "2025-10-10T19:36:45.222Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-05-27",
@@ -76058,7 +76444,7 @@
       "cognitoEntryId": "1687",
       "profileStatus": "ACTIVE",
       "memberNumber": "3321",
-      "cognitoLastModified": "2025-04-01T02:59:17.387Z",
+      "cognitoLastModified": "2025-10-10T19:36:48.342Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2023-02-07",
@@ -77905,7 +78291,7 @@
       "cognitoEntryId": "1739",
       "profileStatus": "ACTIVE",
       "memberNumber": "3415",
-      "cognitoLastModified": "2025-08-29T16:04:20.392Z",
+      "cognitoLastModified": "2025-10-10T19:35:37.826Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2023-07-10",
@@ -79088,7 +79474,7 @@
       "cognitoEntryId": "1769",
       "profileStatus": "INACTIVE",
       "memberNumber": "3467",
-      "cognitoLastModified": "2025-10-01T21:34:44.178Z",
+      "cognitoLastModified": "2025-10-10T19:36:04.440Z",
       "certsParsed": {
         "ProfileStatus": "INACTIVE",
         "DateJoined": "2023-10-03",
@@ -79163,7 +79549,7 @@
       "cognitoEntryId": "1771",
       "profileStatus": "ACTIVE",
       "memberNumber": "3456",
-      "cognitoLastModified": "2025-07-18T13:58:26.524Z",
+      "cognitoLastModified": "2025-10-10T19:36:27.194Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2023-10-03",
@@ -79305,6 +79691,94 @@
         "designations": {
           "ASG": "2023-03-01",
           "SG": "2025-05-13"
+        }
+      }
+    },
+    "1778_json": {
+      "cognitoEntryId": "1778",
+      "profileStatus": "DECEASED",
+      "memberNumber": "1257",
+      "cognitoLastModified": "2024-08-17T00:37:38.363Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2010-01-01",
+        "DateEnd": "2022-01-01",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": null,
+          "lastModified": null
+        }
+      }
+    },
+    "1781_json": {
+      "cognitoEntryId": "1781",
+      "profileStatus": "DECEASED",
+      "memberNumber": "260",
+      "cognitoLastModified": "2024-08-17T00:37:37.493Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "1960-01-01",
+          "lastModified": null
         }
       }
     },
@@ -79547,6 +80021,99 @@
         }
       }
     },
+    "1811_json": {
+      "cognitoEntryId": "1811",
+      "profileStatus": "DECEASED",
+      "memberNumber": "232",
+      "cognitoLastModified": "2024-08-17T00:37:36.768Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "1989-01-01",
+        "DateEnd": "2020-01-01",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "1993-01-01",
+          "lastModified": null
+        },
+        "AAG": {
+          "status": null,
+          "date": "1989-01-01",
+          "lastModified": null
+        }
+      }
+    },
+    "1816_json": {
+      "cognitoEntryId": "1816",
+      "profileStatus": "DECEASED",
+      "memberNumber": "301",
+      "cognitoLastModified": "2024-08-17T00:37:36.228Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "RG": {
+          "status": "Resigned",
+          "date": null,
+          "lastModified": null
+        }
+      }
+    },
     "1819_json": {
       "cognitoEntryId": "1819",
       "profileStatus": "RESIGNED",
@@ -79617,6 +80184,44 @@
         }
       }
     },
+    "1834_json": {
+      "cognitoEntryId": "1834",
+      "profileStatus": "DECEASED",
+      "memberNumber": "221",
+      "cognitoLastModified": "2024-08-17T00:37:35.708Z",
+      "parseError": {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "object",
+            "received": "null",
+            "path": [],
+            "message": "Expected object, received null"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": null
+    },
+    "1859_json": {
+      "cognitoEntryId": "1859",
+      "profileStatus": "DECEASED",
+      "memberNumber": "325",
+      "cognitoLastModified": "2024-08-17T00:37:35.153Z",
+      "parseError": {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "object",
+            "received": "null",
+            "path": [],
+            "message": "Expected object, received null"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": null
+    },
     "1866_json": {
       "cognitoEntryId": "1866",
       "profileStatus": "RESIGNED",
@@ -79668,6 +80273,60 @@
         }
       }
     },
+    "1908_json": {
+      "cognitoEntryId": "1908",
+      "profileStatus": "DECEASED",
+      "memberNumber": "15",
+      "cognitoLastModified": "2024-08-17T00:37:34.418Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "1994-01-01",
+        "DateEnd": "2018-07-01",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "RG": {
+          "status": "Resigned",
+          "date": "1996-01-01",
+          "lastModified": null
+        },
+        "ARG": {
+          "status": null,
+          "date": "1994-01-01",
+          "lastModified": null
+        },
+        "CGI3": {
+          "status": "Resigned",
+          "date": "1997-02-01",
+          "lastModified": null
+        }
+      }
+    },
     "1918_json": {
       "cognitoEntryId": "1918",
       "profileStatus": "RESIGNED",
@@ -79700,6 +80359,505 @@
           ]
         ],
         "designations": {}
+      }
+    },
+    "1925_json": {
+      "cognitoEntryId": "1925",
+      "profileStatus": "DECEASED",
+      "memberNumber": "1173",
+      "cognitoLastModified": "2025-05-16T21:06:46.183Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2009-01-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "Complete",
+        "SkiTimeLimit": null,
+        "AG": {
+          "status": "Resigned",
+          "date": "2019-08-01",
+          "lastModified": null
+        },
+        "AAG": {
+          "status": null,
+          "date": "2014-08-01",
+          "lastModified": null
+        },
+        "ASG": {
+          "status": "Resigned",
+          "date": "2022-04-01",
+          "lastModified": null
+        },
+        "ARG": {
+          "status": null,
+          "date": "2010-09-01",
+          "lastModified": null
+        },
+        "CGI1": {
+          "status": "Resigned",
+          "date": "2008-11-01",
+          "lastModified": null
+        }
+      }
+    },
+    "1928_json": {
+      "cognitoEntryId": "1928",
+      "profileStatus": "DECEASED",
+      "memberNumber": "49",
+      "cognitoLastModified": "2024-08-17T00:37:32.713Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "ASG": {
+          "status": "Resigned",
+          "date": null,
+          "lastModified": null
+        }
+      }
+    },
+    "1938_json": {
+      "cognitoEntryId": "1938",
+      "profileStatus": "DECEASED",
+      "memberNumber": "59",
+      "cognitoLastModified": "2024-08-12T12:41:20.859Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": "2020-01-04",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": null,
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "1980-01-01",
+          "lastModified": null
+        }
+      }
+    },
+    "1939_json": {
+      "cognitoEntryId": "1939",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "62",
+      "cognitoLastModified": "2025-10-09T23:13:28.262Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "1998-01-01",
+        "DateEnd": "2022-01-26",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "HG": {
+          "status": "Resigned",
+          "date": "1998-01-01",
+          "lastModified": "2022-01-26"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "hiking-guide",
+            "Inactive",
+            "1998-01-01",
+            "2022-01-26"
+          ]
+        ],
+        "designations": {
+          "HG": "1998-01-01"
+        }
+      }
+    },
+    "1943_json": {
+      "cognitoEntryId": "1943",
+      "profileStatus": "DECEASED",
+      "memberNumber": "71",
+      "cognitoLastModified": "2024-08-17T00:37:31.923Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "1995-01-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "SG": {
+          "status": "Resigned",
+          "date": "1998-01-01",
+          "lastModified": null
+        },
+        "ASG": {
+          "status": null,
+          "date": "1995-01-01",
+          "lastModified": null
+        },
+        "HG": {
+          "status": "Resigned",
+          "date": "2006-04-01",
+          "lastModified": null
+        },
+        "ARGPerm": {
+          "status": "Resigned",
+          "date": "2008-09-01",
+          "lastModified": null
+        }
+      }
+    },
+    "1944_json": {
+      "cognitoEntryId": "1944",
+      "profileStatus": "DECEASED",
+      "memberNumber": "72",
+      "cognitoLastModified": "2024-08-17T00:37:31.178Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": null,
+          "lastModified": null
+        }
+      }
+    },
+    "1957_json": {
+      "cognitoEntryId": "1957",
+      "profileStatus": "DECEASED",
+      "memberNumber": "106",
+      "cognitoLastModified": "2025-10-02T00:25:56.170Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "1974-01-01",
+        "DateEnd": "2018-08-01",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "1974-01-01",
+          "lastModified": null
+        }
+      }
+    },
+    "1981_json": {
+      "cognitoEntryId": "1981",
+      "profileStatus": "DECEASED",
+      "memberNumber": "152",
+      "cognitoLastModified": "2024-08-17T00:37:29.533Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "ASG": {
+          "status": "Resigned",
+          "date": null,
+          "lastModified": null
+        }
+      }
+    },
+    "2058_json": {
+      "cognitoEntryId": "2058",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "1164",
+      "cognitoLastModified": "2025-10-09T23:00:14.333Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2008-11-01",
+        "DateEnd": "2022-01-25",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "CGI1": {
+          "status": "Resigned",
+          "date": "2008-11-01",
+          "lastModified": "2022-01-25"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2008-11-01",
+            "2022-01-25"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2008-11-01"
+        }
+      }
+    },
+    "2093_json": {
+      "cognitoEntryId": "2093",
+      "profileStatus": "DECEASED",
+      "memberNumber": "658",
+      "cognitoLastModified": "2024-08-17T00:37:28.748Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2003-03-01",
+        "DateEnd": "2014-11-07",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "SG": {
+          "status": "Resigned",
+          "date": "2008-04-01",
+          "lastModified": null
+        },
+        "ASG": {
+          "status": null,
+          "date": "2003-03-01",
+          "lastModified": null
+        },
+        "ARGPerm": {
+          "status": "Resigned",
+          "date": "2009-09-01",
+          "lastModified": null
+        }
+      }
+    },
+    "2100_json": {
+      "cognitoEntryId": "2100",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "1339",
+      "cognitoLastModified": "2025-10-09T23:16:03.215Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2010-11-01",
+        "DateEnd": "2022-01-17",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "ARG": {
+          "status": "Resigned",
+          "date": "2010-09-01",
+          "lastModified": "2022-01-17"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Inactive",
+            "2010-11-01",
+            "2022-01-17"
+          ]
+        ],
+        "designations": {
+          "ARG": "2010-09-01"
+        }
       }
     },
     "2110_json": {
@@ -79763,6 +80921,94 @@
           "DHG": "1999-09-01",
           "ASG": "2003-04-01",
           "SG": "2006-04-01"
+        }
+      }
+    },
+    "2146_json": {
+      "cognitoEntryId": "2146",
+      "profileStatus": "DECEASED",
+      "memberNumber": "741",
+      "cognitoLastModified": "2024-08-17T00:37:27.328Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "1963-01-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "1963-01-01",
+          "lastModified": null
+        }
+      }
+    },
+    "2147_json": {
+      "cognitoEntryId": "2147",
+      "profileStatus": "DECEASED",
+      "memberNumber": "742",
+      "cognitoLastModified": "2024-08-17T00:37:26.528Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": null,
+          "lastModified": null
         }
       }
     },
@@ -79951,6 +81197,25 @@
         }
       }
     },
+    "2365_json": {
+      "cognitoEntryId": "2365",
+      "profileStatus": "DECEASED",
+      "memberNumber": "352",
+      "cognitoLastModified": "2024-08-17T00:37:25.208Z",
+      "parseError": {
+        "issues": [
+          {
+            "code": "invalid_type",
+            "expected": "object",
+            "received": "null",
+            "path": [],
+            "message": "Expected object, received null"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": null
+    },
     "2372_json": {
       "cognitoEntryId": "2372",
       "profileStatus": "RESIGNED",
@@ -79986,6 +81251,94 @@
         ],
         "designations": {
           "AAG": "1990-01-01"
+        }
+      }
+    },
+    "2387_json": {
+      "cognitoEntryId": "2387",
+      "profileStatus": "DECEASED",
+      "memberNumber": "398",
+      "cognitoLastModified": "2024-08-17T00:37:24.523Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": "1966-01-01",
+          "lastModified": null
+        }
+      }
+    },
+    "2414_json": {
+      "cognitoEntryId": "2414",
+      "profileStatus": "DECEASED",
+      "memberNumber": "466",
+      "cognitoLastModified": "2024-08-17T00:37:23.968Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "ASGPerm": {
+          "status": "Resigned",
+          "date": "2001-03-01",
+          "lastModified": null
         }
       }
     },
@@ -80222,6 +81575,40 @@
         ],
         "designations": {
           "TRCI": "2018-06-01"
+        }
+      }
+    },
+    "2483_json": {
+      "cognitoEntryId": "2483",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "2476",
+      "cognitoLastModified": "2025-10-09T23:04:39.657Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2018-07-01",
+        "DateEnd": "2022-02-01",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "HG": {
+          "status": "Resigned",
+          "date": "2018-06-01",
+          "lastModified": "2022-02-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "hiking-guide",
+            "Inactive",
+            "2018-07-01",
+            "2022-02-01"
+          ]
+        ],
+        "designations": {
+          "HG": "2018-06-01"
         }
       }
     },
@@ -80743,6 +82130,64 @@
         }
       }
     },
+    "2568_json": {
+      "cognitoEntryId": "2568",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "1931",
+      "cognitoLastModified": "2025-10-09T23:11:34.276Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2015-10-01",
+        "DateEnd": "2022-03-01",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "AHG": {
+          "status": null,
+          "date": "2015-09-01",
+          "lastModified": "2018-09-01"
+        },
+        "HG": {
+          "status": "Resigned",
+          "date": "2018-09-01",
+          "lastModified": "2022-03-01"
+        },
+        "HGWT": {
+          "status": "Resigned",
+          "date": "2015-12-01",
+          "lastModified": "2022-03-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2015-10-01",
+            "2015-11-30"
+          ],
+          [
+            "apprentice-hiking-guide-winter",
+            "Inactive",
+            "2015-12-01",
+            "2018-08-31"
+          ],
+          [
+            "hiking-guide-winter",
+            "Inactive",
+            "2018-09-01",
+            "2022-03-01"
+          ]
+        ],
+        "designations": {
+          "AHG": "2015-09-01",
+          "HG": "2018-09-01",
+          "HGWT": "2015-12-01"
+        }
+      }
+    },
     "2570_json": {
       "cognitoEntryId": "2570",
       "profileStatus": "ACTIVE",
@@ -80796,6 +82241,50 @@
         }
       }
     },
+    "2572_json": {
+      "cognitoEntryId": "2572",
+      "profileStatus": "DECEASED",
+      "memberNumber": "1965",
+      "cognitoLastModified": "2024-10-24T04:05:17.482Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": null,
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": null,
+          "lastModified": null
+        }
+      }
+    },
     "2575_json": {
       "cognitoEntryId": "2575",
       "profileStatus": "RESIGNED",
@@ -80829,6 +82318,50 @@
         ],
         "designations": {
           "CGI1": "2015-12-01"
+        }
+      }
+    },
+    "2578_json": {
+      "cognitoEntryId": "2578",
+      "profileStatus": "DECEASED",
+      "memberNumber": "317",
+      "cognitoLastModified": "2024-08-17T00:37:22.683Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": null,
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "MG": {
+          "status": "Resigned",
+          "date": null,
+          "lastModified": null
         }
       }
     },
@@ -81136,6 +82669,40 @@
         }
       }
     },
+    "2612_json": {
+      "cognitoEntryId": "2612",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "2462",
+      "cognitoLastModified": "2025-10-09T23:12:32.293Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2018-07-01",
+        "DateEnd": "2022-03-08",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "TRCI": {
+          "status": "Resigned",
+          "date": "2018-06-01",
+          "lastModified": "2022-03-08"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Inactive",
+            "2018-07-01",
+            "2022-03-08"
+          ]
+        ],
+        "designations": {
+          "TRCI": "2018-06-01"
+        }
+      }
+    },
     "2614_json": {
       "cognitoEntryId": "2614",
       "profileStatus": "RESIGNED",
@@ -81304,6 +82871,60 @@
         "designations": {
           "CGI1": "2012-05-01",
           "CGI2": "2015-05-01"
+        }
+      }
+    },
+    "2665_json": {
+      "cognitoEntryId": "2665",
+      "profileStatus": "DECEASED",
+      "memberNumber": "1546",
+      "cognitoLastModified": "2024-08-17T00:51:58.225Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2013-05-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "Complete",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "RG": {
+          "status": "Resigned",
+          "date": "2015-09-01",
+          "lastModified": null
+        },
+        "ARG": {
+          "status": null,
+          "date": "2012-09-01",
+          "lastModified": null
+        },
+        "AAGPerm": {
+          "status": "Resigned",
+          "date": "2016-08-01",
+          "lastModified": null
         }
       }
     },
@@ -81613,6 +83234,40 @@
         ],
         "designations": {
           "CGI1": "2014-03-01"
+        }
+      }
+    },
+    "2711_json": {
+      "cognitoEntryId": "2711",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "1719",
+      "cognitoLastModified": "2025-10-09T22:56:58.397Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2014-05-20",
+        "DateEnd": "2021-10-21",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "CGI1": {
+          "status": "Resigned",
+          "date": "2014-04-01",
+          "lastModified": "2021-10-21"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2014-05-20",
+            "2021-10-21"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2014-04-01"
         }
       }
     },
@@ -81939,6 +83594,40 @@
         "designations": {
           "CGI1": "2014-10-01",
           "CGI2": "2016-10-01"
+        }
+      }
+    },
+    "2767_json": {
+      "cognitoEntryId": "2767",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "1897",
+      "cognitoLastModified": "2025-10-09T23:10:20.757Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2015-07-01",
+        "DateEnd": "2022-03-01",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "AHG": {
+          "status": "Resigned",
+          "date": "2015-06-01",
+          "lastModified": "2022-03-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Inactive",
+            "2015-07-01",
+            "2022-03-01"
+          ]
+        ],
+        "designations": {
+          "AHG": "2015-06-01"
         }
       }
     },
@@ -83030,6 +84719,60 @@
         ],
         "designations": {
           "CGI1": "2017-04-01"
+        }
+      }
+    },
+    "2842_json": {
+      "cognitoEntryId": "2842",
+      "profileStatus": "DECEASED",
+      "memberNumber": "2149",
+      "cognitoLastModified": "2024-08-17T00:37:18.763Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2017-01-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "2022",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "ARG": {
+          "status": "Resigned",
+          "date": "2019-09-01",
+          "lastModified": null
+        },
+        "CGI1": {
+          "status": null,
+          "date": "2016-12-01",
+          "lastModified": null
+        },
+        "CGI2": {
+          "status": "Resigned",
+          "date": "2020-02-01",
+          "lastModified": null
         }
       }
     },
@@ -84139,6 +85882,52 @@
         }
       }
     },
+    "2928_json": {
+      "cognitoEntryId": "2928",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "2586",
+      "cognitoLastModified": "2025-10-09T22:49:38.268Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2019-04-01",
+        "DateEnd": "2022-02-01",
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "transforms": [],
+        "CGI1": {
+          "status": null,
+          "date": "2019-02-01",
+          "lastModified": "2020-02-01"
+        },
+        "CGI2": {
+          "status": "Resigned",
+          "date": "2020-02-01",
+          "lastModified": "2022-02-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "climbing-gym-instructor-level-1",
+            "Inactive",
+            "2019-04-01",
+            "2020-01-31"
+          ],
+          [
+            "climbing-gym-instructor-level-2",
+            "Inactive",
+            "2020-02-01",
+            "2022-02-01"
+          ]
+        ],
+        "designations": {
+          "CGI1": "2019-02-01",
+          "CGI2": "2020-02-01"
+        }
+      }
+    },
     "2929_json": {
       "cognitoEntryId": "2929",
       "profileStatus": "RESIGNED",
@@ -84208,6 +85997,50 @@
         ],
         "designations": {
           "CGI1": "2018-11-01"
+        }
+      }
+    },
+    "2931_json": {
+      "cognitoEntryId": "2931",
+      "profileStatus": "DECEASED",
+      "memberNumber": "2541",
+      "cognitoLastModified": "2024-08-17T00:37:17.778Z",
+      "parseError": {
+        "issues": [
+          {
+            "received": "DECEASED",
+            "code": "invalid_enum_value",
+            "options": [
+              "ACTIVE",
+              "INACTIVE",
+              "RESIGNED",
+              "STAFF",
+              "UNDEFINED"
+            ],
+            "path": [
+              "ProfileStatus"
+            ],
+            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
+          }
+        ],
+        "name": "ZodError"
+      },
+      "originalCerts": {
+        "ProfileStatus": "DECEASED",
+        "DateJoined": "2018-12-01",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": null,
+        "HikeTimeLimit": "No",
+        "RockTimeLimit": "No",
+        "AlpineTimeLimit": "No",
+        "SkiTimeLimit": "No",
+        "CGI1": {
+          "status": "Resigned",
+          "date": "2018-11-01",
+          "lastModified": null
         }
       }
     },
@@ -84996,6 +86829,38 @@
         "designations": {
           "CGI1": "2022-08-01"
         }
+      }
+    },
+    "2975_json": {
+      "cognitoEntryId": "2975",
+      "profileStatus": "RESIGNED",
+      "memberNumber": "3228",
+      "cognitoLastModified": "2025-10-10T13:40:42.779Z",
+      "certsParsed": {
+        "ProfileStatus": "RESIGNED",
+        "DateJoined": "2022-07-01",
+        "DateEnd": "2022-08-24",
+        "DateReinstate": "2024-08-16",
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": null,
+        "SkiExamMode": null,
+        "transforms": [],
+        "MG": {
+          "status": "Resigned",
+          "date": "2022-07-01",
+          "lastModified": "2022-08-24"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "mountain-guide",
+            "Inactive",
+            "2022-07-01",
+            "2022-08-24"
+          ]
+        ],
+        "designations": {}
       }
     },
     "2976_json": {
@@ -86635,7 +88500,7 @@
       "cognitoEntryId": "3051",
       "profileStatus": "ACTIVE",
       "memberNumber": "3621",
-      "cognitoLastModified": "2025-04-01T02:37:41.723Z",
+      "cognitoLastModified": "2025-10-10T19:35:09.851Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-01-12",
@@ -88484,7 +90349,7 @@
       "cognitoEntryId": "3115",
       "profileStatus": "ACTIVE",
       "memberNumber": "3686",
-      "cognitoLastModified": "2025-07-18T14:30:02.196Z",
+      "cognitoLastModified": "2025-10-10T19:37:11.254Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-06-14",
@@ -89370,7 +91235,7 @@
       "cognitoEntryId": "3139",
       "profileStatus": "ACTIVE",
       "memberNumber": "3709",
-      "cognitoLastModified": "2025-06-09T15:06:43.626Z",
+      "cognitoLastModified": "2025-10-08T00:16:57.748Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2024-07-29",
@@ -89379,7 +91244,13 @@
         "LastAnnualValidation": "2024-12-30",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
+        "RockTimeLimit": "2028",
         "transforms": [],
+        "ARG": {
+          "status": "Active",
+          "date": "2025-10-07",
+          "lastModified": "2025-10-07"
+        },
         "CGI1": {
           "status": "Active",
           "date": "2024-05-10",
@@ -89415,12 +91286,19 @@
             "Active",
             "2025-06-09",
             "2025-12-31"
+          ],
+          [
+            "apprentice-rock-guide",
+            "Active",
+            "2025-10-07",
+            "2025-12-31"
           ]
         ],
         "designations": {
           "CGI1": "2024-05-10",
           "TRCI": "2024-06-24",
-          "VFG": "2025-06-09"
+          "VFG": "2025-06-09",
+          "ARG": "2025-10-07"
         }
       }
     },
@@ -91552,7 +93430,7 @@
       "cognitoEntryId": "3227",
       "profileStatus": "ACTIVE",
       "memberNumber": "3812",
-      "cognitoLastModified": "2025-09-05T12:18:16.565Z",
+      "cognitoLastModified": "2025-10-10T11:38:55.220Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-03-17",
@@ -91614,7 +93492,7 @@
       "cognitoEntryId": "3229",
       "profileStatus": "ACTIVE",
       "memberNumber": "3814",
-      "cognitoLastModified": "2025-09-05T12:18:14.863Z",
+      "cognitoLastModified": "2025-10-10T11:38:53.985Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-04-12",
@@ -91709,7 +93587,7 @@
       "cognitoEntryId": "3232",
       "profileStatus": "ACTIVE",
       "memberNumber": "3817",
-      "cognitoLastModified": "2025-09-05T12:18:13.475Z",
+      "cognitoLastModified": "2025-10-10T11:38:52.651Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-04-14",
@@ -91736,7 +93614,7 @@
       "cognitoEntryId": "3233",
       "profileStatus": "ACTIVE",
       "memberNumber": "3818",
-      "cognitoLastModified": "2025-09-05T12:18:11.396Z",
+      "cognitoLastModified": "2025-10-10T11:38:51.320Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-04-14",
@@ -91976,7 +93854,7 @@
       "cognitoEntryId": "3240",
       "profileStatus": "ACTIVE",
       "memberNumber": "3825",
-      "cognitoLastModified": "2025-05-15T01:01:31.237Z",
+      "cognitoLastModified": "2025-10-07T23:17:00.576Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-04-23",
@@ -92969,7 +94847,7 @@
       "cognitoEntryId": "3268",
       "profileStatus": "ACTIVE",
       "memberNumber": "3854",
-      "cognitoLastModified": "2025-10-01T11:35:09.088Z",
+      "cognitoLastModified": "2025-10-08T00:03:33.906Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-06-03",
@@ -93050,7 +94928,7 @@
       "cognitoEntryId": "3270",
       "profileStatus": "ACTIVE",
       "memberNumber": "3856",
-      "cognitoLastModified": "2025-09-05T12:18:10.278Z",
+      "cognitoLastModified": "2025-10-10T11:38:49.927Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-06-09",
@@ -93353,13 +95231,13 @@
       "cognitoEntryId": "3280",
       "profileStatus": "ACTIVE",
       "memberNumber": "3866",
-      "cognitoLastModified": "2025-09-05T12:18:09.061Z",
+      "cognitoLastModified": "2025-10-10T21:26:06.661Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-06-17",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": null,
+        "LastAnnualValidation": "2025-10-10",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "HikeTimeLimit": "2028",
@@ -93371,7 +95249,14 @@
         }
       },
       "wicketMemberships": {
-        "professional": [],
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Active",
+            "2025-06-17",
+            "2025-12-31"
+          ]
+        ],
         "designations": {
           "AHG": "2025-05-27"
         }
@@ -93485,7 +95370,7 @@
       "cognitoEntryId": "3284",
       "profileStatus": "ACTIVE",
       "memberNumber": "3873",
-      "cognitoLastModified": "2025-09-05T12:18:06.486Z",
+      "cognitoLastModified": "2025-10-10T11:38:46.647Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-06-23",
@@ -94077,7 +95962,7 @@
       "cognitoEntryId": "3301",
       "profileStatus": "ACTIVE",
       "memberNumber": "3896",
-      "cognitoLastModified": "2025-09-05T12:18:02.153Z",
+      "cognitoLastModified": "2025-10-10T11:38:44.936Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-08-05",
@@ -94196,7 +96081,7 @@
       "cognitoEntryId": "3304",
       "profileStatus": "ACTIVE",
       "memberNumber": "3899",
-      "cognitoLastModified": "2025-09-05T12:18:01.016Z",
+      "cognitoLastModified": "2025-10-10T11:38:43.517Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-08-25",
@@ -94359,7 +96244,7 @@
       "cognitoEntryId": "3309",
       "profileStatus": "ACTIVE",
       "memberNumber": "3904",
-      "cognitoLastModified": "2025-09-17T14:42:40.371Z",
+      "cognitoLastModified": "2025-10-10T11:38:41.743Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-09-15",
@@ -94386,13 +96271,13 @@
       "cognitoEntryId": "3311",
       "profileStatus": "ACTIVE",
       "memberNumber": "3906",
-      "cognitoLastModified": "2025-10-06T15:24:52.377Z",
+      "cognitoLastModified": "2025-10-08T20:29:31.831Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-10-06",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": null,
+        "LastAnnualValidation": "2025-10-08",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "RockTimeLimit": "2028",
@@ -94404,7 +96289,14 @@
         }
       },
       "wicketMemberships": {
-        "professional": [],
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Active",
+            "2025-10-06",
+            "2025-12-31"
+          ]
+        ],
         "designations": {
           "ARG": "2025-10-06"
         }
@@ -94414,7 +96306,7 @@
       "cognitoEntryId": "3312",
       "profileStatus": "ACTIVE",
       "memberNumber": "3907",
-      "cognitoLastModified": "2025-10-06T15:31:40.825Z",
+      "cognitoLastModified": "2025-10-10T11:38:40.353Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-10-06",
@@ -94442,13 +96334,13 @@
       "cognitoEntryId": "3313",
       "profileStatus": "ACTIVE",
       "memberNumber": "3908",
-      "cognitoLastModified": "2025-10-06T15:39:10.539Z",
+      "cognitoLastModified": "2025-10-07T03:09:22.633Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-10-06",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": null,
+        "LastAnnualValidation": "2025-10-06",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "RockTimeLimit": "2028",
@@ -94460,7 +96352,14 @@
         }
       },
       "wicketMemberships": {
-        "professional": [],
+        "professional": [
+          [
+            "apprentice-rock-guide",
+            "Active",
+            "2025-10-06",
+            "2025-12-31"
+          ]
+        ],
         "designations": {
           "ARG": "2025-10-06"
         }
@@ -94470,7 +96369,7 @@
       "cognitoEntryId": "3314",
       "profileStatus": "ACTIVE",
       "memberNumber": "3909",
-      "cognitoLastModified": "2025-10-06T15:44:42.953Z",
+      "cognitoLastModified": "2025-10-10T11:38:38.956Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-10-06",
@@ -94498,13 +96397,13 @@
       "cognitoEntryId": "3315",
       "profileStatus": "ACTIVE",
       "memberNumber": "3910",
-      "cognitoLastModified": "2025-10-06T15:51:32.245Z",
+      "cognitoLastModified": "2025-10-08T00:23:24.310Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2025-10-06",
         "DateEnd": null,
         "DateReinstate": null,
-        "LastAnnualValidation": null,
+        "LastAnnualValidation": "2025-10-07",
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "transforms": [],
@@ -94515,9 +96414,176 @@
         }
       },
       "wicketMemberships": {
-        "professional": [],
+        "professional": [
+          [
+            "top-rope-climbing-instructor",
+            "Active",
+            "2025-10-06",
+            "2025-12-31"
+          ]
+        ],
         "designations": {
           "TRCI": "2025-07-01"
+        }
+      }
+    },
+    "3316_json": {
+      "cognitoEntryId": "3316",
+      "profileStatus": "ACTIVE",
+      "memberNumber": "3911",
+      "cognitoLastModified": "2025-10-08T01:21:17.180Z",
+      "certsParsed": {
+        "ProfileStatus": "ACTIVE",
+        "DateJoined": "2025-10-06",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": "2025-10-06",
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2028",
+        "transforms": [],
+        "AHG": {
+          "status": "Active",
+          "date": "2025-10-01",
+          "lastModified": "2025-10-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Active",
+            "2025-10-06",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "AHG": "2025-10-01"
+        }
+      }
+    },
+    "3318_json": {
+      "cognitoEntryId": "3318",
+      "profileStatus": "ACTIVE",
+      "memberNumber": "3913",
+      "cognitoLastModified": "2025-10-08T11:29:52.882Z",
+      "certsParsed": {
+        "ProfileStatus": "ACTIVE",
+        "DateJoined": "2025-10-07",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": "2025-10-07",
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2028",
+        "transforms": [],
+        "AHG": {
+          "status": "Active",
+          "date": "2025-10-07",
+          "lastModified": "2025-10-07"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Active",
+            "2025-10-07",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "AHG": "2025-10-07"
+        }
+      }
+    },
+    "3319_json": {
+      "cognitoEntryId": "3319",
+      "profileStatus": "ACTIVE",
+      "memberNumber": "3914",
+      "cognitoLastModified": "2025-10-10T11:38:37.401Z",
+      "certsParsed": {
+        "ProfileStatus": "ACTIVE",
+        "DateJoined": "2025-10-07",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "transforms": [],
+        "CGI1": {
+          "status": "Active",
+          "date": "2025-10-01",
+          "lastModified": "2025-10-01"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [],
+        "designations": {
+          "CGI1": "2025-10-01"
+        }
+      }
+    },
+    "3320_json": {
+      "cognitoEntryId": "3320",
+      "profileStatus": "ACTIVE",
+      "memberNumber": "3915",
+      "cognitoLastModified": "2025-10-10T11:38:36.133Z",
+      "certsParsed": {
+        "ProfileStatus": "ACTIVE",
+        "DateJoined": "2025-10-07",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": null,
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2028",
+        "transforms": [],
+        "AHG": {
+          "status": "Active",
+          "date": "2025-10-07",
+          "lastModified": "2025-10-07"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [],
+        "designations": {
+          "AHG": "2025-10-07"
+        }
+      }
+    },
+    "3321_json": {
+      "cognitoEntryId": "3321",
+      "profileStatus": "ACTIVE",
+      "memberNumber": "3916",
+      "cognitoLastModified": "2025-10-10T13:04:08.999Z",
+      "certsParsed": {
+        "ProfileStatus": "ACTIVE",
+        "DateJoined": "2025-10-07",
+        "DateEnd": null,
+        "DateReinstate": null,
+        "LastAnnualValidation": "2025-10-10",
+        "IFMGALicenseNumber": "0",
+        "SkiExamMode": "Ski",
+        "HikeTimeLimit": "2028",
+        "transforms": [],
+        "AHG": {
+          "status": "Active",
+          "date": "2025-10-07",
+          "lastModified": "2025-10-07"
+        }
+      },
+      "wicketMemberships": {
+        "professional": [
+          [
+            "apprentice-hiking-guide",
+            "Active",
+            "2025-10-07",
+            "2025-12-31"
+          ]
+        ],
+        "designations": {
+          "AHG": "2025-10-07"
         }
       }
     }
