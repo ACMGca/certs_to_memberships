@@ -1,6 +1,6 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-10-11T16:04:32.851Z",
+    "reportGeneratedDate": "2025-10-11T16:29:25.653Z",
     "mostRecentlyUpdatedProfileDate": "2025-10-11T05:48:37.179Z",
     "daysSinceDataRefresh": 0
   },
@@ -14,10 +14,10 @@
     "NONMEMBER_CONVERSION_ERRORS": 0,
     "NONMEMBER_CONVERSION_ERROR_RATE": "0.00%",
     "MEMBER_COUNT": 1685,
-    "NONMEMBER_COUNT": 329,
+    "NONMEMBER_COUNT": 297,
     "ACTIVE_MEMBER_COUNT": 1499,
     "INACTIVE_MEMBER_COUNT": 186,
-    "CONVERTED_PROFILES_COUNT": 2014
+    "CONVERTED_PROFILES_COUNT": 1982
   },
   "profiles": {
     "3_json": {
@@ -4009,50 +4009,6 @@
         "designations": {
           "ASG": "2021-03-01",
           "SG": "2025-05-13"
-        }
-      }
-    },
-    "85_json": {
-      "cognitoEntryId": "85",
-      "profileStatus": "DECEASED",
-      "memberNumber": "119",
-      "cognitoLastModified": "2024-08-17T00:39:15.284Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "1983-01-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "1983-01-01",
-          "lastModified": null
         }
       }
     },
@@ -10197,60 +10153,6 @@
         }
       }
     },
-    "213_json": {
-      "cognitoEntryId": "213",
-      "profileStatus": "DECEASED",
-      "memberNumber": "3141",
-      "cognitoLastModified": "2025-10-09T21:47:44.076Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2022-07-01",
-        "DateEnd": "2025-08-20",
-        "DateReinstate": null,
-        "LastAnnualValidation": "2025-01-07",
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": "Ski",
-        "HikeTimeLimit": "2025",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "AHG": {
-          "status": "Active",
-          "date": "2022-06-01",
-          "lastModified": null
-        },
-        "TRCI": {
-          "status": "Active",
-          "date": "2022-06-01",
-          "lastModified": null
-        },
-        "VFG": {
-          "status": "Inactive",
-          "date": "2022-06-01",
-          "lastModified": "2024-01-06"
-        }
-      }
-    },
     "214_json": {
       "cognitoEntryId": "214",
       "profileStatus": "ACTIVE",
@@ -12976,50 +12878,6 @@
         }
       }
     },
-    "279_json": {
-      "cognitoEntryId": "279",
-      "profileStatus": "DECEASED",
-      "memberNumber": "2986",
-      "cognitoLastModified": "2024-09-15T13:00:19.775Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2021-09-21",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": "2023-01-01",
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "HG": {
-          "status": "Resigned",
-          "date": "2021-08-01",
-          "lastModified": null
-        }
-      }
-    },
     "280_json": {
       "cognitoEntryId": "280",
       "profileStatus": "INACTIVE",
@@ -13201,55 +13059,6 @@
         "designations": {
           "ASG": "2001-04-01",
           "SG": "2004-04-01"
-        }
-      }
-    },
-    "284_json": {
-      "cognitoEntryId": "284",
-      "profileStatus": "DECEASED",
-      "memberNumber": "1629",
-      "cognitoLastModified": "2025-10-09T21:44:15.007Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2013-10-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "Complete",
-        "SG": {
-          "status": "Resigned",
-          "date": "2017-04-01",
-          "lastModified": null
-        },
-        "ASG": {
-          "status": null,
-          "date": "2013-03-01",
-          "lastModified": null
         }
       }
     },
@@ -25255,50 +25064,6 @@
         ],
         "designations": {
           "AAG": "1979-01-01"
-        }
-      }
-    },
-    "534_json": {
-      "cognitoEntryId": "534",
-      "profileStatus": "DECEASED",
-      "memberNumber": "82",
-      "cognitoLastModified": "2024-08-17T00:38:50.189Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "1963-01-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "1962-01-01",
-          "lastModified": null
         }
       }
     },
@@ -54079,55 +53844,6 @@
         }
       }
     },
-    "1159_json": {
-      "cognitoEntryId": "1159",
-      "profileStatus": "DECEASED",
-      "memberNumber": "323",
-      "cognitoLastModified": "2024-08-17T00:37:53.228Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2000-09-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": "2023-01-01",
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": "Ski",
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "2006-10-01",
-          "lastModified": null
-        },
-        "ARG": {
-          "status": null,
-          "date": "2000-09-01",
-          "lastModified": null
-        }
-      }
-    },
     "1160_json": {
       "cognitoEntryId": "1160",
       "profileStatus": "ACTIVE",
@@ -74008,55 +73724,6 @@
         }
       }
     },
-    "1619_json": {
-      "cognitoEntryId": "1619",
-      "profileStatus": "DECEASED",
-      "memberNumber": "2699",
-      "cognitoLastModified": "2024-08-17T00:52:25.415Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2019-09-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": "2024-01-01",
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": "Ski",
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "2025",
-        "SkiTimeLimit": "No",
-        "AAG": {
-          "status": "Resigned",
-          "date": "2022-09-01",
-          "lastModified": null
-        },
-        "ARGPerm": {
-          "status": null,
-          "date": "2019-09-01",
-          "lastModified": null
-        }
-      }
-    },
     "1620_json": {
       "cognitoEntryId": "1620",
       "profileStatus": "INACTIVE",
@@ -79694,94 +79361,6 @@
         }
       }
     },
-    "1778_json": {
-      "cognitoEntryId": "1778",
-      "profileStatus": "DECEASED",
-      "memberNumber": "1257",
-      "cognitoLastModified": "2024-08-17T00:37:38.363Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2010-01-01",
-        "DateEnd": "2022-01-01",
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": null,
-          "lastModified": null
-        }
-      }
-    },
-    "1781_json": {
-      "cognitoEntryId": "1781",
-      "profileStatus": "DECEASED",
-      "memberNumber": "260",
-      "cognitoLastModified": "2024-08-17T00:37:37.493Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "1960-01-01",
-          "lastModified": null
-        }
-      }
-    },
     "1787_json": {
       "cognitoEntryId": "1787",
       "profileStatus": "RESIGNED",
@@ -80021,99 +79600,6 @@
         }
       }
     },
-    "1811_json": {
-      "cognitoEntryId": "1811",
-      "profileStatus": "DECEASED",
-      "memberNumber": "232",
-      "cognitoLastModified": "2024-08-17T00:37:36.768Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "1989-01-01",
-        "DateEnd": "2020-01-01",
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "1993-01-01",
-          "lastModified": null
-        },
-        "AAG": {
-          "status": null,
-          "date": "1989-01-01",
-          "lastModified": null
-        }
-      }
-    },
-    "1816_json": {
-      "cognitoEntryId": "1816",
-      "profileStatus": "DECEASED",
-      "memberNumber": "301",
-      "cognitoLastModified": "2024-08-17T00:37:36.228Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "RG": {
-          "status": "Resigned",
-          "date": null,
-          "lastModified": null
-        }
-      }
-    },
     "1819_json": {
       "cognitoEntryId": "1819",
       "profileStatus": "RESIGNED",
@@ -80184,44 +79670,6 @@
         }
       }
     },
-    "1834_json": {
-      "cognitoEntryId": "1834",
-      "profileStatus": "DECEASED",
-      "memberNumber": "221",
-      "cognitoLastModified": "2024-08-17T00:37:35.708Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "invalid_type",
-            "expected": "object",
-            "received": "null",
-            "path": [],
-            "message": "Expected object, received null"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": null
-    },
-    "1859_json": {
-      "cognitoEntryId": "1859",
-      "profileStatus": "DECEASED",
-      "memberNumber": "325",
-      "cognitoLastModified": "2024-08-17T00:37:35.153Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "invalid_type",
-            "expected": "object",
-            "received": "null",
-            "path": [],
-            "message": "Expected object, received null"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": null
-    },
     "1866_json": {
       "cognitoEntryId": "1866",
       "profileStatus": "RESIGNED",
@@ -80273,60 +79721,6 @@
         }
       }
     },
-    "1908_json": {
-      "cognitoEntryId": "1908",
-      "profileStatus": "DECEASED",
-      "memberNumber": "15",
-      "cognitoLastModified": "2024-08-17T00:37:34.418Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "1994-01-01",
-        "DateEnd": "2018-07-01",
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "RG": {
-          "status": "Resigned",
-          "date": "1996-01-01",
-          "lastModified": null
-        },
-        "ARG": {
-          "status": null,
-          "date": "1994-01-01",
-          "lastModified": null
-        },
-        "CGI3": {
-          "status": "Resigned",
-          "date": "1997-02-01",
-          "lastModified": null
-        }
-      }
-    },
     "1918_json": {
       "cognitoEntryId": "1918",
       "profileStatus": "RESIGNED",
@@ -80359,158 +79753,6 @@
           ]
         ],
         "designations": {}
-      }
-    },
-    "1925_json": {
-      "cognitoEntryId": "1925",
-      "profileStatus": "DECEASED",
-      "memberNumber": "1173",
-      "cognitoLastModified": "2025-05-16T21:06:46.183Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2009-01-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "Complete",
-        "SkiTimeLimit": null,
-        "AG": {
-          "status": "Resigned",
-          "date": "2019-08-01",
-          "lastModified": null
-        },
-        "AAG": {
-          "status": null,
-          "date": "2014-08-01",
-          "lastModified": null
-        },
-        "ASG": {
-          "status": "Resigned",
-          "date": "2022-04-01",
-          "lastModified": null
-        },
-        "ARG": {
-          "status": null,
-          "date": "2010-09-01",
-          "lastModified": null
-        },
-        "CGI1": {
-          "status": "Resigned",
-          "date": "2008-11-01",
-          "lastModified": null
-        }
-      }
-    },
-    "1928_json": {
-      "cognitoEntryId": "1928",
-      "profileStatus": "DECEASED",
-      "memberNumber": "49",
-      "cognitoLastModified": "2024-08-17T00:37:32.713Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "ASG": {
-          "status": "Resigned",
-          "date": null,
-          "lastModified": null
-        }
-      }
-    },
-    "1938_json": {
-      "cognitoEntryId": "1938",
-      "profileStatus": "DECEASED",
-      "memberNumber": "59",
-      "cognitoLastModified": "2024-08-12T12:41:20.859Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": "2020-01-04",
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "1980-01-01",
-          "lastModified": null
-        }
       }
     },
     "1939_json": {
@@ -80547,197 +79789,6 @@
         }
       }
     },
-    "1943_json": {
-      "cognitoEntryId": "1943",
-      "profileStatus": "DECEASED",
-      "memberNumber": "71",
-      "cognitoLastModified": "2024-08-17T00:37:31.923Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "1995-01-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "SG": {
-          "status": "Resigned",
-          "date": "1998-01-01",
-          "lastModified": null
-        },
-        "ASG": {
-          "status": null,
-          "date": "1995-01-01",
-          "lastModified": null
-        },
-        "HG": {
-          "status": "Resigned",
-          "date": "2006-04-01",
-          "lastModified": null
-        },
-        "ARGPerm": {
-          "status": "Resigned",
-          "date": "2008-09-01",
-          "lastModified": null
-        }
-      }
-    },
-    "1944_json": {
-      "cognitoEntryId": "1944",
-      "profileStatus": "DECEASED",
-      "memberNumber": "72",
-      "cognitoLastModified": "2024-08-17T00:37:31.178Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": null,
-          "lastModified": null
-        }
-      }
-    },
-    "1957_json": {
-      "cognitoEntryId": "1957",
-      "profileStatus": "DECEASED",
-      "memberNumber": "106",
-      "cognitoLastModified": "2025-10-02T00:25:56.170Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "1974-01-01",
-        "DateEnd": "2018-08-01",
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "1974-01-01",
-          "lastModified": null
-        }
-      }
-    },
-    "1981_json": {
-      "cognitoEntryId": "1981",
-      "profileStatus": "DECEASED",
-      "memberNumber": "152",
-      "cognitoLastModified": "2024-08-17T00:37:29.533Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "ASG": {
-          "status": "Resigned",
-          "date": null,
-          "lastModified": null
-        }
-      }
-    },
     "2058_json": {
       "cognitoEntryId": "2058",
       "profileStatus": "RESIGNED",
@@ -80769,60 +79820,6 @@
         ],
         "designations": {
           "CGI1": "2008-11-01"
-        }
-      }
-    },
-    "2093_json": {
-      "cognitoEntryId": "2093",
-      "profileStatus": "DECEASED",
-      "memberNumber": "658",
-      "cognitoLastModified": "2024-08-17T00:37:28.748Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2003-03-01",
-        "DateEnd": "2014-11-07",
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "SG": {
-          "status": "Resigned",
-          "date": "2008-04-01",
-          "lastModified": null
-        },
-        "ASG": {
-          "status": null,
-          "date": "2003-03-01",
-          "lastModified": null
-        },
-        "ARGPerm": {
-          "status": "Resigned",
-          "date": "2009-09-01",
-          "lastModified": null
         }
       }
     },
@@ -80921,94 +79918,6 @@
           "DHG": "1999-09-01",
           "ASG": "2003-04-01",
           "SG": "2006-04-01"
-        }
-      }
-    },
-    "2146_json": {
-      "cognitoEntryId": "2146",
-      "profileStatus": "DECEASED",
-      "memberNumber": "741",
-      "cognitoLastModified": "2024-08-17T00:37:27.328Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "1963-01-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "1963-01-01",
-          "lastModified": null
-        }
-      }
-    },
-    "2147_json": {
-      "cognitoEntryId": "2147",
-      "profileStatus": "DECEASED",
-      "memberNumber": "742",
-      "cognitoLastModified": "2024-08-17T00:37:26.528Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": null,
-          "lastModified": null
         }
       }
     },
@@ -81197,25 +80106,6 @@
         }
       }
     },
-    "2365_json": {
-      "cognitoEntryId": "2365",
-      "profileStatus": "DECEASED",
-      "memberNumber": "352",
-      "cognitoLastModified": "2024-08-17T00:37:25.208Z",
-      "parseError": {
-        "issues": [
-          {
-            "code": "invalid_type",
-            "expected": "object",
-            "received": "null",
-            "path": [],
-            "message": "Expected object, received null"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": null
-    },
     "2372_json": {
       "cognitoEntryId": "2372",
       "profileStatus": "RESIGNED",
@@ -81251,94 +80141,6 @@
         ],
         "designations": {
           "AAG": "1990-01-01"
-        }
-      }
-    },
-    "2387_json": {
-      "cognitoEntryId": "2387",
-      "profileStatus": "DECEASED",
-      "memberNumber": "398",
-      "cognitoLastModified": "2024-08-17T00:37:24.523Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": "1966-01-01",
-          "lastModified": null
-        }
-      }
-    },
-    "2414_json": {
-      "cognitoEntryId": "2414",
-      "profileStatus": "DECEASED",
-      "memberNumber": "466",
-      "cognitoLastModified": "2024-08-17T00:37:23.968Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "ASGPerm": {
-          "status": "Resigned",
-          "date": "2001-03-01",
-          "lastModified": null
         }
       }
     },
@@ -82241,50 +81043,6 @@
         }
       }
     },
-    "2572_json": {
-      "cognitoEntryId": "2572",
-      "profileStatus": "DECEASED",
-      "memberNumber": "1965",
-      "cognitoLastModified": "2024-10-24T04:05:17.482Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": null,
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": null,
-          "lastModified": null
-        }
-      }
-    },
     "2575_json": {
       "cognitoEntryId": "2575",
       "profileStatus": "RESIGNED",
@@ -82318,50 +81076,6 @@
         ],
         "designations": {
           "CGI1": "2015-12-01"
-        }
-      }
-    },
-    "2578_json": {
-      "cognitoEntryId": "2578",
-      "profileStatus": "DECEASED",
-      "memberNumber": "317",
-      "cognitoLastModified": "2024-08-17T00:37:22.683Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": null,
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "MG": {
-          "status": "Resigned",
-          "date": null,
-          "lastModified": null
         }
       }
     },
@@ -82871,60 +81585,6 @@
         "designations": {
           "CGI1": "2012-05-01",
           "CGI2": "2015-05-01"
-        }
-      }
-    },
-    "2665_json": {
-      "cognitoEntryId": "2665",
-      "profileStatus": "DECEASED",
-      "memberNumber": "1546",
-      "cognitoLastModified": "2024-08-17T00:51:58.225Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2013-05-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "Complete",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "RG": {
-          "status": "Resigned",
-          "date": "2015-09-01",
-          "lastModified": null
-        },
-        "ARG": {
-          "status": null,
-          "date": "2012-09-01",
-          "lastModified": null
-        },
-        "AAGPerm": {
-          "status": "Resigned",
-          "date": "2016-08-01",
-          "lastModified": null
         }
       }
     },
@@ -84722,60 +83382,6 @@
         }
       }
     },
-    "2842_json": {
-      "cognitoEntryId": "2842",
-      "profileStatus": "DECEASED",
-      "memberNumber": "2149",
-      "cognitoLastModified": "2024-08-17T00:37:18.763Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2017-01-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "2022",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "ARG": {
-          "status": "Resigned",
-          "date": "2019-09-01",
-          "lastModified": null
-        },
-        "CGI1": {
-          "status": null,
-          "date": "2016-12-01",
-          "lastModified": null
-        },
-        "CGI2": {
-          "status": "Resigned",
-          "date": "2020-02-01",
-          "lastModified": null
-        }
-      }
-    },
     "2847_json": {
       "cognitoEntryId": "2847",
       "profileStatus": "RESIGNED",
@@ -85997,50 +84603,6 @@
         ],
         "designations": {
           "CGI1": "2018-11-01"
-        }
-      }
-    },
-    "2931_json": {
-      "cognitoEntryId": "2931",
-      "profileStatus": "DECEASED",
-      "memberNumber": "2541",
-      "cognitoLastModified": "2024-08-17T00:37:17.778Z",
-      "parseError": {
-        "issues": [
-          {
-            "received": "DECEASED",
-            "code": "invalid_enum_value",
-            "options": [
-              "ACTIVE",
-              "INACTIVE",
-              "RESIGNED",
-              "STAFF",
-              "UNDEFINED"
-            ],
-            "path": [
-              "ProfileStatus"
-            ],
-            "message": "Invalid enum value. Expected 'ACTIVE' | 'INACTIVE' | 'RESIGNED' | 'STAFF' | 'UNDEFINED', received 'DECEASED'"
-          }
-        ],
-        "name": "ZodError"
-      },
-      "originalCerts": {
-        "ProfileStatus": "DECEASED",
-        "DateJoined": "2018-12-01",
-        "DateEnd": null,
-        "DateReinstate": null,
-        "LastAnnualValidation": null,
-        "IFMGALicenseNumber": "0",
-        "SkiExamMode": null,
-        "HikeTimeLimit": "No",
-        "RockTimeLimit": "No",
-        "AlpineTimeLimit": "No",
-        "SkiTimeLimit": "No",
-        "CGI1": {
-          "status": "Resigned",
-          "date": "2018-11-01",
-          "lastModified": null
         }
       }
     },
