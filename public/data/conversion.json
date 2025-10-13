@@ -1,8 +1,8 @@
 {
   "info": {
-    "reportGeneratedDate": "2025-10-13T15:17:45.193Z",
-    "mostRecentlyUpdatedProfileDate": "2025-10-12T01:35:02.536Z",
-    "daysSinceDataRefresh": 1
+    "reportGeneratedDate": "2025-10-13T23:05:07.532Z",
+    "mostRecentlyUpdatedProfileDate": "2025-10-13T22:37:43.074Z",
+    "daysSinceDataRefresh": 0
   },
   "stats": {
     "MEMBER_PARSE_ERRORS": 0,
@@ -54578,7 +54578,7 @@
       "cognitoEntryId": "1177",
       "profileStatus": "ACTIVE",
       "memberNumber": "1712",
-      "cognitoLastModified": "2025-10-06T18:53:14.875Z",
+      "cognitoLastModified": "2025-10-13T22:37:43.074Z",
       "certsParsed": {
         "ProfileStatus": "ACTIVE",
         "DateJoined": "2014-05-16",
@@ -54588,7 +54588,6 @@
         "IFMGALicenseNumber": "0",
         "SkiExamMode": "Ski",
         "RockTimeLimit": "2028",
-        "AlpineTimeLimit": "2028",
         "transforms": [],
         "SG": {
           "status": "Active",
@@ -54662,9 +54661,7 @@
           "ARG": "2019-09-01",
           "HGWT": "2018-09-01"
         }
-      },
-      "conversionError": "undefined is not an object (evaluating 'parsedCognitoObject.data[limitCertMap[timeLimit]].date')",
-      "conversionErrorStack": "TypeError: undefined is not an object (evaluating 'parsedCognitoObject.data[limitCertMap[timeLimit]].date')\n    at <anonymous> (/Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:262:107)\n    at map (native)\n    at /Users/mm/github/ACMGca/certs_to_memberships/util/parseAll.js:260:59\n    at <anonymous> (native:2)\n    at processTicksAndRejections (native:7:39)"
+      }
     },
     "1178_json": {
       "cognitoEntryId": "1178",
